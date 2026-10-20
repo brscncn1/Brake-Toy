@@ -1,0 +1,118 @@
+{
+  "root": {
+    "id": "3ffdce66-5831-8186-8ac1-d4e4bd6feeac",
+    "url": "https://app.notion.com/p/3ffdce66583181868ac1d4e4bd6feeac"
+  },
+  "github": "https://github.com/brscncn1/Brake-Toy",
+  "pages": {
+    "README.md": {
+      "id": "3ffdce66-5831-8137-afa3-c44794ab8caa",
+      "url": "https://app.notion.com/p/3ffdce6658318137afa3c44794ab8caa?pvs=204",
+      "properties": {
+        "title": "01 — Kurulum ve kullanım"
+      }
+    },
+    "SOURCE_REQUIREMENTS.md": {
+      "id": "3ffdce66-5831-8197-976b-f033a4ac230b",
+      "url": "https://app.notion.com/p/3ffdce6658318197976bf033a4ac230b?pvs=204",
+      "properties": {
+        "title": "02 — Ana gereksinimler"
+      }
+    },
+    "GAME_DESIGN.md": {
+      "id": "3ffdce66-5831-81ff-877c-c1cf4b5d9fbe",
+      "url": "https://app.notion.com/p/3ffdce66583181ff877cc1cf4b5d9fbe?pvs=204",
+      "properties": {
+        "title": "03 — Oyun tasarımı"
+      }
+    },
+    "ARCHITECTURE.md": {
+      "id": "3ffdce66-5831-81d1-8624-ddfabfc1f49b",
+      "url": "https://app.notion.com/p/3ffdce66583181d18624ddfabfc1f49b?pvs=204",
+      "properties": {
+        "title": "04 — Teknik mimari"
+      }
+    },
+    "ROADMAP.md": {
+      "id": "3ffdce66-5831-8115-a557-d18574f69136",
+      "url": "https://app.notion.com/p/3ffdce6658318115a557d18574f69136?pvs=204",
+      "properties": {
+        "title": "05 — Yol haritası"
+      }
+    },
+    "VISUAL_DIRECTION.md": {
+      "id": "3ffdce66-5831-81d1-9358-f3230c42f375",
+      "url": "https://app.notion.com/p/3ffdce66583181d19358f3230c42f375?pvs=204",
+      "properties": {
+        "title": "06 — Görsel yön ve masa konsepti"
+      }
+    },
+    "TEST_PLAN.md": {
+      "id": "3ffdce66-5831-81e9-b240-ef418d5e8744",
+      "url": "https://app.notion.com/p/3ffdce66583181e9b240ef418d5e8744?pvs=204",
+      "properties": {
+        "title": "07 — Test planı"
+      }
+    },
+    "TEST_REPORT.md": {
+      "id": "3ffdce66-5831-8182-aae2-faf9e946f963",
+      "url": "https://app.notion.com/p/3ffdce6658318182aae2faf9e946f963?pvs=204",
+      "properties": {
+        "title": "08 — Test sonuçları"
+      }
+    },
+    "CHANGELOG.md": {
+      "id": "3ffdce66-5831-8118-823b-e411127c82bd",
+      "url": "https://app.notion.com/p/3ffdce6658318118823be411127c82bd?pvs=204",
+      "properties": {
+        "title": "09 — Değişiklik kaydı"
+      }
+    },
+    "TESLIM_RAPORU.md": {
+      "id": "3ffdce66-5831-8195-93db-ff575f27bac6",
+      "url": "https://app.notion.com/p/3ffdce665831819593dbff575f27bac6?pvs=204",
+      "properties": {
+        "title": "10 — Faz 1 teslim raporu"
+      }
+    },
+    "DEV_LOG.md": {
+      "id": "3ffdce66-5831-8131-ace0-e39614da7f6f",
+      "url": "https://app.notion.com/p/3ffdce6658318131ace0e39614da7f6f?pvs=204",
+      "properties": {
+        "title": "11 — Geliştirme günlüğü"
+      }
+    },
+    "AGENTS.md": {
+      "id": "3ffdce66-5831-8176-82a9-f71a13419f7d",
+      "url": "https://app.notion.com/p/3ffdce665831817682a9f71a13419f7d?pvs=204",
+      "properties": {
+        "title": "12 — Çalışma ve eşitleme kuralları"
+      }
+    },
+    "ANDROID_BUILD_REPORT.json": {
+      "id": "3ffdce66-5831-81da-8f2a-f9a9127e89aa",
+      "url": "https://app.notion.com/p/3ffdce66583181da8f2af9a9127e89aa?pvs=204",
+      "properties": {
+        "title": "13 — Android derleme kanıtı"
+      }
+    },
+    "UNITY_TEST_RESULTS.json": {
+      "id": "3ffdce66-5831-8192-b035-d0ca91ac040b",
+      "url": "https://app.notion.com/p/3ffdce6658318192b035d0ca91ac040b?pvs=204",
+      "properties": {
+        "title": "14 — Unity test kanıtı"
+      }
+    },
+    "TEST_RESULTS.json": {
+      "id": "3ffdce66-5831-813a-952f-fbf390ea3aca",
+      "url": "https://app.notion.com/p/3ffdce665831813a952ffbf390ea3aca?pvs=204",
+      "properties": {
+        "title": "15 — Bağımsız C# test kanıtı"
+      }
+    }
+  },
+  "notice": {
+    "type": "free_block_limit_grace",
+    "endsAtUtc": "2026-10-23T21:41:16.721Z"
+  }
+}
