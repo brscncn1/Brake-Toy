@@ -109,6 +109,13 @@
       "properties": {
         "title": "15 — Bağımsız C# test kanıtı"
       }
+    },
+    "ROOM_MILESTONE.md": {
+      "id": "3ffdce66-5831-816a-8219-d3bd3aefca61",
+      "url": "https://app.notion.com/p/3ffdce665831816a8219d3bd3aefca61",
+      "properties": {
+        "title": "16 — v0.2 Masa ve oda sürümü"
+      }
     }
   },
   "notice": {

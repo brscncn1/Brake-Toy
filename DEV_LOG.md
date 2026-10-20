@@ -33,3 +33,10 @@
 - Unity 27/27 test geçti: 19 EditMode, 8 PlayMode. Yeni dekor akışı/reset testi dahil.
 - v0.2 Android ARM64 IL2CPP Development APK üretildi; boyut 37.0 MiB. Cihaz çalıştırma/performance testi yapılmadı.
 - Sürüm raporları ve önceki raporların v0.1 arşivi hazırlandı. Kaynak/Notion/Release son eşitlemesi teslimden önce doğrulanacak.
+
+## v0.2 yayın ve Notion eşitlemesi tamamlandı
+
+- Kaynaklar feat/toy-room-tabletop dalına gönderildi; PR #1 açıldı: https://github.com/brscncn1/Brake-Toy/pull/1
+- v0.2.0 ön sürümü yayımlandı; APK, derleme raporu ve gerçek Unity görüntüsü yüklendi. Uzak APK özeti yerelle eşleşiyor.
+- Notion proje durumu ve etkilenen 10 belge/test sayfası güncellendi; 16 — v0.2 Masa ve oda sürümü oluşturuldu. Geliştirme günlüğüne gerçek test/yayın sonuçları eklendi.
+- Unity ToyRoomTabletop sahnesiyle tekrar açıldı. Gerçek cihaz ve kullanıcı görsel geri bildirimi bekleniyor.
