@@ -10,6 +10,11 @@ namespace BrakeToy
         public ArcadeHUD HUD;
         public ArcadeAudio Sound;
         public int Seed = 7331;
+        public bool UseVariedPatterns, VaryRuns, BuildCatalogPool;
+        public ObstacleDefinition[] Definitions;
+        public int CurrentSeed { get; private set; }
+        private int runNumber;
+        private int[] poolOffsets;
         public float Elapsed { get; private set; }
         public float Distance { get; private set; }
         public float Speed => ArcadeRules.Speed(Elapsed);
@@ -27,6 +32,40 @@ namespace BrakeToy
         public void Initialize(GameManager manager)
         {
             game = manager;
+            CurrentSeed = Seed;
+            if (BuildCatalogPool)
+            {
+                if (Definitions == null || Definitions.Length != 4) throw new System.InvalidOperationException("Missing encounter catalog.");
+                Transform parent = Pool.Length > 0 ? Pool[0].transform.parent : transform;
+                foreach (var hazard in Pool) { hazard.Release(); Destroy(hazard.gameObject); }
+                var instances = new System.Collections.Generic.List<ArcadeHazard>();
+                foreach (var definition in Definitions)
+                {
+                    if (!definition || !definition.Prefab || definition.PoolSize < 6) throw new System.InvalidOperationException("Invalid catalog prefab.");
+                    for (int i = 0; i < definition.PoolSize; i++)
+                    { var hazard = Instantiate(definition.Prefab, parent); hazard.Release(); instances.Add(hazard); }
+                }
+                Pool = instances.ToArray();
+            }
+            if (Definitions != null && Definitions.Length > 0)
+            {
+                if (Definitions.Length != 4) throw new System.InvalidOperationException("Four encounter kinds required.");
+                poolOffsets = new int[4]; int count = 0;
+                for (int kind = 0; kind < 4; kind++)
+                {
+                    var definition = Definitions[kind];
+                    if (!definition || definition.Kind != kind || definition.PoolSize < 6 || !definition.Prefab)
+                        throw new System.InvalidOperationException("Invalid encounter definition " + kind);
+                    poolOffsets[kind] = count;
+                    for (int i = 0; i < definition.PoolSize; i++)
+                    {
+                        if (count >= Pool.Length) throw new System.InvalidOperationException("Encounter pool is too small.");
+                        var h = Pool[count++]; h.HalfWidth = definition.HalfWidth; h.HalfLength = definition.HalfLength;
+                        h.RollingBall = kind == 3;
+                    }
+                }
+                if (count != Pool.Length) throw new System.InvalidOperationException("Unexpected encounter pool instances.");
+            }
             BestDistance = Mathf.Max(0, PlayerPrefs.GetFloat("BrakeToy.v03.distance", 0));
             BestStyle = Mathf.Max(0, PlayerPrefs.GetInt("BrakeToy.v03.style", 0));
             HUD.Bind(this, game); Sound.Initialize(game, this);
@@ -36,8 +75,17 @@ namespace BrakeToy
         {
             foreach (var hazard in Pool) hazard.Release();
             Elapsed = Distance = 0; SpawnedRows = PoolExhaustions = 0; lastGear = 1;
-            Style.Reset(); sequence = new ArcadeSequence(Seed); pending = sequence.Next();
+            Style.Reset(); sequence = new ArcadeSequence(CurrentSeed, UseVariedPatterns); pending = sequence.Next();
             HUD.Clear(); FillAhead();
+        }
+        public void BeginRun(bool sameRoute)
+        {
+            if (!sameRoute || runNumber == 0)
+            {
+                runNumber++;
+                CurrentSeed = VaryRuns ? unchecked(Seed + runNumber * 104729 + System.Environment.TickCount) : Seed;
+            }
+            ResetRun();
         }
         private void FillAhead()
         {
@@ -52,7 +100,9 @@ namespace BrakeToy
         private void Activate(int variant, float x, float z, float crossing, float slope)
         {
             // Each prefab kind has six reserved instances; no allocations or Instantiate while driving.
-            for (int i = variant * 6; i < variant * 6 + 6; i++)
+            int offset = poolOffsets == null ? variant * 6 : poolOffsets[variant];
+            int count = poolOffsets == null ? 6 : Definitions[variant].PoolSize;
+            for (int i = offset; i < offset + count; i++)
                 if (!Pool[i].InUse) { Pool[i].Place(x, z, crossing, slope); return; }
             PoolExhaustions++; Debug.LogError("Arcade pool exhausted; seed=" + Seed + " row=" + SpawnedRows);
         }
@@ -67,7 +117,7 @@ namespace BrakeToy
                 float fromX = Mathf.Lerp(oldX, newX, step / (float)steps);
                 float toX = Mathf.Lerp(oldX, newX, (step + 1f) / steps);
                 float d = ArcadeRules.Distance(Elapsed + sub) - ArcadeRules.Distance(Elapsed);
-                bool hit = false; float fraction = 1;
+                bool hit = false; float fraction = 1; ArcadeHazard hitHazard = null;
                 foreach (var hazard in Pool)
                 {
                     if (!hazard.InUse) continue;
@@ -77,7 +127,7 @@ namespace BrakeToy
                         ? SweptCircleBox.TryHit(fromX-a.x,-a.z,toX-b.x,-b.z,game.Config.PlayerHalfWidth,game.Config.PlayerHalfLength,hazard.HalfWidth,out t)
                         : SweptCollision.TryHit(fromX-a.x,-a.z,toX-b.x,-b.z,game.Config.PlayerHalfWidth+hazard.HalfWidth,game.Config.PlayerHalfLength+hazard.HalfLength,out t);
                     if (contact && t <= fraction)
-                    { fraction = t; hit = true; }
+                    { fraction = t; hit = true; hitHazard = hazard; }
                 }
                 float moved = d * fraction;
                 foreach (var hazard in Pool) if (hazard.InUse)
@@ -110,7 +160,9 @@ namespace BrakeToy
                     game.Player.StopAt(Mathf.Lerp(fromX, toX, fraction)); Style.Crash();
                     BestDistance = Mathf.Max(BestDistance, Distance); BestStyle = Mathf.Max(BestStyle, Style.Total);
                     if(PersistRecords) { PlayerPrefs.SetFloat("BrakeToy.v03.distance", BestDistance); PlayerPrefs.SetInt("BrakeToy.v03.style", BestStyle); PlayerPrefs.Save(); }
-                    Sound.Crash(); HUD.Impact(); game.Crash(); return;
+                    Sound.Crash(hitHazard && (hitHazard.RollingBall || hitHazard.HalfLength < .5f)); HUD.Impact();
+                    var impact = game.GetComponent<ToyImpactFeedback>(); if (impact) impact.Play();
+                    game.Crash(); return;
                 }
                 FillAhead();
             }

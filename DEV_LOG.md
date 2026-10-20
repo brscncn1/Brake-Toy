@@ -63,3 +63,27 @@
 - v0.3.0 ön sürüm APK/rapor/model kanıtı ve gerçek renderlarla yayımlandı. Uzak APK SHA256 yerelle eşleşiyor: a6a9cbdb0aa321f6e54acb744654c23b75b49eda272dabf3dde0cfb0d73d4ed7.
 - Notion proje merkezi ve etkilenen belgeler eşitlendi; 17 araştırma, 18 teslim, 19 varlık hakları, 20 model kanıtı sayfaları mevcut. Gerçek sürüş/Fever/model görselleri kaynak commitine sabitlenmiş URLlerle eklendi.
 - Son kabul kanıtı 41/41 Unity testi; fiziksel telefon ve insan oyuncu tempo/kalite geri bildirimi bekleniyor. Unity ToyRoomArcade sahnesiyle açıldı.
+
+## v0.4 kalite incelemesi ve çalışma başlangıcı
+
+- Kullanıcı sonraki aşama öncesi kapsam, öz eleştiri ve öneriler istedi. Gerçek v0.3 görüntüleri/kodları incelendi; QUALITY_REVIEW-v0.3.md ve PLAN-v0.4.md yazıldı.
+- Öncelik kamera/UI, malzeme/ışık ve araç oranları, engel kataloğu/çeşitlenen turlar ve grafik profilleri. Ses/çarpışma cilası daha sonra; garaj/yeni harita/online bu sürümde yok.
+- feat/refined-room-v04 dalı açıldı; Notion 21/22 sayfaları ve günlük güncellendi. Henüz v0.4 test sonucu yok.
+
+## Kullanıcının kapsam kararı — tüm öneriler bu sürümde
+
+Kalite raporundaki dokuz başlık aynı v0.4 çalışmasına alındı. Ses ve çarpışma cilası sonraya bırakılmayacak: katmanlı motor/teker sesi, kuru oyuncak çarpışması ve kısa görsel tepki. Oda ayrıntıları ve gerçek motor önce/sonra karşılaştırması da teslimde yer alacak. Fiziksel cihaz FPS/ısı/dokunma kabulü için cihaz matrisi ve ölçüm kaydı hazırlanacak; cihaz olmadan ölçüldü denmeyecek. Önceki dar kapsam ifadeleri bu kararla güncellendi. Yeni harita/garaj/online bu kalite raporunun önerileri arasında değildir.
+
+## v0.4 implementation and first checks
+
+- User expanded the milestone to all nine review recommendations, including audio/impact polish. Separate refined scene/assets preserve previous versions and real user records.
+- Added defined pooled encounters, varied gaps/ball slopes/events and new-run/same-route retry. Catalog prefabs instantiate once at scene startup; no new hazards while driving.
+- Added private runtime high/low pipeline copies, menu quality controls, local opt-in performance recorder and explicit development benchmark. No USB-debuggable device detected; user could not locate the setting, so delivery proceeds with direct tablet APK testing.
+- Reduced wood contrast and adjusted tint after the first render looked washed out, softened sunlight, refined cabin/roof, opened wheel arches and added window joinery/plant. Actual Unity front/rear/game renders inspected; concept still exceeds current art quality.
+- Layered motor/friction/ratchet, dry wood/metal and rubber impact cues; short grounded wobble/camera impulse synchronized with impact and delayed result panel.
+- First tests: 28/28 EditMode +25/25 PlayMode. Final catalog/art/audio changes are being rechecked before Android packaging.
+- Updated GitHub main landing README; fixed a local text-encoding conversion before delivery. All further Python file IO uses explicit UTF-8.
+
+## v0.4 final paket kontrolü
+
+Masa chunk uçlarındaki bevel ve duvar panel çizgileri görüldü; yalnızca yeni sahnenin kesintisiz yüzey geometrisiyle giderildi. PlayMode 25/25 yeniden geçti; model denetimi 61 unique mesh /192 renderer /158146 üçgen (inaktif havuz dahil), hata sıfır. APK yeniden derlendi ve imza/paket/ZIP denetimi geçti. SHA256: 0ce3f84da0b58b3e98dc0fab0f1922985fcd194bb22c017b6f172e45f6dca4a0. Kullanıcının tableti Windows MTP aygıtı olarak görünüyor; APK aktarımı yapılıyor, henüz tablet oynanış/FPS kabulü yok.

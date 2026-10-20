@@ -1,0 +1,20 @@
+{
+  "result": "Succeeded",
+  "unityVersion": "6000.3.26f1",
+  "target": "Android",
+  "architecture": "arm64-v8a",
+  "scriptingBackend": "IL2CPP",
+  "developmentBuild": true,
+  "applicationIdentifier": "com.braketoy.prototype",
+  "versionName": "0.3.0",
+  "versionCode": 3,
+  "minSdkVersion": 25,
+  "targetSdkVersion": 36,
+  "sizeBytes": 40790462,
+  "sha256": "a6a9cbdb0aa321f6e54acb744654c23b75b49eda272dabf3dde0cfb0d73d4ed7",
+  "apkArchiveIntegrityChecked": true,
+  "signatureVerified": true,
+  "physicalDeviceTested": false,
+  "scene": "ToyRoomArcade",
+  "releaseUrl": "https://github.com/brscncn1/Brake-Toy/releases/tag/v0.3.0"
+}

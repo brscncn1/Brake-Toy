@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d643b953a168a354eb9715d11fc04c75, type: 3}
+  m_Name: 3
+  m_EditorClassIdentifier: BrakeToy.Runtime::BrakeToy.ObstacleDefinition
+  Kind: 3
+  Prefab: {fileID: 8580613885484182355, guid: 503c5f4001eb37e45bd7a456bafcf9ec, type: 3}
+  PoolSize: 6
+  HalfWidth: 0.51
+  HalfLength: 0.51
+  ReadabilityNotes: Visible side warning; swept sphere; safe lane remains clear.

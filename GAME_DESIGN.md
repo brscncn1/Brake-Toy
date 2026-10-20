@@ -118,3 +118,7 @@ Orta Android'de ölçülmüş kararlı 60 FPS, gerekirse 30 FPS kalite; düşük
 Kullanıcının sonraki kararıyla 0–25 saniye sabit hız yerine ilk saniyeden yumuşak hız artışı (10→18) ve yaklaşık 2.2 saniyede ilk karşılaşma uygulanır. Görsel hedef daha gerçekçi oyuncak malzemeleri ve modellerdir; onaylanan AI konsept kalite referansıdır, mevcut gerçek motor çıktısı ayrıca değerlendirilir.
 
 Sınırlı seedli kalıp ailesi, tek/duble kapılar ve nefes satırları, ilk 6–7 saniyede uyarılı top; Near Miss .005–.48 kenar boşluğu, tehlike tamamen geçtikten sonra bir ödül; 100 temel stil, 1/2/3/5× kombo, 6 saniye timeout, 8+ Combo Fever görsel iz. Mesafe/stil ayrı yerel rekorlar. Tam genel üretici/ilerleme/online henüz tamam değil. Ayrıntı ARCADE_MILESTONE.md.
+
+## v0.4 karşılaşma ve kalite güncellemesi
+
+Her yeni tur farklı seed, aynı parkur düğmesi oturumdaki aynı diziyi kurar. Güvenli koridor en fazla iki kez tekrarlanır; mesafeler 25–31, nefes aralığı 34; toplar 5–8 satır arayla farklı kesişim/eğimler alır. Komşu şerit geçişi ve güvenli koridor ailesi korunur. Hız/ilk tehlike v0.3'teki erken eğriyi kullanır. Görsel impact gameplay kutusunu etkilemez. Final sanat ve insan eğlence kabulü henüz yok.

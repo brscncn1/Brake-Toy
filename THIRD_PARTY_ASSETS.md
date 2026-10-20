@@ -12,3 +12,7 @@
 - Used as wood albedo and normal texture; original asset credits retained voluntarily. Material tint, UV mapping and normal strength configured for the tabletop.
 
 All newly authored mesh geometry, softbox cubemap and synthesized audio cues are original project content. Unity engine/package assets remain under their respective Unity licenses. Competitor screenshots, music, models and trademarks are not bundled.
+
+## v0.4 Quiet Wood shader
+
+`Art/Refined/Shaders/QuietWood.shader` and `QuietWoodInput.hlsl` are modified copies of Unity URP 17.3's Lit shader/input from the installed package. The shader name and albedo contrast calculation were changed; rendering passes and material constant layout are retained. The package license is redistributed as `Unity-LICENSE.md` in that folder. This is Unity-licensed source, not original Brake Toy shader authorship. The existing CC0 wood images remain unmodified. v0.4 mesh additions and layered synthesized audio are project-authored.

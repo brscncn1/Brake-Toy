@@ -1,6 +1,6 @@
 # Brake Toy project workflow
 
-- Follow SOURCE_REQUIREMENTS.md and the user's later decisions. The current approved milestone is v0.3: earlier excitement and acceleration, readable deterministic encounter patterns, warned rolling balls, Near Miss/combo, and visibly improved toy models/materials. Retain earlier scenes and document the difference between a concept target and an actual Unity render.
+- Follow SOURCE_REQUIREMENTS.md and the user's later decisions. The current approved milestone is v0.4 Refined Room: follow QUALITY_REVIEW-v0.3.md and PLAN-v0.4.md for camera/UI, quieter materials/light, car proportions, encounter definitions/varied deterministic runs and graphics profiles. Preserve earlier scenes/assets and distinguish plans from verified results.
 - Keep existing working scenes and user edits. Save new scene/config/prefab variants for visual milestones.
 - Keep DEV_LOG.md current at meaningful checkpoints: decisions, implementation, tests, limitations, and next steps. Do not claim a test passed unless it was executed.
 - The user explicitly authorized uploading this project's work to https://github.com/brscncn1/Brake-Toy and maintaining its Notion documentation. Push completed checkpoints to the appropriate feature branch. Do not force-push or overwrite unrelated remote work. Large APKs belong in GitHub Releases, not source commits.

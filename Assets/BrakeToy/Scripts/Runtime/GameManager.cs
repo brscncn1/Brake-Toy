@@ -26,11 +26,15 @@ namespace BrakeToy
             ChangeState(RunState.Ready);
         }
         public void StartRun()
+        { BeginRun(false); }
+        public void StartSameRoute()
+        { BeginRun(true); }
+        private void BeginRun(bool sameRoute)
         {
             Input.ResetCapture();
             Player.ResetRun();
             World.ResetRun();
-            if (Arcade) Arcade.ResetRun();
+            if (Arcade) Arcade.BeginRun(sameRoute);
             ChangeState(RunState.Running);
         }
         public void Resume()

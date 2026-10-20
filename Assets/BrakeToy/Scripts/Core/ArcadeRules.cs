@@ -31,25 +31,35 @@ namespace BrakeToy.Core
     public sealed class ArcadeSequence
     {
         private uint state;
-        private int index, safe = 1, previousVariant = -1;
+        private int index, safe = 1, previousVariant = -1, sameLaneCount, nextBall = 2;
+        private readonly bool varied;
         private float distance = 24;
-        public ArcadeSequence(int seed) { state = (uint)seed; if (state == 0) state = 1; }
+        public ArcadeSequence(int seed, bool varied = false) { state = (uint)seed; if (state == 0) state = 1; this.varied = varied; }
         private int Next(int count) { state ^= state << 13; state ^= state >> 17; state ^= state << 5; return (int)(state % (uint)count); }
         public ArcadeRow Next()
         {
             int i = index++;
             // First encounter asks for a visible steering decision, not a waiting period.
             int candidate = i == 0 ? (Next(2) == 0 ? 0 : 2) : Math.Max(0, Math.Min(2, safe + Next(3) - 1));
+            if (varied && candidate == safe && sameLaneCount >= 2) candidate = safe == 1 ? Next(2) * 2 : 1;
+            sameLaneCount = candidate == safe ? sameLaneCount + 1 : 1;
             safe = candidate;
             int variant = (previousVariant + 1 + Next(2)) % 3; previousVariant = variant;
-            bool ball = i >= 2 && i % 7 == 2;
+            bool ball = varied ? i == nextBall : i >= 2 && i % 7 == 2;
+            if (varied && ball) nextBall += 5 + Next(4);
             int mask = 7 ^ (1 << safe);
             // Single obstacles and breathing rows break up the double-gate cadence.
-            if (i % 6 == 4 || i == 0) mask = 1 << (safe == 1 ? Next(2) * 2 : 1);
+            bool breathing = varied ? i > 0 && Next(5) == 0 : i % 6 == 4;
+            if (breathing || i == 0) mask = 1 << (safe == 1 ? Next(2) * 2 : 1);
             int ballLane = safe == 0 ? 2 : 0;
             float slope = ballLane == 2 ? .06f : -.06f;
+            if (varied)
+            {
+                ballLane = (safe + 1 + Next(2)) % 3;
+                slope = (Next(2) == 0 ? -1 : 1) * (.035f + Next(31) * .001f);
+            }
             var row = new ArcadeRow(i, safe, ball ? 0 : mask, variant, ball, distance, ArcadeRules.LaneX(ballLane), slope);
-            distance += i % 6 == 4 ? 34 : 27;
+            distance += varied ? (breathing ? 34 : 25 + Next(7)) : i % 6 == 4 ? 34 : 27;
             return row;
         }
     }

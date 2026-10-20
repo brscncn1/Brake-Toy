@@ -125,3 +125,7 @@ Kullanıcı sonraki kararları, ana prompttaki 0–25 saniye sabit hız ve low-p
 - [ ] Fiziksel Android maliyet, kalite profilleri, insan oyuncu tempo/risk ödülü kabulü ve final sanat düzeyi.
 
 Faz 2/3 tam kabulü bu açık maddeler ve geri bildirimlerle devam eder; tamamlandı olarak işaretlenmez.
+
+## v0.4 kalite düzeltmeleri
+
+Ayrı Refined Room sahnesinde katalog/prefab havuzu, çeşitlenen deterministik kalıplar ve top yolları, yeni tur/aynı parkur, tek panel/kompakt HUD, araç/oda malzemeleri ve katmanlı ses/çarpışma cilası uygulandı. Genel keyfi birleşim çözücüsü yerine test edilen koridor ailesi korunur. Grafik profilleri ve yerel performans ölçüm aracı eklendi. Son test/APK raporu teslimde kaydedilir; fiziksel cihaz FPS/ısı/dokunma ve insan eğlence/sanat kabulü henüz açık kalır. Faz 2/3 tamamlandı veya final görsel kaliteye ulaşıldı denmez.

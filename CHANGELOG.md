@@ -1,3 +1,11 @@
+# v0.4.0 — Refined Room
+
+- Dokuz kalite başlığında uygulama: ayrı oda/malzeme seti, düşük kontrast ahşap, yumuşak gölge, kabin/çatı/teker boşlukları ve kesintisiz masa/duvar.
+- Kompakt HUD/tek menü, yeni parkur/aynı parkur ayrımı, katalogdan başlangıç havuzu ve değişken aralık/top yolları.
+- Katmanlı motor/teker/vites, ahşap-metal/kauçuk impact; kısa grounded görsel tepki ve sonuç paneli zamanlaması.
+- İzole yüksek/ekonomik grafik profilleri, yerel ölçüm, development benchmark ve tablet kabul matrisi.
+- 53/53 Unity testi ve Android ARM64 IL2CPP APK; gerçek önce/sonra ve açık kalite sınırları.
+
 # v0.3.0 — Arcade Workshop
 
 - Erken/sürekli hızlanma; seed'li tek/duble geçitler, yön değişimi ve nefes satırları.

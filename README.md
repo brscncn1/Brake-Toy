@@ -2,35 +2,36 @@
 
 **NO BRAKES. BIG TROUBLE.** Unity 6.3 LTS / C# / gerçek 3D URP / Android portre.
 
-## v0.3 — Arcade Workshop
+## v0.4 — Refined Room
 
-İlk saniyelerde başlayan kaçışlar, yumuşak hız artışı, seed'li engel dizileri, uyarılı yuvarlanan toplar, Near Miss/kombo/Fever, mesafe/stil rekoru ve yeniden modellenmiş oyuncak araba. Pencere ışığı, kumaş perde/abajur, gerçek ahşap doku ve ayrı boya/cam/metal/kauçuk malzemeleri.
+Daha sakin sıcak masa ve gölge, daha açık oda/pencere ayrıntıları, alçaltılmış araç kabini ve açılmış teker boşlukları, kompakt HUD ve tek menü. Her yeni turda değişen parkur, aynı parkuru tekrar etme seçeneği, değişken top olayları, katmanlı oyuncak sesleri ve kısa çarpışma tepkisi. Yüksek/ekonomik grafik profili ve yerel performans ölçümü.
 
-![Gerçek Unity oynanış görüntüsü](Preview-v0.3.png)
+![Gerçek Unity v0.4 oynanış](Preview-v0.4.png)
 
-Bu görüntü gerçek çalışan Unity sahnesinden alınmıştır. Concepts klasöründeki onaylanmış AI konsepti ayrı bir hedef görseldir; mevcut sürüm final sanat kalitesi olarak sunulmaz.
+Bu görüntü gerçek Unity sahnesidir. Concepts altındaki AI hedefi ayrı bir referanstır; bu sürüm final sanat kalitesi olarak sunulmaz.
+
+[Android APK / v0.4](https://github.com/brscncn1/Brake-Toy/releases/tag/v0.4.0) · [v0.4 kaynakları](https://github.com/brscncn1/Brake-Toy/tree/feat/refined-room-v04) · [Notion](https://app.notion.com/p/3ffdce66583181868ac1d4e4bd6feeac)
 
 ## Aç ve oyna
 
-1. Unity Hub → Add project from disk → bu klasör. Unity 6000.3.26f1.
-2. Tools → Brake Toy → Open Arcade Workshop v0.3.
-3. Game oranı **16:9 Portrait (9:16)**, Scale 1×. Play → OYNA.
-4. Fareyi basılı tutup sağa/sola sürükle; telefonda parmakla sürükle. Alt ortadan ses kapatılabilir.
+1. v0.4 kaynak dalını indirin/seçin. Unity Hub → Add project from disk → proje klasörü. Unity **6000.3.26f1**.
+2. Tools → Brake Toy → **Open Refined Room v0.4**.
+3. Game: **16:9 Portrait (9:16)**, Scale 1×. Play → OYNA. Fareyi basılı tutup/parmakla sağa sola sürükle.
+4. Sonuçta **YENİ PARKUR** farklı bir tur, **AYNI PARKURU TEKRARLA** aynı dizidir. Duraklat düğmesi sağ üstte.
+5. Menüde ses ve grafik profili seçilir. Ekonomik profil SSAO'yu kapatır, render ölçeği/gölge/AA bütçesini azaltır; hedef 30 FPS. Yüksek hedef 60 FPS. Bunlar cihaz ölçümü değildir.
+6. **60 sn PERFORMANS TESTİ** düğmesine basıp oynayın; toplam 60 sn gerçek sürüş sonunda menüde FPS/p95 görünür. Detaylar [tablet testi](DEVICE_TEST-v0.4.md).
 
-[Android APK / sürüm](https://github.com/brscncn1/Brake-Toy/releases/tag/v0.3.0) · [v0.3 kaynak dalı](https://github.com/brscncn1/Brake-Toy/tree/feat/arcade-workshop-v03) · [Notion proje merkezi](https://app.notion.com/p/3ffdce66583181868ac1d4e4bd6feeac)
+APK: ARM64 IL2CPP Development, Android 7.1+; Builds/Android/BrakeToy-v0.4-Refined.apk. APK'lar kaynak geçmişine değil GitHub Releases'e yüklenir. Eski ToyRoom/ToyRoomTabletop/ToyRoomArcade sahneleri ve sürümleri korunur. Önceki rekor anahtarları değiştirilmedi.
 
-APK ARM64 IL2CPP Development, Android 7.1+; yerelde Builds/Android/BrakeToy-v0.3-Arcade.apk. APK'lar kaynak Git geçmişi yerine Releases içinde. Eski ToyRoom ve ToyRoomTabletop sahneleri ve sürümleri korunur.
+## Kanıt ve açık kalanlar
 
-## Doğrulama ve belgeler
+**53/53 Unity testi geçti**: 28 EditMode +25 PlayMode. Yeni ve eski 128.000 satırlık koridor kontrolleri, 10.000 top çarpışma örneği, iki dakikalık motor içi tanık sürüşleri, kamera/model/UI/profil/impact kontrolleri. APK imza/paket kontrolü geçti. Fiziksel tablet FPS/ısı/dokunma, insan tempo/ses/sanat kabulü henüz doğrulanmadı.
 
-**41/41 Unity testi geçti**: 26 EditMode + 15 PlayMode. 128.000 satır koridor kontrolü, 10.000 top çarpışma örneği, 2 dakikalık motor içi tanık sürüşü, pause/retry, Near Miss, Fever ve model/kamera kontrolleri. APK imza/paket kontrolü geçti. Fiziksel cihaz FPS/ısı/dokunma ve insan oynanış dengesi henüz doğrulanmadı.
+- [Sonuçlar ve hâlâ beğenmediğim taraflar](REFINED_MILESTONE.md)
+- [v0.3 kalite eleştirisi ve öneriler](QUALITY_REVIEW-v0.3.md), [v0.4 planı](PLAN-v0.4.md)
+- [Gerçek önce/sonra](COMPARISON-v0.4.html), Preview-v0.4-late-run.png ve Models-v0.4-*.png
+- [Test raporu](TEST_REPORT.md), UNITY_TEST_RESULTS.json, Tests/*.xml, ANDROID_BUILD_REPORT.json, MODEL_VALIDATION.json
+- [Araştırma ve birincil kaynaklar](RESEARCH-v0.3.md), [varlık lisansları](THIRD_PARTY_ASSETS.md)
+- GAME_DESIGN.md, ARCHITECTURE.md, ROADMAP.md, SOURCE_REQUIREMENTS.md ve DEV_LOG.md
 
-- ARCADE_MILESTONE.md — bu sürümün deneyimi ve sınırları.
-- RESEARCH-v0.3.md — benzer oyun araştırması, kaynaklar ve uygulama kararları.
-- THIRD_PARTY_ASSETS.md — CC0 doku kaynağı, lisansı ve dosya özetleri.
-- TEST_REPORT.md, UNITY_TEST_RESULTS.json, Tests/*.xml, ANDROID_BUILD_REPORT.json — gerçek kanıtlar.
-- GAME_DESIGN.md, ARCHITECTURE.md, ROADMAP.md, SOURCE_REQUIREMENTS.md — tasarım/kapsam.
-- DEV_LOG.md ve Notion — aktif geliştirme karar ve test günlüğü.
-- Models-v0.3-*.png — gerçek motor içinde model yakın planları.
-
-Kayıtlı tam kapsam için yayın hazırlığı Faz 6. Bu ara sürüm tüm Faz 2/3 veya oyunun finali değildir. Notion ücretsiz blok sınırı ek süresi 24 Ekim 2026 00.41 İstanbul'da biter; yazma engellenirse yerel günlük korunup eşitleme bekleyenler kaydedilecek.
+Bu sürüm Faz 2/3'ü ilerletir; tüm kapsamda yayın hazırlığı Faz 6'dır. Görev/garaj/ekonomi/Relax/online ve final sanat kabulü sonraki kapsamda kalır. Geliştirme sırasında önemli karar/test/teslim sonuçları Notion günlüğüne de işlenir.

@@ -71,3 +71,7 @@ GameManager opsiyonel ArcadeDirector ile yeni sahnede arcade yolunu çalıştır
 ArcadeHUD ayrı sürüş/sonuç/uyarı, ArcadeAudio özgün sentez sesleri, ArcadeFeedback collider/hız değiştirmeyen yeniden kullanılan Fever şeritleridir. Yerel v03 mesafe/stil PlayerPrefs anahtarları küresel sonuç değildir.
 
 WorkshopSceneBuilder ayrı scene/config/prefab/mesh/material/renderer üretir. Araç gövdesi/tekerlekler ve sabit oda materyal bazında birleştirilir; yakın dekor hedefleri ayrı korunur. ModelAuditCapture ve PreviewCapture gerçek Unity çıktıları üretir. Kaydedilmiş sahnede sanat üretim/refine komutları geliştirici araçlarıdır, Open yeterlidir.
+
+## v0.4 yapı
+
+ObstacleDefinition: prefab/kind/pool size/collision footprint. ArcadeDirector: katalog örnekleri sahne açılışında bir kez, CurrentSeed/BeginRun(sameRoute), sürüşte tahsissiz havuz yeniden kullanımı. ArcadeSequence varied modu eski diziyi varsayılan durumda korur. GraphicsProfileController iki renderer kullanan özel runtime pipeline kopyasını sahiplenir ve sahne kapanışında geri yükler. PerformanceProbe yalnızca isteğe bağlı yerel 60 sn kare kaydı tutar; Android JNI yerleşik modülü explicit development benchmark intent'ini okur. ToyImpactFeedback kök/collider yerine visual/kameraya kısa impulse uygular. Quiet Wood, lisanslı URP Lit türevidir. v0.4 varlık/sahne üreticileri eski sanat dosyalarını değiştirmez.

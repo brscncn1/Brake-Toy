@@ -1,0 +1,10 @@
+{
+    "scene": "ToyRoomArcade",
+    "unusedIntermediateMeshesRemoved": 750,
+    "authoredMeshRenderersIncludingInactivePool": 186,
+    "uniqueReferencedMeshes": 61,
+    "trianglesIncludingInactivePool": 147642,
+    "missingMeshes": 0,
+    "missingMaterials": 0,
+    "physicalDeviceProfiled": false
+}

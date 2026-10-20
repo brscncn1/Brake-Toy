@@ -18,7 +18,7 @@ namespace BrakeToy.Editor
         private static double last;
         public static void Capture()
         {
-            EditorSceneManager.OpenScene(WorkshopSceneBuilder.ScenePath);ShaderUtil.allowAsyncCompilation=false;
+            EditorSceneManager.OpenScene(File.Exists(RefinedSceneBuilder.ScenePath)?RefinedSceneBuilder.ScenePath:WorkshopSceneBuilder.ScenePath);ShaderUtil.allowAsyncCompilation=false;
             game=UnityEngine.Object.FindFirstObjectByType<GameManager>();game.UI.gameObject.SetActive(false);
             camera=Camera.main;camera.GetComponent<PortraitCamera>().enabled=false;
             camera.fieldOfView=38;camera.aspect=4f/3;camera.nearClipPlane=.02f;
@@ -50,6 +50,7 @@ namespace BrakeToy.Editor
                 RenderPipeline.SubmitRenderRequest(camera,new UniversalRenderPipeline.SingleCameraRequest{destination=target});
                 RenderTexture.active=target;var texture=new Texture2D(1200,900,TextureFormat.RGB24,false);texture.ReadPixels(new Rect(0,0,1200,900),0,0);texture.Apply();
                 string name=stage==0?"Models-v0.3-front.png":stage==1?"Models-v0.3-rear.png":"Models-v0.3-obstacles.png";
+                if(game.Arcade.UseVariedPatterns)name=name.Replace("v0.3","v0.4");
                 File.WriteAllBytes(Path.GetFullPath(Path.Combine(Application.dataPath,"../"+name)),texture.EncodeToPNG());UnityEngine.Object.DestroyImmediate(texture);RenderTexture.active=null;
                 stage++;if(stage<3){Setup();last=EditorApplication.timeSinceStartup;return;}
                 camera.targetTexture=null;target.Release();UnityEngine.Object.DestroyImmediate(target);EditorApplication.update-=Update;EditorApplication.Exit(0);

@@ -144,6 +144,34 @@
       "properties": {
         "title": "20 — Model ve varlık doğrulaması"
       }
+    },
+    "QUALITY_REVIEW-v0.3.md": {
+      "id": "3ffdce66-5831-8101-8431-f2d6a49d804c",
+      "url": "https://app.notion.com/p/3ffdce66583181018431f2d6a49d804c",
+      "properties": {
+        "title": "21 — v0.3 kalite eleştirisi ve öneriler"
+      }
+    },
+    "PLAN-v0.4.md": {
+      "id": "3ffdce66-5831-81b3-b3bb-f82e6244b77b",
+      "url": "https://app.notion.com/p/3ffdce66583181b3b3bbf82e6244b77b",
+      "properties": {
+        "title": "22 — v0.4 Refined Room planı"
+      }
+    },
+    "REFINED_MILESTONE.md": {
+      "id": "3ffdce66-5831-81c5-8efb-d8e063d23cdb",
+      "url": "https://app.notion.com/p/3ffdce66583181c58efbd8e063d23cdb",
+      "properties": {
+        "title": "23 — v0.4 kalite sonuçları ve açık kabul maddeleri"
+      }
+    },
+    "DEVICE_TEST-v0.4.md": {
+      "id": "3ffdce66-5831-8129-9a0a-e3d1c3199f3b",
+      "url": "https://app.notion.com/p/3ffdce66583181299a0ae3d1c3199f3b",
+      "properties": {
+        "title": "24 — v0.4 tablet testi ve performans ölçümü"
+      }
     }
   },
   "notice": {
