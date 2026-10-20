@@ -11,6 +11,7 @@ namespace BrakeToy
         public PlayerController Player;
         public WorldScroller World;
         public PrototypeUI UI;
+        public ArcadeDirector Arcade;
         public RunState State { get; private set; }
 
         private void Awake()
@@ -21,6 +22,7 @@ namespace BrakeToy
             Player.Initialize(Config);
             World.Initialize();
             UI.Bind(this);
+            if (Arcade) Arcade.Initialize(this);
             ChangeState(RunState.Ready);
         }
         public void StartRun()
@@ -28,6 +30,7 @@ namespace BrakeToy
             Input.ResetCapture();
             Player.ResetRun();
             World.ResetRun();
+            if (Arcade) Arcade.ResetRun();
             ChangeState(RunState.Running);
         }
         public void Resume()
@@ -51,6 +54,7 @@ namespace BrakeToy
             float dt = Mathf.Min(Time.deltaTime, .1f);
             float oldX = Player.X;
             Player.Move(dt);
+            if (Arcade) { Arcade.Step(dt, oldX, Player.X); return; }
             float distance = Config.WorldSpeed * dt;
             if (CollisionManager.FirstHit(Config, World.Obstacles, oldX, Player.X, distance, out float fraction))
             {
@@ -63,6 +67,7 @@ namespace BrakeToy
             World.Advance(distance);
         }
         private void OnApplicationFocus(bool focused) { if (!focused) Pause(); }
+        public void Crash() { Input.ResetCapture(); Player.EndDrag(); ChangeState(RunState.Crashed); }
         private void OnApplicationPause(bool paused) { if (paused) Pause(); }
         private void ChangeState(RunState state) { State = state; UI.Show(state); }
     }

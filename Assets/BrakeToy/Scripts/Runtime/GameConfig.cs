@@ -13,7 +13,7 @@ namespace BrakeToy
         [Min(.1f)] public float DragSensitivity = 9;
         [Min(.1f)] public float MaxLateralSpeed = 9.5f;
         [Range(.15f, .35f)] public float PlayerViewportY = .25f;
-        [Range(40, 65)] public float CameraPitch = 52;
+        [Range(15, 65)] public float CameraPitch = 52;
         [Range(35, 65)] public float VerticalFieldOfView = 50;
         [Range(30, 60)] public int TargetFrameRate = 60;
         public float PlayerLimit => Mathf.Max(.1f, TrackHalfWidth - PlayerHalfWidth);

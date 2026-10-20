@@ -1,5 +1,12 @@
 # Test planı
 
+## v0.2 güncel sonuç ve manuel kontrol
+
+19 EditMode + 8 PlayMode = 27/27 geçti. v0.2 kanıtları Tests altındaki sürümlü XML dosyalarıdır. Oda sahnesi/dekor collider ayrımı, kamera tepki görüşü, retry ve dekor kayma/reset testleri eklendi.
+
+Manuel: yeni sahneyi 9:16'da aç; odanın ve masa yüksekliğinin okunurluğunu, kalemlik/defterin akışını, parmağı bırakıp yeniden tutmayı, pause/kesinti/tekrar oynamayı ve gerçek telefonda uzun sürüşü kontrol et. 20° kamera yeni kullanıcı geri bildirimine açıktır.
+
+
 ## Faz 1 kabul sırası
 
 | Alan | Yöntem | Mevcut durum |
@@ -39,3 +46,7 @@
 - **Online:** ağ zaman aşımı, auth hatası, offline devam, doğrulanmamış skor reddi, güvensiz istemci yazmalarının kapalı olması, yaş/izin kapıları ve güvenli takma adlar.
 - **Daily/ghost:** sunucu günü/seed, kural versiyonu, zaman ekseni, seed eşleşmesi; farklı parkurda ghost göstermeme; sıkıştırma/okuma doğruluğu; çarpışma etkisi olmaması.
 - **Yayın:** farklı Android sınıfları, uzun seans, kayıt, yaşam döngüsü, erişilebilirlik, izinler ve güncel mağaza/politika kontrolü. iOS ayrı macOS/Xcode cihaz matrisi gerektirir.
+
+## v0.3 ek kapsam
+
+Hız integrali/ilk karşılaşma, seed tekrarları, 128.000 satır koridor/geçiş denetimi, 10.000 top oracle karşılaştırması; iki dakikalık motor içi tanık rota, hareketli top süpürmesi, bir kez Near Miss, combo reset/timeout/Fever, pause/retry/havuz, model gameplay sınırı/mesh geçerliliği ve döner top gerçek vertexleri, maksimum hızda dört portre oranı. Gerçek test sonuçları TEST_REPORT.md ve Tests/*v0.3-results.xml içinde. Fiziksel Android FPS/ısı/dokunma ve kullanıcı tempo/hissetme kabulü ayrı manuel adımdır.

@@ -1,0 +1,135 @@
+{
+  "version": "0.2.0",
+  "editorVersion": "6000.3.26f1",
+  "unityTestFramework": "1.6.0",
+  "suites": {
+    "EditMode": {
+      "total": 19,
+      "passed": 19,
+      "failed": 0,
+      "startTimeUtc": "2026-10-20 21:56:01Z",
+      "endTimeUtc": "2026-10-20 21:56:01Z",
+      "cases": [
+        {
+          "name": "Touch begin does not teleport",
+          "result": "Passed"
+        },
+        {
+          "name": "Relative input is resolution independent",
+          "result": "Passed"
+        },
+        {
+          "name": "Lift immediately holds current position",
+          "result": "Passed"
+        },
+        {
+          "name": "Retouch does not jump or carry old target",
+          "result": "Passed"
+        },
+        {
+          "name": "Movement stays inside both boundaries",
+          "result": "Passed"
+        },
+        {
+          "name": "Direction reverses immediately at boundary",
+          "result": "Passed"
+        },
+        {
+          "name": "Maximum lateral speed is enforced",
+          "result": "Passed"
+        },
+        {
+          "name": "Input without a drag and zero width are ignored",
+          "result": "Passed"
+        },
+        {
+          "name": "Restart resets all steering state",
+          "result": "Passed"
+        },
+        {
+          "name": "30 60 and 120 FPS reach the same target",
+          "result": "Passed"
+        },
+        {
+          "name": "Swept collision catches forward tunneling",
+          "result": "Passed"
+        },
+        {
+          "name": "Swept collision catches lateral tunneling",
+          "result": "Passed"
+        },
+        {
+          "name": "Diagonal swept collision catches both moving axes",
+          "result": "Passed"
+        },
+        {
+          "name": "A separated path does not collide",
+          "result": "Passed"
+        },
+        {
+          "name": "Crossing each axis at different times does not collide",
+          "result": "Passed"
+        },
+        {
+          "name": "Initial overlap and contact count as collision",
+          "result": "Passed"
+        },
+        {
+          "name": "Obstacle behind the player moving away does not collide",
+          "result": "Passed"
+        },
+        {
+          "name": "Stop at contact cancels pending steering",
+          "result": "Passed"
+        },
+        {
+          "name": "10000 seeded sweeps match independent closest approach oracle",
+          "result": "Passed"
+        }
+      ]
+    },
+    "PlayMode": {
+      "total": 8,
+      "passed": 8,
+      "failed": 0,
+      "startTimeUtc": "2026-10-20 22:04:32Z",
+      "endTimeUtc": "2026-10-20 22:04:39Z",
+      "cases": [
+        {
+          "name": "MouseDragReleaseRetouchAndUIBlocking",
+          "result": "Passed"
+        },
+        {
+          "name": "TouchDragIgnoresSecondFingerAndHoldsOnRelease",
+          "result": "Passed"
+        },
+        {
+          "name": "CameraPreservesPortraitFraming",
+          "result": "Passed"
+        },
+        {
+          "name": "ReadyCrashAndRestart",
+          "result": "Passed"
+        },
+        {
+          "name": "NearDecorSharesWorldMovementPauseAndRestart",
+          "result": "Passed"
+        },
+        {
+          "name": "NewSceneStillCrashesAndReusesWorldOnRestart",
+          "result": "Passed"
+        },
+        {
+          "name": "RoomCameraKeepsTrackAndReactionDistanceVisible",
+          "result": "Passed"
+        },
+        {
+          "name": "RoomPreservesGameplayAndDecorHasNoColliders",
+          "result": "Passed"
+        }
+      ]
+    }
+  },
+  "physicalAndroidDeviceTested": false,
+  "manualControlFeelApproved": false
+}

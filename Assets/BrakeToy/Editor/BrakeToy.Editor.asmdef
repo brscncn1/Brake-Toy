@@ -1,6 +1,6 @@
 {
   "name": "BrakeToy.Editor",
   "rootNamespace": "BrakeToy.Editor",
-  "references": ["BrakeToy.Runtime", "Unity.InputSystem", "UnityEngine.UI", "Unity.RenderPipelines.Universal.Runtime", "Unity.RenderPipelines.Core.Runtime"],
+  "references": ["BrakeToy.Runtime", "BrakeToy.Core", "Unity.InputSystem", "UnityEngine.UI", "Unity.RenderPipelines.Universal.Runtime", "Unity.RenderPipelines.Core.Runtime"],
   "includePlatforms": ["Editor"]
 }

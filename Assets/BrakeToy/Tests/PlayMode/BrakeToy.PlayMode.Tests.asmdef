@@ -1,6 +1,6 @@
 {
   "name": "BrakeToy.PlayMode.Tests",
-  "references": ["BrakeToy.Runtime", "Unity.InputSystem", "UnityEngine.UI"],
+  "references": ["BrakeToy.Runtime", "BrakeToy.Core", "Unity.InputSystem", "UnityEngine.UI"],
   "optionalUnityReferences": ["TestAssemblies"],
   "autoReferenced": false
 }

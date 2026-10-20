@@ -1,4 +1,24 @@
+# v0.3.0 — Arcade Workshop
+
+- Erken/sürekli hızlanma; seed'li tek/duble geçitler, yön değişimi ve nefes satırları.
+- 24 örnek havuzu, uyarılı çapraz toplar ve sürekli göreli daire-kutu çarpışması.
+- Tek sefer Near Miss, kombo/timeout/Fever, ayrı yerel mesafe/stil rekorları, sonuç ekranı.
+- HUD/vites/yön uyarısı, özgün sentez sesleri ve ses kapatma.
+- Özgün diecast araç, yeni kitap/silgi/blok/top modelleri, gerçek CC0 ahşap, pencere açıklığı, perde/abajur, ayrı renderer/SSAO/reflection ve oda mesh birleştirmesi.
+- 41 Unity testi, 128.000 satır / 10.000 top çarpışması kontrolü ve Android APK.
+
 # Değişiklik kaydı
+
+## 0.2.0 — Bedroom Tabletop, 21 Ekim 2026
+
+- Ayrı çocuk odası/masa sahnesi, oda mobilyaları ve kırtasiye dekorları.
+- Yuvarlatılmış oyuncak mesh'leri, plastik/ahşap materyalleri ve tekerlek animasyonu.
+- 20° oda kamerası; 28° karşılaştırması ve daha hafif menü örtüsü.
+- World ilerlemesi/reset ile eşzamanlı yakın dekor akışı; kontrol/collider değerleri korundu.
+- Unity 27/27 test geçti; Android ARM64 IL2CPP Development APK üretildi.
+- GitHub deposu/ilk APK Release ve özel Notion proje merkezi/ayrı belgeler/günlük kuruldu.
+- Gerçek cihaz FPS/dokunma testi ve nihai art tamamlanmadı.
+
 
 ## 0.1.0 — Faz 1 kaynak hazırlığı, 21 Ekim 2026
 

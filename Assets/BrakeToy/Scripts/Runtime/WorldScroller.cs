@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 
 namespace BrakeToy
 {
     public sealed class WorldScroller : MonoBehaviour
     {
+        public event Action<float> DistanceAdvanced;
+        public event Action RunReset;
         public Transform[] FloorChunks;
         public ObstacleView[] Obstacles;
         public float ChunkLength = 18;
@@ -22,6 +25,7 @@ namespace BrakeToy
         {
             for (int i = 0; i < FloorChunks.Length; i++) FloorChunks[i].position = floorStarts[i];
             for (int i = 0; i < Obstacles.Length; i++) Obstacles[i].transform.position = obstacleStarts[i];
+            RunReset?.Invoke();
         }
         public void Advance(float distance)
         {
@@ -38,6 +42,7 @@ namespace BrakeToy
                 while (obstacle.transform.position.z < -8)
                     obstacle.transform.position += Vector3.forward * (Obstacles.Length * ObstacleSpacing);
             }
+            DistanceAdvanced?.Invoke(distance);
         }
     }
 }

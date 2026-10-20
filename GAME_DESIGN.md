@@ -2,6 +2,10 @@
 
 Ana gereksinim kaynağı `SOURCE_REQUIREMENTS.md` dosyasıdır. Bu dosya uygulanacak tasarımı düzenler; aşağıdaki nihai özelliklerin listelenmesi hazır oldukları anlamına gelmez. Uygulama durumu `ROADMAP.md` içindedir.
 
+## Onaylanan oda/masa yönü — 21 Ekim 2026
+
+Kullanıcı ilk prototipte oda hissinin eksik olduğunu belirtti ve çocuk odasındaki masa üzerinde sürüş istedi. Konsept görüntüsünü onayladı. Toy Room'un ilk oynanabilir görsel çalışması bu yönde: çevrede oda mobilyaları, ön planda ahşap oyun masası. v0.2 bu kompozisyonu gerçek Unity sahnesinde uygular; nihai sanat kalitesi değildir. Orijinal serbest kontrol, arcade kuralları ve aşamalı kapsam korunur.
+
 ## Kimlik ve deneyim
 
 **NO BRAKES. BIG TROUBLE.** Pilleri değiştirilen Sparky'nin güç düğmesi takılır. Küçük kırmızı oyuncak yarış arabası hiç durmadan dev ev eşyalarının arasından geçer. Oyuncu tek parmakla serbest sağ-sol yönlendirir; gaz/fren veya üç şerit sistemi yoktur. Çocuklar için saniyeler içinde anlaşılır, yetişkinler için mesafe ve stil ustalığı sunar. Kısa seans ve hesap gerektirmeyen çevrimdışı oynanış temel koşuldur.
@@ -108,3 +112,9 @@ Yayın öncesinde hedef yaş ve mağaza sınıflandırması, güncel Google Play
 ## Kalite hedefi
 
 Orta Android'de ölçülmüş kararlı 60 FPS, gerekirse 30 FPS kalite; düşük bellek, hızlı retry, mesh/materyal paylaşımı, sınırlı gölge/fizik/postprocessing, gerektiğinde baked ışık. Hedefler gerçek cihaz testine bağlıdır. İlk yayın öncesi Android çeşitliliği, erişilebilirlik, mağaza dokümanları, ikon/splash/görseller, test dağıtımı ve hata düzeltmeleri tamamlanır. Desk/Kitchen genişlemeleri ilk yayın için zorunlu değildir.
+
+## v0.3 kullanıcı yönü ve uygulanan çekirdek
+
+Kullanıcının sonraki kararıyla 0–25 saniye sabit hız yerine ilk saniyeden yumuşak hız artışı (10→18) ve yaklaşık 2.2 saniyede ilk karşılaşma uygulanır. Görsel hedef daha gerçekçi oyuncak malzemeleri ve modellerdir; onaylanan AI konsept kalite referansıdır, mevcut gerçek motor çıktısı ayrıca değerlendirilir.
+
+Sınırlı seedli kalıp ailesi, tek/duble kapılar ve nefes satırları, ilk 6–7 saniyede uyarılı top; Near Miss .005–.48 kenar boşluğu, tehlike tamamen geçtikten sonra bir ödül; 100 temel stil, 1/2/3/5× kombo, 6 saniye timeout, 8+ Combo Fever görsel iz. Mesafe/stil ayrı yerel rekorlar. Tam genel üretici/ilerleme/online henüz tamam değil. Ayrıntı ARCADE_MILESTONE.md.

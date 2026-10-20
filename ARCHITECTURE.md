@@ -53,3 +53,21 @@ Gelecek sistemler için boş, çalışıyor izlenimi veren sınıflar eklenmedi.
 ## Performans bütçesi ve sınırlamalar
 
 Tek yönlü ışık, 1024 shadow map, 35 birim gölge mesafesi, tek cascade, 2× MSAA, HDR/postprocessing/depth/opaque texture kapalı. Ortak materyaller ve basit primitive modeller. Hedef 60 FPS; 30 FPS seçeneği gelecekte ölçüme göre sunulacak. UI pointer raycast tamponu tekrar kullanılır; ilk başlatma tahsisleri kabul edilir. Düşük/orta Android Profiler ölçümü yoktur. Uzun seans, ısınma, bellek, overdraw ve GPU maliyeti fiziksel cihazda sınanacak.
+
+## v0.2 oda sunumu
+
+ToyRoomTabletop ve RoomConfig ilk prototipten ayrı varlıklardır. Aktif kamera 20°'dir; önceki 52° Faz 1 konfigürasyonu korunur. Perspektif çerçeve hesabı aynı, kontrol/collider değerleri aynıdır. Masa 12, kullanılabilir sürüş alanı 7 birimdir.
+
+TabletopSceneBuilder yeni ortak materyal, yuvarlatılmış mesh, ahşap doku, prefab ve oda geometrisini oluşturur. Büyük yüzeylerde düz normalleri korumak için bevel sınırları mesh'te açıkça örneklenir. Eski sahnenin üzerine yazılmaz.
+
+ToyWheelAnimation yalnızca Running sırasında görsel tekerlekleri döndürür. TabletopDecorScroller, WorldScroller'ın DistanceAdvanced ve RunReset olaylarını dinler; aynı çarpışma kesri ve restart zamanında yakın dekorları ilerletir. Oda mobilyaları gameplay collider'ı taşımaz; statik oda, kayan yakın yüzeyden ayrıdır. Bu sonsuz arcade sunumudur; fiziksel olarak sonsuz bir masa veya serbest odada dolaşma sistemi değildir.
+
+AndroidPrototypeBuild yeni sahne varsa onu derler. Unity test sahne listesinde eski sahne de regresyon için korunur. Notion doküman/günlük eşitlemesi Docs/NOTION_INDEX.json ve AGENTS.md ile sonraki çalışmalar için tanımlanmıştır.
+
+## v0.3 Arcade Workshop
+
+GameManager opsiyonel ArcadeDirector ile yeni sahnede arcade yolunu çalıştırır; eski sahneler eski yolu korur. Core ArcadeRules/ArcadeSequence/StyleScore motor bağımsızdır. ArcadeDirector 24 ArcadeHazard örneğini aktifleştirir/geri alır; ilerleme ve göreli hareketli çarpışma alt adımlarla hesaplanır. Top Minkowski toplamı üzerinden SweptCircleBox kullanır; kutularda mevcut SweptCollision devam eder. WorldScroller mesafe/reset olayları yakın dekorları aynı temas kesrinde taşır.
+
+ArcadeHUD ayrı sürüş/sonuç/uyarı, ArcadeAudio özgün sentez sesleri, ArcadeFeedback collider/hız değiştirmeyen yeniden kullanılan Fever şeritleridir. Yerel v03 mesafe/stil PlayerPrefs anahtarları küresel sonuç değildir.
+
+WorkshopSceneBuilder ayrı scene/config/prefab/mesh/material/renderer üretir. Araç gövdesi/tekerlekler ve sabit oda materyal bazında birleştirilir; yakın dekor hedefleri ayrı korunur. ModelAuditCapture ve PreviewCapture gerçek Unity çıktıları üretir. Kaydedilmiş sahnede sanat üretim/refine komutları geliştirici araçlarıdır, Open yeterlidir.

@@ -24,7 +24,20 @@ Durum anahtarı: **Kaynak hazır** = uygulama dosyası var, Unity kabulü beklen
 
 **Kabul kriteri:** Telefonda veya Unity editöründe temel sürüş düzgün çalışır. Unity otomatik testleri ile temel döngü/giriş/kamera doğrulandı; oynanabilir sahne hazır. Gerçek kullanıcı sürüş hissi ve fiziksel Android kabulü açık. Faz 2 öncesi ilk adım bu kısa oynanış kontrolüdür.
 
-## Faz 2 — Ana oynanış döngüsü (bekliyor)
+## Faz 1.5 — Onaylanan oda/masa ara sürümü (v0.2)
+
+- [x] Ayrı ToyRoomTabletop sahnesi; ilk prototip korunuyor.
+- [x] Ahşap masa, oda kabuğu, pencere/perde, raf/oyuncak ayı, yatak, poster ve sandalye.
+- [x] Yuvarlatılmış Sparky ve engeller, ortak materyaller, tekerlek animasyonu.
+- [x] Yakın masa dekorlarının kayması/reset; uzak odanın referans olarak korunması.
+- [x] 20°/28° gerçek render karşılaştırması; 20° seçimi ve portre tepki görüşü testleri.
+- [x] Unity 27/27 otomatik test; Android ARM64 prototip APK.
+- [x] GitHub ve ayrı başlıklı Notion proje belgeleri/günlüğü.
+- [ ] Yeni sürüm için gerçek telefon ve öznel sürüş/oda hissi geri bildirimi.
+
+Bu ara adım Faz 2 veya nihai Toy Room art aşamasını tamamlanmış saymaz.
+
+## Faz 2 — Ana oynanış döngüsü (v0.3 çalışılıyor)
 
 - [ ] Deterministik, ağırlıklı, tekrar azaltmalı kalıp üretimi; aynalama/konum/boyut varyasyonu ve dinlenme aralıkları.
 - [ ] Mevcut oyuncu konumu, yatay hız, dünya hızı ve hareketli tehlikelere göre ulaşılabilirlik; yaklaşık 1.5 s tepki.
@@ -37,7 +50,7 @@ Durum anahtarı: **Kaynak hazır** = uygulama dosyası var, Unity kabulü beklen
 
 **Kabul:** Ana döngü teknik olarak tamam; adalet, yüksek hız collision ve ödül sınırları otomatik/manuel doğrulanır.
 
-## Faz 3 — Toy Room ve game feel (bekliyor)
+## Faz 3 — Toy Room ve game feel (v0.3 ile kısmen ilerliyor)
 
 - [ ] Çocuk odası art yönü: ahşap/dokulu yüzey, blok/kule, kitap, silgi, açık defter, dekor/çıkartma.
 - [ ] Araç ve engel modelleri, plastik materyaller, ışık/gölge; tehlike/dekor ayrımı.
@@ -96,3 +109,19 @@ Durum anahtarı: **Kaynak hazır** = uygulama dosyası var, Unity kabulü beklen
 ## Gereksinim izlenebilirliği
 
 Ana prompt bölümleri 1/23/26/27 çalışma yöntemi, mimari ve dokümantasyonda; 2–4 kimlik/dünya/kontrol/modlarda; 5–8 zorluk/üretim/collision/stilde; 9 çevrimiçi planında; 10–12 ilerleme kapsamındadır. 13–15 Toy Chaos/çevre/çarpışma hissinde, 16–17 Daily/ghost'ta, 18–19 UI/seste, 20–21 yayın/gizlilikte, 22 performansta, 24 bu fazlarda, 25 test planında ve 28 mevcut Faz 1 tesliminde izlenir. Ayrıntı kaynağı eksiksiz `SOURCE_REQUIREMENTS.md` dosyasıdır.
+
+## v0.3 kapsam ve faz düzeltmesi
+
+Kullanıcı sonraki kararları, ana prompttaki 0–25 saniye sabit hız ve low-poly başlangıç hedefinin önüne geçer: ilk saniyelerden hızlanma ve daha gerçekçi malzemeler/modeller isteniyor. Faz 2 ve Faz 3 birlikte ilerletiliyor; henüz tümünün tamamlandığı iddia edilmez. Çevrimiçi kapsam korunuyorsa Faz 5 online, Faz 6 yayın hazırlığıdır. Sohbette verilen Faz 5 final sözü bu kayıtlı kapsamla uyumsuzdu ve düzeltildi. Faz 7 ilk yayın için zorunlu değildir.
+
+## v0.3 kanıtlı ilerleme
+
+- [x] Sınırlı seedli tek/duble geçit, nefes satırı, varyant tekrar azaltma, 24 tehlike havuzu.
+- [x] Erken yumuşak hız, vites/HUD, mesafe, tek ödüllü Near Miss, stil/kombo/timeout/Fever ve yerel ayrı rekorlar.
+- [x] Uyarılı çapraz top; koridor ailesinde hareketli tehlike kontrolü, sürekli daire-kutu çarpışması.
+- [x] Yeni detaylı araç/engel geometrisi, ayrı yüzey malzemeleri, doku lisansı ve gerçek motor yakın planları.
+- [x] 26 EditMode + 15 PlayMode, toplam 41 Unity testi.
+- [ ] Genel ObstacleDefinition veri kataloğu ve keyfi engel birleşimleri için tam ulaşılabilirlik çözücüsü.
+- [ ] Fiziksel Android maliyet, kalite profilleri, insan oyuncu tempo/risk ödülü kabulü ve final sanat düzeyi.
+
+Faz 2/3 tam kabulü bu açık maddeler ve geri bildirimlerle devam eder; tamamlandı olarak işaretlenmez.

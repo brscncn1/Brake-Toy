@@ -4,7 +4,7 @@
 
 ## Durum
 
-Bu belge ve `Concepts/ToyRoom-Tabletop-v1.png` bir görsel yön önerisidir. Görsel imagegen yerleşik aracıyla üretilmiştir; Unity ekran görüntüsü, uygulanmış sahne veya cihaz performansı taahhüdü değildir. Mevcut oynanabilir sahne ve APK değiştirilmedi. Ana gereksinim kaynağı korunur; bu dosya yeni geri bildirimi kaydeder.
+Kullanıcı bu görsel yönü onayladı. `Concepts/ToyRoom-Tabletop-v1.png` hedef kompozisyon referansıdır. Görsel imagegen yerleşik aracıyla üretilmiştir; Unity ekran görüntüsü, uygulanmış sahne veya cihaz performansı taahhüdü değildir. v0.1 sahnesi/APK korundu; v0.2 için ayrı bir oynanabilir oda/masa sahnesi ve APK üretildi. Ana gereksinim kaynağı korunur; bu dosya yeni geri bildirimi kaydeder.
 
 ## Hedef kompozisyon
 
@@ -37,3 +37,11 @@ Faz 2'nin büyük sistemlerinden önce küçük bir görsel çalışma: oda kabu
 ## Konsept üretim kaydı
 
 Araç: yerleşik imagegen. Kullanılan tam istem: `Concepts/ToyRoom-Tabletop-v1-prompt.txt`. Çıktı: `Concepts/ToyRoom-Tabletop-v1.png`. Görselin amacı oda/masa/araç ilişkisini göstermektir; aynı ayrıntı düzeyinin mobilde aynı performansla çalışacağı henüz sınanmadı.
+
+## Uygulanan ilk kesit — v0.2
+
+Gerçek motor görüntüsü `Preview-v0.2.png`. 20° ve 28° karşılaştırılarak oda görünürlüğü için 20° seçildi. Onaylanan konseptin ince doku ve ışık ayrıntısı henüz nihai kaliteye ulaşmış değildir. Yeni sahnenin otomatik testleri ve APK derlemesi tamamlandı; fiziksel cihaz ve kullanıcı hissiyatı bekleniyor.
+
+## v0.3 görsel ilerleme
+
+Kullanıcı daha gerçekçi modeller istedi. Yeni diecast Sparky silueti, boya/cam/metal/kauçuk ayrımı; jant/lastik/ayna/far/tampon, kitap sayfa/kapak, silgi kılıfı ve dikişli top oluşturuldu. CC0 gerçek ahşap diffuse/normal, pencere açıklığı ve güneş/gölgesiz dolgu, kumaş perde/açık abajur ve temas gölgesi eklendi. Preview-v0.3.png ve Models-v0.3-*.png çalışan Unity renderlarıdır. Nihai kalite/konsept eşitliği iddia edilmez.
