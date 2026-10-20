@@ -1,5 +1,16 @@
 # Değişiklik kaydı
 
+## 0.2.0 — Bedroom Tabletop, 21 Ekim 2026
+
+- Ayrı çocuk odası/masa sahnesi, oda mobilyaları ve kırtasiye dekorları.
+- Yuvarlatılmış oyuncak mesh'leri, plastik/ahşap materyalleri ve tekerlek animasyonu.
+- 20° oda kamerası; 28° karşılaştırması ve daha hafif menü örtüsü.
+- World ilerlemesi/reset ile eşzamanlı yakın dekor akışı; kontrol/collider değerleri korundu.
+- Unity 27/27 test geçti; Android ARM64 IL2CPP Development APK üretildi.
+- GitHub deposu/ilk APK Release ve özel Notion proje merkezi/ayrı belgeler/günlük kuruldu.
+- Gerçek cihaz FPS/dokunma testi ve nihai art tamamlanmadı.
+
+
 ## 0.1.0 — Faz 1 kaynak hazırlığı, 21 Ekim 2026
 
 - Ana gereksinim belgesi eksiksiz korundu; tasarım, mimari ve yedi fazlık yol haritası yazıldı.

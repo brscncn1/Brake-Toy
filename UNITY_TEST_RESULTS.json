@@ -1,4 +1,5 @@
 {
+  "version": "0.2.0",
   "editorVersion": "6000.3.26f1",
   "unityTestFramework": "1.6.0",
   "suites": {
@@ -6,8 +7,8 @@
       "total": 19,
       "passed": 19,
       "failed": 0,
-      "startTimeUtc": "2026-10-20 21:13:03Z",
-      "endTimeUtc": "2026-10-20 21:13:03Z",
+      "startTimeUtc": "2026-10-20 21:56:01Z",
+      "endTimeUtc": "2026-10-20 21:56:01Z",
       "cases": [
         {
           "name": "Touch begin does not teleport",
@@ -88,11 +89,11 @@
       ]
     },
     "PlayMode": {
-      "total": 4,
-      "passed": 4,
+      "total": 8,
+      "passed": 8,
       "failed": 0,
-      "startTimeUtc": "2026-10-20 21:16:38Z",
-      "endTimeUtc": "2026-10-20 21:16:41Z",
+      "startTimeUtc": "2026-10-20 22:04:32Z",
+      "endTimeUtc": "2026-10-20 22:04:39Z",
       "cases": [
         {
           "name": "MouseDragReleaseRetouchAndUIBlocking",
@@ -108,6 +109,22 @@
         },
         {
           "name": "ReadyCrashAndRestart",
+          "result": "Passed"
+        },
+        {
+          "name": "NearDecorSharesWorldMovementPauseAndRestart",
+          "result": "Passed"
+        },
+        {
+          "name": "NewSceneStillCrashesAndReusesWorldOnRestart",
+          "result": "Passed"
+        },
+        {
+          "name": "RoomCameraKeepsTrackAndReactionDistanceVisible",
+          "result": "Passed"
+        },
+        {
+          "name": "RoomPreservesGameplayAndDecorHasNoColliders",
           "result": "Passed"
         }
       ]

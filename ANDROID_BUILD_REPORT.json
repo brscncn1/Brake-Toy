@@ -6,11 +6,14 @@
   "scriptingBackend": "IL2CPP",
   "developmentBuild": true,
   "applicationIdentifier": "com.braketoy.prototype",
-  "versionName": "0.1.0",
+  "versionName": "0.2.0",
+  "versionCode": 2,
   "minSdkVersion": 25,
   "targetSdkVersion": 36,
-  "sizeBytes": 36147854,
-  "sha256": "212f4d06f7a8a97d07df8203bd08d00493e876d7f083d564444695f6ebf736c3",
+  "sizeBytes": 38769585,
+  "sha256": "c1ec1523bcaa08d376f589b1d97eeb44f14f9cff388cfbb2c66e7e478bcb62a7",
   "apkArchiveIntegrityChecked": true,
-  "physicalDeviceTested": false
+  "physicalDeviceTested": false,
+  "scene": "ToyRoomTabletop",
+  "releaseUrl": "https://github.com/brscncn1/Brake-Toy/releases/tag/v0.2.0"
 }

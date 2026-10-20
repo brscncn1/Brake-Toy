@@ -1,5 +1,12 @@
 # Test planı
 
+## v0.2 güncel sonuç ve manuel kontrol
+
+19 EditMode + 8 PlayMode = 27/27 geçti. v0.2 kanıtları Tests altındaki sürümlü XML dosyalarıdır. Oda sahnesi/dekor collider ayrımı, kamera tepki görüşü, retry ve dekor kayma/reset testleri eklendi.
+
+Manuel: yeni sahneyi 9:16'da aç; odanın ve masa yüksekliğinin okunurluğunu, kalemlik/defterin akışını, parmağı bırakıp yeniden tutmayı, pause/kesinti/tekrar oynamayı ve gerçek telefonda uzun sürüşü kontrol et. 20° kamera yeni kullanıcı geri bildirimine açıktır.
+
+
 ## Faz 1 kabul sırası
 
 | Alan | Yöntem | Mevcut durum |

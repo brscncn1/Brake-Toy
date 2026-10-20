@@ -24,6 +24,19 @@ Durum anahtarı: **Kaynak hazır** = uygulama dosyası var, Unity kabulü beklen
 
 **Kabul kriteri:** Telefonda veya Unity editöründe temel sürüş düzgün çalışır. Unity otomatik testleri ile temel döngü/giriş/kamera doğrulandı; oynanabilir sahne hazır. Gerçek kullanıcı sürüş hissi ve fiziksel Android kabulü açık. Faz 2 öncesi ilk adım bu kısa oynanış kontrolüdür.
 
+## Faz 1.5 — Onaylanan oda/masa ara sürümü (v0.2)
+
+- [x] Ayrı ToyRoomTabletop sahnesi; ilk prototip korunuyor.
+- [x] Ahşap masa, oda kabuğu, pencere/perde, raf/oyuncak ayı, yatak, poster ve sandalye.
+- [x] Yuvarlatılmış Sparky ve engeller, ortak materyaller, tekerlek animasyonu.
+- [x] Yakın masa dekorlarının kayması/reset; uzak odanın referans olarak korunması.
+- [x] 20°/28° gerçek render karşılaştırması; 20° seçimi ve portre tepki görüşü testleri.
+- [x] Unity 27/27 otomatik test; Android ARM64 prototip APK.
+- [x] GitHub ve ayrı başlıklı Notion proje belgeleri/günlüğü.
+- [ ] Yeni sürüm için gerçek telefon ve öznel sürüş/oda hissi geri bildirimi.
+
+Bu ara adım Faz 2 veya nihai Toy Room art aşamasını tamamlanmış saymaz.
+
 ## Faz 2 — Ana oynanış döngüsü (bekliyor)
 
 - [ ] Deterministik, ağırlıklı, tekrar azaltmalı kalıp üretimi; aynalama/konum/boyut varyasyonu ve dinlenme aralıkları.
