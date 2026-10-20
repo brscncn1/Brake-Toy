@@ -87,3 +87,9 @@ Kalite raporundaki dokuz başlık aynı v0.4 çalışmasına alındı. Ses ve ç
 ## v0.4 final paket kontrolü
 
 Masa chunk uçlarındaki bevel ve duvar panel çizgileri görüldü; yalnızca yeni sahnenin kesintisiz yüzey geometrisiyle giderildi. PlayMode 25/25 yeniden geçti; model denetimi 61 unique mesh /192 renderer /158146 üçgen (inaktif havuz dahil), hata sıfır. APK yeniden derlendi ve imza/paket/ZIP denetimi geçti. SHA256: 0ce3f84da0b58b3e98dc0fab0f1922985fcd194bb22c017b6f172e45f6dca4a0. Kullanıcının tableti Windows MTP aygıtı olarak görünüyor; APK aktarımı yapılıyor, henüz tablet oynanış/FPS kabulü yok.
+
+## v0.4 yayımlandı ve eşitlendi
+
+Kaynak commit 7e36334d85211c5baa3ce1a42440c17e92043f6b, PR https://github.com/brscncn1/Brake-Toy/pull/3 (v0.3 dalı üzerine). v0.4.0 prerelease APK/render/raporları yayımlandı; GitHub APK asset digest yerel SHA256 ile eşleşti. Ana sayfa README 517c4df ile v0.4 durumuna güncellendi; main kaynak tabanının önceki prototip olduğu ve yeni kaynak dalı açıkça belirtildi.
+
+APK Huawei MatePad 11 /Dahili depolama/Download altında görünüyor; kullanıcıya kurulum ve isteğe bağlı 60 sn sürüş ölçümü adımları verildi. Fiziksel kabul henüz alınmadı. Notion 24 alt sayfayla korundu; 21 eleştiri/22 plan güncellendi, 23 kalite sonuçları ve24 cihaz kabulü oluşturuldu. İlgili kurulum/tasarım/mimari/yol haritası/görsel/test/değişiklik/lisans/model/derleme kanıtı sayfaları güncellendi; root ve görsel/teslim sayfaları tekrar okunarak doğrulandı. Eski kullanıcı içerikleri/alt sayfalar silinmedi.

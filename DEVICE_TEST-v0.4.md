@@ -1,6 +1,6 @@
 # v0.4 gerçek cihaz kabulü
 
-Durum: APK hazırlığı sürüyor. Cihazda ölçülmüş FPS, ısı veya fiziksel dokunma sonucu henüz yok.
+Durum: v0.4.0 APK derlendi, imza/paket/ZIP kontrolü geçti ve GitHub Releases’e yüklendi. Kullanıcının Huawei MatePad 11 cihazının Download klasörüne MTP ile kopyalandığı Dosya Gezgini üzerinden doğrulandı. Kurulum/oynanış ve cihazda FPS/ısı/fiziksel dokunma sonucu henüz bekliyor.
 
 ## Cihaz matrisi
 
