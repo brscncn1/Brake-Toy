@@ -56,3 +56,10 @@
 - Son yakın planlarda far/kaput-lastik kesişmesi ve gövde normalleri düzeltildi; gerçek renderlar incelendi. Sabit oda birleştirildi, pencere açıklığı ve gölgesiz dolgu eklendi.
 - Android ARM64 IL2CPP APK oluşturuldu; imza/paket/arşiv kontrolü geçti. Fiziksel cihaz ve kullanıcı hissi onayı bekliyor.
 - GitHub yayın ve Notion son eşitlemesi hazırlanıyor.
+
+## v0.3 GitHub ve Notion teslimi tamamlandı
+
+- Kaynak feat/arcade-workshop-v03 dalına gönderildi; PR #2: https://github.com/brscncn1/Brake-Toy/pull/2
+- v0.3.0 ön sürüm APK/rapor/model kanıtı ve gerçek renderlarla yayımlandı. Uzak APK SHA256 yerelle eşleşiyor: a6a9cbdb0aa321f6e54acb744654c23b75b49eda272dabf3dde0cfb0d73d4ed7.
+- Notion proje merkezi ve etkilenen belgeler eşitlendi; 17 araştırma, 18 teslim, 19 varlık hakları, 20 model kanıtı sayfaları mevcut. Gerçek sürüş/Fever/model görselleri kaynak commitine sabitlenmiş URLlerle eklendi.
+- Son kabul kanıtı 41/41 Unity testi; fiziksel telefon ve insan oyuncu tempo/kalite geri bildirimi bekleniyor. Unity ToyRoomArcade sahnesiyle açıldı.
