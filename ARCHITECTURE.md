@@ -63,3 +63,11 @@ TabletopSceneBuilder yeni ortak materyal, yuvarlatılmış mesh, ahşap doku, pr
 ToyWheelAnimation yalnızca Running sırasında görsel tekerlekleri döndürür. TabletopDecorScroller, WorldScroller'ın DistanceAdvanced ve RunReset olaylarını dinler; aynı çarpışma kesri ve restart zamanında yakın dekorları ilerletir. Oda mobilyaları gameplay collider'ı taşımaz; statik oda, kayan yakın yüzeyden ayrıdır. Bu sonsuz arcade sunumudur; fiziksel olarak sonsuz bir masa veya serbest odada dolaşma sistemi değildir.
 
 AndroidPrototypeBuild yeni sahne varsa onu derler. Unity test sahne listesinde eski sahne de regresyon için korunur. Notion doküman/günlük eşitlemesi Docs/NOTION_INDEX.json ve AGENTS.md ile sonraki çalışmalar için tanımlanmıştır.
+
+## v0.3 Arcade Workshop
+
+GameManager opsiyonel ArcadeDirector ile yeni sahnede arcade yolunu çalıştırır; eski sahneler eski yolu korur. Core ArcadeRules/ArcadeSequence/StyleScore motor bağımsızdır. ArcadeDirector 24 ArcadeHazard örneğini aktifleştirir/geri alır; ilerleme ve göreli hareketli çarpışma alt adımlarla hesaplanır. Top Minkowski toplamı üzerinden SweptCircleBox kullanır; kutularda mevcut SweptCollision devam eder. WorldScroller mesafe/reset olayları yakın dekorları aynı temas kesrinde taşır.
+
+ArcadeHUD ayrı sürüş/sonuç/uyarı, ArcadeAudio özgün sentez sesleri, ArcadeFeedback collider/hız değiştirmeyen yeniden kullanılan Fever şeritleridir. Yerel v03 mesafe/stil PlayerPrefs anahtarları küresel sonuç değildir.
+
+WorkshopSceneBuilder ayrı scene/config/prefab/mesh/material/renderer üretir. Araç gövdesi/tekerlekler ve sabit oda materyal bazında birleştirilir; yakın dekor hedefleri ayrı korunur. ModelAuditCapture ve PreviewCapture gerçek Unity çıktıları üretir. Kaydedilmiş sahnede sanat üretim/refine komutları geliştirici araçlarıdır, Open yeterlidir.

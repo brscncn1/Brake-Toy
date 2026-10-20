@@ -46,3 +46,7 @@ Manuel: yeni sahneyi 9:16'da aç; odanın ve masa yüksekliğinin okunurluğunu,
 - **Online:** ağ zaman aşımı, auth hatası, offline devam, doğrulanmamış skor reddi, güvensiz istemci yazmalarının kapalı olması, yaş/izin kapıları ve güvenli takma adlar.
 - **Daily/ghost:** sunucu günü/seed, kural versiyonu, zaman ekseni, seed eşleşmesi; farklı parkurda ghost göstermeme; sıkıştırma/okuma doğruluğu; çarpışma etkisi olmaması.
 - **Yayın:** farklı Android sınıfları, uzun seans, kayıt, yaşam döngüsü, erişilebilirlik, izinler ve güncel mağaza/politika kontrolü. iOS ayrı macOS/Xcode cihaz matrisi gerektirir.
+
+## v0.3 ek kapsam
+
+Hız integrali/ilk karşılaşma, seed tekrarları, 128.000 satır koridor/geçiş denetimi, 10.000 top oracle karşılaştırması; iki dakikalık motor içi tanık rota, hareketli top süpürmesi, bir kez Near Miss, combo reset/timeout/Fever, pause/retry/havuz, model gameplay sınırı/mesh geçerliliği ve döner top gerçek vertexleri, maksimum hızda dört portre oranı. Gerçek test sonuçları TEST_REPORT.md ve Tests/*v0.3-results.xml içinde. Fiziksel Android FPS/ısı/dokunma ve kullanıcı tempo/hissetme kabulü ayrı manuel adımdır.

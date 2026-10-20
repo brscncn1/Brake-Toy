@@ -23,3 +23,6 @@ Tests/Standalone/obj/
 *.apk
 *.aab
 *.keystore
+/Assets/Resources/PerformanceTestRunInfo.json*
+/Assets/Resources/PerformanceTestRunSettings.json*
+/Assets/Resources.meta

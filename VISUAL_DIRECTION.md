@@ -41,3 +41,7 @@ Araç: yerleşik imagegen. Kullanılan tam istem: `Concepts/ToyRoom-Tabletop-v1-
 ## Uygulanan ilk kesit — v0.2
 
 Gerçek motor görüntüsü `Preview-v0.2.png`. 20° ve 28° karşılaştırılarak oda görünürlüğü için 20° seçildi. Onaylanan konseptin ince doku ve ışık ayrıntısı henüz nihai kaliteye ulaşmış değildir. Yeni sahnenin otomatik testleri ve APK derlemesi tamamlandı; fiziksel cihaz ve kullanıcı hissiyatı bekleniyor.
+
+## v0.3 görsel ilerleme
+
+Kullanıcı daha gerçekçi modeller istedi. Yeni diecast Sparky silueti, boya/cam/metal/kauçuk ayrımı; jant/lastik/ayna/far/tampon, kitap sayfa/kapak, silgi kılıfı ve dikişli top oluşturuldu. CC0 gerçek ahşap diffuse/normal, pencere açıklığı ve güneş/gölgesiz dolgu, kumaş perde/açık abajur ve temas gölgesi eklendi. Preview-v0.3.png ve Models-v0.3-*.png çalışan Unity renderlarıdır. Nihai kalite/konsept eşitliği iddia edilmez.

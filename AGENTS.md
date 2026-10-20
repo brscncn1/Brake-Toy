@@ -1,6 +1,6 @@
 # Brake Toy project workflow
 
-- Follow SOURCE_REQUIREMENTS.md and the user's later decisions. The approved next milestone is a playable bedroom tabletop scene, before the larger Phase 2 gameplay systems.
+- Follow SOURCE_REQUIREMENTS.md and the user's later decisions. The current approved milestone is v0.3: earlier excitement and acceleration, readable deterministic encounter patterns, warned rolling balls, Near Miss/combo, and visibly improved toy models/materials. Retain earlier scenes and document the difference between a concept target and an actual Unity render.
 - Keep existing working scenes and user edits. Save new scene/config/prefab variants for visual milestones.
 - Keep DEV_LOG.md current at meaningful checkpoints: decisions, implementation, tests, limitations, and next steps. Do not claim a test passed unless it was executed.
 - The user explicitly authorized uploading this project's work to https://github.com/brscncn1/Brake-Toy and maintaining its Notion documentation. Push completed checkpoints to the appropriate feature branch. Do not force-push or overwrite unrelated remote work. Large APKs belong in GitHub Releases, not source commits.

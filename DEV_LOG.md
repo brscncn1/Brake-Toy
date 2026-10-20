@@ -40,3 +40,19 @@
 - v0.2.0 ön sürümü yayımlandı; APK, derleme raporu ve gerçek Unity görüntüsü yüklendi. Uzak APK özeti yerelle eşleşiyor.
 - Notion proje durumu ve etkilenen 10 belge/test sayfası güncellendi; 16 — v0.2 Masa ve oda sürümü oluşturuldu. Geliştirme günlüğüne gerçek test/yayın sonuçları eklendi.
 - Unity ToyRoomTabletop sahnesiyle tekrar açıldı. Gerçek cihaz ve kullanıcı görsel geri bildirimi bekleniyor.
+
+## v0.3 araştırma ve uygulama başladı
+
+- Kullanıcı erken heyecan/hız, daha gerçekçi modeller ve yuvarlanan topları yetkilendirdi. Yeni feat/arcade-workshop-v03 dalı açıldı.
+- Birincil Halfbrick/GDC, Milestone, SYBO ve Unity kaynakları incelendi; kapsam ve çıkarımlar RESEARCH-v0.3.md içinde. Tüm yayınların tarandığı veya video izlendiği iddia edilmiyor.
+- Ayrı ToyRoomArcade sahnesi oluşturuldu: seedli satırlar, 24 tehlike havuzu, hız eğrisi, sürekli hareketli top çarpışması, Near Miss/kombo/rekor, HUD/ses.
+- Özgün diecast araç geometrisi ve daha detaylı oyuncaklar; Poly Haven CC0 ahşap diffuse/normal, ayrı renderer/SSAO/reflection. Topun merkez çevresinde dönmesi düzeltildi.
+- 128.000 satır/10.000 çarpışma örneği ve motor içi regresyon testleri başlatıldı; sonuçlar henüz doğrulanmadı.
+- Notion 17 — v0.3 Araştırma ve uygulama planı oluşturuldu.
+
+## v0.3 son doğrulama ve paket
+
+- 26 EditMode + 15 PlayMode = 41/41 Unity testi geçti. İki dakikalık tanık sürüşü, 128.000 satır ve 10.000 top örneği dahil.
+- Son yakın planlarda far/kaput-lastik kesişmesi ve gövde normalleri düzeltildi; gerçek renderlar incelendi. Sabit oda birleştirildi, pencere açıklığı ve gölgesiz dolgu eklendi.
+- Android ARM64 IL2CPP APK oluşturuldu; imza/paket/arşiv kontrolü geçti. Fiziksel cihaz ve kullanıcı hissi onayı bekliyor.
+- GitHub yayın ve Notion son eşitlemesi hazırlanıyor.

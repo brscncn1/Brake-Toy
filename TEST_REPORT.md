@@ -1,27 +1,23 @@
-# v0.2 — Doğrulama raporu
+# v0.3 doğrulama raporu
 
-Unity 6000.3.26f1 ile yeni ToyRoomTabletop sahnesi ve tüm C# assembly'leri derlendi.
+Unity 6000.3.26f1: **41/41 geçti** — 26 EditMode, 15 PlayMode. XML sonuçları Tests klasöründe. Önceki 19 çekirdek ve 8 PlayMode regresyonu korunuyor.
 
-## Çalıştırılan testler
+## Gerçekleştirilen kontroller
 
-- **EditMode: 19/19 geçti.** Aynı üretim SteeringModel/SweptCollision kontrolleri; 10.000 seed segment/kutu oracle karşılaştırması dahil.
-- **PlayMode: 8/8 geçti.** İlk 4 test orijinal sahneye regresyon; yeni 4 test oda sahnesi ve dekor akışı içindir.
-- Oda dekorlarının collider'ı yok; araç/engel gameplay ölçüleri korunuyor; tekerlek GameManager bağlantısı kalıcı.
-- Yeni sahnede çarpışma, tekrar başlama, zemin/engel kimliklerinin yeniden kullanımı doğrulandı.
-- Kamera 9:16, 9:19.5, 9:21 ve 3:4 oranlarında araç alt %25 ve track kenarlarını koruyor. 1.5 saniyelik ileri mesafe kadrajda; bu bir insan refleksi veya prosedürel parkur adalet garantisi değildir.
-- Yakın masa dekorları WorldScroller'ın gerçek ilerleme miktarıyla hareket eder, pause sırasında durur ve restart'ta başlangıca döner.
-- Kanıt: `Tests/EditMode-v0.2-results.xml`, `Tests/PlayMode-v0.2-results.xml`, `UNITY_TEST_RESULTS.json`.
+- Hızın hemen yükselmesi, başlangıç 10 / tavan 18, 10 saniyede >13, 30 saniyede >16; ilk karşılaşma 1.5–2.5 saniyede. 30/60/120 FPS hız integrali karşılaştırması.
+- 1000 seed × 128 satır = 128.000 satırda güvenli koridor, yan geçiş zamanı, tekrar azaltma ve hareketli topun koridora taşmaması. Bu sınırlı kalıp ailesinin tanık rota kontrolüdür; tüm insan hareketlerinin veya keyfi engel düzenlerinin garantisi değildir.
+- 10.000 göreli hareketli top-kutu çarpışma örneği, ince zaman örnekli oracle ve temas noktasının geometrik doğrulaması. AABB köşesi yerine daire-kutu çözümü.
+- İki dakikalık motor içi tanık sürüşünde 60'tan fazla satır; çarpışma ve havuz tükenmesi yok, tehlike örnek sayısı sabit. Bu gerçek insan oynanış testi değildir.
+- Yakın geçişin yalnızca tam geçişten sonra ve bir kez ödüllendirilmesi; kombo/zaman aşımı/reset; hareketli topta sürekli çarpışma; crash/retry.
+- Duraklamada hız/mesafe/kombo zamanının ilerlememesi, deterministik retry ve aynı 24 tehlike örneğinin tekrar kullanılması.
+- Combo Fever görsel şeritleri: 8 yakın geçişte aktif; hız ve collider değişmiyor, çarpışmada kapanıyor.
+- Araç modelinin gameplay kutusuna sığması, lastiklerin zeminin altında olmaması, 4 tekerlek bağlantısı; top dönerken gerçek vertexlerinin zemine girmemesi. Mesh vertex/indis geçerliliği, dekor collider'larının olmaması.
+- 9:16, 9:19.5, 9:21, 3:4 oranlarında maksimum hızdaki 1.5 saniyelik tepki mesafesi görünür.
+- Gerçek Unity oynanış ve ön/arka/engel yakın plan renderları incelendi. Farın gövde içine kesilmesi, lastiğin kaputtan çıkması, kaporta normalleri ve top dönme merkezi düzeltildi. Bu kontroller hatasızlık garantisi değildir.
+- Android ARM64 IL2CPP Development APK: başarılı build, ZIP bütünlüğü, native kitaplık, v2 imzası, sürüm/paket/API kontrolleri.
 
-## Görsel kontrol
+## Açık doğrulamalar
 
-Gerçek grafik açık Unity Play Mode'da 20° ve 28° renderlar alınıp incelendi. Oda görünürlüğü nedeniyle 20° seçildi. Büyük düz yüzeylerde bevel normal interpolasyonunun yarattığı bantlar düzeltilip ahşap dokusu sadeleştirildi. Son görüntü `Preview-v0.2.png`; imagegen konseptiyle karıştırılmamalı. Bu bir ara sanat sürümüdür.
+Fiziksel Android dokunma/FPS/ısı/safe area/kesintiler ve uzun kullanım; farklı GPU'larda SSAO/materyal görünümü; gerçek oyuncuda tempo ve risk ödülü; iOS. İnsan oyuncunun her seçiminin kurtarılabilir olduğu iddia edilmez. Kaynak görseller hedef kaliteyi tam olarak karşılayan final art olarak sunulmaz.
 
-## Android
-
-ARM64 / IL2CPP Development APK üretildi: yaklaşık 37.0 MiB. APK imzası, ZIP bütünlüğü, libil2cpp.so, paket adı, sürüm ve SDK/ABI bilgileri doğrulandı. `ANDROID_BUILD_REPORT.json` hash ve boyutu içerir.
-
-## Henüz yapılmayan
-
-Fiziksel Android dokunma/safe area/kesinti ve uzun sürüş testleri; gerçek cihaz CPU/GPU frame time, bellek/ısı; iOS; kullanıcı tarafından yeni kamera ve kontrol hissinin onayı. Mağaza yayını, nihai art, prosedürel üretici ve online uygunluk tamamlanmadı.
-
-Önceki Faz 1 raporları `Docs/Archive/v0.1` içinde korunur. Çalıştırılmayan testler geçmiş gibi işaretlenmez.
+SSAO yarım çözünürlük/4 örnek, 4x MSAA, 2048 gölge haritası, iki cascade ve gölgesiz dolgu ışığının mobil maliyeti gerçek cihazda ölçülecek. Düşük kalite profili henüz eklenmedi.

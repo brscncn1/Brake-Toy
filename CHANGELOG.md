@@ -1,3 +1,12 @@
+# v0.3.0 — Arcade Workshop
+
+- Erken/sürekli hızlanma; seed'li tek/duble geçitler, yön değişimi ve nefes satırları.
+- 24 örnek havuzu, uyarılı çapraz toplar ve sürekli göreli daire-kutu çarpışması.
+- Tek sefer Near Miss, kombo/timeout/Fever, ayrı yerel mesafe/stil rekorları, sonuç ekranı.
+- HUD/vites/yön uyarısı, özgün sentez sesleri ve ses kapatma.
+- Özgün diecast araç, yeni kitap/silgi/blok/top modelleri, gerçek CC0 ahşap, pencere açıklığı, perde/abajur, ayrı renderer/SSAO/reflection ve oda mesh birleştirmesi.
+- 41 Unity testi, 128.000 satır / 10.000 top çarpışması kontrolü ve Android APK.
+
 # Değişiklik kaydı
 
 ## 0.2.0 — Bedroom Tabletop, 21 Ekim 2026

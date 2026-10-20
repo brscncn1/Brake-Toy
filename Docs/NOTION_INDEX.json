@@ -116,6 +116,34 @@
       "properties": {
         "title": "16 — v0.2 Masa ve oda sürümü"
       }
+    },
+    "RESEARCH-v0.3.md": {
+      "id": "3ffdce66-5831-8102-9c69-e394e90c3193",
+      "url": "https://app.notion.com/p/3ffdce66583181029c69e394e90c3193",
+      "properties": {
+        "title": "17 — v0.3 Araştırma ve uygulama planı"
+      }
+    },
+    "ARCADE_MILESTONE.md": {
+      "id": "3ffdce66-5831-81df-973a-c5dd7921e7b1",
+      "url": "https://app.notion.com/p/3ffdce66583181df973ac5dd7921e7b1",
+      "properties": {
+        "title": "18 — v0.3 Arcade Workshop teslimi"
+      }
+    },
+    "THIRD_PARTY_ASSETS.md": {
+      "id": "3ffdce66-5831-81a6-bfd8-ed2324809d7a",
+      "url": "https://app.notion.com/p/3ffdce66583181a6bfd8ed2324809d7a",
+      "properties": {
+        "title": "19 — Varlık kaynakları ve lisanslar"
+      }
+    },
+    "MODEL_VALIDATION.json": {
+      "id": "3ffdce66-5831-8127-9406-ffea5ce1ba34",
+      "url": "https://app.notion.com/p/3ffdce66583181279406ffea5ce1ba34",
+      "properties": {
+        "title": "20 — Model ve varlık doğrulaması"
+      }
     }
   },
   "notice": {
