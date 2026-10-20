@@ -2,6 +2,10 @@
 
 Ana gereksinim kaynağı `SOURCE_REQUIREMENTS.md` dosyasıdır. Bu dosya uygulanacak tasarımı düzenler; aşağıdaki nihai özelliklerin listelenmesi hazır oldukları anlamına gelmez. Uygulama durumu `ROADMAP.md` içindedir.
 
+## Onaylanan oda/masa yönü — 21 Ekim 2026
+
+Kullanıcı ilk prototipte oda hissinin eksik olduğunu belirtti ve çocuk odasındaki masa üzerinde sürüş istedi. Konsept görüntüsünü onayladı. Toy Room'un ilk oynanabilir görsel çalışması bu yönde: çevrede oda mobilyaları, ön planda ahşap oyun masası. v0.2 bu kompozisyonu gerçek Unity sahnesinde uygular; nihai sanat kalitesi değildir. Orijinal serbest kontrol, arcade kuralları ve aşamalı kapsam korunur.
+
 ## Kimlik ve deneyim
 
 **NO BRAKES. BIG TROUBLE.** Pilleri değiştirilen Sparky'nin güç düğmesi takılır. Küçük kırmızı oyuncak yarış arabası hiç durmadan dev ev eşyalarının arasından geçer. Oyuncu tek parmakla serbest sağ-sol yönlendirir; gaz/fren veya üç şerit sistemi yoktur. Çocuklar için saniyeler içinde anlaşılır, yetişkinler için mesafe ve stil ustalığı sunar. Kısa seans ve hesap gerektirmeyen çevrimdışı oynanış temel koşuldur.

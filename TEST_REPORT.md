@@ -1,36 +1,27 @@
-# Faz 1 doğrulama raporu
+# v0.2 — Doğrulama raporu
 
-## Geçen testler
+Unity 6000.3.26f1 ile yeni ToyRoomTabletop sahnesi ve tüm C# assembly'leri derlendi.
 
-- Unity **6000.3.26f1** gerçek Editor importu, paket çözümü ve C# derlemesi tamamlandı.
-- Sahne üreticisi gerçek ToyRoom.unity, Sparky/kitap/blok kulesi/silgi/zemin prefabları, ortak materyaller ve URP konfigürasyonu oluşturdu.
-- **Unity EditMode: 19 / 19 geçti.** Kanıt: `Tests/EditMode-results.xml`.
-- **Unity PlayMode: 4 / 4 geçti.** Kanıt: `Tests/PlayMode-results.xml`.
-- Ayrıca aynı çekirdek üretim C# dosyaları taşınabilir .NET SDK 8.0.426 ile derlendi: **19 / 19 geçti.** Kanıt: `TEST_RESULTS.json`. Bu, Unity'deki 19 çekirdek testinin aynı kontrolleridir; benzersiz test sayısı diye toplanmaz.
-- Birleşik Unity özeti: `UNITY_TEST_RESULTS.json`.
+## Çalıştırılan testler
 
-## Doğrulanan kapsam
+- **EditMode: 19/19 geçti.** Aynı üretim SteeringModel/SweptCollision kontrolleri; 10.000 seed segment/kutu oracle karşılaştırması dahil.
+- **PlayMode: 8/8 geçti.** İlk 4 test orijinal sahneye regresyon; yeni 4 test oda sahnesi ve dekor akışı içindir.
+- Oda dekorlarının collider'ı yok; araç/engel gameplay ölçüleri korunuyor; tekerlek GameManager bağlantısı kalıcı.
+- Yeni sahnede çarpışma, tekrar başlama, zemin/engel kimliklerinin yeniden kullanımı doğrulandı.
+- Kamera 9:16, 9:19.5, 9:21 ve 3:4 oranlarında araç alt %25 ve track kenarlarını koruyor. 1.5 saniyelik ileri mesafe kadrajda; bu bir insan refleksi veya prosedürel parkur adalet garantisi değildir.
+- Yakın masa dekorları WorldScroller'ın gerçek ilerleme miktarıyla hareket eder, pause sırasında durur ve restart'ta başlangıca döner.
+- Kanıt: `Tests/EditMode-v0.2-results.xml`, `Tests/PlayMode-v0.2-results.xml`, `UNITY_TEST_RESULTS.json`.
 
-Çözünürlük bağımsızlığı 360/720/1080/1440/2160 piksel, 30/60/120 FPS hedef konumu, dokunma başlangıcı/bırakma/retouch/sınırlar/hız/reset; ileri/yatay/çapraz swept collision, ilk overlap, temas, ayrı yollar ve farklı zamanlarda eksen kesişimi.
+## Görsel kontrol
 
-Seed **4719** ile **10.000** segment/kutu çarpışması bağımsız kenar kesişimi hesabıyla karşılaştırıldı. Bu sayı **engel dizilimi adalet testi değildir**; prosedürel üretici Faz 2'de yapılacak.
+Gerçek grafik açık Unity Play Mode'da 20° ve 28° renderlar alınıp incelendi. Oda görünürlüğü nedeniyle 20° seçildi. Büyük düz yüzeylerde bevel normal interpolasyonunun yarattığı bantlar düzeltilip ahşap dokusu sadeleştirildi. Son görüntü `Preview-v0.2.png`; imagegen konseptiyle karıştırılmamalı. Bu bir ara sanat sürümüdür.
 
-PlayMode testleri gerçek Unity Input System üzerinden sanal mouse ve touch cihazlarıyla UI üzerine başlayan girişin filtrelenmesini, sürüklemeyi, bırakmayı, yeniden dokunmayı ve ikinci parmağı yok saymayı sınadı. Başlangıç → çarpışma → durma → yeniden başlama ve 20 reset/pause/resume döngüsü geçti. Kamera 9:16, 9:19.5, 9:21 ve 3:4 oranlarında araç merkezi ve parkur görünürlüğünü korudu.
+## Android
 
-Mouse testinin ilk koşusunda bir giriş başlangıcı sorunu bulundu. `wasPressedThisFrame` önbelleğine bağımlılık kaldırılıp basılı duruma geçiş InputController içinde izlenerek düzeltildi; son dört PlayMode testi sıfır hatayla geçti.
+ARM64 / IL2CPP Development APK üretildi: yaklaşık 37.0 MiB. APK imzası, ZIP bütünlüğü, libil2cpp.so, paket adı, sürüm ve SDK/ABI bilgileri doğrulandı. `ANDROID_BUILD_REPORT.json` hash ve boyutu içerir.
 
-Grafik açık Unity Play Mode'da 540 × 960 `Preview.png` renderı alındı ve incelendi: gerçek hacimli Sparky, kitap, gölgeler, perspektif ve ahşap renkli primitive zemin. Bu görüntü nihai Toy Room art kalitesi değildir. Önizleme yakalamasında ilk kare shader hazırlığı tamamlanmadan görülen geçici renkler, Play Mode'da hazırlık sonrası render alınarak giderildi.
+## Henüz yapılmayan
 
-## Android derlemesi
+Fiziksel Android dokunma/safe area/kesinti ve uzun sürüş testleri; gerçek cihaz CPU/GPU frame time, bellek/ısı; iOS; kullanıcı tarafından yeni kamera ve kontrol hissinin onayı. Mağaza yayını, nihai art, prosedürel üretici ve online uygunluk tamamlanmadı.
 
-Android ARM64 / IL2CPP Development APK başarıyla üretildi. APK yaklaşık 34.5 MiB, minimum API 25 ve hedef API 36. `aapt2` ile paket kimliği, portre, ARM64 ve izinler kontrol edildi. `apksigner verify --verbose` imzayı doğruladı; ZIP bütünlüğü ve libil2cpp.so varlığı kontrol edildi. Rapor: `ANDROID_BUILD_REPORT.json`.
-
-Bu, fiziksel cihaz çalıştırma veya FPS testi değildir.
-
-## Henüz doğrulanmayan
-
-- Fiziksel Android dokunmatik, cihaz safe area, arka plan/telefon kesintileri ve manuel sürüş hissi.
-- Gerçek cihaz FPS/bellek/ısı ve uzun seans.
-- iOS build ve cihaz testleri.
-
-Faz 1 oynanabilir Unity sahnesi ve otomatik doğrulaması hazır. Android derleme durumu README ve derleme raporunda ayrıca belirtilir; APK üretmek fiziksel cihaz testiyle eşdeğer değildir.
+Önceki Faz 1 raporları `Docs/Archive/v0.1` içinde korunur. Çalıştırılmayan testler geçmiş gibi işaretlenmez.
