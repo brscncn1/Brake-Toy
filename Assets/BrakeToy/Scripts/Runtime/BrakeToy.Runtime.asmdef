@@ -1,0 +1,6 @@
+{
+  "name": "BrakeToy.Runtime",
+  "rootNamespace": "BrakeToy",
+  "references": ["BrakeToy.Core", "Unity.InputSystem", "UnityEngine.UI"],
+  "autoReferenced": true
+}

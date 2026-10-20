@@ -1,0 +1,16 @@
+{
+  "result": "Succeeded",
+  "unityVersion": "6000.3.26f1",
+  "target": "Android",
+  "architecture": "arm64-v8a",
+  "scriptingBackend": "IL2CPP",
+  "developmentBuild": true,
+  "applicationIdentifier": "com.braketoy.prototype",
+  "versionName": "0.1.0",
+  "minSdkVersion": 25,
+  "targetSdkVersion": 36,
+  "sizeBytes": 36147854,
+  "sha256": "212f4d06f7a8a97d07df8203bd08d00493e876d7f083d564444695f6ebf736c3",
+  "apkArchiveIntegrityChecked": true,
+  "physicalDeviceTested": false
+}

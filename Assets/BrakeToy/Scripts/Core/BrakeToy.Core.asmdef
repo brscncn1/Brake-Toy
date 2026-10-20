@@ -1,0 +1,5 @@
+{
+  "name": "BrakeToy.Core",
+  "rootNamespace": "BrakeToy.Core",
+  "noEngineReferences": true
+}

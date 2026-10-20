@@ -1,0 +1,7 @@
+{
+  "name": "BrakeToy.EditMode.Tests",
+  "references": ["BrakeToy.Core"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": false
+}
