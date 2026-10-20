@@ -50,3 +50,7 @@ Manuel: yeni sahneyi 9:16'da aç; odanın ve masa yüksekliğinin okunurluğunu,
 ## v0.3 ek kapsam
 
 Hız integrali/ilk karşılaşma, seed tekrarları, 128.000 satır koridor/geçiş denetimi, 10.000 top oracle karşılaştırması; iki dakikalık motor içi tanık rota, hareketli top süpürmesi, bir kez Near Miss, combo reset/timeout/Fever, pause/retry/havuz, model gameplay sınırı/mesh geçerliliği ve döner top gerçek vertexleri, maksimum hızda dört portre oranı. Gerçek test sonuçları TEST_REPORT.md ve Tests/*v0.3-results.xml içinde. Fiziksel Android FPS/ısı/dokunma ve kullanıcı tempo/hissetme kabulü ayrı manuel adımdır.
+
+## v0.4 ek kabul
+
+Yeni katalog/prefab havuzu, varied seed koridorları, aynı parkur/yeni tur, menüde tek panel, sürüşte ayar gizleme, kaynak pipeline izolasyonu, ses dalga sınırları ve impact kök sabitliği doğrulanır. 28 EditMode/25 PlayMode sonuçları XML'de. DEVICE_TEST-v0.4.md Huawei MatePad 11 için fiziksel dokunma/ısı/kesinti ve iki profilde 60 sn yerel ölçüm planıdır; cihaz onayı henüz açık.

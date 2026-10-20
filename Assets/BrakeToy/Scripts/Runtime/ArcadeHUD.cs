@@ -10,6 +10,9 @@ namespace BrakeToy
         public Image ComboFill, ImpactFlash;
         public Button SoundButton;
         public Text SoundLabel;
+        public bool CompactLayout;
+        public Button SameRouteButton;
+        private ToyImpactFeedback impactFeedback;
         private ArcadeDirector arcade;
         private GameManager game;
         private float noticeTime, impact;
@@ -17,6 +20,8 @@ namespace BrakeToy
         public void Bind(ArcadeDirector director, GameManager manager)
         {
             arcade = director; game = manager;
+            impactFeedback = manager.GetComponent<ToyImpactFeedback>();
+            if (SameRouteButton) SameRouteButton.onClick.AddListener(game.StartSameRoute);
             manager.gameObject.AddComponent<ArcadeFeedback>().Initialize(manager,director);
             muted = PlayerPrefs.GetInt("BrakeToy.v03.muted", 0) == 1;
             SoundButton.onClick.AddListener(() => { muted = !muted; PlayerPrefs.SetInt("BrakeToy.v03.muted", muted ? 1 : 0); PlayerPrefs.Save(); });
@@ -29,12 +34,19 @@ namespace BrakeToy
             if (!arcade || !game) return;
             bool running = game.State == RunState.Running;
             Driving.SetActive(running);
+            if (CompactLayout)
+            {
+                SoundButton.gameObject.SetActive(!running);
+                if (SameRouteButton) SameRouteButton.gameObject.SetActive(game.State == RunState.Crashed);
+                game.UI.Overlay.SetActive(!running && !(impactFeedback && impactFeedback.IsPlaying));
+                if (game.State == RunState.Crashed) game.UI.ActionText.text = "YENİ PARKUR";
+            }
             SoundLabel.text = muted ? "SES KAPALI" : "SES AÇIK";
             arcade.Sound.Muted = muted;
-            DistanceLabel.text = Mathf.FloorToInt(arcade.Distance) + " <size=25>m</size>";
+            DistanceLabel.text = Mathf.FloorToInt(arcade.Distance) + (CompactLayout ? " m" : " <size=25>m</size>");
             StyleLabel.text = "STİL  " + arcade.Style.Total.ToString("N0");
             SpeedLabel.text = "VİTES " + arcade.Gear + "   /   " + (arcade.Speed / 10).ToString("0.00") + "×";
-            ComboLabel.text = arcade.Style.Fever ? "COMBO FEVER   ×5" : arcade.Style.Chain > 0 ? "KOMBO " + arcade.Style.Chain + "   ×" + arcade.Style.Multiplier : "YAKINDAN GEÇ • KOMBO YAP";
+            ComboLabel.text = arcade.Style.Fever ? "COMBO FEVER   ×5" : arcade.Style.Chain > 0 ? "KOMBO " + arcade.Style.Chain + "   ×" + arcade.Style.Multiplier : CompactLayout ? "" : "YAKINDAN GEÇ • KOMBO YAP";
             ComboLabel.color = arcade.Style.Fever ? new Color(1, .70f, .2f) : new Color(.65f, .95f, .91f);
             ComboFill.fillAmount = arcade.Style.Remaining / 6;
             ComboFill.rectTransform.anchorMax = new Vector2(arcade.Style.Remaining / 6, 1);

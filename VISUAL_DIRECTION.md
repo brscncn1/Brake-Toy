@@ -45,3 +45,7 @@ Gerçek motor görüntüsü `Preview-v0.2.png`. 20° ve 28° karşılaştırıla
 ## v0.3 görsel ilerleme
 
 Kullanıcı daha gerçekçi modeller istedi. Yeni diecast Sparky silueti, boya/cam/metal/kauçuk ayrımı; jant/lastik/ayna/far/tampon, kitap sayfa/kapak, silgi kılıfı ve dikişli top oluşturuldu. CC0 gerçek ahşap diffuse/normal, pencere açıklığı ve güneş/gölgesiz dolgu, kumaş perde/açık abajur ve temas gölgesi eklendi. Preview-v0.3.png ve Models-v0.3-*.png çalışan Unity renderlarıdır. Nihai kalite/konsept eşitliği iddia edilmez.
+
+## v0.4 gerçek çıktı
+
+Refined Room: daha sakin sıcak gerçek ahşap, yumuşatılmış gölge, 16° kamera/.45 yan boşluk, tek panel/köşe HUD, alçaltılmış kabin/eğrilmiş çatı/açık mavi cam ve teker boşlukları. Pencere doğrama/donanımı, bitki ve ince duvar paneli ayrıntıları eklendi; masa/duvar birleşim çizgileri giderildi. COMPARISON-v0.4.html gerçek 540×960/6.3 sn renderlarını karşılaştırır. Konsept hâlâ doku, kumaş ve aydınlatma zenginliğinde ileridedir; final sanat denmez.

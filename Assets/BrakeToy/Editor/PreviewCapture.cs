@@ -18,7 +18,7 @@ namespace BrakeToy.Editor
         // Run without -nographics and without -quit. Exits the batch editor after capture.
         public static void CaptureBatch()
         {
-            string scene = File.Exists(WorkshopSceneBuilder.ScenePath) ? WorkshopSceneBuilder.ScenePath : File.Exists(TabletopSceneBuilder.ScenePath) ? TabletopSceneBuilder.ScenePath : "Assets/BrakeToy/Scenes/ToyRoom.unity";
+            string scene = File.Exists(RefinedSceneBuilder.ScenePath) ? RefinedSceneBuilder.ScenePath : File.Exists(WorkshopSceneBuilder.ScenePath) ? WorkshopSceneBuilder.ScenePath : File.Exists(TabletopSceneBuilder.ScenePath) ? TabletopSceneBuilder.ScenePath : "Assets/BrakeToy/Scenes/ToyRoom.unity";
             EditorSceneManager.OpenScene(scene);
             ShaderUtil.allowAsyncCompilation = false;
             SessionState.SetBool("BrakeToy.PreviewPending", true);
@@ -50,12 +50,13 @@ namespace BrakeToy.Editor
                 ShaderUtil.allowAsyncCompilation = false;
                 if (!prepared)
                 {
+                    if(game.Arcade) { game.Arcade.PersistRecords=false; game.Arcade.VaryRuns=false; }
                     game.StartRun();
                     game.enabled = false;
                     if (game.Arcade)
                     {
                         // Capture a real deterministic risk-taking drive, including earned scores and a moving ball.
-                        var stream = new BrakeToy.Core.ArcadeSequence(game.Arcade.Seed);
+                        var stream = new BrakeToy.Core.ArcadeSequence(game.Arcade.CurrentSeed, game.Arcade.UseVariedPatterns);
                         var rows = new System.Collections.Generic.List<BrakeToy.Core.ArcadeRow>();
                         for (int i=0;i<20;i++) rows.Add(stream.Next());
                         int index=0;float x=0;simulatedSeconds=6.3f;
@@ -108,6 +109,7 @@ namespace BrakeToy.Editor
                 float activePitch = camera.GetComponent<PortraitCamera>().Config.CameraPitch;
                 string filename = gameObjectSceneIsTabletop() ? (Mathf.Approximately(activePitch, 20) ? "../Preview-v0.2.png" : "../Preview-v0.2-" + activePitch.ToString("0", System.Globalization.CultureInfo.InvariantCulture) + "deg.png") : "../Preview.png";
                 if (game.Arcade) filename = simulatedSeconds>10 ? "../Preview-v0.3-late-run.png" : "../Preview-v0.3.png";
+                if (game.Arcade && game.Arcade.UseVariedPatterns) filename = simulatedSeconds>10 ? "../Preview-v0.4-late-run.png" : "../Preview-v0.4.png";
                 string output = Path.GetFullPath(Path.Combine(Application.dataPath, filename));
                 File.WriteAllBytes(output, texture.EncodeToPNG());
                 RenderTexture.active = null;

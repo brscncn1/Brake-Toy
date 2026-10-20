@@ -103,5 +103,39 @@ namespace BrakeToy.Tests
             }
             Assert.That(hits,Is.GreaterThan(1000));
         }
+        [Test]
+        public void VariedRowsKeepSafePathsWithoutLongIdenticalLaneRuns()
+        {
+            var gaps=new System.Collections.Generic.HashSet<float>();var ballIntervals=new System.Collections.Generic.HashSet<int>();
+            for(int seed=1;seed<=1000;seed++)
+            {
+                var sequence=new ArcadeSequence(seed,true);var replay=new ArcadeSequence(seed,true);int previous=1,repeats=0,lastBall=-1;float previousDistance=0;
+                for(int i=0;i<128;i++)
+                {
+                    var row=sequence.Next();var same=replay.Next();Assert.That(row.Distance,Is.EqualTo(same.Distance));Assert.That(row.BallSlope,Is.EqualTo(same.BallSlope));Assert.That(row.SafeLane,Is.EqualTo(same.SafeLane));
+                    Assert.That(row.IsBlocked(row.SafeLane),Is.False);Assert.That(Math.Abs(row.SafeLane-previous),Is.LessThanOrEqualTo(1));
+                    repeats=row.SafeLane==previous?repeats+1:1;Assert.That(repeats,Is.LessThanOrEqualTo(2));
+                    float gap=row.Distance-previousDistance;if(i>0){gaps.Add(gap);Assert.That(gap,Is.InRange(25,34));}
+                    if(row.Ball)
+                    {
+                        if(lastBall>=0)ballIntervals.Add(i-lastBall);lastBall=i;
+                        for(float z=-2;z<=2;z+=.2f)Assert.That(Math.Abs(ArcadeRules.LaneX(row.SafeLane)-row.BallX(z)),Is.GreaterThan(1));
+                    }
+                    previous=row.SafeLane;previousDistance=row.Distance;
+                }
+            }
+            Assert.That(gaps.Count,Is.GreaterThanOrEqualTo(8));Assert.That(ballIntervals.Count,Is.EqualTo(4));
+        }
+        [Test]
+        public void LayeredAudioStaysFiniteAndWithinHeadroom()
+        {
+            for(int kind=0;kind<6;kind++)
+            {
+                var clip=BrakeToy.ArcadeAudio.LayeredClip("Audio audit",1,kind);var samples=new float[clip.samples];clip.GetData(samples,0);double energy=0;
+                foreach(float sample in samples){Assert.That(float.IsNaN(sample)||float.IsInfinity(sample),Is.False);Assert.That(Math.Abs(sample),Is.LessThan(.91f));energy+=sample*sample;}
+                Assert.That(Math.Sqrt(energy/samples.Length),Is.InRange(.01,.5));Assert.That(samples[0],Is.Zero);Assert.That(samples[samples.Length-1],Is.Zero);
+                UnityEngine.Object.DestroyImmediate(clip);
+            }
+        }
     }
 }

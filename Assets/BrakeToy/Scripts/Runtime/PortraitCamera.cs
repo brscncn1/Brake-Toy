@@ -22,7 +22,7 @@ namespace BrakeToy
             view.farClipPlane = 160;
             Quaternion rotation = Quaternion.Euler(Config.CameraPitch, 0, 0);
             float tan = Mathf.Tan(view.fieldOfView * .5f * Mathf.Deg2Rad);
-            float depth = (Config.TrackHalfWidth + .8f) / (lastAspect * tan);
+            float depth = (Config.TrackHalfWidth + Config.CameraSidePadding) / (lastAspect * tan);
             float vertical = (2 * Config.PlayerViewportY - 1) * depth * tan;
             transform.SetPositionAndRotation(Vector3.up * .35f - rotation * Vector3.forward * depth
                 - rotation * Vector3.up * vertical, rotation);
