@@ -54,3 +54,7 @@ Hız integrali/ilk karşılaşma, seed tekrarları, 128.000 satır koridor/geçi
 ## v0.4 ek kabul
 
 Yeni katalog/prefab havuzu, varied seed koridorları, aynı parkur/yeni tur, menüde tek panel, sürüşte ayar gizleme, kaynak pipeline izolasyonu, ses dalga sınırları ve impact kök sabitliği doğrulanır. 28 EditMode/25 PlayMode sonuçları XML'de. DEVICE_TEST-v0.4.md Huawei MatePad 11 için fiziksel dokunma/ısı/kesinti ve iki profilde 60 sn yerel ölçüm planıdır; cihaz onayı henüz açık.
+
+## v0.5 kabul eki
+
+Üç hedefin reseti/kümülatif tamamlanması; yıldızın tek kez +75 vermesi, kombo artırmaması ve hit adımında ödül olmaması; merkez/riskli iki rota, 4 seed/120 sn; menü motor/efekt ve postprocessing kalite geçişi; dört ekran oranında takip uçları eklendi. Fiziksel kabul DEVICE_TEST-v0.5.md ile ayrı yürütülür.

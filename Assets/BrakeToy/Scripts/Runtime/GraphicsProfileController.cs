@@ -12,6 +12,7 @@ namespace BrakeToy
         public Button ToggleButton;
         public Text Label;
         public bool PersistPreferences = true;
+        public bool ManagePostProcessing;
         public bool Low { get; private set; }
         public UniversalRenderPipelineAsset ActivePipeline { get; private set; }
         private RenderPipelineAsset previousDefault, previousQuality;
@@ -37,6 +38,7 @@ namespace BrakeToy
             ActivePipeline.mainLightShadowmapResolution = low ? 1024 : 2048;
             GraphicsSettings.defaultRenderPipeline = ActivePipeline; QualitySettings.renderPipeline = ActivePipeline;
             Camera.main.GetUniversalAdditionalCameraData().SetRenderer(low ? 1 : 0);
+            if(ManagePostProcessing)Camera.main.GetUniversalAdditionalCameraData().renderPostProcessing=!low;
             Application.targetFrameRate = low ? 30 : 60;
             if (save && PersistPreferences) { PlayerPrefs.SetInt("BrakeToy.quality.v1", low ? 1 : 0); PlayerPrefs.Save(); }
             if (Label) Label.text = low ? "GRAFİK: EKONOMİK" : "GRAFİK: YÜKSEK";

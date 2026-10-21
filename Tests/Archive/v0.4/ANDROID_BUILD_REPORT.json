@@ -1,0 +1,20 @@
+{
+  "result": "Succeeded",
+  "unityVersion": "6000.3.26f1",
+  "target": "Android",
+  "architecture": "arm64-v8a",
+  "scriptingBackend": "IL2CPP",
+  "developmentBuild": true,
+  "applicationIdentifier": "com.braketoy.prototype",
+  "versionName": "0.4.0",
+  "versionCode": 4,
+  "minSdkVersion": 25,
+  "targetSdkVersion": 36,
+  "sizeBytes": 38560847,
+  "sha256": "0ce3f84da0b58b3e98dc0fab0f1922985fcd194bb22c017b6f172e45f6dca4a0",
+  "apkArchiveIntegrityChecked": true,
+  "signatureVerified": true,
+  "physicalDeviceTested": false,
+  "scene": "ToyRoomRefined",
+  "releaseUrl": "https://github.com/brscncn1/Brake-Toy/releases/tag/v0.4.0"
+}

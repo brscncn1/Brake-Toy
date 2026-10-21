@@ -16,3 +16,14 @@ All newly authored mesh geometry, softbox cubemap and synthesized audio cues are
 ## v0.4 Quiet Wood shader
 
 `Art/Refined/Shaders/QuietWood.shader` and `QuietWoodInput.hlsl` are modified copies of Unity URP 17.3's Lit shader/input from the installed package. The shader name and albedo contrast calculation were changed; rendering passes and material constant layout are retained. The package license is redistributed as `Unity-LICENSE.md` in that folder. This is Unity-licensed source, not original Brake Toy shader authorship. The existing CC0 wood images remain unmodified. v0.4 mesh additions and layered synthesized audio are project-authored.
+
+## v0.5 Living Workshop — CC0 sources
+
+- [Painted Wooden Chair 02](https://polyhaven.com/a/painted_wooden_chair_02), Kirill Sannikov, CC0. Original 1k FBX, diffuse, normal and AO maps; 1,246 source polygons according to metadata. Imported readable for geometry audit; fitted to room scale, shared material assigned.
+- [Cotton Jersey](https://polyhaven.com/a/cotton_jersey), colormass (Photography) / Rico Cilliers (Processing), CC0. Original 1k diffuse and normal maps; project-authored curved cloth meshes, UV scale and tint for curtains, bedding, storage and teddy.
+- [Studio Small 09](https://polyhaven.com/a/studio_small_09), Sergej Majboroda, CC0. Original 1k HDR imported as 256px cubemap for material reflections. It is not an outdoor window photograph or baked room lighting.
+- Poly Haven [CC0 license](https://polyhaven.com/license); asset API metadata retained alongside files as SOURCE.json. Original downloads were checked against API MD5. Delivered file SHA256 and sizes: Docs/ASSET_HASHES-v0.5.json.
+- [Kenney Impact Sounds](https://kenney.nl/assets/impact-sounds), Kenney, CC0. Six selected OGG recordings bundled; wood/metal/soft impacts used. License text retained under ThirdParty/Audio/Kenney-LICENSE.txt. Download archive SHA256: 029d734af1582474edf3a694d1b0cebc97c1c152f2f39fa34d4c2bafc5de77f8.
+- [Bowling Ball Rolling](https://opengameart.org/content/bowling-ball-rolling), qubodup, CC0. Author describes a marble-ball recording, possibly a wooden-door component. The non-fadeout OGG provides approaching ball texture; motor and near-miss synthesis remain project-authored. Archive SHA256: 3c99cfe42ecf8a87ab13f66f0f4c16d0a2bdbf75f825eb2e959baab581091af8.
+
+Retrieved 2026-10-21. No competitor models, screenshots, music or proprietary audio were bundled. The earlier blanket statement about original mesh/audio authorship applies to the earlier releases; this version includes the above credited third-party chair, textures, HDR and recordings.

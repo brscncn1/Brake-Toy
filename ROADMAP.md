@@ -129,3 +129,9 @@ Faz 2/3 tam kabulü bu açık maddeler ve geri bildirimlerle devam eder; tamamla
 ## v0.4 kalite düzeltmeleri
 
 Ayrı Refined Room sahnesinde katalog/prefab havuzu, çeşitlenen deterministik kalıplar ve top yolları, yeni tur/aynı parkur, tek panel/kompakt HUD, araç/oda malzemeleri ve katmanlı ses/çarpışma cilası uygulandı. Genel keyfi birleşim çözücüsü yerine test edilen koridor ailesi korunur. Grafik profilleri ve yerel performans ölçüm aracı eklendi. Son test/APK raporu teslimde kaydedilir; fiziksel cihaz FPS/ısı/dokunma ve insan eğlence/sanat kabulü henüz açık kalır. Faz 2/3 tamamlandı veya final görsel kaliteye ulaşıldı denmez.
+
+## v0.5 güncel konum
+
+Aktif odak Faz 3, Faz 2 kapanışı devam ediyor. v0.5: ayrı Living sahnesi, taranmış sandalye/fotoğraf kumaş/HDR, yeniden eğrisel araç, üç tur hedefi/isteğe bağlı risk yıldızı, ritimli kaçışlar, kayıtlı efekt ve ayrı ses ayarları uygulandı. 62/62 Unity testi geçti; Android test paketi doğrulandı. Fiziksel tablet/insan sanat-ses-tempo kabulü açık. Tam kalıcı görev/garaj/Relax uygulanmış sayılmaz.
+
+Mevcut Faz 2–3 kapanışı +Faz 4 ilerleme/garaj/Relax +Faz 5 online/günlük/ghost +Faz 6 yayın hazırlığı =mevcut dahil 4 ana blok. Faz 7 yeni odalar ilk yayın için isteğe bağlıdır. Sürüm/tarih garantisi değildir.

@@ -45,7 +45,7 @@ namespace BrakeToy
                     quality.SetLow(intent.Call<bool>("getBooleanExtra", "brakeToyLow", false));
                     benchmark = true; game.Arcade.PersistRecords = false; game.Arcade.VaryRuns = false;
                     game.enabled = false; game.StartRun(); rows = new List<ArcadeRow>();
-                    var stream = new ArcadeSequence(game.Arcade.CurrentSeed, true); for (int i=0;i<256;i++) rows.Add(stream.Next());
+                    var stream = new ArcadeSequence(game.Arcade.CurrentSeed, true,game.Arcade.Choreographed); for (int i=0;i<256;i++) rows.Add(stream.Next());
                     BeginCapture();
                 }
             }
@@ -76,7 +76,7 @@ namespace BrakeToy
             for(int i=0;i<count;i++){total+=frameMs[i];max=Mathf.Max(max,frameMs[i]);if(frameMs[i]>50)slow++;}
             Array.Sort(frameMs,0,count);var quality=GetComponent<GraphicsProfileController>();
             var report=new Report{version=Application.version,utc=DateTime.UtcNow.ToString("O"),deviceModel=SystemInfo.deviceModel,os=SystemInfo.operatingSystem,cpu=SystemInfo.processorType,gpu=SystemInfo.graphicsDeviceName,profile=quality.Low?"low":"high",width=Screen.width,height=Screen.height,frames=count,framesOver50ms=slow,gameplaySeconds=seconds,meanFps=count*1000/Mathf.Max(1,total),p95FrameMs=frameMs[Mathf.Clamp(Mathf.CeilToInt(count*.95f)-1,0,count-1)],maxFrameMs=max,allocatedBytes=Profiler.GetTotalAllocatedMemoryLong(),reservedBytes=Profiler.GetTotalReservedMemoryLong(),editor=Application.isEditor,automatedWitness=benchmark,inputValidation="Frame pacing only; physical touch latency and thermal acceptance require separate checks."};
-            string json=JsonUtility.ToJson(report,true),path=Path.Combine(Application.persistentDataPath,"performance-v04-"+report.profile+".json");File.WriteAllText(path,json);
+            string json=JsonUtility.ToJson(report,true),path=Path.Combine(Application.persistentDataPath,"performance-"+Application.version+"-"+report.profile+".json");File.WriteAllText(path,json);
             Debug.Log("BRAKE_TOY_PERFORMANCE "+json);Label.text=report.meanFps.ToString("0.0")+" FPS  •  p95 "+report.p95FrameMs.ToString("0.0")+" ms";
             if(benchmark)game.Pause();
         }

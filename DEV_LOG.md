@@ -93,3 +93,24 @@ Masa chunk uçlarındaki bevel ve duvar panel çizgileri görüldü; yalnızca y
 Kaynak commit 7e36334d85211c5baa3ce1a42440c17e92043f6b, PR https://github.com/brscncn1/Brake-Toy/pull/3 (v0.3 dalı üzerine). v0.4.0 prerelease APK/render/raporları yayımlandı; GitHub APK asset digest yerel SHA256 ile eşleşti. Ana sayfa README 517c4df ile v0.4 durumuna güncellendi; main kaynak tabanının önceki prototip olduğu ve yeni kaynak dalı açıkça belirtildi.
 
 APK Huawei MatePad 11 /Dahili depolama/Download altında görünüyor; kullanıcıya kurulum ve isteğe bağlı 60 sn sürüş ölçümü adımları verildi. Fiziksel kabul henüz alınmadı. Notion 24 alt sayfayla korundu; 21 eleştiri/22 plan güncellendi, 23 kalite sonuçları ve24 cihaz kabulü oluşturuldu. İlgili kurulum/tasarım/mimari/yol haritası/görsel/test/değişiklik/lisans/model/derleme kanıtı sayfaları güncellendi; root ve görsel/teslim sayfaları tekrar okunarak doğrulandı. Eski kullanıcı içerikleri/alt sayfalar silinmedi.
+
+## v0.5 başladı
+
+Kullanıcı sonraki aşama ile altı çözümün birlikte yapılmasını onayladı. Dal feat/living-workshop-v05. Aktif Faz 3 ve Faz 2 kapanışı, ardından Faz 4/5/6 olmak üzere mevcut dahil dört ana çalışma bloğu açıklandı; sürüm/tarih garantisi verilmedi. Kaynak araştırması: Poly Haven Painted Wooden Chair02/Cotton Jersey/Studio Small09, Kenney Impact Sounds, qubodup marble rolling, CC0. Önceki v0.4 Play durdurulup yeni sahne için Unity kapatıldı. Henüz yeni test/build sonucu yok.
+
+## v0.5 uygulama ve ilk doğrulama
+
+Living sahnesi ve kaynak varlıklar üretildi; önceki sürümler korundu. Eğrisel Sparky, gerçek pamuk dokulu kıvrımlı oda tekstili, taranmış sandalye, HDR yansıma/sıcak gölge, üç tur hedefi/isteğe bağlı risk yıldızları ve kayıt tabanlı efektler bağlandı. İlk gerçek 6.3 sn render: 70.87542 m / 275 stil / zincir 2. İlk koşu 31 EditMode +30 PlayMode =61 geçti. Dört seed ×güvenli/riskli rota ×120 sn testinde çarpışma/havuz tükenmesi yok. Yatak/sandalye kadrajı ve poster ayrıntıları son incelemede iyileştirildi; nihai test/render/APK kontrolü takip ediyor. Fiziksel tablet ölçümü ve insan kabulü açık.
+
+## v0.5 son yerel doğrulama
+
+Son PlayMode 31/31, EditMode 31/31:62/62. Model raporu 173 renderer /63 mesh /205.618 üçgen (inaktif havuz dahil), sıfır eksik referans/shader/dekor collider. Son Android paketi ZIP/ARM64/paket/API/v2 imzasıyla doğrulandı. SHA256: d23bad3943464dc0d08103ce9daf2d887868a70fd58a5c5a05ee369427f64341. Gerçek fiziksel cihaz ve insan kabulü hâlâ açık. Kaynak/ön sürüm/README ve Notion eşitlemesi teslim adımıdır.
+
+
+## v0.5 yakın plan düzeltmeleri
+
+Mobilya/masa kesişmesi ve örtüye gömülen yıldızlar gerçek ayrıntı renderında yakalanıp düzeltildi. FBX kök ölçek/dönüş korunarak sandalye doğru oda boyutuna alındı. Üreticide ±6.3 masa açıklığı ve birleştirme sonrası sandalye ölçüsü kontrolü var. Yeni testle son koşu 31 EditMode +31 PlayMode =62/62 geçti. 87 kullanılmayan ara Living mesh kaldırıldı; mevcut sahne/prefab bağımlılıkları korundu. Nihai APK yeniden derlendi ve v2 imza/paket/ZIP doğrulandı. İlk ara APK yayımlanmadı.
+
+## v0.5 teslim eşitlemesi kapandı
+
+Kaynak a7e889ae4264656eca81db093034c63ed15f3906, PR #4 ve v0.5.0 yayımlandı. GitHub APK digest son yerel SHA256 ile aynı: d23bad3943464dc0d08103ce9daf2d887868a70fd58a5c5a05ee369427f64341. Main README 0a91e43 ile güncellendi. Son APK tablet Download içinde 40,4 MB olarak doğrulandı; kurulum/oynanış ölçümü bekler. Notion kökü 27 çocuk sayfayla korundu, 25 plan/26 sonuç/27 cihaz sayfaları ve ilgili 12 belge/kanıt sayfası güncellendi; kök/teslim/görsel/cihaz sayfaları yeniden okunarak doğrulandı. Unity ToyRoomLiving sahnesiyle yeniden açıldı. Fiziksel FPS/ısı/dokunma ve insan tempo/ses/sanat kabulü açık.

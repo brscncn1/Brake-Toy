@@ -32,15 +32,25 @@ namespace BrakeToy.Core
     {
         private uint state;
         private int index, safe = 1, previousVariant = -1, sameLaneCount, nextBall = 2;
-        private readonly bool varied;
+        private readonly bool varied, choreographed;
+        private readonly bool mirrored;
         private float distance = 24;
-        public ArcadeSequence(int seed, bool varied = false) { state = (uint)seed; if (state == 0) state = 1; this.varied = varied; }
+        public ArcadeSequence(int seed, bool varied = false, bool choreographed = false) { state = (uint)seed; if (state == 0) state = 1; this.varied = varied; this.choreographed=choreographed; mirrored=(seed&1)==0; }
         private int Next(int count) { state ^= state << 13; state ^= state >> 17; state ^= state << 5; return (int)(state % (uint)count); }
         public ArcadeRow Next()
         {
             int i = index++;
             // First encounter asks for a visible steering decision, not a waiting period.
             int candidate = i == 0 ? (Next(2) == 0 ? 0 : 2) : Math.Max(0, Math.Min(2, safe + Next(3) - 1));
+            if(choreographed)
+            {
+                // Short authored sweeps/holds create readable decisions; transitions stay one lane apart.
+                int beat=i%8,family=(i/8)%3;
+                int desired=family==0?(beat<=2?beat:beat<=4?4-beat:beat==5?0:beat-5):family==1?(beat/2%2==0?0:1):(beat%4<=2?beat%4:1);
+                if(mirrored)desired=2-desired;
+                candidate=Math.Max(safe-1,Math.Min(safe+1,desired));
+                if(i==0)candidate=mirrored?2:0;
+            }
             if (varied && candidate == safe && sameLaneCount >= 2) candidate = safe == 1 ? Next(2) * 2 : 1;
             sameLaneCount = candidate == safe ? sameLaneCount + 1 : 1;
             safe = candidate;
@@ -76,5 +86,6 @@ namespace BrakeToy.Core
         public void Advance(float dt) { Remaining = Math.Max(0, Remaining - Math.Max(0, dt)); if (Remaining <= 0) Chain = 0; }
         public int Award() { Chain++; NearMisses++; Remaining = 6; int points = 100 * Multiplier; Total += points; return points; }
         public void Crash() { Chain = 0; Remaining = 0; }
+        public void AwardRiskStar() { Total += 75; }
     }
 }
