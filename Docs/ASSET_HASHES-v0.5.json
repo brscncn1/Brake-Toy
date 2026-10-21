@@ -1,0 +1,67 @@
+[
+  {
+    "path": "Assets/BrakeToy/Art/Living/ThirdParty/Audio/impactBell_heavy_000.ogg",
+    "bytes": 13915,
+    "sha256": "94b8bb5f2d43ab65e4bcc32b28562416e9bc2c51d9fd4be1e333660ee52f977f"
+  },
+  {
+    "path": "Assets/BrakeToy/Art/Living/ThirdParty/Audio/impactMetal_light_002.ogg",
+    "bytes": 6804,
+    "sha256": "25a96f90a9a1f88a531e824e126f0519504625e5635e65a72e4f31611428db29"
+  },
+  {
+    "path": "Assets/BrakeToy/Art/Living/ThirdParty/Audio/impactSoft_medium_001.ogg",
+    "bytes": 5506,
+    "sha256": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf"
+  },
+  {
+    "path": "Assets/BrakeToy/Art/Living/ThirdParty/Audio/impactWood_light_000.ogg",
+    "bytes": 6343,
+    "sha256": "eb45e35b4bed784d3f120de4afec4b0d6ac09d9e143cce8cfcb7d739e1b1f3c3"
+  },
+  {
+    "path": "Assets/BrakeToy/Art/Living/ThirdParty/Audio/impactWood_medium_001.ogg",
+    "bytes": 6555,
+    "sha256": "15271dbe8e2872dbb0ff1aeb7b12b2d2b92b7c1951c88532b9ab9158c36dfc73"
+  },
+  {
+    "path": "Assets/BrakeToy/Art/Living/ThirdParty/Audio/qubodup-bowling_roll-nofadeout.ogg",
+    "bytes": 109594,
+    "sha256": "cfbaa7f1917ba881664c184f5dd700d92c9fc39d24e02fac0084882555f2e649"
+  },
+  {
+    "path": "Assets/BrakeToy/Art/Living/ThirdParty/cotton_jersey/cotton_jersey_diff_1k.jpg",
+    "bytes": 581360,
+    "sha256": "0f1b790e4087223275aaa6fdffdd46a556a26d2af72cd811acf72ba9c21ec1f6"
+  },
+  {
+    "path": "Assets/BrakeToy/Art/Living/ThirdParty/cotton_jersey/cotton_jersey_nor_gl_1k.jpg",
+    "bytes": 678670,
+    "sha256": "9b79709806511b62567fb007ff61009c3b194bb0d0821fbaee3faf1b2bff0318"
+  },
+  {
+    "path": "Assets/BrakeToy/Art/Living/ThirdParty/painted_wooden_chair_02/painted_wooden_chair_02_1k.fbx",
+    "bytes": 59964,
+    "sha256": "40fe91442e7704406ba2afccc9fe3b84f64c45287f6e90503986ced8c100a708"
+  },
+  {
+    "path": "Assets/BrakeToy/Art/Living/ThirdParty/painted_wooden_chair_02/painted_wooden_chair_02_ao_1k.jpg",
+    "bytes": 256819,
+    "sha256": "5d7f50d0d645689967615e0447eb16af516ded106be5a12b895f35a99fcee433"
+  },
+  {
+    "path": "Assets/BrakeToy/Art/Living/ThirdParty/painted_wooden_chair_02/painted_wooden_chair_02_diff_1k.jpg",
+    "bytes": 662120,
+    "sha256": "bc944fc83f440198658199080d761b19c3e2f42daa793062aa283563683a732b"
+  },
+  {
+    "path": "Assets/BrakeToy/Art/Living/ThirdParty/painted_wooden_chair_02/painted_wooden_chair_02_nor_gl_1k.jpg",
+    "bytes": 973745,
+    "sha256": "2c2c2f92e4aebadf06c7c675a3c903c1a647dde6f875ac55aa4945d47e053d9a"
+  },
+  {
+    "path": "Assets/BrakeToy/Art/Living/ThirdParty/studio_small_09/studio_small_09_1k.hdr",
+    "bytes": 1615248,
+    "sha256": "e7cfda5f4e98e623db12b8bfd0184e048488e4855d9c83e2751fb44a32e80c45"
+  }
+]

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/BrakeToy/Scenes/ToyRoomLiving.unity
+    guid: d2b967fb5fdf8b84aa88f52d42c614e5
+  - enabled: 1
     path: Assets/BrakeToy/Scenes/ToyRoomRefined.unity
     guid: e26d4c5c1c30bff4ba4bd4dde4d4693f
   - enabled: 1

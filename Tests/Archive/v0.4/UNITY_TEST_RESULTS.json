@@ -1,0 +1,238 @@
+{
+  "version": "0.4.0",
+  "editorVersion": "6000.3.26f1",
+  "suites": {
+    "EditMode": {
+      "total": 28,
+      "passed": 28,
+      "failed": 0,
+      "startTimeUtc": "2026-10-20 23:30:11Z",
+      "endTimeUtc": "2026-10-20 23:30:18Z",
+      "cases": [
+        {
+          "name": "BrakeToy.Tests.ArcadeRulesTests.IntegratedDistanceAgreesAt30And120FramesPerSecond",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.ArcadeRulesTests.LayeredAudioStaysFiniteAndWithinHeadroom",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.ArcadeRulesTests.NearMissChainExpiresAndCrashPreservesEarnedScoreOnly",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.ArcadeRulesTests.OneHundredTwentyEightThousandRowsHaveContinuousSafeWitnessPathsIncludingBalls",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.ArcadeRulesTests.PaceStartsImmediatelyAndHasSmoothBoundedAcceleration",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.ArcadeRulesTests.RollingSphereDoesNotUseAnUnfairSquareCorner",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.ArcadeRulesTests.SeedReproducesEncountersAndDoesNotDependOnFrameRate",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.ArcadeRulesTests.SweptSphereMatchesFineSampleOracleAcrossTenThousandMovingCases",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.ArcadeRulesTests.VariedRowsKeepSafePathsWithoutLongIdenticalLaneRuns",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.Touch begin does not teleport",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.Relative input is resolution independent",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.Lift immediately holds current position",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.Retouch does not jump or carry old target",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.Movement stays inside both boundaries",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.Direction reverses immediately at boundary",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.Maximum lateral speed is enforced",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.Input without a drag and zero width are ignored",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.Restart resets all steering state",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.30 60 and 120 FPS reach the same target",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.Swept collision catches forward tunneling",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.Swept collision catches lateral tunneling",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.Diagonal swept collision catches both moving axes",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.A separated path does not collide",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.Crossing each axis at different times does not collide",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.Initial overlap and contact count as collision",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.Obstacle behind the player moving away does not collide",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.Stop at contact cancels pending steering",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.CoreTests.10000 seeded sweeps match independent closest approach oracle",
+          "result": "Passed"
+        }
+      ]
+    },
+    "PlayMode": {
+      "total": 25,
+      "passed": 25,
+      "failed": 0,
+      "startTimeUtc": "2026-10-20 23:39:24Z",
+      "endTimeUtc": "2026-10-20 23:39:37Z",
+      "cases": [
+        {
+          "name": "BrakeToy.Tests.ArcadeSceneTests.AccelerationPauseAndDeterministicRetryReuseInstances",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.ArcadeSceneTests.FeverIsVisualOnlyAndStopsOnCrash",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.ArcadeSceneTests.FirstChallengeArrivesQuicklyAndRetryIsImmediate",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.ArcadeSceneTests.MaxSpeedReactionDistanceRemainsVisibleInFourPortraitRatios",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.ArcadeSceneTests.NearMissAwardsOnceAndMovingBallUsesRelativeSweep",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.ArcadeSceneTests.StartupPoolAndDetailedModelsAreValid",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.ArcadeSceneTests.TwoMinuteWitnessDriveHandlesEveryRowWithoutAllocatingHazards",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.InputIntegrationTests.MouseDragReleaseRetouchAndUIBlocking",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.InputIntegrationTests.TouchDragIgnoresSecondFingerAndHoldsOnRelease",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.RefinedSceneTests.AccelerationPauseAndDeterministicRetryReuseInstances",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.RefinedSceneTests.FeverIsVisualOnlyAndStopsOnCrash",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.RefinedSceneTests.FirstChallengeArrivesQuicklyAndRetryIsImmediate",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.RefinedSceneTests.ImpactKeepsCollisionRootFixedAndRestoresVisuals",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.RefinedSceneTests.MaxSpeedReactionDistanceRemainsVisibleInFourPortraitRatios",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.RefinedSceneTests.NearMissAwardsOnceAndMovingBallUsesRelativeSweep",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.RefinedSceneTests.ProfilesArePrivateAndMenuHasOnePanel",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.RefinedSceneTests.SameRouteReplaysAndNewRunChangesSeed",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.RefinedSceneTests.StartupPoolAndDetailedModelsAreValid",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.RefinedSceneTests.TwoMinuteWitnessDriveHandlesEveryRowWithoutAllocatingHazards",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.RunLoopTests.CameraPreservesPortraitFraming",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.RunLoopTests.ReadyCrashAndRestart",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.TabletopSceneTests.NearDecorSharesWorldMovementPauseAndRestart",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.TabletopSceneTests.NewSceneStillCrashesAndReusesWorldOnRestart",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.TabletopSceneTests.RoomCameraKeepsTrackAndReactionDistanceVisible",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.TabletopSceneTests.RoomPreservesGameplayAndDecorHasNoColliders",
+          "result": "Passed"
+        }
+      ]
+    }
+  },
+  "physicalAndroidDeviceTested": false,
+  "manualControlFeelApproved": false
+}

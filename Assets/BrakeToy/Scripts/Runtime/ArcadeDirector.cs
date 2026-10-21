@@ -11,6 +11,9 @@ namespace BrakeToy
         public ArcadeAudio Sound;
         public int Seed = 7331;
         public bool UseVariedPatterns, VaryRuns, BuildCatalogPool;
+        public bool Choreographed;
+        public RunChallenges Challenges;
+        public string StyleRecordKey = "BrakeToy.v03.style";
         public ObstacleDefinition[] Definitions;
         public int CurrentSeed { get; private set; }
         private int runNumber;
@@ -67,15 +70,17 @@ namespace BrakeToy
                 if (count != Pool.Length) throw new System.InvalidOperationException("Unexpected encounter pool instances.");
             }
             BestDistance = Mathf.Max(0, PlayerPrefs.GetFloat("BrakeToy.v03.distance", 0));
-            BestStyle = Mathf.Max(0, PlayerPrefs.GetInt("BrakeToy.v03.style", 0));
+            BestStyle = Mathf.Max(0, PlayerPrefs.GetInt(StyleRecordKey, 0));
             HUD.Bind(this, game); Sound.Initialize(game, this);
+            if(Challenges)Challenges.Initialize(game,this);
             ResetRun();
         }
         public void ResetRun()
         {
             foreach (var hazard in Pool) hazard.Release();
             Elapsed = Distance = 0; SpawnedRows = PoolExhaustions = 0; lastGear = 1;
-            Style.Reset(); sequence = new ArcadeSequence(CurrentSeed, UseVariedPatterns); pending = sequence.Next();
+            Style.Reset(); sequence = new ArcadeSequence(CurrentSeed, UseVariedPatterns, Choreographed); pending = sequence.Next();
+            if(Challenges)Challenges.ResetRun();
             HUD.Clear(); FillAhead();
         }
         public void BeginRun(bool sameRoute)
@@ -92,6 +97,7 @@ namespace BrakeToy
             while (pending.Distance - Distance < 95)
             {
                 float z = pending.Distance - Distance;
+                if(Challenges)Challenges.SpawnRisk(pending,z);
                 if (pending.Ball) Activate(3, pending.BallX(z), z, pending.BallCrossingX, pending.BallSlope);
                 else for (int lane = 0; lane < 3; lane++) if (pending.IsBlocked(lane)) Activate(pending.Variant, ArcadeRules.LaneX(lane), z, 0, 0);
                 SpawnedRows++; pending = sequence.Next();
@@ -155,11 +161,12 @@ namespace BrakeToy
                 }
                 game.World.Advance(moved); Distance += moved; Elapsed += sub * fraction;
                 Style.Advance(sub * fraction);
+                if(Challenges)Challenges.Step(moved,fromX,Mathf.Lerp(fromX,toX,fraction),hit);
                 if (hit)
                 {
                     game.Player.StopAt(Mathf.Lerp(fromX, toX, fraction)); Style.Crash();
                     BestDistance = Mathf.Max(BestDistance, Distance); BestStyle = Mathf.Max(BestStyle, Style.Total);
-                    if(PersistRecords) { PlayerPrefs.SetFloat("BrakeToy.v03.distance", BestDistance); PlayerPrefs.SetInt("BrakeToy.v03.style", BestStyle); PlayerPrefs.Save(); }
+                    if(PersistRecords) { PlayerPrefs.SetFloat("BrakeToy.v03.distance", BestDistance); PlayerPrefs.SetInt(StyleRecordKey, BestStyle); PlayerPrefs.Save(); }
                     Sound.Crash(hitHazard && (hitHazard.RollingBall || hitHazard.HalfLength < .5f)); HUD.Impact();
                     var impact = game.GetComponent<ToyImpactFeedback>(); if (impact) impact.Play();
                     game.Crash(); return;

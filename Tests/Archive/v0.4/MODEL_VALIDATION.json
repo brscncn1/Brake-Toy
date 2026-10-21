@@ -1,0 +1,12 @@
+{
+    "scene": "ToyRoomRefined",
+    "version": "0.4.0",
+    "authoredMeshRenderersIncludingInactivePool": 192,
+    "uniqueReferencedMeshes": 61,
+    "trianglesIncludingInactivePool": 158146,
+    "missingMeshes": 0,
+    "missingMaterials": 0,
+    "shaderErrors": 0,
+    "decorativeColliders": 0,
+    "physicalDeviceProfiled": false
+}

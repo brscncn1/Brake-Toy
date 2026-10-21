@@ -75,3 +75,9 @@ WorkshopSceneBuilder ayrı scene/config/prefab/mesh/material/renderer üretir. A
 ## v0.4 yapı
 
 ObstacleDefinition: prefab/kind/pool size/collision footprint. ArcadeDirector: katalog örnekleri sahne açılışında bir kez, CurrentSeed/BeginRun(sameRoute), sürüşte tahsissiz havuz yeniden kullanımı. ArcadeSequence varied modu eski diziyi varsayılan durumda korur. GraphicsProfileController iki renderer kullanan özel runtime pipeline kopyasını sahiplenir ve sahne kapanışında geri yükler. PerformanceProbe yalnızca isteğe bağlı yerel 60 sn kare kaydı tutar; Android JNI yerleşik modülü explicit development benchmark intent'ini okur. ToyImpactFeedback kök/collider yerine visual/kameraya kısa impulse uygular. Quiet Wood, lisanslı URP Lit türevidir. v0.4 varlık/sahne üreticileri eski sanat dosyalarını değiştirmez.
+
+## v0.5 Living Workshop
+
+ToyRoomLiving / LivingConfig / Art/Living ayrı varyanttır. LivingCarBuilder eğrisel kapalı gövde ve cam yüzeyleri; LivingRoomBuilder pamuk kıvrımları ve kaynak FBX sandalye üretir. LivingMeshFactory yalnızca Living/Meshes içine kayıt yapar. Oda materyal bazında birleştirilir; yakın dekorlar WorldScroller olaylarına bağlı kalır. Eski sahne/varlıklar değiştirilmez.
+
+ArcadeSequence üçüncü choreographed seçeneği eskilerin varsayılanını korur. RunGoals saf C# durumudur. RunChallenges 12 yıldız havuzunu ArcadeDirector alt adımına bağlar; pause hareketi durdurur, retry sıfırlar, hit adımı ödülü engeller. v0.5 stil anahtarı BrakeToy.v05.style; eski BrakeToy.v03.style ve mesafe kaydı korunur. Kamera sınırlı yatay takip kullanır. Runtime kalite kopyası yüksek profilde ACES/Bloom'u açar, ekonomikte kapatır. ToyAudioSettings motor ve efekt ayarlarını ayrı saklar. Kayıtlar CC0; ses kaynakları sahne başlangıcında oluşturulur.

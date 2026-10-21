@@ -43,3 +43,11 @@
 - Unity/Android kurulumu ve doğrulama adımları belgelendi. Fiziksel cihaz ve manuel sürüş hissi kabulü açık bırakıldı.
 
 - Android ARM64 IL2CPP Development APK başarıyla derlendi; imza/arşiv ve paket bilgisi kontrol edildi. Fiziksel cihaz testi yapılmadı.
+
+## 0.5.0 — Living Workshop
+
+- Ayrı Living sahnesi, eğrisel araç, kıvrımlı pamuk kumaşlar, taranmış sandalye, pencere gölgesi/HDR ve yüksek profil renk düzenlemesi.
+- Tasarlanmış kısa engel ritimleri; üç tur hedefi, 12 örneklik havuzda isteğe bağlı +75 risk yıldızları, ayrı v05 stil rekoru.
+- CC0 kayıt tabanlı yuvarlanma/çarpışma ve ayrı kalıcı motor/efekt ayarları.
+- Dört ekran oranı, iki rota/dört seed, ödül/reset/pause/model/profil/ses dahil 62/62 test. Fiziksel kabul bekler.
+- Android ARM64 IL2CPP Development v0.5.0/code5; kaynaklar/lisanslar/raporlar ve gerçek renderlar.

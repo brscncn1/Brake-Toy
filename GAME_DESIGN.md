@@ -122,3 +122,7 @@ Sınırlı seedli kalıp ailesi, tek/duble kapılar ve nefes satırları, ilk 6�
 ## v0.4 karşılaşma ve kalite güncellemesi
 
 Her yeni tur farklı seed, aynı parkur düğmesi oturumdaki aynı diziyi kurar. Güvenli koridor en fazla iki kez tekrarlanır; mesafeler 25–31, nefes aralığı 34; toplar 5–8 satır arayla farklı kesişim/eğimler alır. Komşu şerit geçişi ve güvenli koridor ailesi korunur. Hız/ilk tehlike v0.3'teki erken eğriyi kullanır. Görsel impact gameplay kutusunu etkilemez. Final sanat ve insan eğlence kabulü henüz yok.
+
+## v0.5 kısa tur derinliği
+
+Üç kümülatif tur hedefi: 60 m sürüş, 3 risk yıldızı, 6 yakın geçiş. Her yeni turda sıfırlanır. Sabit engel sıralarında güvenli koridorun engel tarafına .72 birim yaklaştırılan yıldız isteğe bağlıdır; top satırında yıldız yoktur. Her yıldız +75 stil verir; yakın geçiş/kombo sayısını yükseltmez. Çarpışma alt adımında yıldız ödülü verilmez. İlk engel 24 m'de; ritimli sekizli diziler yan yana erişilebilir şerit geçişleri kullanır, ayna yönü/engel/top aralıkları seed ile değişir. Bu kısa hedefler Faz 4 kalıcı görev/garaj/ekonomi sisteminin yerine geçmez.

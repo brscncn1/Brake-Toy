@@ -2,11 +2,15 @@ using UnityEngine;
 
 namespace BrakeToy
 {
-    /// <summary>Original synthesized toy motor and short cues. No external audio licence dependency.</summary>
+    /// <summary>Synthesized toy motor with optional CC0 recorded rolling and impact layers.</summary>
     public sealed class ArcadeAudio : MonoBehaviour
     {
         public bool Muted;
         public bool EnhancedLayers;
+        public bool UseRecordedSamples;
+        public AudioClip RecordedRoll,RecordedWood,RecordedMetal,RecordedSoft;
+        [Range(0,1)]public float EngineLevel=.65f,EffectsLevel=.75f;
+        private AudioSource recordedRoll;
         private AudioSource rolling;
         private float previousX, lastShift;
         private AudioSource engine, effects;
@@ -33,6 +37,11 @@ namespace BrakeToy
                 softImpact = LayeredClip("Rubber toy impact", .32f, 5);
                 rolling = gameObject.AddComponent<AudioSource>(); rolling.playOnAwake = false; rolling.loop = true;
                 rolling.clip = LayeredClip("Rubber on desk", 1, 1); rolling.volume = .016f; rolling.Play();
+            }
+            if(UseRecordedSamples && RecordedRoll)
+            {
+                recordedRoll=gameObject.AddComponent<AudioSource>();recordedRoll.playOnAwake=false;recordedRoll.loop=true;
+                recordedRoll.clip=RecordedRoll;recordedRoll.volume=0;recordedRoll.pitch=1.15f;recordedRoll.Play();
             }
         }
         // Deterministic modal synthesis: filtered friction, flywheel harmonics, and a dry wooden attack.
@@ -79,19 +88,28 @@ namespace BrakeToy
             if (!engine) return;
             engine.mute = Muted || game.State != RunState.Running; effects.mute = Muted;
             engine.pitch = .9f + (arcade.Speed - 10) * .09f;
+            if(UseRecordedSamples)
+            {
+                engine.volume=.032f*EngineLevel;effects.volume=.20f*EffectsLevel;
+                if(recordedRoll)
+                {
+                    bool warning=game.State==RunState.Running && arcade.BallWarning(out _);
+                    recordedRoll.mute=Muted;recordedRoll.volume=Mathf.MoveTowards(recordedRoll.volume,warning?.10f*EffectsLevel:0,Time.unscaledDeltaTime*.4f);
+                }
+            }
             if (EnhancedLayers)
             {
                 float shiftDip = Mathf.Clamp01((Time.unscaledTime - lastShift) / .12f);
                 engine.pitch = (.92f + (arcade.Speed - 10) * .065f) * Mathf.Lerp(.84f, 1, shiftDip);
                 float lateral = Mathf.Abs(game.Player.X - previousX) / Mathf.Max(.001f, Time.deltaTime);
                 rolling.mute = Muted || game.State != RunState.Running;
-                rolling.volume = .012f + Mathf.Min(.018f, lateral * .002f); rolling.pitch = .85f + arcade.Speed * .025f;
+                rolling.volume = (.012f + Mathf.Min(.018f, lateral * .002f))*(UseRecordedSamples?EngineLevel:1); rolling.pitch = .85f + arcade.Speed * .025f;
                 previousX = game.Player.X;
             }
         }
         public void NearMiss(int multiplier) { if (effects) { effects.pitch = 1 + multiplier * .07f; effects.PlayOneShot(near); } }
-        public void Shift() { lastShift = Time.unscaledTime; if (effects) { effects.pitch = 1; effects.PlayOneShot(shift); } }
-        public void Crash(bool soft = false) { if (effects) { effects.pitch = 1; effects.PlayOneShot(EnhancedLayers && soft ? softImpact : crash); } }
+        public void Shift() { lastShift = Time.unscaledTime; if (effects) { effects.pitch = 1; effects.PlayOneShot(UseRecordedSamples&&RecordedMetal?RecordedMetal:shift,UseRecordedSamples?.35f:1); } }
+        public void Crash(bool soft = false) { if (effects) { effects.pitch = 1; effects.PlayOneShot(UseRecordedSamples?(soft?RecordedSoft:RecordedWood):EnhancedLayers && soft ? softImpact : crash); } }
         private void OnDestroy()
         {
             if (engine && engine.clip) Destroy(engine.clip);

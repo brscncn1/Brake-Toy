@@ -1,0 +1,11 @@
+# Huawei MatePad 11 — v0.5 fiziksel kabul
+
+Durum: **bekliyor**. Android paketi üretildi ve masaüstünde doğrulandı; tablet üzerinde kurulum/oynanış sonucu henüz yok. Önceki bağlantı MTP dosya aktarımı için çalıştı; ADB listesi boştu. Paket: Builds/Android/BrakeToy-v0.5-Living.apk.
+
+1. Tablette Dosyalar → Dahili depolama → Download → BrakeToy-v0.5-Living.apk. Kurulum izin/onayını kullanıcı yapar. Önceki kaydı korumak için kaldırmadan güncelleme kurun.
+2. OYNA: ilk engelde sağ/sol kaçış, parmağı bırakınca duruş ve yeniden dokununca sıçramama; aynı parkur/yeni parkur/arka plan sonrası pause.
+3. Üç hedefi ve isteğe bağlı yıldızları dene. Yıldız almak zorunlu değildir. Yakın geçiş sesi, yaklaşan top yuvarlanması ve çarpışma sesi dengeli mi? Menüde MOTOR/EFEKT ayrı ayarlanır.
+4. Menüde 60 sn PERFORMANS TESTİ → toplam 60 sn gerçek sürüş (retry yapılabilir); ilk 3 sn ısınma ölçüme girmez. Menüde FPS/p95 sonucu görünür. İki grafik profilinde tekrar et.
+5. 10–15 dk sürüşte ısınma/rahatsızlık, takılma ve ses tekrarını değerlendir. Termal düşüş varsa süre ve grafik profilini bildir. Editör sayımı fiziksel ölçüm değildir.
+
+Yerel JSON: Application.persistentDataPath/performance-0.5.0-high.json veya low.json. Ağ gönderimi yok. Dosyayı almak zorunlu değil; ekrandaki FPS/p95 ve his değerlendirmesi ilk kabul için yeterli. Termal/latency kabulü otomatik çıkarılmaz. Sonuç gelmeden bu belge tamamlandı sayılmaz.

@@ -1,13 +1,13 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "editorVersion": "6000.3.26f1",
   "suites": {
     "EditMode": {
-      "total": 28,
-      "passed": 28,
+      "total": 31,
+      "passed": 31,
       "failed": 0,
-      "startTimeUtc": "2026-10-20 23:30:11Z",
-      "endTimeUtc": "2026-10-20 23:30:18Z",
+      "startTimeUtc": "2026-10-21 00:15:20Z",
+      "endTimeUtc": "2026-10-21 00:15:28Z",
       "cases": [
         {
           "name": "BrakeToy.Tests.ArcadeRulesTests.IntegratedDistanceAgreesAt30And120FramesPerSecond",
@@ -120,15 +120,27 @@
         {
           "name": "BrakeToy.Tests.CoreTests.10000 seeded sweeps match independent closest approach oracle",
           "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.LivingRulesTests.AuthoredBeatsKeepReachableDeterministicSafeCorridors",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.LivingRulesTests.GoalsAreCumulativeOnceAndResetCompletely",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.LivingRulesTests.RiskScoreDoesNotInventNearMissesOrExtendChain",
+          "result": "Passed"
         }
       ]
     },
     "PlayMode": {
-      "total": 25,
-      "passed": 25,
+      "total": 31,
+      "passed": 31,
       "failed": 0,
-      "startTimeUtc": "2026-10-20 23:39:24Z",
-      "endTimeUtc": "2026-10-20 23:39:37Z",
+      "startTimeUtc": "2026-10-21 00:28:11Z",
+      "endTimeUtc": "2026-10-21 00:28:25Z",
       "cases": [
         {
           "name": "BrakeToy.Tests.ArcadeSceneTests.AccelerationPauseAndDeterministicRetryReuseInstances",
@@ -164,6 +176,30 @@
         },
         {
           "name": "BrakeToy.Tests.InputIntegrationTests.TouchDragIgnoresSecondFingerAndHoldsOnRelease",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.LivingSceneTests.CameraPreservesReactionVisibilityAndCarAtSteeringExtremes",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.LivingSceneTests.CenterAndRiskWitnessesSurviveTwoMinutesAcrossSeedsWithoutGrowingPools",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.LivingSceneTests.ImportedChairKeepsItsIntendedRoomScaleAfterMeshMerge",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.LivingSceneTests.RebuiltCarHasFiniteGeometryAndRoomHasNoGameplayColliders",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.LivingSceneTests.RecordedAudioAndPrivateQualityProfilesAreWired",
+          "result": "Passed"
+        },
+        {
+          "name": "BrakeToy.Tests.LivingSceneTests.RiskRewardOccursOnceAndNeverOnImpactThenResets",
           "result": "Passed"
         },
         {
