@@ -1,0 +1,17 @@
+{
+  "version": "0.5.0",
+  "utc": "2026-10-21T00:36:34.609124+00:00",
+  "sourceCommit": "a7e889ae4264656eca81db093034c63ed15f3906",
+  "sourceBranch": "feat/living-workshop-v05",
+  "pullRequest": "https://github.com/brscncn1/Brake-Toy/pull/4",
+  "release": "https://github.com/brscncn1/Brake-Toy/releases/tag/v0.5.0",
+  "mainReadmeCommit": "0a91e43",
+  "apkSha256": "d23bad3943464dc0d08103ce9daf2d887868a70fd58a5c5a05ee369427f64341",
+  "remoteDigestMatches": true,
+  "notionChildPages": 27,
+  "notionRootAndDeliveryRefetched": true,
+  "tabletMtpFileVisible": true,
+  "tabletMtpDisplaySize": "40,4 MB",
+  "physicalDeviceTested": false,
+  "humanQualityAccepted": false
+}

@@ -110,3 +110,7 @@ Son PlayMode 31/31, EditMode 31/31:62/62. Model raporu 173 renderer /63 mesh /20
 ## v0.5 yakın plan düzeltmeleri
 
 Mobilya/masa kesişmesi ve örtüye gömülen yıldızlar gerçek ayrıntı renderında yakalanıp düzeltildi. FBX kök ölçek/dönüş korunarak sandalye doğru oda boyutuna alındı. Üreticide ±6.3 masa açıklığı ve birleştirme sonrası sandalye ölçüsü kontrolü var. Yeni testle son koşu 31 EditMode +31 PlayMode =62/62 geçti. 87 kullanılmayan ara Living mesh kaldırıldı; mevcut sahne/prefab bağımlılıkları korundu. Nihai APK yeniden derlendi ve v2 imza/paket/ZIP doğrulandı. İlk ara APK yayımlanmadı.
+
+## v0.5 teslim eşitlemesi kapandı
+
+Kaynak a7e889ae4264656eca81db093034c63ed15f3906, PR #4 ve v0.5.0 yayımlandı. GitHub APK digest son yerel SHA256 ile aynı: d23bad3943464dc0d08103ce9daf2d887868a70fd58a5c5a05ee369427f64341. Main README 0a91e43 ile güncellendi. Son APK tablet Download içinde 40,4 MB olarak doğrulandı; kurulum/oynanış ölçümü bekler. Notion kökü 27 çocuk sayfayla korundu, 25 plan/26 sonuç/27 cihaz sayfaları ve ilgili 12 belge/kanıt sayfası güncellendi; kök/teslim/görsel/cihaz sayfaları yeniden okunarak doğrulandı. Unity ToyRoomLiving sahnesiyle yeniden açıldı. Fiziksel FPS/ısı/dokunma ve insan tempo/ses/sanat kabulü açık.

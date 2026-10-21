@@ -1,6 +1,6 @@
 # Huawei MatePad 11 — v0.5 fiziksel kabul
 
-Durum: **bekliyor**. Android paketi üretildi ve masaüstünde doğrulandı; tablet üzerinde kurulum/oynanış sonucu henüz yok. Önceki bağlantı MTP dosya aktarımı için çalıştı; ADB listesi boştu. Paket: Builds/Android/BrakeToy-v0.5-Living.apk.
+Durum: **fiziksel kabul bekliyor**. Son düzeltmeli APK MTP ile tabletin Download klasörüne kopyalandı; Dosya Gezgini’nde BrakeToy-v0.5-Living ve 40,4 MB boyutu doğrulandı. Önceki 40,0 MB ara dosya yenilendi. Android paketi üretildi ve masaüstünde doğrulandı; tablet üzerinde kurulum/oynanış sonucu henüz yok. Önceki bağlantı MTP dosya aktarımı için çalıştı; ADB listesi boştu. Paket: Builds/Android/BrakeToy-v0.5-Living.apk.
 
 1. Tablette Dosyalar → Dahili depolama → Download → BrakeToy-v0.5-Living.apk. Kurulum izin/onayını kullanıcı yapar. Önceki kaydı korumak için kaldırmadan güncelleme kurun.
 2. OYNA: ilk engelde sağ/sol kaçış, parmağı bırakınca duruş ve yeniden dokununca sıçramama; aynı parkur/yeni parkur/arka plan sonrası pause.

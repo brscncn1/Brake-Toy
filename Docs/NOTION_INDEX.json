@@ -179,6 +179,20 @@
       "properties": {
         "title": "25 — v0.5 Living Workshop Planı"
       }
+    },
+    "LIVING_MILESTONE.md": {
+      "id": "400dce66-5831-8135-aed2-ed21f332cd92",
+      "url": "https://app.notion.com/p/400dce6658318135aed2ed21f332cd92",
+      "properties": {
+        "title": "26 — v0.5 Living Workshop sonuçları ve eleştiriler"
+      }
+    },
+    "DEVICE_TEST-v0.5.md": {
+      "id": "400dce66-5831-81ff-ad88-c85aeb13eaaf",
+      "url": "https://app.notion.com/p/400dce66583181ffad88c85aeb13eaaf",
+      "properties": {
+        "title": "27 — v0.5 tablet kabul ve ses testi"
+      }
     }
   },
   "notice": {
