@@ -1,5 +1,11 @@
 # 23 Ekim 2026 — Faz 6 revizyon adayı kontrol noktası
 
+## Son teslim ve eşitleme
+
+Kaynak ca7aa2ab18094269f6d2e9d0d9aed7f87d3321b6, PR #5 ve v0.6.0 GitHub'a gönderildi. GitHub APK digest yerel 65750071216c7742625eab7f8e410f027a815f96741d3518c6eecb6821ead042 ile aynı; 38.232.631 bayt. v0.5 ile aynı Debug sertifikası doğrulandı. Main README 179f9370750dc89e1503292c6e0fbc131e418894 güncel teslim ve ayrı kaynak dalını açıkça gösterir. PR'lar birleştirilmedi.
+
+Notion kökü 31 alt sayfayla korundu; 28–31 plan/geri bildirim/servis/teslim sayfaları ayrı. Günlük, README/tasarım/mimari/yol haritası/test/değişiklik, cihaz, Android, Unity kanıtı ve model sayfaları güncellendi. Teslim sayfası tekrar okunup APK SHA256/görsel/eski bekleme metninin kaldırılması doğrulandı. Fiziksel v0.6, ısı, 16KB gerçek ortam, canlı servis/kalıcı online kimlik ve mağaza kabulü açık. Tablet dosya kopyası iddia edilmedi; doğrudan APK linki sağlandı.
+
 Kullanıcı tüm bağımsız geliştirmeye devam izni verdi. v0.5 tablet geri bildirimi alındı: kontrol iyi, tam grafikte öznel akıcılık; ilk 30 sn/parkur çok kolay ve sığ, müzik eksik, sanat hedefin altında. FPS/p95 ve kesinti ölçülmedi. Kullanıcı bu kalite revizyonlarını sonraki tura ayırdı.
 
 feat/complete-review-build üzerinde Review sahnesi, 10 araç varyantı, garaj, kariyer/ekonomi, kozmetik, 3 görev/15 başarım, Relax, ghost/günlük ve REST sınırı kodlandı. 39 EditMode +36 PlayMode geçti. 9 Python test ve gerçek C#HTTP yerel probe geçti. On araç ve tüm yeni menüler motor renderıyla incelendi. 316 renderer/133 mesh/768322 üçgen tüm inaktif araç/havuz dahil; eksik referans/shader/dekor collider sıfır. İlk yanlış mesh testi ve DX12 kapanışı düzeltildi, son test/yakalama başarılı.
