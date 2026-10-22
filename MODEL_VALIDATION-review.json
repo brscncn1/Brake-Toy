@@ -1,0 +1,12 @@
+{
+    "scene": "ToyRoomReview",
+    "version": "0.6.0",
+    "authoredRenderersIncludingInactiveCarsAndPool": 316,
+    "uniqueReferencedMeshes": 133,
+    "trianglesIncludingInactiveCarsAndPool": 768322,
+    "missingMeshes": 0,
+    "missingMaterials": 0,
+    "shaderErrors": 0,
+    "decorativeColliders": 0,
+    "physicalDeviceProfiled": false
+}

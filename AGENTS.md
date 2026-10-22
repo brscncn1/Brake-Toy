@@ -1,6 +1,6 @@
 # Brake Toy project workflow
 
-- Follow SOURCE_REQUIREMENTS.md and the user's later decisions. The current approved milestone is v0.5 Living Workshop: follow PLAN-v0.5.md for room/cloth/light, rebuilt car, short run goals and optional risk paths, recorded audio and physical-device acceptance. Preserve earlier scenes/assets/records and distinguish plans from verified results.
+- Follow SOURCE_REQUIREMENTS.md and the user's later decisions. The current approved milestone is the Phase 6 review candidate: follow PLAN-REVIEW.md. Preserve earlier scenes/assets/records and distinguish implemented features from physical-device, live-service and store acceptance. Difficulty, soundtrack and visual-quality revision are scheduled after this delivery at the user's request.
 - Keep existing working scenes and user edits. Save new scene/config/prefab variants for visual milestones.
 - Keep DEV_LOG.md current at meaningful checkpoints: decisions, implementation, tests, limitations, and next steps. Do not claim a test passed unless it was executed.
 - The user explicitly authorized uploading this project's work to https://github.com/brscncn1/Brake-Toy and maintaining its Notion documentation. Push completed checkpoints to the appropriate feature branch. Do not force-push or overwrite unrelated remote work. Large APKs belong in GitHub Releases, not source commits.

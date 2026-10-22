@@ -20,7 +20,7 @@ namespace BrakeToy
         private int[] poolOffsets;
         public float Elapsed { get; private set; }
         public float Distance { get; private set; }
-        public float Speed => ArcadeRules.Speed(Elapsed);
+        public float Speed => game && game.Review ? CareerRules.Speed(Elapsed,game.Review.Mode) : ArcadeRules.Speed(Elapsed);
         public readonly StyleScore Style = new StyleScore();
         public int Gear => Mathf.Min(4, 1 + Mathf.FloorToInt((Speed - 10) / 2));
         public float BestDistance { get; private set; }
@@ -79,7 +79,7 @@ namespace BrakeToy
         {
             foreach (var hazard in Pool) hazard.Release();
             Elapsed = Distance = 0; SpawnedRows = PoolExhaustions = 0; lastGear = 1;
-            Style.Reset(); sequence = new ArcadeSequence(CurrentSeed, UseVariedPatterns, Choreographed); pending = sequence.Next();
+            Style.Reset(); sequence = new ArcadeSequence(CurrentSeed, UseVariedPatterns, Choreographed,game&&game.Review&&game.Review.Mode==PlayMode.Relax); pending = sequence.Next();
             if(Challenges)Challenges.ResetRun();
             HUD.Clear(); FillAhead();
         }
@@ -115,6 +115,7 @@ namespace BrakeToy
         public void Step(float dt, float oldX, float newX)
         {
             if (dt <= 0 || game.State != RunState.Running) return;
+            if(game.Review)GetComponent<ReviewOnline>()?.Record(dt,newX);
             // Substeps bound acceleration error; swept relative collision handles both axes and hitches.
             int steps = Mathf.Max(1, Mathf.CeilToInt(dt * 60));
             float sub = dt / steps;
@@ -122,7 +123,8 @@ namespace BrakeToy
             {
                 float fromX = Mathf.Lerp(oldX, newX, step / (float)steps);
                 float toX = Mathf.Lerp(oldX, newX, (step + 1f) / steps);
-                float d = ArcadeRules.Distance(Elapsed + sub) - ArcadeRules.Distance(Elapsed);
+                var mode=game.Review?game.Review.Mode:PlayMode.Arcade;
+                float d = CareerRules.Distance(Elapsed + sub,mode) - CareerRules.Distance(Elapsed,mode);
                 bool hit = false; float fraction = 1; ArcadeHazard hitHazard = null;
                 foreach (var hazard in Pool)
                 {
@@ -162,11 +164,16 @@ namespace BrakeToy
                 game.World.Advance(moved); Distance += moved; Elapsed += sub * fraction;
                 Style.Advance(sub * fraction);
                 if(Challenges)Challenges.Step(moved,fromX,Mathf.Lerp(fromX,toX,fraction),hit);
+                if(game.Review)GetComponent<GhostReplay>().Record(Elapsed,Mathf.Lerp(fromX,toX,fraction));
                 if (hit)
                 {
                     game.Player.StopAt(Mathf.Lerp(fromX, toX, fraction)); Style.Crash();
+                    if(game.Review && game.Review.SurviveHit()){Sound.Crash(true);HUD.Impact();FillAhead();return;}
+                    if(!game.Review || game.Review.Mode==PlayMode.Arcade)
+                    {
                     BestDistance = Mathf.Max(BestDistance, Distance); BestStyle = Mathf.Max(BestStyle, Style.Total);
                     if(PersistRecords) { PlayerPrefs.SetFloat("BrakeToy.v03.distance", BestDistance); PlayerPrefs.SetInt(StyleRecordKey, BestStyle); PlayerPrefs.Save(); }
+                    }
                     Sound.Crash(hitHazard && (hitHazard.RollingBall || hitHazard.HalfLength < .5f)); HUD.Impact();
                     var impact = game.GetComponent<ToyImpactFeedback>(); if (impact) impact.Play();
                     game.Crash(); return;

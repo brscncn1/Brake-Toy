@@ -1,0 +1,21 @@
+{
+  "version": "0.6.0",
+  "status": "review_candidate_not_store_accepted",
+  "sourceCommit": "ca7aa2ab18094269f6d2e9d0d9aed7f87d3321b6",
+  "branch": "feat/complete-review-build",
+  "pullRequest": "https://github.com/brscncn1/Brake-Toy/pull/5",
+  "release": "https://github.com/brscncn1/Brake-Toy/releases/tag/v0.6.0",
+  "apk": "https://github.com/brscncn1/Brake-Toy/releases/download/v0.6.0/BrakeToy-v0.6-Review.apk",
+  "apkBytes": 38232631,
+  "apkSha256": "65750071216c7742625eab7f8e410f027a815f96741d3518c6eecb6821ead042",
+  "githubDigestMatchesLocal": true,
+  "signatureMatchesPreviousV05": true,
+  "mainReadmeCommit": "179f9370750dc89e1503292c6e0fbc131e418894",
+  "notionDeliveryPage": "https://app.notion.com/p/401dce66583181028107e4d8f3d84255",
+  "notionChildPagesPreserved": 31,
+  "notionDeliveryReadBackVerified": true,
+  "physicalCandidateTested": false,
+  "tabletFileTransferClaimed": false,
+  "productionOnlineDeployed": false,
+  "storeSubmitted": false
+}

@@ -108,6 +108,7 @@ namespace BrakeToy
             }
         }
         public void NearMiss(int multiplier) { if (effects) { effects.pitch = 1 + multiplier * .07f; effects.PlayOneShot(near); } }
+        public void Horn(int variation){if(effects){effects.pitch=.65f+variation*.2f;effects.PlayOneShot(near,.65f);}}
         public void Shift() { lastShift = Time.unscaledTime; if (effects) { effects.pitch = 1; effects.PlayOneShot(UseRecordedSamples&&RecordedMetal?RecordedMetal:shift,UseRecordedSamples?.35f:1); } }
         public void Crash(bool soft = false) { if (effects) { effects.pitch = 1; effects.PlayOneShot(UseRecordedSamples?(soft?RecordedSoft:RecordedWood):EnhancedLayers && soft ? softImpact : crash); } }
         private void OnDestroy()
