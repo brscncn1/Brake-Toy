@@ -2,35 +2,39 @@
 
 **NO BRAKES. BIG TROUBLE.** Unity 6.3 LTS / C# / gerçek 3D URP / Android portre.
 
-## v0.5 — Living Workshop
+## v0.6 — Faz 6 revizyon adayı
 
-Eğrisel oyuncak araba, taranmış ahşap sandalye, gerçek pamuk dokulu kıvrımlı perde/yatak ve sıcak pencere gölgesi. Ritimli erken kaçışlar, üç kısa tur hedefi, isteğe bağlı +75 stil yıldızları, kayıt tabanlı çarpışma/yuvarlanma sesleri ve ayrı motor/efekt ayarları.
+10 araç varyantı ve gerçek 3D garaj; Toy Points/kariyer/yedekli kayıt; üç görev ve 15 başarım; üç haklı Relax; günlük antrenman ve kişisel ghost. Bu aday kullanıcı revizyonları içindir; hedef görsel/oynanış kalitesi veya mağaza kabulü tamamlandı demek değildir.
 
-![Gerçek Unity v0.5 oynanış](https://raw.githubusercontent.com/brscncn1/Brake-Toy/a7e889ae4264656eca81db093034c63ed15f3906/Preview-v0.5.png)
+![Gerçek Unity garajı](https://raw.githubusercontent.com/brscncn1/Brake-Toy/ca7aa2ab18094269f6d2e9d0d9aed7f87d3321b6/UI-review-1.png)
 
-[Android APK / v0.5.0](https://github.com/brscncn1/Brake-Toy/releases/tag/v0.5.0) · [Kaynak dalı](https://github.com/brscncn1/Brake-Toy/tree/feat/living-workshop-v05) · [Notion proje merkezi](https://app.notion.com/p/3ffdce66583181868ac1d4e4bd6feeac)
+[Android test APK / v0.6.0](https://github.com/brscncn1/Brake-Toy/releases/tag/v0.6.0) · [Kaynak](https://github.com/brscncn1/Brake-Toy/tree/feat/complete-review-build) · [Notion](https://app.notion.com/p/3ffdce66583181868ac1d4e4bd6feeac)
 
 ## Kaynak dalı
 
-Bu main dalının oyun kaynak tabanı Faz 1'dir; daha sonraki PR'lar henüz birleştirilmedi. Güncel v0.5 oyunu için **feat/living-workshop-v05** dalını veya yukarıdaki hazır APK'yı kullanın. Bu README güncel teslimi gösterir; main'in aynı kaynakları içerdiği anlamına gelmez. [PR #4](https://github.com/brscncn1/Brake-Toy/pull/4).
+Bu main dalının oyun kaynak tabanı Faz 1'dir; özellik PR'ları henüz birleştirilmedi. Güncel v0.6 oyunu için **feat/complete-review-build** dalını veya hazır APK'yı kullan. Bu README güncel teslimi gösterir; main'in aynı oyun kaynaklarını içerdiği anlamına gelmez. [PR #5](https://github.com/brscncn1/Brake-Toy/pull/5).
 
 ## Aç ve oyna
 
-1. v0.5 kaynak dalını kullan. Unity **6000.3.26f1** ile bu proje klasörünü aç.
-2. Tools → Brake Toy → **Open Living Workshop v0.5**. Game: **16:9 Portrait (9:16)** /Scale 1×. Play → OYNA. Fareyi basılı tutup/parmakla sağa sola sürükle.
-3. Hedefler: **60 m →3 risk yıldızı →6 yakın geçiş**. Güvenli yolu kullanabilir veya yıldız için engele yaklaşabilirsin. İlk kaçış yaklaşık 2 saniyede gelir.
-4. **YENİ PARKUR** farklı seed; **AYNI PARKURU TEKRARLA** aynı dizi. Sağ üstten pause. Menüde MOTOR/EFEKT, genel ses ve grafik profili bulunur.
-5. **60 sn PERFORMANS TESTİ** gerçek sürüşten FPS/p95 kaydeder. Yüksek 60 /ekonomik 30 FPS hedeflerdir; fiziksel tablet sonucu henüz yok. [Tablet kontrol adımları](https://github.com/brscncn1/Brake-Toy/blob/a7e889ae4264656eca81db093034c63ed15f3906/DEVICE_TEST-v0.5.md).
+1. `feat/complete-review-build` dalını Unity **6000.3.26f1** ile aç. Android Build Support, SDK/NDK ve OpenJDK kurulu olmalı.
+2. Tools → Brake Toy → **Open Review Candidate v0.6**. Game görünümü 9:16 Portrait. Play → ARCADE veya RELAX.
+3. Göreli mouse/parmak sürükleme. Pause sağ üstte. Sonuçtan yeni parkur veya aynı parkur + ghost.
+4. Garajdan araç aç/seç; görevler TP kazandırır. Bütün araçların oynanış değerleri eşittir. [Oyuncu el kitabı](https://github.com/brscncn1/Brake-Toy/blob/ca7aa2ab18094269f6d2e9d0d9aed7f87d3321b6/PLAYER_GUIDE.md).
+5. APK'yı önceki oyunu kaldırmadan güncelle. Paket kimliği `com.braketoy.prototype`; ARM64 IL2CPP, 0.6.0/kod6. Non-Development test APK'sı; kullanıcıya ait mağaza release anahtarı değildir.
 
-APK: ARM64 IL2CPP Development /Android 7.1+; Builds/Android/BrakeToy-v0.5-Living.apk. Öncekini kaldırmadan güncelleme kur. Eski sahneler ve kayıtlar korunur; değişen puan kuralları nedeniyle v0.5 stil rekoru ayrıdır. APK'lar kaynak geçmişine değil GitHub Releases'e yüklenir.
+## Gerçek durum
 
-## Sonuç ve sınırlar
+**75/75 Unity testi** (39 EditMode +36 PlayMode), **9/9 Python sunucu testi** ve gerçek C# HTTP yerel entegrasyon probe'u geçti. [Rapor](https://github.com/brscncn1/Brake-Toy/blob/ca7aa2ab18094269f6d2e9d0d9aed7f87d3321b6/REVIEW_MILESTONE.md), Tests/EditMode-review.xml, Tests/PlayMode-review.xml, Tests/Network-review.txt, UNITY_TEST_RESULTS-review.json.
 
-**62/62 Unity testi geçti** (31 EditMode +31 PlayMode). Yeni 128.000 ritimli satır kontrolü, dört seed ×iki rota ×120 sn simüle sürüş, eski regresyonlar, kamera/model/ödül/ses/profil kontrolleri. APK paket/imza/arşiv kontrolü geçti. Fiziksel FPS/ısı/dokunma ve insan tempo/ses/sanat kabulü bekliyor.
+Sıralama adapter'ı ve girdi yeniden simülasyonu yapan REST referans sunucusu vardır. **Canlı servis kurulmadı; APK online kapalıdır.** Günlük antrenman cihaz UTC tarihini kullanır. Referans anonim kimlik kalıcı değildir; üretim kimliği/kurtarma ve yaş/gizlilik kabulü açık iştir. [Servis sınırı ve kurulum](https://github.com/brscncn1/Brake-Toy/blob/ca7aa2ab18094269f6d2e9d0d9aed7f87d3321b6/Server/README.md), [gizlilik taslağı](https://github.com/brscncn1/Brake-Toy/blob/ca7aa2ab18094269f6d2e9d0d9aed7f87d3321b6/PRIVACY-REVIEW.md).
 
-- [Ayrıntılı sonuç, eleştiri ve kalan fazlar](https://github.com/brscncn1/Brake-Toy/blob/a7e889ae4264656eca81db093034c63ed15f3906/LIVING_MILESTONE.md), [plan](https://github.com/brscncn1/Brake-Toy/blob/a7e889ae4264656eca81db093034c63ed15f3906/PLAN-v0.5.md).
-- [Test raporu](https://github.com/brscncn1/Brake-Toy/blob/a7e889ae4264656eca81db093034c63ed15f3906/TEST_REPORT.md), UNITY_TEST_RESULTS.json, Tests/*-v05.xml, ANDROID_BUILD_REPORT.json, MODEL_VALIDATION.json.
-- [Gerçek önce/sonra](https://github.com/brscncn1/Brake-Toy/blob/a7e889ae4264656eca81db093034c63ed15f3906/COMPARISON-v0.5.html), Preview-v0.5-late-run.png, Models-v0.5-*.png, Room-v0.5-detail.png.
-- [Kaynak/lisanslar](https://github.com/brscncn1/Brake-Toy/blob/a7e889ae4264656eca81db093034c63ed15f3906/THIRD_PARTY_ASSETS.md), [araştırma](https://github.com/brscncn1/Brake-Toy/blob/a7e889ae4264656eca81db093034c63ed15f3906/RESEARCH-v0.3.md), GAME_DESIGN.md, ARCHITECTURE.md, ROADMAP.md, DEV_LOG.md.
+Kullanıcı v0.5'te kontrolü sorunsuz ve tam grafiği öznel olarak akıcı buldu; zorluk/parkur derinliği, müzik ve görüntü beklentinin altında. Sayısal FPS/p95 ölçülmedi. Yeni v0.6 tablet/uzun süre/mağaza kabulü bekler. [Revizyon listesi](https://github.com/brscncn1/Brake-Toy/blob/ca7aa2ab18094269f6d2e9d0d9aed7f87d3321b6/REVISION_BACKLOG.md).
 
-Gerçek render ile Concepts altındaki AI hedefi farklıdır; bu test sürümü final kalite kabulü değildir. Aktif odak Faz 3. Mevcut kapanış dahil ilk yayına 4 ana iş bloğu; dört sürüm garantisi değildir. Kalıcı ilerleme/garaj/Relax/online ve yayın hazırlığı sonraki kapsamda.
+## İnceleme ve belgeler
+
+- [Gerçek ekran/model galerisi](https://github.com/brscncn1/Brake-Toy/blob/ca7aa2ab18094269f6d2e9d0d9aed7f87d3321b6/REVIEW_GALLERY.html); UI-review-0..17.png. Bunlar motor renderıdır, AI konsepti değildir.
+- [Kapsam, eleştiri, faz durumu ve kullanıcı işlemleri](https://github.com/brscncn1/Brake-Toy/blob/ca7aa2ab18094269f6d2e9d0d9aed7f87d3321b6/REVIEW_MILESTONE.md); [yürütme planı](https://github.com/brscncn1/Brake-Toy/blob/ca7aa2ab18094269f6d2e9d0d9aed7f87d3321b6/PLAN-REVIEW.md).
+- [Tasarım](https://github.com/brscncn1/Brake-Toy/blob/ca7aa2ab18094269f6d2e9d0d9aed7f87d3321b6/GAME_DESIGN.md), [mimari](https://github.com/brscncn1/Brake-Toy/blob/ca7aa2ab18094269f6d2e9d0d9aed7f87d3321b6/ARCHITECTURE.md), [yol haritası](https://github.com/brscncn1/Brake-Toy/blob/ca7aa2ab18094269f6d2e9d0d9aed7f87d3321b6/ROADMAP.md), [günlük](https://github.com/brscncn1/Brake-Toy/blob/ca7aa2ab18094269f6d2e9d0d9aed7f87d3321b6/DEV_LOG.md), [lisanslar](https://github.com/brscncn1/Brake-Toy/blob/ca7aa2ab18094269f6d2e9d0d9aed7f87d3321b6/THIRD_PARTY_ASSETS.md).
+- ANDROID_BUILD_REPORT-review.json ve MODEL_VALIDATION-review.json bu adaya aittir. Önceki raporlar/sahneler korunur.
+
+Editor testleri: Test Runner EditMode/PlayMode. Sunucu: `cd Server` ardından `python -m unittest -v test_server`. Android paket: Tools → Brake Toy → Build Android Prototype, en yeni Review sahnesini seçer. Üretim online bağlantısı ve mağazaya yükleme bu komutla otomatik etkinleşmez.
