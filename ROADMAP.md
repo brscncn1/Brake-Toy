@@ -1,3 +1,15 @@
+# v0.6 güncel durum — 23 Ekim 2026
+
+Önceki faz planı aşağıda tarihsel kapsam olarak korunur. En güncel kanıt ve kabul ayrımı REVIEW_MILESTONE.md dosyasındadır.
+
+- Faz 4: ekonomi, 10 araç varyantı/3D garaj, kozmetik, üç görev/15 başarım, Relax ve menüler kodlandı/test edildi. Tam çok dil ve screen reader uygulanmadı; fiziksel yeni sürüm kabulü bekliyor.
+- Faz 5: yerel ghost/günlük antrenman ve gerçek REST istemci/sunucu simülasyonu yerelde doğrulandı. Üretim HTTPS/kalıcı kimlik/kurtarma, hedef yaş uygunluğu ve canlı cihaz testi açık. UGS dağıtımı yapılmadı.
+- Faz 6: teknik revizyon paketi/test/render/gizlilik ve mağaza hazırlık belgeleri hazırlandı. Cihaz matrisi, ısı, son kalite kabulü, mağaza imzası/AAB/Console ve üretim kabulü açık.
+- Kullanıcı zorluk, müzik ve görsel revizyonları bu adaydan sonra istiyor; REVISION_BACKLOG.md.
+- Faz 7 ek haritalar bu teslim dışında.
+
+Kalanları yalnızca faz sayısı ile sıfır ilan etmiyoruz: bağımsız geliştirme adayı hazırlandığında bile üretim/cihaz/mağaza kabul maddeleri açık kalır.
+
 # Yol haritası
 
 Durum anahtarı: **Kaynak hazır** = uygulama dosyası var, Unity kabulü bekleniyor. **Bekliyor** = henüz uygulanmadı. Bir fazın tamamlanması kendi kabul kriterine bağlıdır.

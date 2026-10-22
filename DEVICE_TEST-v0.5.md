@@ -1,5 +1,9 @@
 # Huawei MatePad 11 — v0.5 fiziksel kabul
 
+## 23 Ekim kullanıcı sonucu
+
+Parmak takibi sorunsuz; tam grafik ayarlarında öznel olarak akıcı. FPS/p95 ölçülmedi. İlk 30 saniye ve genel oyun aşırı kolay/sığ bulundu. Eğlenceli müzik eksik ve grafikler hedef seviyede değil. Menü/pause/retry/arka plan denemesi yapılmadı. Aşağıdaki önceki teslim notu tarihseldir; tam fiziksel kabul hâlâ açık. Ayrıntı ve sonraki revizyon sırası: REVISION_BACKLOG.md.
+
 Durum: **fiziksel kabul bekliyor**. Son düzeltmeli APK MTP ile tabletin Download klasörüne kopyalandı; Dosya Gezgini’nde BrakeToy-v0.5-Living ve 40,4 MB boyutu doğrulandı. Önceki 40,0 MB ara dosya yenilendi. Android paketi üretildi ve masaüstünde doğrulandı; tablet üzerinde kurulum/oynanış sonucu henüz yok. Önceki bağlantı MTP dosya aktarımı için çalıştı; ADB listesi boştu. Paket: Builds/Android/BrakeToy-v0.5-Living.apk.
 
 1. Tablette Dosyalar → Dahili depolama → Download → BrakeToy-v0.5-Living.apk. Kurulum izin/onayını kullanıcı yapar. Önceki kaydı korumak için kaldırmadan güncelleme kurun.

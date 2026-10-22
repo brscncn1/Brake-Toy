@@ -1,3 +1,13 @@
+# v0.6 uygulanmış tasarım ekleri
+
+Arcade korunur. Relax 7→10 hız ve üç hak kullanır; tek engelli toleranslı satırlar ve çarpışma sonrası yakın tehlike temizliği vardır. Skorları Arcade/günlükten ayrıdır.
+
+Toy Points = min(2500, floor(mesafe/10)+floor(stil/100)) +görev/tek seferlik başarım ödülleri. Merkezi satın alma 10 aracın örnek fiyatlarını kullanır; üç iz/korna seçeneği vardır. Üç görev iki tamamlanan turda yenilenir, 15 başarım kalıcıdır. Bu ekonomi oyuncu dengesi kabulü değildir.
+
+Ghost mod başına son parkurun en iyi kişisel kaydıdır; farklı seed'de oynatılmaz. Günlük antrenman çevrimdışı cihaz UTC gününe bağlıdır. Doğrulanmış daily yalnızca uygunluk sonrası sunucu biletiyle mümkündür; gönderilen input sunucuda tekrar simüle edilir.
+
+Kullanıcıya sunulan 10 model aynı temel aileden türetilmiş varyantlardır; bağımsız nihai tasarım kalitesi iddiası yoktur. Zorluk/parkur, müzik ve görsel kalite sonraki revizyon turuna kaydedildi.
+
 # BRAKE TOY — Ana tasarım
 
 Ana gereksinim kaynağı `SOURCE_REQUIREMENTS.md` dosyasıdır. Bu dosya uygulanacak tasarımı düzenler; aşağıdaki nihai özelliklerin listelenmesi hazır oldukları anlamına gelmez. Uygulama durumu `ROADMAP.md` içindedir.

@@ -1,0 +1,3 @@
+PASS
+Unity HTTP auth → server-owned ticket → input recording → resimulated submit → own rank → daily/style fetch → gated offline Relax
+Local loopback reference server only; no production deployment or eligibility acceptance.

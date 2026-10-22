@@ -1,3 +1,16 @@
+# v0.6 uygulama ekleri
+
+- Core/Career.cs: saf kariyer/ekonomi/görev/başarım/Relax kuralları ve kayıt doğrulaması.
+- CareerSave: sürümlü JSON payload +SHA256 checksum, pending/backup fallback. Yerel bozulma tespiti; anti-cheat değildir.
+- ReviewSession: mod/ödül/araç seçimi, Relax hakları, kalıcılık. GameManager tur akışıyla bağlanır.
+- ReviewFrontend: bir kez kurulan menüler, gerçek 3D RenderTexture garajı, mod ve ayarlar.
+- VehicleDefinition: ScriptableObject verisi; 10 görsel aynı gameplay kökünü paylaşır.
+- GhostReplay: 20 Hz quantized short X, gzip, 12000 örnek/10 dakika, seed/mod/header kontrolü; mod başına son seed dosyası.
+- ILeaderboardService +Local/OnlineLeaderboardService; ReviewOnline: yapılandırma uygunluk kapısı, isteğe bağlı UnityWebRequest, yalnızca bellekte oturum, sunucu bileti ve input kaydı.
+- Server/app.py/rules.py: SQLite ve server UTC, one-time ticket, yeniden simülasyon, ayrı mesafe/stil rekorları. Üretim account continuity/kurtarma tamamlanmadı; Server/README.md sınırdır.
+
+Önceki v0.5 ve eski sahneler Review=null yoluyla korunur. Testler Persist=false ile gerçek oyuncu kariyer/rekorlarına yazmaz. Android offline aday HTTPS dışı endpoint kabul etmez; loopback yalnız Editor entegrasyon aracı içindir.
+
 # Mimari
 
 ## İlk kararlar

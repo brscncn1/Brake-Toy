@@ -32,10 +32,10 @@ namespace BrakeToy.Core
     {
         private uint state;
         private int index, safe = 1, previousVariant = -1, sameLaneCount, nextBall = 2;
-        private readonly bool varied, choreographed;
+        private readonly bool varied, choreographed,relaxed;
         private readonly bool mirrored;
         private float distance = 24;
-        public ArcadeSequence(int seed, bool varied = false, bool choreographed = false) { state = (uint)seed; if (state == 0) state = 1; this.varied = varied; this.choreographed=choreographed; mirrored=(seed&1)==0; }
+        public ArcadeSequence(int seed, bool varied = false, bool choreographed = false,bool relaxed=false) { this.relaxed=relaxed; state = (uint)seed; if (state == 0) state = 1; this.varied = varied; this.choreographed=choreographed; mirrored=(seed&1)==0; }
         private int Next(int count) { state ^= state << 13; state ^= state >> 17; state ^= state << 5; return (int)(state % (uint)count); }
         public ArcadeRow Next()
         {
@@ -61,6 +61,7 @@ namespace BrakeToy.Core
             // Single obstacles and breathing rows break up the double-gate cadence.
             bool breathing = varied ? i > 0 && Next(5) == 0 : i % 6 == 4;
             if (breathing || i == 0) mask = 1 << (safe == 1 ? Next(2) * 2 : 1);
+            if(relaxed)mask=1<<(safe==0?2:0);
             int ballLane = safe == 0 ? 2 : 0;
             float slope = ballLane == 2 ? .06f : -.06f;
             if (varied)

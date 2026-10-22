@@ -1,3 +1,13 @@
+# v0.6 son doğrulama
+
+39/39 EditMode ve 36/36 PlayMode geçti; 75 toplam. 9/9 Python sunucu testi ve Tests/Network-review.txt gerçek Unity HTTP entegrasyonu geçti. Unity XML saatleri UTC'dir; yerel tarih 23 Ekimdir. Eski regresyonlar dahil.
+
+Yeni kapsam: yedek kayıt/kötü şema/alan doğrulaması, TP idempotence/harcama, Relax kaydı/hakları/120 sn tanık, 10 modelin ortak collider/dört tekerleği, günlük offline/gated online, sıkıştırılmış ghost, gerçek Unity input →Python simülasyonu eşleşmesi. Ayrıntı UNITY_TEST_RESULTS-review.json ve REVIEW_MILESTONE.md.
+
+İlk model çeşitlilik testi yanlış tekerlek mesh'ini seçti; gövde mesh'i seçilerek düzeltildi ve son 36/36 geçti. İlk DX12 yakalama native kapanış hatası sonrası temizlik düzeltildi; D3D11 yakalama 0 ile tamamlandı. Bu olaylar gizlenmedi.
+
+v0.5 tablette kullanıcı kontrol/full grafik öznel akıcılık bildirdi; FPS/p95 ölçülmedi. v0.6 gerçek cihaz, ısı, uzun süre, üretim servis, iOS ve mağaza kabulü yapılmadı.
+
 # v0.5 doğrulama sonuçları
 
 Unity 6000.3.26f1: **31/31 EditMode +31/31 PlayMode =62/62 geçti**. Ayrıntılı test isimleri/saatleri UNITY_TEST_RESULTS.json ve Tests/EditMode-v05.xml / PlayMode-v05.xml içindedir. Önceki raporlar Tests/Archive/v0.4 altında.

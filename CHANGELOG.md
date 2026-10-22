@@ -1,3 +1,9 @@
+# 0.6.0 — review candidate
+
+10 araç varyantı/3D garaj; TP/kariyer yedekli kayıt; kozmetik; görev/başarım; Relax; menüler; günlük antrenman/ghost; gerçek REST transport ve referans skor simülasyonu. 75 Unity +9 server testi ve C# loopback probe geçti. Yeni Review sahnesi önceki sahneleri korur.
+
+Online üretim bağlantısı kapalıdır; stabil online kimlik/kurtarma, cihaz/mağaza kabulü tamamlanmadı. Zorluk/müzik/görsel kullanıcı revizyon listesinde. Reklam/IAP eklenmedi.
+
 # v0.4.0 — Refined Room
 
 - Dokuz kalite başlığında uygulama: ayrı oda/malzeme seti, düşük kontrast ahşap, yumuşak gölge, kabin/çatı/teker boşlukları ve kesintisiz masa/duvar.

@@ -12,6 +12,7 @@ namespace BrakeToy
         public WorldScroller World;
         public PrototypeUI UI;
         public ArcadeDirector Arcade;
+        public ReviewSession Review;
         public RunState State { get; private set; }
 
         private void Awake()
@@ -23,6 +24,7 @@ namespace BrakeToy
             World.Initialize();
             UI.Bind(this);
             if (Arcade) Arcade.Initialize(this);
+            if(Review)Review.Initialize(this);
             ChangeState(RunState.Ready);
         }
         public void StartRun()
@@ -35,6 +37,7 @@ namespace BrakeToy
             Player.ResetRun();
             World.ResetRun();
             if (Arcade) Arcade.BeginRun(sameRoute);
+            if(Review)Review.NewRun();
             ChangeState(RunState.Running);
         }
         public void Resume()
@@ -71,7 +74,7 @@ namespace BrakeToy
             World.Advance(distance);
         }
         private void OnApplicationFocus(bool focused) { if (!focused) Pause(); }
-        public void Crash() { Input.ResetCapture(); Player.EndDrag(); ChangeState(RunState.Crashed); }
+        public void Crash() { Input.ResetCapture(); Player.EndDrag(); ChangeState(RunState.Crashed); if(Review)Review.Finish(); }
         private void OnApplicationPause(bool paused) { if (paused) Pause(); }
         private void ChangeState(RunState state) { State = state; UI.Show(state); }
     }

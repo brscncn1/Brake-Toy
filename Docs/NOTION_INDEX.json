@@ -193,6 +193,34 @@
       "properties": {
         "title": "27 — v0.5 tablet kabul ve ses testi"
       }
+    },
+    "PLAN-REVIEW.md": {
+      "id": "401dce66-5831-816b-b857-f73e36f2462f",
+      "url": "https://app.notion.com/p/401dce665831816bb857f73e36f2462f",
+      "properties": {
+        "title": "28 — Faz 6 revizyon adayı planı ve kapsamı"
+      }
+    },
+    "REVISION_BACKLOG.md": {
+      "id": "401dce66-5831-8121-af21-ec7242dfa00e",
+      "url": "https://app.notion.com/p/401dce6658318121af21ec7242dfa00e",
+      "properties": {
+        "title": "29 — Tablet geri bildirimi ve revizyon listesi"
+      }
+    },
+    "Server/README.md": {
+      "id": "401dce66-5831-81ec-98a9-fc20878a0801",
+      "url": "https://app.notion.com/p/401dce66583181ec98a9fc20878a0801",
+      "properties": {
+        "title": "30 — Çevrimiçi servis ve yayın ön koşulları"
+      }
+    },
+    "REVIEW_MILESTONE.md": {
+      "id": "401dce66-5831-8102-8107-e4d8f3d84255",
+      "url": "https://app.notion.com/p/401dce66583181028107e4d8f3d84255",
+      "properties": {
+        "title": "31 — v0.6 test sonuçları, eleştiri ve teslim"
+      }
     }
   },
   "notice": {

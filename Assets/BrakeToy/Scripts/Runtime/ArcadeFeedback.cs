@@ -11,6 +11,7 @@ namespace BrakeToy
         private Material material;
         private Mesh mesh;
         private MeshRenderer ribbon;
+        private static readonly Color[] TrailColors={new Color(.05f,.85f,.72f),new Color(1,.52f,.08f),new Color(.65f,.25f,1)};
         private readonly Vector3[] vertices=new Vector3[16];
         public bool FeverVisible => ribbon && ribbon.enabled;
         public void Initialize(GameManager manager,ArcadeDirector director)
@@ -28,6 +29,7 @@ namespace BrakeToy
         private void LateUpdate()
         {
             if(!ribbon)return;ribbon.enabled=game.State==RunState.Running&&arcade.Style.Fever;if(!ribbon.enabled)return;
+            if(game.Review){var tint=TrailColors[game.Review.Data.trail];material.SetColor("_BaseColor",tint);material.SetColor("_EmissionColor",tint*.7f);}
             for(int side=0;side<2;side++)for(int point=0;point<4;point++)
             {
                 float width=.035f*(1-point/4f),x=game.Player.X+(side==0?-.23f:.23f)+Mathf.Sin(arcade.Elapsed*7-point)*.025f*point;
