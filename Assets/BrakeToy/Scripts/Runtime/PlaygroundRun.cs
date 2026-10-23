@@ -12,7 +12,7 @@ namespace BrakeToy
         private GameManager game;private float grace,powerAge,masteryLeft;private int lastMiss,lastStars,lastJumps,mask;private bool wasAir;
         public string Status{get;private set;}="";
         public Transform PowerRig,RocketRig,JetRig;
-        private void Awake(){game=GetComponent<GameManager>();TableZones=PlayerPrefs.GetInt("BrakeToy.v08.zones",1)!=0;DominoEnabled=PlayerPrefs.GetInt("BrakeToy.v08.domino",1)!=0;}
+        private void Awake(){game=GetComponent<GameManager>();TableZones=PlayerPrefs.GetInt("BrakeToy.v08.zones",1)!=0;DominoEnabled=!GetComponent<TidyRoom>()&&PlayerPrefs.GetInt("BrakeToy.v08.domino",1)!=0;}
         private void Start(){game.Review.InitializePowers();}
         public void ResetRun(){game=GetComponent<GameManager>();ActivePower=null;Remaining=grace=powerAge=0;Assisted=false;Mastery=BestMastery=mask=lastMiss=lastStars=lastJumps=0;masteryLeft=0;wasAir=false;GetComponent<PlaygroundEncounters>()?.ResetRun();}
         public bool Activate(ToyPower power)

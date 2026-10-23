@@ -1,5 +1,7 @@
 # Brake Toy project workflow
 
+- Current patch v0.8.1: PLAN-v0.8.1.md. Fix tabletop dressing/notebook overlaps, relocate radio onto shelf, remove domino from the new Tidy scene. Preserve v0.8 and user career/charges. Do not retune speed/difficulty or add suggested future mechanics in this patch. Notion block creation was entitlement-blocked; keep local pending notes and GitHub current without retrying that request automatically.
+
 - Follow SOURCE_REQUIREMENTS.md and the user's later decisions. Current approved milestone: v0.8 Playground, PLAN-v0.8.md. Preserve v0.7 and earlier scenes/assets/records. Model detailing is deferred by the user; improve silhouettes and UI in this scope. Music stays. Reversible table zones/domino; fix ramp edges; powers use persistent starter charges and TP refills, no real-money IAP in this milestone. Distinguish automated evidence from human art/audio, physical-device, live-service and store acceptance.
 - Keep existing working scenes and user edits. Save new scene/config/prefab variants for visual milestones.
 - Keep DEV_LOG.md current at meaningful checkpoints: decisions, implementation, tests, limitations, and next steps. Do not claim a test passed unless it was executed.

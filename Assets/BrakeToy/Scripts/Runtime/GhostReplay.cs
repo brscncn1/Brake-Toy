@@ -12,7 +12,7 @@ namespace BrakeToy
         private const int Capacity=12000;private readonly short[] recorded=new short[Capacity];private short[] playback;private readonly short[] elevations=new short[Capacity];private short[] playbackElevations;private float lastHeight;
         private int seed;private PlayMode mode;private float next,lastTime,lastX,best;private GameObject ghost;private Material material;
         private ReviewSession session;private GameManager game;
-        private string FilePath=>Path.Combine(Application.persistentDataPath,(GetComponent<PlaygroundRun>()?"ghost-playground-latest-":GetComponent<JoyfulRun>()?"ghost-joyful-latest-":"ghost-latest-")+(int)mode+".gz");
+        private string FilePath=>Path.Combine(Application.persistentDataPath,(GetComponent<TidyRoom>()?"ghost-tidy-latest-":GetComponent<PlaygroundRun>()?"ghost-playground-latest-":GetComponent<JoyfulRun>()?"ghost-joyful-latest-":"ghost-latest-")+(int)mode+".gz");
         public void Begin(int route,PlayMode playMode)
         {
             session=GetComponent<ReviewSession>();game=GetComponent<GameManager>();seed=route;mode=playMode;RecordedCount=0;next=lastTime=lastX=best=0;playback=null;playbackElevations=null;lastHeight=0;
