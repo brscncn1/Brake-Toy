@@ -11,3 +11,6 @@ Kullanıcı sekiz parkur mekaniğinin tamamını onayladı. PLAN-v0.9.md: karton
 
 ### v0.9 doğrulama checkpoint
 112/112 test, 13 gerçek Unity görüntüsü ve model denetimi tamamlandı. Eksik mesh/malzeme/shader hatası yok. Sekiz aile + kurbağa/ördek ve bant/kart varyantları, tünel uçuş açıklığı, misket başlangıç mesafesi düzeltmesi. APK/GitHub teslimi sırada. Bu kayıt Notion'a henüz eşitlenmedi.
+
+### v0.9 Android doğrulandı
+Kaynak b656017cb48c7b10b62891647135d0bc2371cfde; ARM64 IL2CPP 0.9.0/kod10, SHA256 4cb72fc735be4f5dc6300eece1d4cac34f99da589ec7d4e05c97e11a883726ba. V2 imza/aynı sertifika, ZIP/ELF16KB, yalnız INTERNET geçti. Fiziksel tablet kabulü bekler. GitHub Release bağlantısı https://github.com/brscncn1/Brake-Toy/releases/tag/v0.9.0 . Yeni Notion blok isteği yapılmadı.

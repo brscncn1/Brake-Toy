@@ -35,3 +35,9 @@ Tünelin yüksek tavanı kitap uçuşu ve jetpack için pay bırakır; tavanın 
 ## Görsel ve model kontrolü
 
 13 gerçek Unity/URP görüntüsü ADVENTURE_GALLERY.html içinde: menü, 45 saniyelik gerçek koşu, sekiz aile yakın planı, parkur gösterimi, ördek ve kart varyantları. Kurbağa ön ayakları gövdeye bağlandı; cetvel oku masa yüzeyinden ayrılarak titreme giderildi. Yakın plan kamerası oynanış kamerası değildir. Sekiz prefab toplam83 renderer/90.649 üçgen içerir; sahne/kapalı havuz toplamı çalışma anındaki draw-call veya FPS ölçümü değildir. Model taramasında eksik mesh/malzeme/shader hatası ve dekoratif fizik collider'ı yoktur; çarpışma analitik hacimlerle yapılır.
+
+## Android teslimi
+
+0.9.0/kod10, com.braketoy.prototype, ARM64 IL2CPP non-Development: **40568255 bayt**, SHA256 `4cb72fc735be4f5dc6300eece1d4cac34f99da589ec7d4e05c97e11a883726ba`. APK v2 imza, önceki testlerle aynı sertifika, ZIP bütünlüğü/16KB ve ELF LOAD16KB kontrolleri geçti. Yalnız INTERNET izni; online kapalı. Kaynak `b656017cb48c7b10b62891647135d0bc2371cfde`. Fiziksel v0.9 tablet kurulumu/performansı ve 16KB cihaz kabulü henüz yapılmadı; mağaza imza anahtarı değildir.
+
+[APK ve sürüm](https://github.com/brscncn1/Brake-Toy/releases/tag/v0.9.0) · [Kaynak](https://github.com/brscncn1/Brake-Toy/tree/feat/adventure-v09)

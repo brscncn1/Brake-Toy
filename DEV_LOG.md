@@ -1,3 +1,7 @@
+# v0.9 Android doğrulandı — 24 Ekim 2026
+
+Kaynak b656017cb48c7b10b62891647135d0bc2371cfde; 0.9.0/kod10 ARM64 IL2CPP non-Development, 40568255 bayt. V2/aynı sertifika, ZIP bütünlüğü/ZIP16KB/ELF16KB geçti. Fiziksel tablet kabulü bekler. Rapor ANDROID_BUILD_REPORT-v09.json. GitHub Release yükleme sırada; Notion kotası pending.
+
 # v0.9 checkpoint — 24 Ekim 2026
 
 112/112 test geçti. Misket erken giriş hatası hızla ölçeklenen başlangıç mesafesiyle düzeltildi; son12 uzun koşuda çarpışma/hak kaybı/havuz tükenmesi yok. Kurmalı kurbağa/ördek, gerçek enine tren, vinç geçiş boşluğu ve sabit uzunluklu halat; tünel yüksek tavan/duvar çarpışmaları. Malzeme başına statik mesh birleştirme. Fiziksel tablet ve sanat kabulü bekler. Notion kotası nedeniyle yeni notlar yerelde bekliyor.
