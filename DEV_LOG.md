@@ -174,3 +174,7 @@ Kaynak 0a2cbf03fce7acdc796dfa9dd2cbfb56fab430e9, PR #6 ve v0.7.0 ön sürüm Git
 ## v0.8 yayın ve kaynak eşitlemesi
 
 Kaynak 0cda6024cfe585500df58cc61e3c232d7125bb35; PR #7 ve v0.8.0 ön sürüm yayımlandı. APK GitHub digest/yerel SHA256 aynı. Main README c356447d1fcd48026b024fc45b854c6e9f7f7ea9 ile güncel, gerçek kaynak dalı ayrımı açık. Son 102/102 test, 29 gerçek görüntü, model/Android raporları kaynakta. Notion yeni sayfa blok limiti nedeniyle oluşturulamadı; başlangıç günlüğü önceden doğrulandı, sonraki notlar GitHub/yerelde. Fiziksel ve insan kabulü açık.
+
+## v0.8.1 teslim doğrulandı
+
+Kaynak af0c0e6bdacbc435f3252a6dd5498035deffe402, PR #8 ve v0.8.1 ön sürüm GitHub üzerinde. APK digest yerel SHA256 ile eşleşti; main README bc370471f780b633d940a818dced2d94c9b6c741 ile güncel. 104/104 Unity, 9 gerçek görüntü ve model/Android denetimleri kaynakta. Notion eşitlemesi önceki ücretsiz blok sınırı nedeniyle yerel notta bekler. Yeni fiziksel tablet kabulü henüz yapılmadı.

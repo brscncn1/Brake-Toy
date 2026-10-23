@@ -1,0 +1,26 @@
+{
+  "version": "0.8.1",
+  "sourceCommit": "af0c0e6bdacbc435f3252a6dd5498035deffe402",
+  "pullRequest": "https://github.com/brscncn1/Brake-Toy/pull/8",
+  "release": "https://github.com/brscncn1/Brake-Toy/releases/tag/v0.8.1",
+  "apk": {
+    "url": "https://github.com/brscncn1/Brake-Toy/releases/download/v0.8.1/BrakeToy-v0.8.1-Tidy.apk",
+    "sizeBytes": 39381857,
+    "sha256": "edb833836ab8b7a323e5c501fe00bf3c333bb1b81d2918fc14715ef041cdc0c8",
+    "githubDigestMatched": true
+  },
+  "mainReadmeCommit": "bc370471f780b633d940a818dced2d94c9b6c741",
+  "unityTests": {
+    "EditMode": 48,
+    "PlayMode": 56,
+    "passed": 104
+  },
+  "realUnityRenders": 9,
+  "sharedLayoutPeriodMeters": 64,
+  "radio": "left toy shelf, static",
+  "dominoInActiveScene": false,
+  "speedCurveAndSpacingUnchanged": true,
+  "careerPathChanged": false,
+  "physicalV081Tested": false,
+  "notionSync": "pending_previously_reported_free_block_limit"
+}
