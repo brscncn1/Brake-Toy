@@ -14,3 +14,6 @@ Kullanıcı sekiz parkur mekaniğinin tamamını onayladı. PLAN-v0.9.md: karton
 
 ### v0.9 Android doğrulandı
 Kaynak b656017cb48c7b10b62891647135d0bc2371cfde; ARM64 IL2CPP 0.9.0/kod10, SHA256 4cb72fc735be4f5dc6300eece1d4cac34f99da589ec7d4e05c97e11a883726ba. V2 imza/aynı sertifika, ZIP/ELF16KB, yalnız INTERNET geçti. Fiziksel tablet kabulü bekler. GitHub Release bağlantısı https://github.com/brscncn1/Brake-Toy/releases/tag/v0.9.0 . Yeni Notion blok isteği yapılmadı.
+
+### v0.9 teslim kaydı — 24 Ekim 2026
+PR https://github.com/brscncn1/Brake-Toy/pull/9 ; Release https://github.com/brscncn1/Brake-Toy/releases/tag/v0.9.0 ; main README güncel. APK asset digest/byte eşleşmesi API üzerinden doğrulandı. 112/112 test, 13 gerçek render, 24 dakika güvenli yol simülasyonu. PC Adventure Play menüsü hazır; tablette yeni fiziksel kabul yapılmadı. Ayrıntılar DELIVERY-v09.json / MILESTONE-v09.md. Bu yeni kayıtlar Notion'a gönderilmedi; bilinen ücretsiz blok kotası devam ediyor.

@@ -1,3 +1,7 @@
+# v0.9 teslim edildi — 24 Ekim 2026
+
+GitHub PR #9 (base fix/table-layout-v081), v0.9.0 Release ve APK yüklendi. GitHub asset digest/byte sayısı yerel APK ile aynı; main README d6dae250c0752a9c41830ddf479ce42d155c55d8 doğrulandı. Kaynak dal feat/adventure-v09; oyun PR'ları merge edilmedi, main oyun kodu Faz1 olarak açıklanır. DELIVERY-v09.json teslim kanıtıdır. PC Unity penceresi büyütüldü, ToyRoomAdventure Play menüsü 1× hazır bırakıldı; kullanıcı turu başlatmadı. Kariyer korunur. Yeni fiziksel tablet testi ve insan sanat/oynanış kabulü bekler. Notion yeni kayıtları bilinen ücretsiz blok kotası nedeniyle yerel/GitHub pending; yeniden blok isteği yapılmadı.
+
 # v0.9 Android doğrulandı — 24 Ekim 2026
 
 Kaynak b656017cb48c7b10b62891647135d0bc2371cfde; 0.9.0/kod10 ARM64 IL2CPP non-Development, 40568255 bayt. V2/aynı sertifika, ZIP bütünlüğü/ZIP16KB/ELF16KB geçti. Fiziksel tablet kabulü bekler. Rapor ANDROID_BUILD_REPORT-v09.json. GitHub Release yükleme sırada; Notion kotası pending.
