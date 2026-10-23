@@ -26,7 +26,7 @@ namespace BrakeToy.Editor
         public static void Tube(string name,Transform p,Vector3[] path,float radius,string mat)=>LivingMeshFactory.Tube(name,p,path,radius,M(mat),10);
         public static void Combine(Transform root,string name)
         {
-            var filters=root.GetComponentsInChildren<MeshFilter>().Where(f=>f.GetComponent<Renderer>().sharedMaterials.Length==1).ToArray();int part=0;
+            var filters=root.GetComponentsInChildren<MeshFilter>().Where(f=>f.GetComponent<Renderer>().sharedMaterials.Length==1&&(!f.transform.parent||!f.transform.parent.name.StartsWith("Wheel unit"))).ToArray();int part=0;
             foreach(var group in filters.GroupBy(f=>f.GetComponent<Renderer>().sharedMaterial))
             {var mesh=new Mesh{name=name,indexFormat=IndexFormat.UInt32};mesh.CombineMeshes(group.Select(f=>new CombineInstance{mesh=f.sharedMesh,transform=root.worldToLocalMatrix*f.transform.localToWorldMatrix}).ToArray(),true,true);mesh.RecalculateBounds();AssetDatabase.CreateAsset(mesh,AssetDatabase.GenerateUniqueAssetPath(Root+"Meshes/"+name+"_"+part+++".asset"));LivingMeshFactory.MeshObject(name+" • "+group.Key.name,root,mesh,group.Key,Vector3.zero);}
             foreach(var f in filters)if(f)Object.DestroyImmediate(f.gameObject);
@@ -68,7 +68,7 @@ namespace BrakeToy.Editor
         {
             var t=Group("Sunny toy bus",parent);B("Diecast lower shell",t,new Vector3(0,.32f,0),new Vector3(1.70f,.43f,.87f),"Mango",.12f);B("Roof cab",t,new Vector3(0,.66f,0),new Vector3(1.56f,.50f,.82f),"Rose",.13f);B("Cream roof",t,new Vector3(0,.91f,0),new Vector3(1.53f,.06f,.81f),"Cream",.03f);
             for(int i=0;i<5;i++){B("Side window",t,new Vector3(-.60f+i*.30f,.69f,-.414f),new Vector3(.23f,.24f,.025f),"Ink",.035f);B("Window reflection",t,new Vector3(-.63f+i*.30f,.75f,-.432f),new Vector3(.07f,.025f,.012f),"White",.005f);}
-            for(int x=-1;x<=1;x+=2)for(int z=-1;z<=1;z+=2){S("Rubber tire",t,new Vector3(x*.55f,.18f,z*.44f),new Vector3(.36f,.36f,.12f),"Ink");S("Wheel hub",t,new Vector3(x*.55f,.18f,z*.505f),new Vector3(.18f,.18f,.025f),"White");}
+            for(int x=-1;x<=1;x+=2)for(int z=-1;z<=1;z+=2){var wheel=Group("Wheel unit",t,new Vector3(x*.55f,.18f,z*.44f));S("Rubber tire",wheel,Vector3.zero,new Vector3(.36f,.36f,.12f),"Ink");S("Wheel hub",wheel,new Vector3(0,0,z*.065f),new Vector3(.18f,.18f,.025f),"White");S("Rotation marker",wheel,new Vector3(.085f,.08f,z*.083f),Vector3.one*.04f,"Mango");}
             B("Bumper",t,new Vector3(0,.24f,-.46f),new Vector3(1.55f,.09f,.06f),"White",.03f);for(int side=-1;side<=1;side+=2)S("Headlamp",t,new Vector3(side*.74f,.37f,-.45f),new Vector3(.10f,.10f,.035f),"Cream");return t;
         }
         public static Transform Ball(Transform parent)
@@ -81,7 +81,7 @@ namespace BrakeToy.Editor
         public static BookRamp Ramp(Transform parent)
         {
             var t=Group("Book jump — green arrow",parent);var ramp=t.gameObject.AddComponent<BookRamp>();B("Stack lower book",t,new Vector3(0,.17f,.35f),new Vector3(1.92f,.34f,1.25f),"Blue",.055f);B("Paper pages",t,new Vector3(0,.36f,.35f),new Vector3(1.78f,.10f,1.15f),"Cream",.025f);
-            var cover=Group("Inclined book cover",t,new Vector3(0,.34f,-.85f));cover.localRotation=Quaternion.Euler(-11.15f,0,0);B("Hardback launch surface",cover,Vector3.zero,new Vector3(1.90f,.09f,3.36f),"Purple",.035f);B("Inset binding",cover,new Vector3(-.78f,.055f,0),new Vector3(.10f,.015f,3.2f),"Mango",.006f);
+            var cover=Group("Inclined book cover",t,new Vector3(0,.296f,-.85f));cover.localRotation=Quaternion.Euler(-11.15f,0,0);B("Hardback launch surface",cover,Vector3.zero,new Vector3(1.90f,.09f,3.36f),"Purple",.035f);B("Inset binding",cover,new Vector3(-.78f,.055f,0),new Vector3(.10f,.015f,3.2f),"Mango",.006f);
             var points=new[]{new Vector3(-.17f,.03f,-4.35f),new Vector3(.17f,.03f,-4.35f),new Vector3(.17f,.03f,-3.55f),new Vector3(.52f,.03f,-3.55f),new Vector3(0,.03f,-2.98f),new Vector3(-.52f,.03f,-3.55f),new Vector3(-.17f,.03f,-3.55f)};var arrow=new Mesh();arrow.vertices=points;arrow.triangles=new[]{0,2,1,0,6,2,6,5,4,6,4,2,2,4,3};arrow.RecalculateNormals();arrow.RecalculateBounds();LivingMeshFactory.MeshObject("GREEN approach arrow",t,arrow,M("Green"),Vector3.zero);Combine(t,"BookRamp");ramp.Release();return ramp;
         }
     }

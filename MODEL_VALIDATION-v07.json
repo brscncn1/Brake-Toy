@@ -1,0 +1,13 @@
+{
+    "scene": "ToyRoomJoyful",
+    "version": "0.7.0",
+    "sceneRenderersIncludingInactiveCars": 406,
+    "sceneTrianglesIncludingInactiveCars": 1012691,
+    "uniqueMeshes": 237,
+    "missingMeshes": 0,
+    "missingMaterials": 0,
+    "shaderErrors": 0,
+    "decorativeColliders": 0,
+    "physicalDeviceProfiled": false,
+    "note": "Scene counts before runtime catalog pool replacement. All seven prefab models separately checked."
+}

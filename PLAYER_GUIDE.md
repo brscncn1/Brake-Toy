@@ -1,3 +1,7 @@
+# v0.7 güncel kullanım
+
+Tools → Brake Toy → Open Joyful Room v0.7 → Play. Arcade 14→30, Relax 9→14. Yeşil ok rampadır; üzerinden geçince 1.65 sn uçuş ve havada kazanılan TP bölümüne 2x. İnişte çarpışma devam eder. Motor uğultu/lastik, Efektler çarpma/korna/yıldız, Müzik menü ve yarış kanalını yönetir. Yeni sürüm eski TP/açılmış araçları taşır; yeni rekor ve ghost ayrı tutulur. Aşağıdaki önceki sürüm belgesi tarihsel ayrıntıdır; v0.7 farklılıkları bu paragraf ve MILESTONE-v07.md ile üstüne yazılır.
+
 # Brake Toy — revizyon adayı oyuncu el kitabı
 
 Unity: Tools → Brake Toy → Open Review Candidate v0.6; Play. Android: önceki oyunu kaldırmadan yeni APK ile güncelle. Kaldırma yerel ilerlemeyi silebilir.

@@ -14,7 +14,7 @@ namespace BrakeToy.Core
     {
         public readonly int Index,SafeLane,Pattern,Kind,Balls,Stage;
         public readonly float Distance,Phase;public readonly bool Ramp,Bus;
-        public float SafeX=>ArcadeRules.LaneX(SafeLane);
+        public float SafeX=>ArcadeRules.LaneX(SafeLane)+((Pattern%7)-3)*.085f;
         public JoyfulRow(int index,int safe,int pattern,int kind,int balls,int stage,float distance,float phase,bool ramp,bool bus)
         {Index=index;SafeLane=safe;Pattern=pattern;Kind=kind;Balls=balls;Stage=stage;Distance=distance;Phase=phase;Ramp=ramp;Bus=bus;}
     }

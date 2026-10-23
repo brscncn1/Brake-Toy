@@ -27,7 +27,7 @@ namespace BrakeToy
             SoundButton.onClick.AddListener(() => { muted = !muted; PlayerPrefs.SetInt("BrakeToy.v03.muted", muted ? 1 : 0); PlayerPrefs.Save(); });
         }
         public void Clear() { noticeTime = impact = 0; if (NoticeLabel) NoticeLabel.text = ""; }
-        public void Notify(string text, Color color) { NoticeLabel.text = text; NoticeLabel.color = color; noticeTime = 1.45f; }
+        public void Notify(string text, Color color) { NoticeLabel.text = text; NoticeLabel.color = arcade&&arcade.Joyful?new Color(.035f,.16f,.22f):color; noticeTime = 1.45f; }
         public void Impact() { impact = .28f; }
         private void LateUpdate()
         {
@@ -45,7 +45,7 @@ namespace BrakeToy
             arcade.Sound.Muted = muted;
             DistanceLabel.text = Mathf.FloorToInt(arcade.Distance) + (CompactLayout ? " m" : " <size=25>m</size>");
             StyleLabel.text = "STİL  " + arcade.Style.Total.ToString("N0");
-            SpeedLabel.text = "VİTES " + arcade.Gear + "   /   " + (arcade.Speed / 10).ToString("0.00") + "×";
+            SpeedLabel.text = "VİTES " + arcade.Gear + "   /   " + (arcade.Speed / (arcade.Joyful?14:10)).ToString("0.00") + "×";
             ComboLabel.text = arcade.Style.Fever ? "COMBO FEVER   ×5" : arcade.Style.Chain > 0 ? "KOMBO " + arcade.Style.Chain + "   ×" + arcade.Style.Multiplier : CompactLayout ? "" : "YAKINDAN GEÇ • KOMBO YAP";
             ComboLabel.color = arcade.Style.Fever ? new Color(1, .70f, .2f) : new Color(.65f, .95f, .91f);
             ComboFill.fillAmount = arcade.Style.Remaining / 6;

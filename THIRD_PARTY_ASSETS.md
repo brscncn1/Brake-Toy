@@ -1,5 +1,14 @@
 # Third-party assets
 
+## v0.7 composed music and real toy recordings
+
+- Bobjt, **leo's theme**, [author page](https://opengameart.org/content/leos-theme), CC0 option of the author's dual licensing. Trimmed silence and a two-second equal-power loop overlap; 87.01 seconds. File menu-leo-loop.ogg.
+- Zane Little Music, **Pixel Sprinter**, [author page](https://opengameart.org/content/pixel-sprinter), CC0. Author-provided 34.29-second racing/running loop; race-pixel-sprinter.ogg.
+- AntumDeluge, **Bicycle Horn**, [author page](https://opengameart.org/content/bicycle-horn), CC0. Actual child's plastic bicycle horn; toy-horn.wav. Three cosmetic pitch settings, separate from near-miss chime.
+- rioforce, **LEGO Pour 1**, [author page](https://freesound.org/people/rioforce/sounds/233662/), CC0. Public HQ preview of plastic toy bricks poured on a table, cut/normalized to 0.85-second toy clatter. plastic-toy-clatter.ogg; no brand affiliation implied.
+
+Exact downloaded file URLs, authors, SHA256 and license selection: Assets/BrakeToy/Audio/Joyful/SOURCES.json. Processing and waveform measurements: AUDIO_CHECK.json. No human listening acceptance is claimed by the file checks. The original source files are retained for provenance; only referenced game clips enter the APK. Prior Poly Haven cotton textures are also reused on new cloth toy materials. New models and procedural playmat grain are project-authored.
+
 ## Poly Haven — Wood Table 001
 
 - Asset: https://polyhaven.com/a/wood_table_001

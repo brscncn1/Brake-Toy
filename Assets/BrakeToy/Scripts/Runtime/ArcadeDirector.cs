@@ -120,12 +120,19 @@ namespace BrakeToy
                 }
                 else if(row.Balls>0)
                 {
-                    int[] lanes={row.SafeLane==0?1:0,row.SafeLane==2?1:2};
-                    for(int n=0;n<row.Balls;n++){int lane=lanes[n%2];float crossing=ArcadeRules.LaneX(lane),factor=1.10f+row.Stage*.08f;var h=Activate(3,crossing,(z+(n==2?7:0))*factor,crossing,0);h.MotionKind=1;h.CurveAmplitude=.8f+row.Stage*.16f;h.CurveFrequency=.055f+row.Stage*.008f;h.CurvePhase=row.Phase+n;h.ForwardFactor=factor;h.transform.position=h.PositionAfter(0);}
+
+                    for(int n=0;n<row.Balls;n++){int lane=n%2==0?(row.SafeLane==0?1:0):(row.SafeLane==2?1:2);float crossing=ArcadeRules.LaneX(lane),factor=1.05f+row.Stage*.02f;var h=Activate(3,crossing,(z+(n==2?7:0))*factor,crossing,0);h.MotionKind=1;h.CurveAmplitude=.8f+row.Stage*.16f;h.CurveFrequency=.055f+row.Stage*.008f;h.CurvePhase=row.Phase+n;h.ForwardFactor=factor;h.transform.position=h.PositionAfter(0);}
                 }
                 else
                 {
-                    for(int lane=0;lane<3;lane++)if(lane!=row.SafeLane){float stagger=(row.Pattern%3==0&&lane==2)?4:0;Activate((row.Kind+lane)%6==3?5:(row.Kind+lane)%6,ArcadeRules.LaneX(lane),z+stagger,0,0);}
+                    for(int lane=0;lane<3;lane++)if(lane!=row.SafeLane)
+                    {
+                        int kind=(row.Kind+lane+row.Pattern/4)%6;if(kind==3)kind=5;
+                        float stagger=((row.Pattern+lane)%3)*2,jitter=(((row.Pattern*7+lane*3)%5)-2)*.09f;
+                        var h=Activate(kind,ArcadeRules.LaneX(lane)+jitter,z+stagger,0,0);float angle=((row.Pattern+lane)%5-2)*4;
+                        h.Model.localRotation=Quaternion.Euler(0,angle,0);float c=Mathf.Abs(Mathf.Cos(angle*Mathf.Deg2Rad)),s=Mathf.Abs(Mathf.Sin(angle*Mathf.Deg2Rad));h.HalfWidth=Definitions[kind].HalfWidth*c+Definitions[kind].HalfLength*s;h.HalfLength=Definitions[kind].HalfWidth*s+Definitions[kind].HalfLength*c;
+                    }
+                    if(row.Stage>=2&&row.Pattern%4==1){int lane=row.SafeLane==0?2:0;Activate(2,ArcadeRules.LaneX(lane),z+8,0,0);}
                     if(Challenges)Challenges.SpawnRisk(new ArcadeRow(row.Index,row.SafeLane,7^(1<<row.SafeLane),row.Kind,false,row.Distance,0,0),z);
                 }
                 SpawnedRows++;joyfulPending=joyfulSequence.Next();
@@ -137,7 +144,7 @@ namespace BrakeToy
             int offset = poolOffsets == null ? variant * 6 : poolOffsets[variant];
             int count = poolOffsets == null ? 6 : Definitions[variant].PoolSize;
             for (int i = offset; i < offset + count; i++)
-                if (!Pool[i].InUse) { Pool[i].MotionKind=0;Pool[i].ForwardFactor=1;Pool[i].Place(x, z, crossing, slope); return Pool[i]; }
+                if (!Pool[i].InUse) { Pool[i].MotionKind=0;Pool[i].ForwardFactor=1;if(Definitions!=null&&Definitions.Length>variant){Pool[i].HalfWidth=Definitions[variant].HalfWidth;Pool[i].HalfLength=Definitions[variant].HalfLength;}Pool[i].Place(x, z, crossing, slope); return Pool[i]; }
             PoolExhaustions++; throw new System.InvalidOperationException("Arcade pool exhausted; seed=" + Seed + " row=" + SpawnedRows);
         }
         public void Step(float dt, float oldX, float newX)
@@ -215,7 +222,7 @@ namespace BrakeToy
         public bool BallWarning(out float x)
         {
             foreach (var hazard in Pool)
-                if (hazard.InUse && hazard.RollingBall && hazard.transform.position.z > 0 && hazard.transform.position.z < Speed * 2.1f)
+                if (hazard.InUse && hazard.RollingBall && hazard.transform.position.z > 0 && hazard.transform.position.z < Speed * hazard.ForwardFactor * 2.1f)
                 { x = hazard.transform.position.x; return true; }
             x = 0; return false;
         }

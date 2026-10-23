@@ -10,6 +10,8 @@ namespace BrakeToy
         public int MotionKind;public float CurveAmplitude,CurveFrequency=.075f,CurvePhase,ForwardFactor=1,Height=1.3f;
         [System.NonSerialized] public bool InUse, Scored;
         [System.NonSerialized] public float Slope, CrossingX, BestGap;
+        private Transform[] wheels;
+        private void Awake(){if(Model){var found=new System.Collections.Generic.List<Transform>();foreach(var t in Model.GetComponentsInChildren<Transform>())if(t.name.StartsWith("Wheel unit"))found.Add(t);wheels=found.ToArray();}}
         public void Place(float x, float z, float crossing, float slope)
         {
             InUse = true; Scored = false; BestGap = float.PositiveInfinity;
@@ -28,6 +30,7 @@ namespace BrakeToy
         public void Advance(float distance)
         {
             var old = transform.position; transform.position = PositionAfter(distance);
+            if(MotionKind==2&&wheels!=null){float angle=(transform.position.x-old.x)/.18f*Mathf.Rad2Deg;foreach(var wheel in wheels)wheel.Rotate(Vector3.forward,-angle,Space.Self);}
             if (RollingBall && Model)
             {
                 Vector3 delta = transform.position - old;

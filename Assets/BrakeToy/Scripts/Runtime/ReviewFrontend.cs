@@ -98,7 +98,7 @@ namespace BrakeToy
         {
             if(!game)return;
             game.UI.Overlay.SetActive(false);bool running=game.State==RunState.Running;
-            if(game.State!=previous){if(game.State==RunState.Crashed){SetPage("Sonuç");results.text=(game.Arcade.Joyful?"JOYFUL ROOM · ":"")+ModeName()+"\n"+Mathf.FloorToInt(game.Arcade.Distance)+" m  •  "+game.Arcade.Style.Total+" STİL\n\n+"+career.LastReward+" TOY POINTS\nBAKİYE  "+career.Data.points+" TP";}else if(game.State==RunState.Paused)SetPage("Mola");previous=game.State;}
+            if(game.State!=previous){if(game.State==RunState.Crashed){SetPage("Sonuç");results.text=(game.Arcade.Joyful?"JOYFUL ROOM · ":"")+ModeName()+"\n"+Mathf.FloorToInt(game.Arcade.Distance)+" m  •  "+game.Arcade.Style.Total+" STİL\n\n+"+career.LastReward+" TOY POINTS\nBAKİYE  "+career.Data.points+" TP";if(game.Arcade.Joyful){var jump=GetComponent<JoyfulRun>();results.text+="\n\n"+jump.Jumps+" SIÇRAMA · "+Mathf.FloorToInt(jump.AirDistance)+" m HAVADA\nHava bölümünde TP ×2 uygulandı.";}}else if(game.State==RunState.Paused)SetPage("Mola");previous=game.State;}
             foreach(var pair in pages)pair.Value.SetActive(!running&&pair.Key==Page);
             wallet.gameObject.SetActive(!running);wallet.text=career.Data.points+" TOY POINTS"+(career.SaveFailed?"  •  KAYIT HATASI":"");
             garageCamera.enabled=!running&&Page=="Garaj";if(model){model.SetActive(garageCamera.enabled);if(model.activeSelf){modelAngle+=Time.unscaledDeltaTime*15;model.transform.rotation=Quaternion.Euler(0,modelAngle,0);}}
