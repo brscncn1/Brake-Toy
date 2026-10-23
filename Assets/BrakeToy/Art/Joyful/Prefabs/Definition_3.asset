@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d643b953a168a354eb9715d11fc04c75, type: 3}
+  m_Name: Definition_3
+  m_EditorClassIdentifier: BrakeToy.Runtime::BrakeToy.ObstacleDefinition
+  Kind: 3
+  Prefab: {fileID: 899868960720865911, guid: 6b467e2e8a58ec040ba69f4a2b3c3d5c, type: 3}
+  PoolSize: 24
+  HalfWidth: 0.48
+  HalfLength: 0.48
+  ReadabilityNotes: Joyful-r2 swept XZ with height check; decoration has no collider.

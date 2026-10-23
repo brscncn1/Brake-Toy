@@ -9,6 +9,8 @@ namespace BrakeToy
         public bool EnhancedLayers;
         public bool UseRecordedSamples;
         public AudioClip RecordedRoll,RecordedWood,RecordedMetal,RecordedSoft;
+        public AudioClip RecordedHorn,RecordedToyCrash;
+        private AudioSource horn;
         [Range(0,1)]public float EngineLevel=.65f,EffectsLevel=.75f;
         private AudioSource recordedRoll;
         private AudioSource rolling;
@@ -20,6 +22,7 @@ namespace BrakeToy
         public void Initialize(GameManager manager, ArcadeDirector director)
         {
             game = manager; arcade = director;
+            if(RecordedHorn){horn=gameObject.AddComponent<AudioSource>();horn.playOnAwake=false;horn.clip=RecordedHorn;}
             engine = gameObject.AddComponent<AudioSource>(); effects = gameObject.AddComponent<AudioSource>();
             engine.playOnAwake = effects.playOnAwake = false;
             engine.loop = true; engine.volume = .045f; effects.volume = .18f;
@@ -87,6 +90,7 @@ namespace BrakeToy
         {
             if (!engine) return;
             engine.mute = Muted || game.State != RunState.Running; effects.mute = Muted;
+            if(horn){horn.mute=Muted;horn.volume=.65f*EffectsLevel;}
             engine.pitch = .9f + (arcade.Speed - 10) * .09f;
             if(UseRecordedSamples)
             {
@@ -108,9 +112,9 @@ namespace BrakeToy
             }
         }
         public void NearMiss(int multiplier) { if (effects) { effects.pitch = 1 + multiplier * .07f; effects.PlayOneShot(near); } }
-        public void Horn(int variation){if(effects){effects.pitch=.65f+variation*.2f;effects.PlayOneShot(near,.65f);}}
+        public void Horn(int variation){if(horn){horn.pitch=.90f+variation*.10f;horn.Play();}else if(effects){effects.pitch=.65f+variation*.2f;effects.PlayOneShot(near,.65f);}}
         public void Shift() { lastShift = Time.unscaledTime; if (effects) { effects.pitch = 1; effects.PlayOneShot(UseRecordedSamples&&RecordedMetal?RecordedMetal:shift,UseRecordedSamples?.35f:1); } }
-        public void Crash(bool soft = false) { if (effects) { effects.pitch = 1; effects.PlayOneShot(UseRecordedSamples?(soft?RecordedSoft:RecordedWood):EnhancedLayers && soft ? softImpact : crash); } }
+        public void Crash(bool soft = false) { if (effects) { effects.pitch = 1; effects.PlayOneShot(RecordedToyCrash?RecordedToyCrash:UseRecordedSamples?(soft?RecordedSoft:RecordedWood):EnhancedLayers && soft ? softImpact : crash,RecordedToyCrash?2.5f:1);if(RecordedToyCrash)GetComponent<ToyMusic>()?.DuckForImpact(); } }
         private void OnDestroy()
         {
             if (engine && engine.clip) Destroy(engine.clip);

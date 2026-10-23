@@ -22,12 +22,12 @@ namespace BrakeToy
         private RectTransform Rect(string name,Transform parent,float x0,float y0,float x1,float y1)
         {var r=new GameObject(name,typeof(RectTransform)).GetComponent<RectTransform>();r.SetParent(parent,false);r.anchorMin=new Vector2(x0,y0);r.anchorMax=new Vector2(x1,y1);r.offsetMin=r.offsetMax=Vector2.zero;return r;}
         private Text Text(Transform parent,string name,string value,int size,float x0,float y0,float x1,float y1,TextAnchor alignment=TextAnchor.MiddleCenter)
-        {var t=Rect(name,parent,x0,y0,x1,y1).gameObject.AddComponent<Text>();t.font=Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");t.text=value;t.fontSize=size;t.color=new Color(.94f,.96f,.99f);t.alignment=alignment;t.raycastTarget=false;return t;}
+        {var t=Rect(name,parent,x0,y0,x1,y1).gameObject.AddComponent<Text>();t.font=Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");t.text=value;t.fontSize=size;t.color=game.Arcade.Joyful?new Color(.055f,.14f,.22f):new Color(.94f,.96f,.99f);t.alignment=alignment;t.raycastTarget=false;return t;}
         private Button Button(Transform parent,string name,Action action,float x0,float y0,float x1,float y1,bool gold=false)
-        {var r=Rect(name,parent,x0,y0,x1,y1);var image=r.gameObject.AddComponent<Image>();image.color=gold?new Color(.95f,.57f,.12f):new Color(.08f,.20f,.25f,.98f);var b=r.gameObject.AddComponent<Button>();b.targetGraphic=image;b.onClick.AddListener(()=>action());var label=Text(r,"Label",name,32,.03f,0,.97f,1);if(gold)label.color=new Color(.12f,.12f,.10f);return b;}
+        {var r=Rect(name,parent,x0,y0,x1,y1);var image=r.gameObject.AddComponent<Image>();image.color=gold?new Color(.95f,.57f,.12f):game.Arcade.Joyful?new Color(.07f,.48f,.52f):new Color(.08f,.20f,.25f,.98f);var b=r.gameObject.AddComponent<Button>();b.targetGraphic=image;b.onClick.AddListener(()=>action());var label=Text(r,"Label",name,32,.03f,0,.97f,1);if(gold)label.color=new Color(.12f,.12f,.10f);else if(game.Arcade.Joyful)label.color=Color.white;return b;}
         private Transform Panel(string name)
         {
-            var r=Rect(name,game.UI.SafeArea,.045f,.035f,.955f,.96f);var bg=r.gameObject.AddComponent<Image>();bg.color=new Color(.025f,.055f,.075f,.97f);pages[name]=r.gameObject;
+            var r=Rect(name,game.UI.SafeArea,.045f,.035f,.955f,.96f);var bg=r.gameObject.AddComponent<Image>();bg.color=game.Arcade.Joyful?new Color(.99f,.95f,.84f,.96f):new Color(.025f,.055f,.075f,.97f);pages[name]=r.gameObject;
             Text(r,"Title",name=="Ana menü"?"BRAKE TOY":name.ToUpperInvariant(),58,.04f,.865f,.96f,.96f);
             if(name!="Ana menü")Button(r,"GERİ",()=>SetPage(game.State==RunState.Paused?"Mola":"Ana menü"),.08f,.035f,.92f,.095f);
             return r;
@@ -41,11 +41,11 @@ namespace BrakeToy
             Button(main,"GÜNLÜK ANTRENMAN",()=>StartMode(PlayMode.Daily),.08f,.44f,.92f,.525f);
             Button(main,"GARAJ",()=>SetPage("Garaj"),.08f,.33f,.48f,.41f);Button(main,"GÖREVLER",()=>SetPage("Görevler"),.52f,.33f,.92f,.41f);
             Button(main,"SIRALAMA",()=>SetPage("Sıralama"),.08f,.22f,.48f,.30f);Button(main,"AYARLAR",()=>SetPage("Ayarlar"),.52f,.22f,.92f,.30f);
-            Text(main,"Version","REVIEW 0.6  •  TOY ROOM\nSürükle; parmağını bırakınca yön korunur.",25,.05f,.10f,.95f,.19f);
+            Text(main,"Version",game.Arcade.Joyful?"v0.7  •  JOYFUL ROOM\nYeşil ok → kitap rampası → havada TP ×2":"REVIEW 0.6  •  TOY ROOM\nSürükle; parmağını bırakınca yön korunur.",25,.05f,.10f,.95f,.19f);
             var garage=Panel("Garaj");garageTitle=Text(garage,"Car name","",38,.06f,.77f,.94f,.85f);
             var raw=Rect("3D preview",garage,.04f,.43f,.96f,.76f).gameObject.AddComponent<RawImage>();preview=new RenderTexture(640,520,24);preview.Create();raw.texture=preview;raw.raycastTarget=false;
             Button(garage,"İZ RENGİ · 100 TP",()=>{Status=career.Cosmetic(false)?"İz rengi seçildi":"Yeterli TP yok";RefreshGarage(false);},.07f,.37f,.49f,.425f);Button(garage,"KORNA · 100 TP",()=>{Status=career.Cosmetic(true)?"Korna seçildi":"Yeterli TP yok";game.Arcade.Sound.Horn(career.Data.horn);RefreshGarage(false);},.51f,.37f,.93f,.425f);
-            garageCamera=new GameObject("Garage preview camera").AddComponent<Camera>();garageCamera.transform.position=new Vector3(1001.5f,1001,1001.8f);garageCamera.transform.LookAt(new Vector3(1000,1000.28f,1000));garageCamera.fieldOfView=38;garageCamera.clearFlags=CameraClearFlags.SolidColor;garageCamera.backgroundColor=new Color(.025f,.055f,.075f);garageCamera.cullingMask=1<<30;garageCamera.targetTexture=preview;garageCamera.enabled=false;
+            garageCamera=new GameObject("Garage preview camera").AddComponent<Camera>();garageCamera.transform.position=new Vector3(1001.5f,1001,1001.8f);garageCamera.transform.LookAt(new Vector3(1000,1000.28f,1000));garageCamera.fieldOfView=38;garageCamera.clearFlags=CameraClearFlags.SolidColor;garageCamera.backgroundColor=game.Arcade.Joyful?new Color(.52f,.82f,.82f):new Color(.025f,.055f,.075f);garageCamera.cullingMask=1<<30;garageCamera.targetTexture=preview;garageCamera.enabled=false;
             Button(garage,"◀",()=>Browse(-1),.07f,.30f,.25f,.365f);Button(garage,"DÖNDÜR",()=>modelAngle+=45,.29f,.30f,.71f,.365f);Button(garage,"▶",()=>Browse(1),.75f,.30f,.93f,.365f);
             garageInfo=Text(garage,"Car info","",26,.06f,.185f,.94f,.29f);buy=Button(garage,"SEÇ",()=>{Status=career.BuyOrSelect(carIndex)?"Seçildi":"Yeterli TP yok";RefreshGarage(false);},.08f,.115f,.92f,.18f,true);
             var missionPanel=Panel("Görevler");missions=Text(missionPanel,"Mission list","",30,.08f,.115f,.92f,.85f,TextAnchor.UpperLeft);
@@ -98,13 +98,13 @@ namespace BrakeToy
         {
             if(!game)return;
             game.UI.Overlay.SetActive(false);bool running=game.State==RunState.Running;
-            if(game.State!=previous){if(game.State==RunState.Crashed){SetPage("Sonuç");results.text=ModeName()+"\n"+Mathf.FloorToInt(game.Arcade.Distance)+" m  •  "+game.Arcade.Style.Total+" STİL\n\n+"+career.LastReward+" TOY POINTS\nBAKİYE  "+career.Data.points+" TP";}else if(game.State==RunState.Paused)SetPage("Mola");previous=game.State;}
+            if(game.State!=previous){if(game.State==RunState.Crashed){SetPage("Sonuç");results.text=(game.Arcade.Joyful?"JOYFUL ROOM · ":"")+ModeName()+"\n"+Mathf.FloorToInt(game.Arcade.Distance)+" m  •  "+game.Arcade.Style.Total+" STİL\n\n+"+career.LastReward+" TOY POINTS\nBAKİYE  "+career.Data.points+" TP";}else if(game.State==RunState.Paused)SetPage("Mola");previous=game.State;}
             foreach(var pair in pages)pair.Value.SetActive(!running&&pair.Key==Page);
             wallet.gameObject.SetActive(!running);wallet.text=career.Data.points+" TOY POINTS"+(career.SaveFailed?"  •  KAYIT HATASI":"");
             garageCamera.enabled=!running&&Page=="Garaj";if(model){model.SetActive(garageCamera.enabled);if(model.activeSelf){modelAngle+=Time.unscaledDeltaTime*15;model.transform.rotation=Quaternion.Euler(0,modelAngle,0);}}
             if(!running&&Page=="Sıralama")
             {var online=GetComponent<ReviewOnline>();if(online.Board!=null&&online.Board.rows!=null){var rows=online.Board.rows;boardPage=Mathf.Clamp(boardPage,0,Mathf.Max(0,(rows.Length-1)/15));leaderboard.text=online.Status+"\n"+online.BoardMode.ToUpperInvariant()+" · "+online.BoardMetric.ToUpperInvariant()+" · "+(boardPage+1)+"/"+Mathf.Max(1,(rows.Length+14)/15)+"\nSıran: "+(online.Board.ownRank>0?online.Board.ownRank.ToString():"Henüz yok")+"\n\n";for(int i=boardPage*15;i<Mathf.Min(rows.Length,boardPage*15+15);i++){var row=rows[i];leaderboard.text+=(i+1)+". "+row.player+"  "+(online.BoardMetric=="style"?row.style+" stil":Mathf.FloorToInt(row.distance)+" m")+"\n";}if(online.Board.nearby!=null&&online.Board.nearby.Length>0){leaderboard.text+="\nYAKIN SIRALAR\n";foreach(var row in online.Board.nearby)leaderboard.text+=row.player+" · "+(online.BoardMetric=="style"?row.style+" stil":Mathf.FloorToInt(row.distance)+" m")+"\n";}}else{Refresh();leaderboard.text+="\n"+online.Status;}}
-            if(running){modeHud.text=ModeName()+(career.Mode==PlayMode.Relax?"  •  "+career.Lives+" HAK":"");if(career.Mode==PlayMode.Relax)game.Arcade.HUD.SpeedLabel.text="RELAX  "+(game.Arcade.Speed/10).ToString("0.00")+"×";}
+            if(running){modeHud.text=ModeName()+(career.Mode==PlayMode.Relax?"  •  "+career.Lives+" HAK":"")+(game.Arcade.Joyful&&GetComponent<JoyfulRun>().Airborne?"  •  TP ×2":"");if(career.Mode==PlayMode.Relax)game.Arcade.HUD.SpeedLabel.text="RELAX  "+(game.Arcade.Speed/10).ToString("0.00")+"×";}
             GetComponent<ToyAudioSettings>().Panel.SetActive(!running&&Page=="Ayarlar");
         }
         private string ModeName()=>career.Mode==PlayMode.Relax?"RELAX":career.Mode==PlayMode.Daily?"GÜNLÜK ANTRENMAN":"ARCADE";

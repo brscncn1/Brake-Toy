@@ -11,8 +11,10 @@ namespace BrakeToy
         public ArcadeAudio Sound;
         public int Seed = 7331;
         public bool UseVariedPatterns, VaryRuns, BuildCatalogPool;
-        public bool Choreographed;
+        public bool Choreographed;public bool Joyful;
+        private JoyfulRun joyful;private JoyfulSequence joyfulSequence;private JoyfulRow joyfulPending;
         public RunChallenges Challenges;
+        public string DistanceRecordKey="BrakeToy.v03.distance";
         public string StyleRecordKey = "BrakeToy.v03.style";
         public ObstacleDefinition[] Definitions;
         public int CurrentSeed { get; private set; }
@@ -20,9 +22,9 @@ namespace BrakeToy
         private int[] poolOffsets;
         public float Elapsed { get; private set; }
         public float Distance { get; private set; }
-        public float Speed => game && game.Review ? CareerRules.Speed(Elapsed,game.Review.Mode) : ArcadeRules.Speed(Elapsed);
+        public float Speed => Joyful?JoyfulRules.Speed(Elapsed,game&&game.Review&&game.Review.Mode==PlayMode.Relax):game && game.Review ? CareerRules.Speed(Elapsed,game.Review.Mode) : ArcadeRules.Speed(Elapsed);
         public readonly StyleScore Style = new StyleScore();
-        public int Gear => Mathf.Min(4, 1 + Mathf.FloorToInt((Speed - 10) / 2));
+        public int Gear => Joyful?Mathf.Clamp(1+Mathf.FloorToInt((Speed-14)/4),1,5):Mathf.Min(4, 1 + Mathf.FloorToInt((Speed - 10) / 2));
         public float BestDistance { get; private set; }
         public int BestStyle { get; private set; }
         public int SpawnedRows { get; private set; }
@@ -34,11 +36,11 @@ namespace BrakeToy
         private int lastGear;
         public void Initialize(GameManager manager)
         {
-            game = manager;
+            game = manager;joyful=GetComponent<JoyfulRun>();
             CurrentSeed = Seed;
             if (BuildCatalogPool)
             {
-                if (Definitions == null || Definitions.Length != 4) throw new System.InvalidOperationException("Missing encounter catalog.");
+                if (Definitions == null || Definitions.Length < 4) throw new System.InvalidOperationException("Missing encounter catalog.");
                 Transform parent = Pool.Length > 0 ? Pool[0].transform.parent : transform;
                 foreach (var hazard in Pool) { hazard.Release(); Destroy(hazard.gameObject); }
                 var instances = new System.Collections.Generic.List<ArcadeHazard>();
@@ -52,9 +54,9 @@ namespace BrakeToy
             }
             if (Definitions != null && Definitions.Length > 0)
             {
-                if (Definitions.Length != 4) throw new System.InvalidOperationException("Four encounter kinds required.");
-                poolOffsets = new int[4]; int count = 0;
-                for (int kind = 0; kind < 4; kind++)
+                if (Definitions.Length < 4) throw new System.InvalidOperationException("Four encounter kinds required.");
+                poolOffsets = new int[Definitions.Length]; int count = 0;
+                for (int kind = 0; kind < Definitions.Length; kind++)
                 {
                     var definition = Definitions[kind];
                     if (!definition || definition.Kind != kind || definition.PoolSize < 6 || !definition.Prefab)
@@ -69,7 +71,7 @@ namespace BrakeToy
                 }
                 if (count != Pool.Length) throw new System.InvalidOperationException("Unexpected encounter pool instances.");
             }
-            BestDistance = Mathf.Max(0, PlayerPrefs.GetFloat("BrakeToy.v03.distance", 0));
+            BestDistance = Mathf.Max(0, PlayerPrefs.GetFloat(DistanceRecordKey, 0));
             BestStyle = Mathf.Max(0, PlayerPrefs.GetInt(StyleRecordKey, 0));
             HUD.Bind(this, game); Sound.Initialize(game, this);
             if(Challenges)Challenges.Initialize(game,this);
@@ -81,6 +83,7 @@ namespace BrakeToy
             Elapsed = Distance = 0; SpawnedRows = PoolExhaustions = 0; lastGear = 1;
             Style.Reset(); sequence = new ArcadeSequence(CurrentSeed, UseVariedPatterns, Choreographed,game&&game.Review&&game.Review.Mode==PlayMode.Relax); pending = sequence.Next();
             if(Challenges)Challenges.ResetRun();
+            if(Joyful){joyfulSequence=new JoyfulSequence(CurrentSeed,game.Review.Mode==PlayMode.Relax);joyfulPending=joyfulSequence.Next();joyful.ResetRun();}
             HUD.Clear(); FillAhead();
         }
         public void BeginRun(bool sameRoute)
@@ -94,6 +97,7 @@ namespace BrakeToy
         }
         private void FillAhead()
         {
+            if(Joyful){FillJoyful();return;}
             while (pending.Distance - Distance < 95)
             {
                 float z = pending.Distance - Distance;
@@ -103,14 +107,38 @@ namespace BrakeToy
                 SpawnedRows++; pending = sequence.Next();
             }
         }
-        private void Activate(int variant, float x, float z, float crossing, float slope)
+        private void FillJoyful()
+        {
+            while(joyfulPending.Distance-Distance<115)
+            {
+                var row=joyfulPending;float z=row.Distance-Distance;
+                if(row.Ramp)joyful.SpawnRamp(row.SafeX,z);
+                if(row.Bus)
+                {
+                    float crossing=row.SafeLane==0?1.7f:-1.7f;var h=Activate(6,crossing,z,crossing,0);h.MotionKind=2;h.CurveAmplitude=1.05f;h.CurveFrequency=.10f+row.Stage*.012f;h.CurvePhase=row.Phase;h.ForwardFactor=1;h.transform.position=h.PositionAfter(0);
+                    int other=row.SafeLane==0?1:1;Activate(row.Kind,ArcadeRules.LaneX(other),z+6,0,0);
+                }
+                else if(row.Balls>0)
+                {
+                    int[] lanes={row.SafeLane==0?1:0,row.SafeLane==2?1:2};
+                    for(int n=0;n<row.Balls;n++){int lane=lanes[n%2];float crossing=ArcadeRules.LaneX(lane),factor=1.10f+row.Stage*.08f;var h=Activate(3,crossing,(z+(n==2?7:0))*factor,crossing,0);h.MotionKind=1;h.CurveAmplitude=.8f+row.Stage*.16f;h.CurveFrequency=.055f+row.Stage*.008f;h.CurvePhase=row.Phase+n;h.ForwardFactor=factor;h.transform.position=h.PositionAfter(0);}
+                }
+                else
+                {
+                    for(int lane=0;lane<3;lane++)if(lane!=row.SafeLane){float stagger=(row.Pattern%3==0&&lane==2)?4:0;Activate((row.Kind+lane)%6==3?5:(row.Kind+lane)%6,ArcadeRules.LaneX(lane),z+stagger,0,0);}
+                    if(Challenges)Challenges.SpawnRisk(new ArcadeRow(row.Index,row.SafeLane,7^(1<<row.SafeLane),row.Kind,false,row.Distance,0,0),z);
+                }
+                SpawnedRows++;joyfulPending=joyfulSequence.Next();
+            }
+        }
+        private ArcadeHazard Activate(int variant, float x, float z, float crossing, float slope)
         {
             // Each prefab kind has six reserved instances; no allocations or Instantiate while driving.
             int offset = poolOffsets == null ? variant * 6 : poolOffsets[variant];
             int count = poolOffsets == null ? 6 : Definitions[variant].PoolSize;
             for (int i = offset; i < offset + count; i++)
-                if (!Pool[i].InUse) { Pool[i].Place(x, z, crossing, slope); return; }
-            PoolExhaustions++; Debug.LogError("Arcade pool exhausted; seed=" + Seed + " row=" + SpawnedRows);
+                if (!Pool[i].InUse) { Pool[i].MotionKind=0;Pool[i].ForwardFactor=1;Pool[i].Place(x, z, crossing, slope); return Pool[i]; }
+            PoolExhaustions++; throw new System.InvalidOperationException("Arcade pool exhausted; seed=" + Seed + " row=" + SpawnedRows);
         }
         public void Step(float dt, float oldX, float newX)
         {
@@ -124,12 +152,13 @@ namespace BrakeToy
                 float fromX = Mathf.Lerp(oldX, newX, step / (float)steps);
                 float toX = Mathf.Lerp(oldX, newX, (step + 1f) / steps);
                 var mode=game.Review?game.Review.Mode:PlayMode.Arcade;
-                float d = CareerRules.Distance(Elapsed + sub,mode) - CareerRules.Distance(Elapsed,mode);
+                float d = Joyful?JoyfulRules.Distance(Elapsed+sub,mode==PlayMode.Relax)-JoyfulRules.Distance(Elapsed,mode==PlayMode.Relax):CareerRules.Distance(Elapsed + sub,mode) - CareerRules.Distance(Elapsed,mode);
                 bool hit = false; float fraction = 1; ArcadeHazard hitHazard = null;
                 foreach (var hazard in Pool)
                 {
                     if (!hazard.InUse) continue;
                     var a = hazard.transform.position; var b = hazard.PositionAfter(d);
+                    if(Joyful&&Mathf.Min(joyful.Height,joyful.PredictHeight(sub))>hazard.Height+.02f)continue;
                     float t;
                     bool contact = hazard.RollingBall
                         ? SweptCircleBox.TryHit(fromX-a.x,-a.z,toX-b.x,-b.z,game.Config.PlayerHalfWidth,game.Config.PlayerHalfLength,hazard.HalfWidth,out t)
@@ -145,8 +174,8 @@ namespace BrakeToy
                     // Closest lateral separation only while longitudinal hit volumes overlap.
                     if (a.z >= -halfZ && b.z <= halfZ)
                     {
-                        float enter = Mathf.Clamp01((a.z - halfZ) / Mathf.Max(.000001f, moved));
-                        float exit = Mathf.Clamp01((a.z + halfZ) / Mathf.Max(.000001f, moved));
+                        float enter = Mathf.Clamp01((a.z - halfZ) / Mathf.Max(.000001f, a.z-b.z));
+                        float exit = Mathf.Clamp01((a.z + halfZ) / Mathf.Max(.000001f, a.z-b.z));
                         float r0 = Mathf.Lerp(fromX, toX, fraction * enter) - Mathf.Lerp(a.x, b.x, enter);
                         float r1 = Mathf.Lerp(fromX, toX, fraction * exit) - Mathf.Lerp(a.x, b.x, exit);
                         float separation = r0 * r1 <= 0 ? 0 : Mathf.Min(Mathf.Abs(r0), Mathf.Abs(r1));
@@ -156,7 +185,7 @@ namespace BrakeToy
                     if (!hit && !hazard.Scored && b.z < -halfZ)
                     {
                         hazard.Scored = true;
-                        if (hazard.BestGap > .005f && hazard.BestGap <= .48f)
+                        if ((!Joyful||!joyful.Airborne) && hazard.BestGap > .005f && hazard.BestGap <= .48f)
                         { int award = Style.Award(); HUD.Notify("YAKIN GEÇİŞ  +" + award, new Color(.2f, .95f, .85f)); Sound.NearMiss(Style.Multiplier); }
                     }
                     if (b.z < -9) hazard.Release();
@@ -164,6 +193,7 @@ namespace BrakeToy
                 game.World.Advance(moved); Distance += moved; Elapsed += sub * fraction;
                 Style.Advance(sub * fraction);
                 if(Challenges)Challenges.Step(moved,fromX,Mathf.Lerp(fromX,toX,fraction),hit);
+                if(Joyful)joyful.Advance(sub*fraction,moved,fromX,Mathf.Lerp(fromX,toX,fraction));
                 if(game.Review)GetComponent<GhostReplay>().Record(Elapsed,Mathf.Lerp(fromX,toX,fraction));
                 if (hit)
                 {
@@ -172,7 +202,7 @@ namespace BrakeToy
                     if(!game.Review || game.Review.Mode==PlayMode.Arcade)
                     {
                     BestDistance = Mathf.Max(BestDistance, Distance); BestStyle = Mathf.Max(BestStyle, Style.Total);
-                    if(PersistRecords) { PlayerPrefs.SetFloat("BrakeToy.v03.distance", BestDistance); PlayerPrefs.SetInt(StyleRecordKey, BestStyle); PlayerPrefs.Save(); }
+                    if(PersistRecords) { PlayerPrefs.SetFloat(DistanceRecordKey, BestDistance); PlayerPrefs.SetInt(StyleRecordKey, BestStyle); PlayerPrefs.Save(); }
                     }
                     Sound.Crash(hitHazard && (hitHazard.RollingBall || hitHazard.HalfLength < .5f)); HUD.Impact();
                     var impact = game.GetComponent<ToyImpactFeedback>(); if (impact) impact.Play();

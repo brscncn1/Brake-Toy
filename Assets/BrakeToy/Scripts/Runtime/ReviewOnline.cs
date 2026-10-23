@@ -36,7 +36,7 @@ namespace BrakeToy
         private readonly List<InputStep> steps=new List<InputStep>(36000);private string token,ticket,runMode;private int seed;private bool prepared,busy;
         public bool Configured
         {
-            get{if(!Configuration||!Configuration.EligibilityAndPrivacyReviewed||string.IsNullOrWhiteSpace(Configuration.Endpoint))return false;if(!Uri.TryCreate(Configuration.Endpoint,UriKind.Absolute,out var u))return false;
+            get{if(GetComponent<JoyfulRun>())return false;if(!Configuration||!Configuration.EligibilityAndPrivacyReviewed||string.IsNullOrWhiteSpace(Configuration.Endpoint))return false;if(!Uri.TryCreate(Configuration.Endpoint,UriKind.Absolute,out var u))return false;
 #if UNITY_EDITOR
                 if(u.IsLoopback&&u.Scheme=="http")return true;
 #endif
