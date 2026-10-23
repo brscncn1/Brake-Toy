@@ -88,5 +88,6 @@ namespace BrakeToy.Core
         public int Award() { Chain++; NearMisses++; Remaining = 6; int points = 100 * Multiplier; Total += points; return points; }
         public void Crash() { Chain = 0; Remaining = 0; }
         public void AwardRiskStar() { Total += 75; }
+        public void AwardMastery(int points) { Total += Math.Max(0,points); }
     }
 }

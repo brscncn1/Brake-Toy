@@ -1,3 +1,13 @@
+## 24 Ekim — v0.8 Playground
+
+Yeni ToyRoomPlayground sahnesi ve feat/playground-v08 dalı; v0.7 korunur. Güvenli/riskli yol, bağlı altı karşılaşma ailesi, isteğe bağlı domino ile yol açma, sinyalli açılıp kapanan oyuncak garaj kapısı/hareketli oyuncak geçişleri, üç yatay konuma dağılan kitap rampaları ve farklı hareketleri bağlayan ustalık bonusu uygulandı. Rampa artık dar merkez toleransı yerine aracın teker/gövde temas alanını kullanır; yan giriş/çıkış ve kenarları sınandı.
+
+3 sn yavaşlatma, 3 sn korumalı roket, 5 sn jetpack. İlk kariyere üçer kalıcı hak; menüde kullanım başına 350/500/650 TP yenileme. Retry hak vermez; pause süreyi durdurur. Gerçek para/coin/IAP yok. Yardımlı tur etiketlenir; güç kullanıldığında kişisel ghost gizlenir ve yeni ghost yazılmaz. Yeni rekor/kariyer dosyası ayrı; TP/açılmış araçlar taşınır.
+
+Masa bölgeleri ve domino Ayarlar'dan ayrı kapatılır. Oda ışığında yön/kontrast, plastik-kumaş-kauçuk-metal yüzey ayrımı; odanın üst kısmını açık bırakan menü, simgeli görev/rozet kartları ve farklı araç siluetleri eklendi. Müzik korunur. Araçlar ayrıntılı son model değil, sonraki model agent çalışmasına temel siluetlerdir.
+
+Son Unity: **102/102** (48 EditMode +54 PlayMode). Fiziksel v0.8 FPS/p95/ısınma ve insan sanat/oynanış kabulü bekler. Canlı online ve mağaza kabulü yok. Notion yeni sayfa oluşturma ücretsiz blok sınırından reddedildi; NOTION_PENDING-v08.md içinde eşitleme kaydı tutulur.
+
 # 23 Ekim 2026 — Faz 6 revizyon adayı kontrol noktası
 
 ## v0.7 Joyful Room — uygulama ve görsel inceleme
@@ -148,3 +158,7 @@ Kaynak a7e889ae4264656eca81db093034c63ed15f3906, PR #4 ve v0.5.0 yayımlandı. G
 ## v0.7 yayın ve eşitleme tamamlandı
 
 Kaynak 0a2cbf03fce7acdc796dfa9dd2cbfb56fab430e9, PR #6 ve v0.7.0 ön sürüm GitHub üzerinde. APK GitHub digest/yerel SHA256 eşleşti. Main README 8fa898a ile güncel kaynak dalını gösterir. Notion 32 plan/33 sonuç, günlük ve ilgili 12 sayfa güncellendi; root/sonuç/görsel readback doğrulandı ve 33 alt sayfa korundu. Gerçek tablet ve insan kalite kabulü açık; film/mağaza final onayı diye sunulmaz.
+
+## v0.8 son kabul koşusu
+
+48 EditMode +54 PlayMode =102/102 geçti. Son ekler: gerçek zemin/hava risk yıldızları ve görev bağlantısı; tur bitişinde aktif güç/lift temizliği ve hakların iade edilmemesi. Kenar/yan rampa, kapı sinyali, domino açma ve iki mod/üç seed güvenli tanık geçti. Garaj yakın planda far/arka kanat bağlantıları düzeltilip yeni prefab/sahne varyantlarına kaydedildi. Kullanıcı TP/araçları ve önceki sahneler korunur. Notion yeni sayfa blok limiti nedeniyle reddedildi; otomatik tekrar yok, eşitleme bekleyen notlar yerel/GitHub'da.

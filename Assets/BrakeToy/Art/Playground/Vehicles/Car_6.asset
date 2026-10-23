@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4795848bbf28424589feb07f788fc5e, type: 3}
+  m_Name: Car_6
+  m_EditorClassIdentifier: BrakeToy.Runtime::BrakeToy.VehicleDefinition
+  Title: Thunder Volt
+  Cost: 3600
+  VisualPrefab: {fileID: 4019253850025152031, guid: f222c786294f0ae4580c0ff9bae81cc9, type: 3}
+  TrailColor: {r: 0.17, g: 0.75, b: 0.3, a: 1}
+  Silhouette: "Al\xE7ak elektrikli wedge"

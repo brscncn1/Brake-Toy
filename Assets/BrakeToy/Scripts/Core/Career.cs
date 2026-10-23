@@ -10,6 +10,7 @@ namespace BrakeToy.Core
         public int arcadeStyle,relaxStyle,dailyStyle;
         public string lastRun="",dailyDate="";
         public string[] recentRuns=new string[32];public int recentCursor,trail,horn,ownedTrails=1,ownedHorns=1;
+        public bool powerStarterGranted;public int slowCharges,rocketCharges,jetCharges;
     }
     [Serializable] public sealed class MissionDefinition
     {
@@ -48,7 +49,7 @@ namespace BrakeToy.Core
         }
         public static MissionDefinition[] ActiveMissions(CareerData data)
         {var result=new MissionDefinition[3];int start=(data.runs/2*3)%Missions.Length;for(int i=0;i<3;i++)result[i]=Missions[(start+i)%Missions.Length];return result;}
-        public static bool IsValid(CareerData d)=>d!=null&&d.version==1&&d.points>=0&&d.runs>=0&&d.arcadeRuns>=0&&d.relaxRuns>=0&&d.totalDistance>=0&&d.completedMissions>=0&&d.unlocked>0&&d.unlocked<1024&&(d.unlocked&1)!=0&&d.selectedCar>=0&&d.selectedCar<10&&(d.unlocked&(1<<d.selectedCar))!=0&&ValidDistance(d.arcadeDistance)&&ValidDistance(d.relaxDistance)&&ValidDistance(d.dailyDistance)&&d.arcadeStyle>=0&&d.relaxStyle>=0&&d.dailyStyle>=0&&d.achievements>=0&&d.achievements<(1<<15)&&d.recentRuns!=null&&d.recentRuns.Length==32&&d.recentCursor>=0&&d.recentCursor<32&&ValidCosmetic(d.trail,d.ownedTrails)&&ValidCosmetic(d.horn,d.ownedHorns);
+        public static bool IsValid(CareerData d)=>d!=null&&d.version==1&&d.points>=0&&d.slowCharges>=0&&d.slowCharges<=99&&d.rocketCharges>=0&&d.rocketCharges<=99&&d.jetCharges>=0&&d.jetCharges<=99&&d.runs>=0&&d.arcadeRuns>=0&&d.relaxRuns>=0&&d.totalDistance>=0&&d.completedMissions>=0&&d.unlocked>0&&d.unlocked<1024&&(d.unlocked&1)!=0&&d.selectedCar>=0&&d.selectedCar<10&&(d.unlocked&(1<<d.selectedCar))!=0&&ValidDistance(d.arcadeDistance)&&ValidDistance(d.relaxDistance)&&ValidDistance(d.dailyDistance)&&d.arcadeStyle>=0&&d.relaxStyle>=0&&d.dailyStyle>=0&&d.achievements>=0&&d.achievements<(1<<15)&&d.recentRuns!=null&&d.recentRuns.Length==32&&d.recentCursor>=0&&d.recentCursor<32&&ValidCosmetic(d.trail,d.ownedTrails)&&ValidCosmetic(d.horn,d.ownedHorns);
         private static bool ValidDistance(float value)=>float.IsFinite(value)&&value>=0;
         private static bool ValidCosmetic(int selected,int owned)=>selected>=0&&selected<3&&owned>0&&owned<8&&(owned&1)!=0&&(owned&(1<<selected))!=0;
     }

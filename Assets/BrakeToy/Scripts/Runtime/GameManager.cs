@@ -74,7 +74,7 @@ namespace BrakeToy
             World.Advance(distance);
         }
         private void OnApplicationFocus(bool focused) { if (!focused) Pause(); }
-        public void Crash() { Input.ResetCapture(); Player.EndDrag(); ChangeState(RunState.Crashed); if(Review)Review.Finish(); }
+        public void Crash() { Input.ResetCapture(); Player.EndDrag(); ChangeState(RunState.Crashed); if(Review)Review.Finish();GetComponent<PlaygroundRun>()?.EndRun(); }
         private void OnApplicationPause(bool paused) { if (paused) Pause(); }
         private void ChangeState(RunState state) { State = state; UI.Show(state); }
     }

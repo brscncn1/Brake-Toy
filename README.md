@@ -2,25 +2,26 @@
 
 **NO BRAKES. BIG TROUBLE.** Unity 6.3 LTS / C# / gerçek 3D URP / Android portre.
 
-## v0.7 — Joyful Room revizyonu
+## v0.8 — Playground
 
-Menü ve yarış için ayrı müzik, gerçek oyuncak sesleri, erken hızlanan parkur, gelişen falsolu çoklu toplar, hareketli oyuncak otobüs ve yeşil oklu kitap rampaları/havada 2x TP. Yeni renkli oda; radyo/oyuncaklar, daha geniş kadraj ve gün/gece döngüsü. Film kalitesi veya kullanıcı kabulü tamamlandı demek değildir.
+Güvenli/riskli yollar, bağlı karşılaşmalar, kitap rampalarının teker kenarı düzeltmesi, domino ile yol açma ve sinyalli oyuncak kapısı. 3 sn yavaşlatma, korumalı roket ve 5 sn jetpack; başlangıçta üçer hak, TP yenileme. Geri alınabilir masa bölgeleri, ışık/malzeme düzenlemesi, kompakt menü, görsel görev kartları ve ayrı araç siluetleri. Ayrıntılı final model/sanat kabulü bekler.
 
-![Gerçek Unity oynanışı](Joyful-6.png)
+![Gerçek Unity menüsü](Playground-0.png)
 
-[Android APK / v0.7.0](https://github.com/brscncn1/Brake-Toy/releases/tag/v0.7.0) · [Kaynak dalı](https://github.com/brscncn1/Brake-Toy/tree/feat/joyful-room-v07) · [Notion](https://app.notion.com/p/3ffdce66583181868ac1d4e4bd6feeac)
+[APK v0.8.0](https://github.com/brscncn1/Brake-Toy/releases/tag/v0.8.0) · [Kaynak](https://github.com/brscncn1/Brake-Toy/tree/feat/playground-v08) · [Ayrıntılı sonuç/eleştiri](MILESTONE-v08.md)
 
 ## Aç ve oyna
 
-1. `feat/joyful-room-v07` dalını Unity **6000.3.26f1** ile aç. Tools → Brake Toy → **Open Joyful Room v0.7** → Play. Game görünümü 9:16, 1×.
-2. Parmağı/mouse'u sürükle. Yeşil ok kitap rampasını gösterir; havada kazanılan TP bölümü 2x. Motor, efekt ve müzik ayrı ayarlanır.
-3. APK önceki oyunun üzerine güncellenir; paket com.braketoy.prototype, 0.7.0/kod7, ARM64 IL2CPP, non-Development test APK. Mağaza imzası değildir.
-4. TP ve açık araçlar korunur; v0.7 rekorları/ghost yeni kurallarla ayrıdır. [El kitabı](PLAYER_GUIDE.md).
+1. feat/playground-v08 dalını Unity **6000.3.26f1** ile aç. Tools → Brake Toy → **Open Playground v0.8** → Play. Game 9:16, 1×.
+2. Sürükle; yeşil rota güvenli, altın rota isteğe bağlı risk/ödül. Kitap rampasındaki yeşil yaklaşma oku atlayışı gösterir. Havada kazanılan TP bölümü 2x.
+3. Üç güç düğmesi sürüşte; aynı anda bir güç. Haklar kalıcıdır, retry yenilemez. Menü → GÜÇ HAKLARI: 350/500/650 TP. Gerçek para/coin yok.
+4. Ayarlar → MASA: KLASİK / DOMİNO: KAPALI; iki deney ayrı geri alınabilir. Eski v0.7 sahnesi ayrıca korunur.
+5. APK öncekinin üzerine güncellenir: com.braketoy.prototype, 0.8.0/kod8, ARM64 IL2CPP non-Development test paketi; mağaza imzası değildir. TP/açık araçlar taşınır, yeni rekor/kariyer/ghost ayrıdır. Güç kullanılan turda ghost yazılmaz.
 
-## Doğrulama ve belgeler
+## Kanıt ve belgeler
 
-**87/87 Unity testi** (44 EditMode +43 PlayMode) geçti. [Sonuç/eleştiri/cihaz kabulü](MILESTONE-v07.md), [gerçek motor galerisi](JOYFUL_GALLERY.html), [plan](PLAN-v0.7.md), [araştırma](RESEARCH-v0.7.md), [ses lisansları](THIRD_PARTY_ASSETS.md). 16 Joyful renderı ve Tests/*-v07.xml korunur.
+**102/102 Unity testi** (48 EditMode +54 PlayMode).
 
-Fiziksel v0.7 FPS/p95/ısınma ve insan ses/görsel kabulü bekler. Canlı online kurulmadı; yeni joyful-r2, eski review-r1 referans sunucuya skor göndermez. Eski sunucu kodu ve v0.6 raporları geçmiş kanıt olarak korunur. [Servis sınırı](Server/README.md).
+[Gerçek görüntüler](PLAYGROUND_GALLERY.html), [plan](PLAN-v0.8.md), [model agent devir notu](MODEL_HANDOFF-v08.md), [tasarım](GAME_DESIGN.md), [mimari](ARCHITECTURE.md), [günlük](DEV_LOG.md). ANDROID_BUILD_REPORT-v08.json, UNITY_TEST_RESULTS-v08.json ve MODEL_VALIDATION-v08.json.
 
-10 araç/3D garaj, kariyer, görev/başarım, Relax, günlük yerel antrenman ve kişisel ghost sürer. [Tasarım](GAME_DESIGN.md), [mimari](ARCHITECTURE.md), [yol haritası](ROADMAP.md), [günlük](DEV_LOG.md), ANDROID_BUILD_REPORT-v07.json ve MODEL_VALIDATION-v07.json.
+Fiziksel v0.8 FPS/p95/ısınma ve insan kalite kabulü bekler. Canlı online kapalı; yeni kurallar eski referans sunucuya gönderilmez. Notion mevcut proje merkezi korunur, ücretsiz blok sınırı yeni sayfayı reddetti: [eşitleme durumu](NOTION_PENDING-v08.md). Müzik ve önceki sürüm kanıtları korunur.

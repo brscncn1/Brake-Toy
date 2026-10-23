@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4795848bbf28424589feb07f788fc5e, type: 3}
+  m_Name: Car_2
+  m_EditorClassIdentifier: BrakeToy.Runtime::BrakeToy.VehicleDefinition
+  Title: Mini Muscle
+  Cost: 500
+  VisualPrefab: {fileID: 1426298035069218097, guid: 980ad788cbf82ae489cd373944201dcc, type: 3}
+  TrailColor: {r: 0.95, g: 0.29, b: 0.035, a: 1}
+  Silhouette: "Uzun kasl\u0131 coupe"

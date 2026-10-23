@@ -1,0 +1,21 @@
+{
+  "version": "0.8.0",
+  "total": 102,
+  "tests": {
+    "EditMode": {
+      "total": "48",
+      "passed": "48",
+      "failed": "0",
+      "end-time": "2026-10-23 21:50:03Z"
+    },
+    "PlayMode": {
+      "total": "54",
+      "passed": "54",
+      "failed": "0",
+      "end-time": "2026-10-23 22:04:52Z"
+    }
+  },
+  "physicalDeviceTested": false,
+  "humanArtAccepted": false,
+  "notionSync": "blocked_free_block_limit"
+}

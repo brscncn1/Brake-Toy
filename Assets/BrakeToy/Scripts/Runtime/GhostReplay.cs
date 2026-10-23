@@ -12,7 +12,7 @@ namespace BrakeToy
         private const int Capacity=12000;private readonly short[] recorded=new short[Capacity];private short[] playback;private readonly short[] elevations=new short[Capacity];private short[] playbackElevations;private float lastHeight;
         private int seed;private PlayMode mode;private float next,lastTime,lastX,best;private GameObject ghost;private Material material;
         private ReviewSession session;private GameManager game;
-        private string FilePath=>Path.Combine(Application.persistentDataPath,(GetComponent<JoyfulRun>()?"ghost-joyful-latest-":"ghost-latest-")+(int)mode+".gz");
+        private string FilePath=>Path.Combine(Application.persistentDataPath,(GetComponent<PlaygroundRun>()?"ghost-playground-latest-":GetComponent<JoyfulRun>()?"ghost-joyful-latest-":"ghost-latest-")+(int)mode+".gz");
         public void Begin(int route,PlayMode playMode)
         {
             session=GetComponent<ReviewSession>();game=GetComponent<GameManager>();seed=route;mode=playMode;RecordedCount=0;next=lastTime=lastX=best=0;playback=null;playbackElevations=null;lastHeight=0;
@@ -29,12 +29,12 @@ namespace BrakeToy
         }
         private void LateUpdate()
         {
-            if(!ghost||!game)return;float t=game.Arcade.Elapsed/.05f;int i=Mathf.FloorToInt(t);ghost.SetActive(Visible&&game.State==RunState.Running&&i<playback.Length-1);
+            if(!ghost||!game)return;float t=game.Arcade.Elapsed/.05f;int i=Mathf.FloorToInt(t);ghost.SetActive(Visible&&(!GetComponent<PlaygroundRun>()||!GetComponent<PlaygroundRun>().Assisted)&&game.State==RunState.Running&&i<playback.Length-1);
             if(ghost.activeSelf)ghost.transform.SetPositionAndRotation(new Vector3(Mathf.Lerp(playback[i],playback[i+1],t-i)/1000,.018f+(playbackElevations!=null?Mathf.Lerp(playbackElevations[i],playbackElevations[i+1],t-i)/1000:0),.35f),Quaternion.identity);
         }
         public void Finish(float distance)
         {
-            if(!session.Persist||distance<=best||RecordedCount<2)return;
+            if((GetComponent<PlaygroundRun>()&&GetComponent<PlaygroundRun>().Assisted)||!session.Persist||distance<=best||RecordedCount<2)return;
             try{Write(FilePath,seed,(int)mode,distance,recorded,RecordedCount,GetComponent<JoyfulRun>()?elevations:null);}catch(Exception e){Debug.LogWarning("Ghost save failed: "+e.GetType().Name);}
         }
         public static void Write(string path,int seed,int mode,float distance,short[] values,int count,short[] heights=null)
