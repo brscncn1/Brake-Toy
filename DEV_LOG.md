@@ -1,5 +1,13 @@
 # 23 Ekim 2026 — Faz 6 revizyon adayı kontrol noktası
 
+## v0.7 Joyful Room — uygulama ve görsel inceleme
+
+Kullanıcının ses/oynanış/oda revizyonu PLAN-v0.7.md ile başlatıldı. 5b9671b plan/araştırma; 7a7b993 ilk çalışan uygulama ve 84 test ile GitHub'a gönderildi. Notion 32 revizyon/araştırma sayfası ve günlük güncellendi. v0.6 korunuyor.
+
+Gerçek CC0 menü/yarış müzikleri, plastik çocuk kornası ve oyuncak şakırtısı; açıklamalı üç ses kanalı; hızlı hız eğrisi, recent-pattern hafızası, farklı oyuncak/stagger/jitter, falsolu ve ikili/üçlü top, dönen tekerlekli bus, kitap rampası/havada TP, yeni oyuncaklar ve gündüz/gece odası uygulandı. Yeni kariyere sahip olunan ürün/TP taşınır, değişen skor ve X+Y ghost dosyaları ayrıdır. v0.7 review-r1 sunucusuna bağlanmaz.
+
+Gerçek render incelemesinde düz masa/boş duvar, radyo omuz açıklığı ve hızlı topların duvar arkasında geç görünmesi yakalandı. Masa mikro doku/kenarları, pastel oda duvarı, bunting/gezegen mobil ve daha derin arka oda hazırlandı. Maksimum ileri top yaklaşımı için görünürlük ve model vertex/collider sınır testi eklendi. Uçuş pozunda dönüşün kare kare birikmesi ayrıca bulundu; X açısı mutlak hesaplanarak düzeltildi, pause/iniş regresyonu geçti. Son geçit/rampa kalibrasyonu sonrası test/render tekrar koşusu sürüyor. Henüz yeni APK ve kullanıcı ses/sanat/cihaz kabulü yok.
+
 ## Son teslim ve eşitleme
 
 Kaynak ca7aa2ab18094269f6d2e9d0d9aed7f87d3321b6, PR #5 ve v0.6.0 GitHub'a gönderildi. GitHub APK digest yerel 65750071216c7742625eab7f8e410f027a815f96741d3518c6eecb6821ead042 ile aynı; 38.232.631 bayt. v0.5 ile aynı Debug sertifikası doğrulandı. Main README 179f9370750dc89e1503292c6e0fbc131e418894 güncel teslim ve ayrı kaynak dalını açıkça gösterir. PR'lar birleştirilmedi.
@@ -132,3 +140,11 @@ Kaynak a7e889ae4264656eca81db093034c63ed15f3906, PR #4 ve v0.5.0 yayımlandı. G
 ## v0.6 son Android paket doğrulaması
 
 38.232.631 bayt non-Development ARM64 IL2CPP APK üretildi. SHA256 65750071216c7742625eab7f8e410f027a815f96741d3518c6eecb6821ead042. ZIP/v2 imza, paket/API/portre, ZIP16KB ve altı native ELF LOAD16KB geçti. Android Debug sertifikası test dağıtımı içindir. Tek izin INTERNET; varsayılan endpoint boş/uygunluk kapalı. allowBackup özel olarak kapalı değil; OEM/OS yedek davranışı gizlilik taslağında açıklandı. Cihaz/16KB gerçek ortam/mağaza onayı yok.
+
+## v0.7 son doğrulama ve teslim hazırlığı
+
+44 EditMode +43 PlayMode =87/87 geçti. Son 16 gerçek render incelendi; pitch/pause, rampa kapağı, masa çerçevesi ve duvar/oda düzeni düzeltildi. Model denetimi 0 eksik mesh/materyal/shader/dekor collider; tüm inaktif araçlar ve eski başlangıç havuzu dahil 406 renderer/1.012.691 üçgen/237 mesh (runtime görünür maliyet veya FPS değildir). Son Android paket v2/ZIP/ELF16KB ve sürüm kontrolünden geçti. Notion 33 sonuç sayfası oluşturuldu. Film kalitesi, insan dinleme, yeni tablet kabulü ve canlı servis açık kalır.
+
+## v0.7 yayın ve eşitleme tamamlandı
+
+Kaynak 0a2cbf03fce7acdc796dfa9dd2cbfb56fab430e9, PR #6 ve v0.7.0 ön sürüm GitHub üzerinde. APK GitHub digest/yerel SHA256 eşleşti. Main README 8fa898a ile güncel kaynak dalını gösterir. Notion 32 plan/33 sonuç, günlük ve ilgili 12 sayfa güncellendi; root/sonuç/görsel readback doğrulandı ve 33 alt sayfa korundu. Gerçek tablet ve insan kalite kabulü açık; film/mağaza final onayı diye sunulmaz.

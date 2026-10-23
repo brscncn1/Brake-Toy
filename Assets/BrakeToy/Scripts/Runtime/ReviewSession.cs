@@ -19,7 +19,7 @@ namespace BrakeToy
         public bool Recovered=>save!=null&&save.Recovered;
         private CareerSave save;private string runId;private GameManager game;private bool settled;
         public void Initialize(GameManager manager)
-        {game=manager;save=new CareerSave(Path.Combine(Application.persistentDataPath,"career-v1.json"));if(Persist)Data=save.Load();Data.arcadeDistance=Mathf.Max(Data.arcadeDistance,PlayerPrefs.GetFloat("BrakeToy.v03.distance",0));Data.arcadeStyle=Mathf.Max(Data.arcadeStyle,PlayerPrefs.GetInt("BrakeToy.v05.style",0));Missions=CareerRules.ActiveMissions(Data);SelectVisual(Data.selectedCar);}
+        {game=manager;bool joyful=GetComponent<JoyfulRun>();string path=Path.Combine(Application.persistentDataPath,joyful?"career-joyful-v1.json":"career-v1.json");save=new CareerSave(path);if(Persist){Data=save.Load();if(joyful&&!File.Exists(path)){Data=new CareerSave(Path.Combine(Application.persistentDataPath,"career-v1.json")).Load();Data.arcadeDistance=Data.relaxDistance=Data.dailyDistance=0;Data.arcadeStyle=Data.relaxStyle=Data.dailyStyle=0;Data.dailyDate="";}}Data.arcadeDistance=Mathf.Max(Data.arcadeDistance,PlayerPrefs.GetFloat(game.Arcade.DistanceRecordKey,0));Data.arcadeStyle=Mathf.Max(Data.arcadeStyle,PlayerPrefs.GetInt(joyful?"BrakeToy.v07.style":"BrakeToy.v05.style",0));Missions=CareerRules.ActiveMissions(Data);SelectVisual(Data.selectedCar);}
         public void NewRun(){runId=Guid.NewGuid().ToString("N");settled=false;LastReward=0;Lives=Mode==PlayMode.Relax?3:1;Missions=CareerRules.ActiveMissions(Data);GetComponent<GhostReplay>()?.Begin(game.Arcade.CurrentSeed,Mode);GetComponent<ReviewOnline>()?.BeginRecord();}
         public bool SurviveHit()
         {
@@ -31,7 +31,7 @@ namespace BrakeToy
         public void Finish()
         {
             if(settled)return;settled=true;
-            var a=game.Arcade;LastReward=CareerRules.Settle(Data,runId,new RunSummary(a.Distance,a.Style.Total,a.Style.NearMisses,a.Challenges.Goals.Pickups,Mode),Missions);
+            var a=game.Arcade;var jump=GetComponent<JoyfulRun>();LastReward=CareerRules.Settle(Data,runId,new RunSummary(a.Distance,a.Style.Total,a.Style.NearMisses,a.Challenges.Goals.Pickups,Mode,jump?jump.AirDistance:0,jump?jump.AirStyle:0),Missions);
             GetComponent<GhostReplay>()?.Finish(a.Distance);GetComponent<ReviewOnline>()?.Submit();if(Persist)SaveFailed=!save.Save(Data);
         }
         public bool BuyOrSelect(int index)

@@ -1,0 +1,23 @@
+{
+  "version": "0.7.0",
+  "total": 87,
+  "tests": {
+    "EditMode": {
+      "total": "44",
+      "passed": "44",
+      "failed": "0",
+      "start-time": "2026-10-23 14:20:50Z",
+      "end-time": "2026-10-23 14:21:00Z"
+    },
+    "PlayMode": {
+      "total": "43",
+      "passed": "43",
+      "failed": "0",
+      "start-time": "2026-10-23 14:24:17Z",
+      "end-time": "2026-10-23 14:24:38Z"
+    }
+  },
+  "physicalDeviceTested": false,
+  "humanListeningAccepted": false,
+  "humanArtAccepted": false
+}

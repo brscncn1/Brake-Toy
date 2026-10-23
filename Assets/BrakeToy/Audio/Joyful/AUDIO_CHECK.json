@@ -1,0 +1,24 @@
+[
+  {
+    "file": "menu-leo-loop.ogg",
+    "seconds": 87.01421768707483,
+    "peak": 0.71528200507164,
+    "rms": 0.18835007370609794,
+    "seamMax": 0.025894582271575928
+  },
+  {
+    "file": "race-pixel-sprinter.ogg",
+    "seconds": 34.285714285714285,
+    "peak": 0.8417117595672607,
+    "rms": 0.13332152366638184,
+    "seamMax": 0.03233592212200165,
+    "authorLoop": true
+  },
+  {
+    "file": "plastic-toy-clatter.ogg",
+    "seconds": 0.8522675736961451,
+    "peak": 0.6239613890647888,
+    "rms": 0.08012375980615616,
+    "seamMax": 0.0
+  }
+]

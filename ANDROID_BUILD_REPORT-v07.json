@@ -1,0 +1,53 @@
+{
+  "result": "Succeeded",
+  "unityVersion": "6000.3.26f1",
+  "target": "Android",
+  "architecture": "arm64-v8a",
+  "scriptingBackend": "IL2CPP",
+  "developmentBuild": false,
+  "applicationIdentifier": "com.braketoy.prototype",
+  "versionName": "0.7.0",
+  "versionCode": 7,
+  "minSdkVersion": 25,
+  "targetSdkVersion": 36,
+  "sizeBytes": 43206769,
+  "sha256": "d5cd12dee2d4995c43d026a888c13e115c38c9aa2e264e3215343f88d978c0be",
+  "apkArchiveIntegrityChecked": true,
+  "v2SignatureVerified": true,
+  "zipAlignment16KBVerified": true,
+  "nativeElfLoadSegments16KBVerified": [
+    {
+      "path": "lib/arm64-v8a/lib_burst_generated.so",
+      "minimumLoadSegmentAlignment": 16384
+    },
+    {
+      "path": "lib/arm64-v8a/libc++_shared.so",
+      "minimumLoadSegmentAlignment": 16384
+    },
+    {
+      "path": "lib/arm64-v8a/libil2cpp.so",
+      "minimumLoadSegmentAlignment": 16384
+    },
+    {
+      "path": "lib/arm64-v8a/libmain.so",
+      "minimumLoadSegmentAlignment": 16384
+    },
+    {
+      "path": "lib/arm64-v8a/libswappywrapper.so",
+      "minimumLoadSegmentAlignment": 16384
+    },
+    {
+      "path": "lib/arm64-v8a/libunity.so",
+      "minimumLoadSegmentAlignment": 16384
+    }
+  ],
+  "permissions": [
+    "android.permission.INTERNET"
+  ],
+  "onlineConfiguredInShippedScene": false,
+  "physicalCandidateTested": false,
+  "physical16KBEnvironmentTested": false,
+  "storeSigningKeyUsed": false,
+  "scene": "ToyRoomJoyful",
+  "releaseUrl": "https://github.com/brscncn1/Brake-Toy/releases/tag/v0.7.0"
+}

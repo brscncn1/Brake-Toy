@@ -1,0 +1,40 @@
+[
+  {
+    "file": "menu-leo.mp3",
+    "url": "https://opengameart.org/sites/default/files/leo%20the%20kids%20theme.mp3",
+    "page": "https://opengameart.org/content/leos-theme",
+    "author": "Bobjt",
+    "license": "CC0 1.0",
+    "sha256": "3bbc3803417217a8eb98e6e8ff4d8759c66acb585feb062da83e48e2df40869e",
+    "bytes": 1785647
+  },
+  {
+    "file": "race-pixel-sprinter.ogg",
+    "url": "https://opengameart.org/sites/default/files/pixel_sprinter_loop_0.ogg",
+    "page": "https://opengameart.org/content/pixel-sprinter",
+    "author": "Zane Little Music",
+    "license": "CC0 1.0",
+    "sha256": "d42b0c4076b98a21dc08196107d8a5ec662e773ee11ff0f5efec863c2f28422b",
+    "bytes": 562618
+  },
+  {
+    "file": "toy-horn.wav",
+    "url": "https://opengameart.org/sites/default/files/bicycle-horn-1.wav",
+    "page": "https://opengameart.org/content/bicycle-horn",
+    "author": "AntumDeluge",
+    "license": "CC0 1.0",
+    "sha256": "14f39499ae93be9cc88d7db8e22297108599c902b03a1417fb8ca93e47bbdb1f",
+    "bytes": 62404
+  },
+  {
+    "file": "plastic-toys-source.mp3",
+    "url": "https://cdn.freesound.org/previews/233/233662_4067126-hq.mp3",
+    "page": "https://freesound.org/people/rioforce/sounds/233662/",
+    "author": "rioforce",
+    "title": "LEGO Pour 1",
+    "license": "CC0 1.0",
+    "sha256": "c3c6c1d63767cdc4274bdcc3021e3bfe69aa1c04334f7d30ffa90f4f4cfc1718",
+    "bytes": 36581,
+    "use": "Public HQ preview, clipped/normalized as plastic toy clatter; no brand association."
+  }
+]

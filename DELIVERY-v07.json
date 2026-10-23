@@ -1,0 +1,31 @@
+{
+  "version": "0.7.0",
+  "sourceCommit": "0a2cbf03fce7acdc796dfa9dd2cbfb56fab430e9",
+  "pullRequest": "https://github.com/brscncn1/Brake-Toy/pull/6",
+  "release": "https://github.com/brscncn1/Brake-Toy/releases/tag/v0.7.0",
+  "apk": {
+    "url": "https://github.com/brscncn1/Brake-Toy/releases/download/v0.7.0/BrakeToy-v0.7-Joyful.apk",
+    "bytes": 43206769,
+    "sha256": "d5cd12dee2d4995c43d026a888c13e115c38c9aa2e264e3215343f88d978c0be",
+    "githubDigestMatched": true
+  },
+  "mainReadmeCommit": "8fa898ae30179a8f9cbda30cdfa153cc2003425e",
+  "notion": {
+    "root": "https://app.notion.com/p/3ffdce66583181868ac1d4e4bd6feeac",
+    "plan": "https://app.notion.com/p/402dce665831817e9d94f357526f1e53",
+    "results": "https://app.notion.com/p/402dce66583181f5bc67e963edeaf9d4",
+    "childPagesPreserved": 33,
+    "rootResultsVisualReadbackVerified": true,
+    "affectedPagesUpdated": 12
+  },
+  "unityTests": {
+    "EditMode": 44,
+    "PlayMode": 43,
+    "passed": 87
+  },
+  "physicalV07Tested": false,
+  "humanListeningAccepted": false,
+  "humanArtAccepted": false,
+  "productionOnlineDeployed": false,
+  "storeAcceptanceComplete": false
+}

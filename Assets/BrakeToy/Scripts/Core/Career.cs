@@ -18,8 +18,8 @@ namespace BrakeToy.Core
     }
     public readonly struct RunSummary
     {
-        public readonly float Distance; public readonly int Style,NearMisses,Stars;public readonly PlayMode Mode;
-        public RunSummary(float distance,int style,int misses,int stars,PlayMode mode){Distance=distance;Style=style;NearMisses=misses;Stars=stars;Mode=mode;}
+        public readonly float Distance,AirDistance;public readonly int AirStyle; public readonly int Style,NearMisses,Stars;public readonly PlayMode Mode;
+        public RunSummary(float distance,int style,int misses,int stars,PlayMode mode,float airDistance=0,int airStyle=0){AirDistance=airDistance;AirStyle=airStyle;Distance=distance;Style=style;NearMisses=misses;Stars=stars;Mode=mode;}
         public float Metric(int metric)=>metric==0?Distance:metric==1?Style:metric==2?NearMisses:Stars;
     }
     public static class CareerRules
@@ -35,13 +35,13 @@ namespace BrakeToy.Core
         {if(index<0||index>2)return false;int owned=horn?data.ownedHorns:data.ownedTrails,bit=1<<index;if((owned&bit)==0){if(data.points<100)return false;data.points-=100;owned|=bit;}if(horn){data.ownedHorns=owned;data.horn=index;}else{data.ownedTrails=owned;data.trail=index;}return true;}
         public static int Settle(CareerData data,string runId,RunSummary run,MissionDefinition[] missions)
         {
-            if(string.IsNullOrEmpty(runId)||data.lastRun==runId||Array.IndexOf(data.recentRuns,runId)>=0||!float.IsFinite(run.Distance)||run.Distance<0||run.Distance>10000000||run.Style<0)return 0;
+            if(string.IsNullOrEmpty(runId)||data.lastRun==runId||Array.IndexOf(data.recentRuns,runId)>=0||!float.IsFinite(run.Distance)||run.Distance<0||run.Distance>10000000||run.Style<0||!float.IsFinite(run.AirDistance)||run.AirDistance<0||run.AirStyle<0)return 0;
             data.recentRuns[data.recentCursor]=runId;data.recentCursor=(data.recentCursor+1)%data.recentRuns.Length;
             data.lastRun=runId;data.runs++;data.totalDistance+=(long)run.Distance;
             if(run.Mode==PlayMode.Relax){data.relaxRuns++;data.relaxDistance=Math.Max(data.relaxDistance,run.Distance);data.relaxStyle=Math.Max(data.relaxStyle,run.Style);}
             else if(run.Mode==PlayMode.Arcade){data.arcadeRuns++;data.arcadeDistance=Math.Max(data.arcadeDistance,run.Distance);data.arcadeStyle=Math.Max(data.arcadeStyle,run.Style);}
             else{data.dailyDistance=Math.Max(data.dailyDistance,run.Distance);data.dailyStyle=Math.Max(data.dailyStyle,run.Style);}
-            int reward=Math.Min(2500,(int)(run.Distance/10)+run.Style/100);
+            int reward=Math.Min(2500,(int)(run.Distance/10)+run.Style/100+(int)(Math.Max(0,Math.Min(run.Distance,run.AirDistance))/10)+Math.Max(0,Math.Min(run.Style,run.AirStyle))/100);
             foreach(var m in missions)if(run.Metric(m.Metric)>=m.Target){reward+=m.Reward;data.completedMissions++;}
             for(int i=0;i<Achievements.Length;i++){var a=Achievements[i];if((data.achievements&(1<<i))==0&&(a.Metric==4?data.runs:run.Metric(a.Metric))>=a.Target){data.achievements|=1<<i;reward+=a.Reward;}}
             data.points=(int)Math.Min(int.MaxValue,(long)data.points+reward);return reward;

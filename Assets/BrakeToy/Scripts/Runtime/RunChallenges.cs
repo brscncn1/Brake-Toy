@@ -30,7 +30,7 @@ namespace BrakeToy
             {
                 if(!star.gameObject.activeSelf)continue;
                 var a=star.position;var b=a-Vector3.forward*moved;b.y=.25f+Mathf.Sin(arcade.Elapsed*4+a.x)*.035f;star.position=b;
-                if(!crashed && SweptCircleBox.TryHit(oldX-a.x,-a.z,newX-b.x,-b.z,game.Config.PlayerHalfWidth,game.Config.PlayerHalfLength,.11f,out _))
+                if(!crashed && (!game.Arcade.Joyful||game.GetComponent<JoyfulRun>().Height<.6f) && SweptCircleBox.TryHit(oldX-a.x,-a.z,newX-b.x,-b.z,game.Config.PlayerHalfWidth,game.Config.PlayerHalfLength,.11f,out _))
                 {
                     star.gameObject.SetActive(false);Goals.Collect();arcade.Style.AwardRiskStar();
                     arcade.HUD.Notify("RİSK YILDIZI  +75",new Color(1,.83f,.25f));arcade.Sound.NearMiss(1);
