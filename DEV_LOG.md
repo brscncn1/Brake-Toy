@@ -162,3 +162,7 @@ Kaynak 0a2cbf03fce7acdc796dfa9dd2cbfb56fab430e9, PR #6 ve v0.7.0 ön sürüm Git
 ## v0.8 son kabul koşusu
 
 48 EditMode +54 PlayMode =102/102 geçti. Son ekler: gerçek zemin/hava risk yıldızları ve görev bağlantısı; tur bitişinde aktif güç/lift temizliği ve hakların iade edilmemesi. Kenar/yan rampa, kapı sinyali, domino açma ve iki mod/üç seed güvenli tanık geçti. Garaj yakın planda far/arka kanat bağlantıları düzeltilip yeni prefab/sahne varyantlarına kaydedildi. Kullanıcı TP/araçları ve önceki sahneler korunur. Notion yeni sayfa blok limiti nedeniyle reddedildi; otomatik tekrar yok, eşitleme bekleyen notlar yerel/GitHub'da.
+
+## v0.8 yayın ve kaynak eşitlemesi
+
+Kaynak 0cda6024cfe585500df58cc61e3c232d7125bb35; PR #7 ve v0.8.0 ön sürüm yayımlandı. APK GitHub digest/yerel SHA256 aynı. Main README c356447d1fcd48026b024fc45b854c6e9f7f7ea9 ile güncel, gerçek kaynak dalı ayrımı açık. Son 102/102 test, 29 gerçek görüntü, model/Android raporları kaynakta. Notion yeni sayfa blok limiti nedeniyle oluşturulamadı; başlangıç günlüğü önceden doğrulandı, sonraki notlar GitHub/yerelde. Fiziksel ve insan kabulü açık.
