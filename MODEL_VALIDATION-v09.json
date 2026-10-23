@@ -1,0 +1,15 @@
+{
+    "scene": "ToyRoomAdventure",
+    "version": "0.9.0",
+    "toyFamilies": 8,
+    "pooledSlotsPerFamily": 6,
+    "templateRenderers": 83,
+    "templateTriangles": 90649,
+    "uniqueMeshes": 438,
+    "missingMeshes": 0,
+    "missingMaterials": 0,
+    "shaderErrors": 0,
+    "colliders": 0,
+    "physicalDeviceProfiled": false,
+    "note": "Template counts include dynamic pivots; scene/pooled inactive geometry is not runtime draw-call or FPS evidence."
+}

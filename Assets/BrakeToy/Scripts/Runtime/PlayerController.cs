@@ -6,7 +6,8 @@ namespace BrakeToy
     public sealed class PlayerController : MonoBehaviour
     {
         public Transform Visual;
-        private SteeringModel steering;
+        private SteeringModel steering;private AdventureEncounters adventure;
+        public void SetSurfaceProvider(AdventureEncounters value)=>adventure=value;
         public float X => steering.Position;
         public void Initialize(GameConfig config) => steering = new SteeringModel(config.PlayerLimit, config.DragSensitivity, config.MaxLateralSpeed);
         public void BeginDrag() => steering.BeginDrag();
@@ -16,7 +17,7 @@ namespace BrakeToy
         public void Move(float dt)
         {
             float old = X;
-            transform.position = new Vector3(steering.Step(dt), 0, 0);
+            transform.position = new Vector3(steering.Step(dt,adventure&&adventure.OnIce?.23f:1), 0, 0);
             if (Visual && dt > 0)
             {
                 float lean = -(X - old) / dt * 1.4f;

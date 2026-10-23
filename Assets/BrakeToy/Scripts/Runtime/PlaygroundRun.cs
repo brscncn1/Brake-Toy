@@ -14,7 +14,7 @@ namespace BrakeToy
         public Transform PowerRig,RocketRig,JetRig;
         private void Awake(){game=GetComponent<GameManager>();TableZones=PlayerPrefs.GetInt("BrakeToy.v08.zones",1)!=0;DominoEnabled=!GetComponent<TidyRoom>()&&PlayerPrefs.GetInt("BrakeToy.v08.domino",1)!=0;}
         private void Start(){game.Review.InitializePowers();}
-        public void ResetRun(){game=GetComponent<GameManager>();ActivePower=null;Remaining=grace=powerAge=0;Assisted=false;Mastery=BestMastery=mask=lastMiss=lastStars=lastJumps=0;masteryLeft=0;wasAir=false;GetComponent<PlaygroundEncounters>()?.ResetRun();}
+        public void ResetRun(){game=GetComponent<GameManager>();ActivePower=null;Remaining=grace=powerAge=0;Assisted=false;Mastery=BestMastery=mask=lastMiss=lastStars=lastJumps=0;masteryLeft=0;wasAir=false;GetComponent<PlaygroundEncounters>()?.ResetRun();GetComponent<AdventureEncounters>()?.ResetRun();}
         public bool Activate(ToyPower power)
         {
             if(game.State!=RunState.Running||ActivePower.HasValue||grace>0)return false;
@@ -32,9 +32,9 @@ namespace BrakeToy
             if(a.Style.NearMisses>lastMiss)Skill(1);if(stars>lastStars)Skill(2);if(jump.Jumps>lastJumps)Skill(4);if(wasAir&&!jump.Airborne&&jump.Height<.08f)Skill(8);
             lastMiss=a.Style.NearMisses;lastStars=stars;lastJumps=jump.Jumps;wasAir=jump.Airborne;
             masteryLeft=Mathf.Max(0,masteryLeft-dt);if(masteryLeft<=0){mask=0;Mastery=0;}
-            GetComponent<PlaygroundEncounters>()?.Advance(dt,moved,oldX,x);
+            GetComponent<PlaygroundEncounters>()?.Advance(dt,moved,oldX,x);GetComponent<AdventureEncounters>()?.Advance(dt,moved,oldX,x);
         }
-        private void ClearLanding(){foreach(var h in game.Arcade.Pool)if(h.InUse&&h.transform.position.z> -2&&h.transform.position.z<game.Arcade.Speed*.85f)h.Release();GetComponent<PlaygroundEncounters>()?.ClearLanding(game.Arcade.Speed*.85f);}
+        private void ClearLanding(){foreach(var h in game.Arcade.Pool)if(h.InUse&&h.transform.position.z> -2&&h.transform.position.z<game.Arcade.Speed*.85f)h.Release();GetComponent<PlaygroundEncounters>()?.ClearLanding(game.Arcade.Speed*.85f);GetComponent<AdventureEncounters>()?.ClearLanding(game.Arcade.Speed*.85f);}
         public void Skill(int bit)
         {if((mask&bit)!=0)return;mask|=bit;masteryLeft=7;Mastery=Mathf.Min(4,Mastery+1);BestMastery=Mathf.Max(BestMastery,Mastery);if(Mastery>=2){game.Arcade.Style.AwardMastery(50*Mastery);game.Arcade.HUD.Notify("USTALIK ×"+Mastery+"  +"+(50*Mastery),new Color(.24f,.08f,.40f));}if(Mastery==4)mask=0;}
         public void EndRun(){ActivePower=null;Remaining=grace=0;GetComponent<JoyfulRun>().StopFlight();}

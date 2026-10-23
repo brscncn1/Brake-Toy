@@ -1,3 +1,10 @@
+# v0.9 checkpoint — 24 Ekim 2026
+
+112/112 test geçti. Misket erken giriş hatası hızla ölçeklenen başlangıç mesafesiyle düzeltildi; son12 uzun koşuda çarpışma/hak kaybı/havuz tükenmesi yok. Kurmalı kurbağa/ördek, gerçek enine tren, vinç geçiş boşluğu ve sabit uzunluklu halat; tünel yüksek tavan/duvar çarpışmaları. Malzeme başına statik mesh birleştirme. Fiziksel tablet ve sanat kabulü bekler. Notion kotası nedeniyle yeni notlar yerelde bekliyor.
+
+# v0.9 started — 2026-10-24
+Eight mechanics authorized; PLAN-v0.9.md. New scene preserves Tidy, no domino, same difficulty curve. Implementation/testing in progress; no acceptance claimed. Notion quota pending.
+
 ## 24 Ekim — v0.8.1 yerleşim düzeltmesi
 
 Yeni ToyRoomTidy sahnesi, fix/table-layout-v081 dalı. Mavi parçalar v0.8 oyuncak kasabası kenar dekorlarıydı; 42 m dekor döngüsüyle 64 m defter/kalemlik döngüsü bağımsız olduğundan tekrar tekrar çakışıyordu. Yeni sahnede iki grup aynı 64 m döngüyü ve ayrılmış boşlukları kullanır. Defter/kalemlik en fazla 1.25 birim genişliğe indirildi, ±4.45 kenar merkezlerine oturtuldu; oyun alanına ve masa dışına taşmaları sınandı. Tüm bölge parçaları hücre olarak birlikte akar, pencere/ev parçaları ayrışmaz.

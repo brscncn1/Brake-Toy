@@ -1,3 +1,7 @@
+# v0.9 — Adventure / 2026-10-24
+
+Sekiz parkur ailesi, torba/hafıza, sinyaller, bağlı diziler, yüzey etkileri ve cetvel uçuşu. Tidy/kariyer korunur, domino yok. 112 test. PLAN-v0.9.md ve MILESTONE-v09.md.
+
 ## 24 Ekim — v0.8.1 yerleşim düzeltmesi
 
 Yeni ToyRoomTidy sahnesi, fix/table-layout-v081 dalı. Mavi parçalar v0.8 oyuncak kasabası kenar dekorlarıydı; 42 m dekor döngüsüyle 64 m defter/kalemlik döngüsü bağımsız olduğundan tekrar tekrar çakışıyordu. Yeni sahnede iki grup aynı 64 m döngüyü ve ayrılmış boşlukları kullanır. Defter/kalemlik en fazla 1.25 birim genişliğe indirildi, ±4.45 kenar merkezlerine oturtuldu; oyun alanına ve masa dışına taşmaları sınandı. Tüm bölge parçaları hücre olarak birlikte akar, pencere/ev parçaları ayrışmaz.

@@ -13,7 +13,7 @@ namespace BrakeToy
         public void ResetRun(){Bind();if(Props!=null)foreach(var p in Props){p.InUse=false;p.Barrier=null;p.Root.gameObject.SetActive(false);}if(RouteMarkers!=null)foreach(var m in RouteMarkers)m.gameObject.SetActive(false);}
         public void Spawn(PlaygroundBeat b,float z,Func<int,float,float,float,float,ArcadeHazard> spawn)
         {
-            Bind();int third=3-b.SafeLane-b.RiskLane;float thirdX=ArcadeRules.LaneX(third);int kind=(b.Variant%5);if(kind==3)kind=4;
+            Bind();var adventure=GetComponent<AdventureEncounters>();if(adventure){adventure.Spawn(b,z,spawn);return;}int third=3-b.SafeLane-b.RiskLane;float thirdX=ArcadeRules.LaneX(third);int kind=(b.Variant%5);if(kind==3)kind=4;
             spawn(kind,thirdX,z+2,0,0);spawn((kind+1)%3,thirdX,z+12,0,0);
             // The green route stays open. Gold is an optional, rewarded timing/airborne route.
             Marker(b.SafeX,z,false);Marker(b.RiskX,z,true);
@@ -34,6 +34,7 @@ namespace BrakeToy
                     var ball=spawn(3,b.RiskX,z*1.12f,b.RiskX,0);ball.MotionKind=1;ball.ForwardFactor=1.12f;ball.CurveAmplitude=.42f;ball.CurveFrequency=.09f;ball.CurvePhase=b.Variant;ball.transform.position=ball.PositionAfter(0);GetComponent<JoyfulRun>().SpawnRamp(b.RiskX,z+15);spawn(2,b.RiskX,z+26,0,0);break;
             }
         }
+        public void MarkRoute(float x,float z,bool risk)=>Marker(x,z,risk);
         private void Marker(float x,float z,bool risk)
         {foreach(var m in RouteMarkers)if(!m.gameObject.activeSelf){m.position=new Vector3(x,.025f,z-5);m.localScale=new Vector3(risk?.7f:.5f,1,1);m.GetComponent<Renderer>().sharedMaterial=risk?RiskMaterial:SafeMaterial;m.gameObject.SetActive(true);return;}throw new InvalidOperationException("Route marker pool exhausted");}
         public Material RiskMaterial,SafeMaterial;

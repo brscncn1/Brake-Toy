@@ -2,15 +2,29 @@
 
 **NO BRAKES. BIG TROUBLE.** Unity 6.3 LTS / C# / gerçek 3D URP / Android portre.
 
-## v0.8.1 — Güncel yerleşim düzeltmesi
+## v0.9 — Adventure
+
+**Sekiz yeni parkur mekaniği:** iki çıkışlı karton tünel, kurmalı kurbağa/ördek, sallanan oyuncak vinç, enine oyuncak tren, 1–3 misketli oluk, yapışkan bant/kaygan kartlar, cetvel tahterevalli ve kapısından araç çıkan oyuncak garaj.
+
+Sekizli karıştırılmış seçim, son üç aileyi tekrarlamama, bağlı yaklaşma/karar/atlayış dizileri ve açık yeşil yol. Hız eğrisi korunur; yüzey ve zamanlama kararları yenidir. Tidy yerleşimi, raf radyosu, müzik ve TP/araç/güç envanteri korunur. Domino yoktur.
+
+![Gerçek Unity parkur görünümü](Adventure-10.png)
+
+[APK v0.9.0](https://github.com/brscncn1/Brake-Toy/releases/tag/v0.9.0) · [Kaynak feat/adventure-v09](https://github.com/brscncn1/Brake-Toy/tree/feat/adventure-v09) · [Sonuç/kanıt](MILESTONE-v09.md) · [13 gerçek Unity görüntüsü](ADVENTURE_GALLERY.html)
+
+Unity **6000.3.26f1** → Tools → Brake Toy → **Open Adventure v0.9** → Play. Game 9:16, 1×. Paket com.braketoy.prototype, **0.9.0/kod10**, ARM64 IL2CPP non-Development; öncekinin üzerine güncellenir. Kariyer aynı dosyada, yeni parkurun rekor/ghost kayıtları ayrıdır. **112/112 test: 50 EditMode +62 PlayMode.** Fiziksel tablet ve insan görsel/oynanış kabulü bekler. Notion yeni not eşitlemesi ücretsiz blok kotası nedeniyle bekler; yerel/GitHub günlükleri günceldir.
+
+Aşağıdaki v0.8.1 ve önceki bölümler tarihsel teslim kayıtlarıdır; güncel oyun Adventure sahnesidir.
+
+## v0.8.1 — Yerleşim düzeltmesi arşivi
 
 Mavi kenar dekorları defter/kalemlikten ayrıldı, radyo soldaki rafın üstüne taşındı, domino aktif oyundan kaldırıldı. Hız/zorluk ayarları korunur. Önceki kariyer/TP/araç/güç hakları sürer.
 
 ![Gerçek Unity yerleşimi](Tidy-6.png)
 
-[Güncel APK v0.8.1](https://github.com/brscncn1/Brake-Toy/releases/tag/v0.8.1) · [Güncel kaynak](https://github.com/brscncn1/Brake-Toy/tree/fix/table-layout-v081) · [104/104 test ve sonuç](MILESTONE-v081.md)
+[APK v0.8.1](https://github.com/brscncn1/Brake-Toy/releases/tag/v0.8.1) · [v0.8.1 kaynak](https://github.com/brscncn1/Brake-Toy/tree/fix/table-layout-v081) · [104/104 test ve sonuç](MILESTONE-v081.md)
 
-Unity 6000.3.26f1 → Tools → Brake Toy → **Open Tidy Room v0.8.1** → Play. Paket com.braketoy.prototype, 0.8.1/kod9; APK öncekinin üzerine güncellenir. Önceki v0.8 açıklamaları aşağıda tarihsel olarak korunur; güncel sahne Tidy'dir.
+Unity 6000.3.26f1 → Tools → Brake Toy → **Open Tidy Room v0.8.1** → Play. Paket com.braketoy.prototype, 0.8.1/kod9; APK öncekinin üzerine güncellenir. Önceki v0.8 açıklamaları aşağıda tarihsel olarak korunur; bu sürümün sahnesi Tidy'dir.
 
 
 ## v0.8 — Playground
@@ -21,7 +35,7 @@ Güvenli/riskli yollar, bağlı karşılaşmalar, kitap rampalarının teker ken
 
 [APK v0.8.0](https://github.com/brscncn1/Brake-Toy/releases/tag/v0.8.0) · [Kaynak](https://github.com/brscncn1/Brake-Toy/tree/feat/playground-v08) · [Ayrıntılı sonuç/eleştiri](MILESTONE-v08.md)
 
-## Aç ve oyna
+## v0.8 arşivi: Aç ve oyna
 
 1. feat/playground-v08 dalını Unity **6000.3.26f1** ile aç. Tools → Brake Toy → **Open Playground v0.8** → Play. Game 9:16, 1×.
 2. Sürükle; yeşil rota güvenli, altın rota isteğe bağlı risk/ödül. Kitap rampasındaki yeşil yaklaşma oku atlayışı gösterir. Havada kazanılan TP bölümü 2x.
@@ -29,7 +43,7 @@ Güvenli/riskli yollar, bağlı karşılaşmalar, kitap rampalarının teker ken
 4. Ayarlar → MASA: KLASİK / DOMİNO: KAPALI; iki deney ayrı geri alınabilir. Eski v0.7 sahnesi ayrıca korunur.
 5. APK öncekinin üzerine güncellenir: com.braketoy.prototype, 0.8.0/kod8, ARM64 IL2CPP non-Development test paketi; mağaza imzası değildir. TP/açık araçlar taşınır, yeni rekor/kariyer/ghost ayrıdır. Güç kullanılan turda ghost yazılmaz.
 
-## Kanıt ve belgeler
+## v0.8 arşivi: Kanıt ve belgeler
 
 **102/102 Unity testi** (48 EditMode +54 PlayMode).
 

@@ -28,20 +28,21 @@ namespace BrakeToy.Core
                 Target = Clamp(Target + pixelDelta / screenWidth * Sensitivity, -Limit, Limit);
         }
         public void EndDrag() { IsDragging = false; Target = Position; }
-        public void Reset() { Position = Target = 0; IsDragging = false; }
+        public void Reset() { Position = Target = 0; iceVelocity=0; IsDragging = false; }
 
-        public float Step(float deltaTime)
+        private float iceVelocity;
+        public float Step(float deltaTime,float grip=1)
         {
             if (deltaTime < 0) throw new ArgumentOutOfRangeException(nameof(deltaTime));
             float distance = MaxSpeed * deltaTime;
-            Position += Clamp(Target - Position, -distance, distance);
+            if(grip<1){float desired=deltaTime>0?Clamp((Target-Position)/deltaTime,-MaxSpeed,MaxSpeed):0;float blend=1-(float)Math.Exp(-4*deltaTime);iceVelocity+=(desired-iceVelocity)*blend;Position=Clamp(Position+iceVelocity*deltaTime,-Limit,Limit);}else {iceVelocity=0;Position += Clamp(Target - Position, -distance, distance);}
             return Position;
         }
 
         // Only used to stop precisely at the first swept contact of a frame.
         public void StopAt(float position)
         {
-            Position = Target = Clamp(position, -Limit, Limit);
+            iceVelocity=0;Position = Target = Clamp(position, -Limit, Limit);
             IsDragging = false;
         }
 
