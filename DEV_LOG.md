@@ -144,3 +144,7 @@ Kaynak a7e889ae4264656eca81db093034c63ed15f3906, PR #4 ve v0.5.0 yayımlandı. G
 ## v0.7 son doğrulama ve teslim hazırlığı
 
 44 EditMode +43 PlayMode =87/87 geçti. Son 16 gerçek render incelendi; pitch/pause, rampa kapağı, masa çerçevesi ve duvar/oda düzeni düzeltildi. Model denetimi 0 eksik mesh/materyal/shader/dekor collider; tüm inaktif araçlar ve eski başlangıç havuzu dahil 406 renderer/1.012.691 üçgen/237 mesh (runtime görünür maliyet veya FPS değildir). Son Android paket v2/ZIP/ELF16KB ve sürüm kontrolünden geçti. Notion 33 sonuç sayfası oluşturuldu. Film kalitesi, insan dinleme, yeni tablet kabulü ve canlı servis açık kalır.
+
+## v0.7 yayın ve eşitleme tamamlandı
+
+Kaynak 0a2cbf03fce7acdc796dfa9dd2cbfb56fab430e9, PR #6 ve v0.7.0 ön sürüm GitHub üzerinde. APK GitHub digest/yerel SHA256 eşleşti. Main README 8fa898a ile güncel kaynak dalını gösterir. Notion 32 plan/33 sonuç, günlük ve ilgili 12 sayfa güncellendi; root/sonuç/görsel readback doğrulandı ve 33 alt sayfa korundu. Gerçek tablet ve insan kalite kabulü açık; film/mağaza final onayı diye sunulmaz.
