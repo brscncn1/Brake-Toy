@@ -17,7 +17,7 @@ namespace BrakeToy
             spawn(kind,thirdX,z+2,0,0);spawn((kind+1)%3,thirdX,z+12,0,0);
             // The green route stays open. Gold is an optional, rewarded timing/airborne route.
             Marker(b.SafeX,z,false);Marker(b.RiskX,z,true);
-            game.Arcade.Challenges.SpawnAt(b.RiskX,z-7);game.Arcade.Challenges.SpawnAt(b.RiskX,z-3);float rampOffset=b.Family==0?4:b.Family==1?14:b.Family==3?17:15;game.Arcade.Challenges.SpawnAt(b.RiskX,z+(b.Family==4?24:rampOffset+16),b.Family==4?.25f:1.8f);
+            game.Arcade.Challenges.SpawnAt(b.RiskX,z-7);game.Arcade.Challenges.SpawnAt(b.RiskX,z-3);float rampOffset=b.Family==0?4:b.Family==1?14:b.Family==3?17:15;bool removedDomino=b.Family==4&&GetComponent<TidyRoom>();game.Arcade.Challenges.SpawnAt(b.RiskX,z+(b.Family==4?(removedDomino?21:24):rampOffset+16),b.Family==4&&!removedDomino?.25f:1.8f);
             switch(b.Family)
             {
                 case 0: // Read a low toy, choose a book jump over the next one.
@@ -29,7 +29,7 @@ namespace BrakeToy
                 case 3: // Crossing toy train: two coupled carriages stay on the risk half.
                     for(int n=0;n<2;n++){var train=spawn(6,b.RiskX,z+n*5,b.RiskX,0);train.MotionKind=2;train.CurveAmplitude=.55f;train.CurveFrequency=.15f;train.CurvePhase=b.Variant*.1f;train.transform.position=train.PositionAfter(0);}GetComponent<JoyfulRun>().SpawnRamp(b.RiskX,z+17);break;
                 case 4: // Optional domino switch opens a later toy barrier.
-                    if(run.DominoEnabled){var barrier=spawn(4,b.RiskX,z+20,0,0);Prop(b.RiskX,z,barrier,1,b.Variant);}else GetComponent<JoyfulRun>().SpawnRamp(b.RiskX,z+5);break;
+                    if(run.DominoEnabled&&!GetComponent<TidyRoom>()){var barrier=spawn(4,b.RiskX,z+20,0,0);Prop(b.RiskX,z,barrier,1,b.Variant);}else GetComponent<JoyfulRun>().SpawnRamp(b.RiskX,z+5);break;
                 default: // Rolling ball approach followed by a jump/landing challenge.
                     var ball=spawn(3,b.RiskX,z*1.12f,b.RiskX,0);ball.MotionKind=1;ball.ForwardFactor=1.12f;ball.CurveAmplitude=.42f;ball.CurveFrequency=.09f;ball.CurvePhase=b.Variant;ball.transform.position=ball.PositionAfter(0);GetComponent<JoyfulRun>().SpawnRamp(b.RiskX,z+15);spawn(2,b.RiskX,z+26,0,0);break;
             }

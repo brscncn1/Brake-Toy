@@ -1,3 +1,11 @@
+## 24 Ekim — v0.8.1 yerleşim düzeltmesi
+
+Yeni ToyRoomTidy sahnesi, fix/table-layout-v081 dalı. Mavi parçalar v0.8 oyuncak kasabası kenar dekorlarıydı; 42 m dekor döngüsüyle 64 m defter/kalemlik döngüsü bağımsız olduğundan tekrar tekrar çakışıyordu. Yeni sahnede iki grup aynı 64 m döngüyü ve ayrılmış boşlukları kullanır. Defter/kalemlik en fazla 1.25 birim genişliğe indirildi, ±4.45 kenar merkezlerine oturtuldu; oyun alanına ve masa dışına taşmaları sınandı. Tüm bölge parçaları hücre olarak birlikte akar, pencere/ev parçaları ayrışmaz.
+
+Radyo eski birleşik masa mesh'inden ayrılıp soldaki oyuncak rafının üstüne taşındı; alt yüzeyi gerçek raf üstünden 0.025 birim yukarıda. Sürüş mesafesiyle hareket etmez. Domino model/üretim/ayar düğmesi aktif Tidy sahnesinden kaldırıldı; yerine mevcut rampa fırsatı kullanılır. Önceki v0.8 sahnesi korunur. Hız eğrisi, karşılaşma aralığı, güç süreleri/fiyatları ve kontrol ayarları değiştirilmedi. Kariyer/TP/araç/güç hakları aynı dosyada korunur; geometrisi farklı eski parkurun ghost'u yeni sahnede yüklenmez.
+
+**104/104 Unity testi** (48 EditMode +56 PlayMode) geçti. Üç bölge, dört tam ortak döngü ve yarım metre adımlı yerleşim örnekleri; raf desteği/radyo sabitliği; domino yokluğu ve eski 102 regresyon dahil. Fiziksel cihaz ve insan görüntü/oynanış kabulü bekler. Notion yeni içerik işlemi önceki ücretsiz blok sınırı nedeniyle engelli; otomatik tekrar yapılmadı, yerel/GitHub notları güncel.
+
 ## 24 Ekim — v0.8 Playground
 
 Yeni ToyRoomPlayground sahnesi ve feat/playground-v08 dalı; v0.7 korunur. Güvenli/riskli yol, bağlı altı karşılaşma ailesi, isteğe bağlı domino ile yol açma, sinyalli açılıp kapanan oyuncak garaj kapısı/hareketli oyuncak geçişleri, üç yatay konuma dağılan kitap rampaları ve farklı hareketleri bağlayan ustalık bonusu uygulandı. Rampa artık dar merkez toleransı yerine aracın teker/gövde temas alanını kullanır; yan giriş/çıkış ve kenarları sınandı.
@@ -166,3 +174,7 @@ Kaynak 0a2cbf03fce7acdc796dfa9dd2cbfb56fab430e9, PR #6 ve v0.7.0 ön sürüm Git
 ## v0.8 yayın ve kaynak eşitlemesi
 
 Kaynak 0cda6024cfe585500df58cc61e3c232d7125bb35; PR #7 ve v0.8.0 ön sürüm yayımlandı. APK GitHub digest/yerel SHA256 aynı. Main README c356447d1fcd48026b024fc45b854c6e9f7f7ea9 ile güncel, gerçek kaynak dalı ayrımı açık. Son 102/102 test, 29 gerçek görüntü, model/Android raporları kaynakta. Notion yeni sayfa blok limiti nedeniyle oluşturulamadı; başlangıç günlüğü önceden doğrulandı, sonraki notlar GitHub/yerelde. Fiziksel ve insan kabulü açık.
+
+## v0.8.1 teslim doğrulandı
+
+Kaynak af0c0e6bdacbc435f3252a6dd5498035deffe402, PR #8 ve v0.8.1 ön sürüm GitHub üzerinde. APK digest yerel SHA256 ile eşleşti; main README bc370471f780b633d940a818dced2d94c9b6c741 ile güncel. 104/104 Unity, 9 gerçek görüntü ve model/Android denetimleri kaynakta. Notion eşitlemesi önceki ücretsiz blok sınırı nedeniyle yerel notta bekler. Yeni fiziksel tablet kabulü henüz yapılmadı.
