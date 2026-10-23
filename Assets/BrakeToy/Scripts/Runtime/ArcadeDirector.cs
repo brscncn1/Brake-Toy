@@ -12,6 +12,7 @@ namespace BrakeToy
         public int Seed = 7331;
         public bool UseVariedPatterns, VaryRuns, BuildCatalogPool;
         public bool Choreographed;public bool Joyful;
+        private AdventureEncounters adventure;private AdventureSequence adventureSequence;
         private PlaygroundRun playground;private PlaygroundSequence playgroundSequence;private PlaygroundBeat playgroundPending;
         private JoyfulRun joyful;private JoyfulSequence joyfulSequence;private JoyfulRow joyfulPending;
         public RunChallenges Challenges;
@@ -37,7 +38,7 @@ namespace BrakeToy
         private int lastGear;
         public void Initialize(GameManager manager)
         {
-            game = manager;playground=GetComponent<PlaygroundRun>();joyful=GetComponent<JoyfulRun>();
+            game = manager;adventure=GetComponent<AdventureEncounters>();playground=GetComponent<PlaygroundRun>();joyful=GetComponent<JoyfulRun>();
             CurrentSeed = Seed;
             if (BuildCatalogPool)
             {
@@ -85,7 +86,7 @@ namespace BrakeToy
             Style.Reset(); sequence = new ArcadeSequence(CurrentSeed, UseVariedPatterns, Choreographed,game&&game.Review&&game.Review.Mode==PlayMode.Relax); pending = sequence.Next();
             if(Challenges)Challenges.ResetRun();
             if(Joyful){joyfulSequence=new JoyfulSequence(CurrentSeed,game.Review.Mode==PlayMode.Relax);joyfulPending=joyfulSequence.Next();joyful.ResetRun();}
-            if(playground){playground.ResetRun();playgroundSequence=new PlaygroundSequence(CurrentSeed,game.Review.Mode==PlayMode.Relax);playgroundPending=playgroundSequence.Next();}
+            if(playground){playground.ResetRun();playgroundSequence=new PlaygroundSequence(CurrentSeed,game.Review.Mode==PlayMode.Relax);adventureSequence=adventure?new AdventureSequence(CurrentSeed,game.Review.Mode==PlayMode.Relax):null;playgroundPending=adventure?adventureSequence.Next():playgroundSequence.Next();}
             HUD.Clear(); FillAhead();
         }
         public void BeginRun(bool sameRoute)
@@ -142,7 +143,7 @@ namespace BrakeToy
             }
         }
         private void FillPlayground()
-        {while(playgroundPending.Distance-Distance<115){GetComponent<PlaygroundEncounters>().Spawn(playgroundPending,playgroundPending.Distance-Distance,Activate);SpawnedRows++;playgroundPending=playgroundSequence.Next();}}
+        {while(playgroundPending.Distance-Distance<115){GetComponent<PlaygroundEncounters>().Spawn(playgroundPending,playgroundPending.Distance-Distance,Activate);SpawnedRows++;playgroundPending=adventure?adventureSequence.Next():playgroundSequence.Next();}}
         private ArcadeHazard Activate(int variant, float x, float z, float crossing, float slope)
         {
             // Each prefab kind has six reserved instances; no allocations or Instantiate while driving.
@@ -165,7 +166,7 @@ namespace BrakeToy
                 float toX = Mathf.Lerp(oldX, newX, (step + 1f) / steps);
                 var mode=game.Review?game.Review.Mode:PlayMode.Arcade;
                 float d = Joyful?JoyfulRules.Distance(Elapsed+sub,mode==PlayMode.Relax)-JoyfulRules.Distance(Elapsed,mode==PlayMode.Relax):CareerRules.Distance(Elapsed + sub,mode) - CareerRules.Distance(Elapsed,mode);
-                if(playground)d*=playground.WorldFactor;
+                if(playground)d*=playground.WorldFactor;if(adventure)d*=adventure.SurfaceFactor;
                 bool hit = false; float fraction = 1; ArcadeHazard hitHazard = null;
                 foreach (var hazard in Pool)
                 {
@@ -181,6 +182,7 @@ namespace BrakeToy
                     if (contact && t <= fraction)
                     { fraction = t; hit = true; hitHazard = hazard; }
                 }
+                if(adventure&&adventure.FirstHit(sub,d,fromX,toX,out float toyFraction)&&toyFraction<=fraction){hit=true;fraction=toyFraction;hitHazard=null;}
                 float moved = d * fraction;
                 foreach (var hazard in Pool) if (hazard.InUse)
                 {

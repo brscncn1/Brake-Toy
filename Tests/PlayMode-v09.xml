@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="62" result="Passed" total="62" passed="62" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-23 23:03:41Z" end-time="2026-10-23 23:04:13Z" duration="32,6695518">
+  <test-suite type="TestSuite" id="1080" name="Brake Toy" fullname="Brake Toy" runstate="Runnable" testcasecount="62" result="Passed" start-time="2026-10-23 23:03:41Z" end-time="2026-10-23 23:04:13Z" duration="32.669552" total="62" passed="62" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1074" name="BrakeToy.PlayMode.Tests.dll" fullname="C:/Users/Baris/Documents/Codex/2026-10-20/burada-yazan-promptu-sana-zel-haz/outputs/BrakeToy/Library/ScriptAssemblies/BrakeToy.PlayMode.Tests.dll" runstate="Runnable" testcasecount="62" result="Passed" start-time="2026-10-23 23:03:41Z" end-time="2026-10-23 23:04:13Z" duration="32.664722" total="62" passed="62" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="36308" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1075" name="BrakeToy" fullname="BrakeToy" runstate="Runnable" testcasecount="62" result="Passed" start-time="2026-10-23 23:03:41Z" end-time="2026-10-23 23:04:13Z" duration="32.664482" total="62" passed="62" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1076" name="Tests" fullname="BrakeToy.Tests" runstate="Runnable" testcasecount="62" result="Passed" start-time="2026-10-23 23:03:41Z" end-time="2026-10-23 23:04:13Z" duration="32.664273" total="62" passed="62" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="AdventureSceneTests" fullname="BrakeToy.Tests.AdventureSceneTests" classname="BrakeToy.Tests.AdventureSceneTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-23 23:03:41Z" end-time="2026-10-23 23:03:46Z" duration="5.074967" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1002" name="EightFamiliesKeepReachableSafeLaneAcrossSeedsAndModes" fullname="BrakeToy.Tests.AdventureSceneTests.EightFamiliesKeepReachableSafeLaneAcrossSeedsAndModes" methodname="EightFamiliesKeepReachableSafeLaneAcrossSeedsAndModes" classname="BrakeToy.Tests.AdventureSceneTests" runstate="Runnable" seed="1617242744" result="Passed" start-time="2026-10-23 23:03:41Z" end-time="2026-10-23 23:03:44Z" duration="3.641735" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1007" name="MarbleCountSpeedGarageExitAndCraneRopeAreReal" fullname="BrakeToy.Tests.AdventureSceneTests.MarbleCountSpeedGarageExitAndCraneRopeAreReal" methodname="MarbleCountSpeedGarageExitAndCraneRopeAreReal" classname="BrakeToy.Tests.AdventureSceneTests" runstate="Runnable" seed="2132308517" result="Passed" start-time="2026-10-23 23:03:44Z" end-time="2026-10-23 23:03:45Z" duration="0.298958" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1006" name="RocketClearsNewToysAndPauseFreezesTheirPhase" fullname="BrakeToy.Tests.AdventureSceneTests.RocketClearsNewToysAndPauseFreezesTheirPhase" methodname="RocketClearsNewToysAndPauseFreezesTheirPhase" classname="BrakeToy.Tests.AdventureSceneTests" runstate="Runnable" seed="111340140" result="Passed" start-time="2026-10-23 23:03:45Z" end-time="2026-10-23 23:03:45Z" duration="0.280123" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1005" name="RulerSupportsBothEdgesLaunchesAndAwardsAirDistance" fullname="BrakeToy.Tests.AdventureSceneTests.RulerSupportsBothEdgesLaunchesAndAwardsAirDistance" methodname="RulerSupportsBothEdgesLaunchesAndAwardsAirDistance" classname="BrakeToy.Tests.AdventureSceneTests" runstate="Runnable" seed="1055600665" result="Passed" start-time="2026-10-23 23:03:45Z" end-time="2026-10-23 23:03:45Z" duration="0.283190" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1004" name="TapeAndCardsOnlyAffectGroundAndResetOnRetry" fullname="BrakeToy.Tests.AdventureSceneTests.TapeAndCardsOnlyAffectGroundAndResetOnRetry" methodname="TapeAndCardsOnlyAffectGroundAndResetOnRetry" classname="BrakeToy.Tests.AdventureSceneTests" runstate="Runnable" seed="224129404" result="Passed" start-time="2026-10-23 23:03:45Z" end-time="2026-10-23 23:03:46Z" duration="0.281924" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1003" name="ToyContactsAreSweptAndMatchVisiblePartsIncludingTunnelWalls" fullname="BrakeToy.Tests.AdventureSceneTests.ToyContactsAreSweptAndMatchVisiblePartsIncludingTunnelWalls" methodname="ToyContactsAreSweptAndMatchVisiblePartsIncludingTunnelWalls" classname="BrakeToy.Tests.AdventureSceneTests" runstate="Runnable" seed="67872448" result="Passed" start-time="2026-10-23 23:03:46Z" end-time="2026-10-23 23:03:46Z" duration="0.281362" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1008" name="ArcadeSceneTests" fullname="BrakeToy.Tests.ArcadeSceneTests" classname="BrakeToy.Tests.ArcadeSceneTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-23 23:03:46Z" end-time="2026-10-23 23:03:48Z" duration="1.967726" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1010" name="AccelerationPauseAndDeterministicRetryReuseInstances" fullname="BrakeToy.Tests.ArcadeSceneTests.AccelerationPauseAndDeterministicRetryReuseInstances" methodname="AccelerationPauseAndDeterministicRetryReuseInstances" classname="BrakeToy.Tests.ArcadeSceneTests" runstate="Runnable" seed="934210768" result="Passed" start-time="2026-10-23 23:03:46Z" end-time="2026-10-23 23:03:46Z" duration="0.276476" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1014" name="FeverIsVisualOnlyAndStopsOnCrash" fullname="BrakeToy.Tests.ArcadeSceneTests.FeverIsVisualOnlyAndStopsOnCrash" methodname="FeverIsVisualOnlyAndStopsOnCrash" classname="BrakeToy.Tests.ArcadeSceneTests" runstate="Runnable" seed="1884537083" result="Passed" start-time="2026-10-23 23:03:46Z" end-time="2026-10-23 23:03:46Z" duration="0.254147" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1011" name="FirstChallengeArrivesQuicklyAndRetryIsImmediate" fullname="BrakeToy.Tests.ArcadeSceneTests.FirstChallengeArrivesQuicklyAndRetryIsImmediate" methodname="FirstChallengeArrivesQuicklyAndRetryIsImmediate" classname="BrakeToy.Tests.ArcadeSceneTests" runstate="Runnable" seed="1514780787" result="Passed" start-time="2026-10-23 23:03:46Z" end-time="2026-10-23 23:03:47Z" duration="0.227084" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1015" name="MaxSpeedReactionDistanceRemainsVisibleInFourPortraitRatios" fullname="BrakeToy.Tests.ArcadeSceneTests.MaxSpeedReactionDistanceRemainsVisibleInFourPortraitRatios" methodname="MaxSpeedReactionDistanceRemainsVisibleInFourPortraitRatios" classname="BrakeToy.Tests.ArcadeSceneTests" runstate="Runnable" seed="861931238" result="Passed" start-time="2026-10-23 23:03:47Z" end-time="2026-10-23 23:03:47Z" duration="0.217731" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1012" name="NearMissAwardsOnceAndMovingBallUsesRelativeSweep" fullname="BrakeToy.Tests.ArcadeSceneTests.NearMissAwardsOnceAndMovingBallUsesRelativeSweep" methodname="NearMissAwardsOnceAndMovingBallUsesRelativeSweep" classname="BrakeToy.Tests.ArcadeSceneTests" runstate="Runnable" seed="234529786" result="Passed" start-time="2026-10-23 23:03:47Z" end-time="2026-10-23 23:03:47Z" duration="0.220390" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1009" name="StartupPoolAndDetailedModelsAreValid" fullname="BrakeToy.Tests.ArcadeSceneTests.StartupPoolAndDetailedModelsAreValid" methodname="StartupPoolAndDetailedModelsAreValid" classname="BrakeToy.Tests.ArcadeSceneTests" runstate="Runnable" seed="1458626856" result="Passed" start-time="2026-10-23 23:03:47Z" end-time="2026-10-23 23:03:48Z" duration="0.497353" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1013" name="TwoMinuteWitnessDriveHandlesEveryRowWithoutAllocatingHazards" fullname="BrakeToy.Tests.ArcadeSceneTests.TwoMinuteWitnessDriveHandlesEveryRowWithoutAllocatingHazards" methodname="TwoMinuteWitnessDriveHandlesEveryRowWithoutAllocatingHazards" classname="BrakeToy.Tests.ArcadeSceneTests" runstate="Runnable" seed="1344775709" result="Passed" start-time="2026-10-23 23:03:48Z" end-time="2026-10-23 23:03:48Z" duration="0.265096" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1016" name="InputIntegrationTests" fullname="BrakeToy.Tests.InputIntegrationTests" classname="BrakeToy.Tests.InputIntegrationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-23 23:03:48Z" end-time="2026-10-23 23:03:48Z" duration="0.519632" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1017" name="MouseDragReleaseRetouchAndUIBlocking" fullname="BrakeToy.Tests.InputIntegrationTests.MouseDragReleaseRetouchAndUIBlocking" methodname="MouseDragReleaseRetouchAndUIBlocking" classname="BrakeToy.Tests.InputIntegrationTests" runstate="Runnable" seed="851414043" result="Passed" start-time="2026-10-23 23:03:48Z" end-time="2026-10-23 23:03:48Z" duration="0.252082" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1018" name="TouchDragIgnoresSecondFingerAndHoldsOnRelease" fullname="BrakeToy.Tests.InputIntegrationTests.TouchDragIgnoresSecondFingerAndHoldsOnRelease" methodname="TouchDragIgnoresSecondFingerAndHoldsOnRelease" classname="BrakeToy.Tests.InputIntegrationTests" runstate="Runnable" seed="941433460" result="Passed" start-time="2026-10-23 23:03:48Z" end-time="2026-10-23 23:03:48Z" duration="0.265232" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1019" name="JoyfulSceneTests" fullname="BrakeToy.Tests.JoyfulSceneTests" classname="BrakeToy.Tests.JoyfulSceneTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-23 23:03:48Z" end-time="2026-10-23 23:03:52Z" duration="3.521207" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1022" name="ActualToyVerticesFitCollisionBoundsAndFarHazardsRemainVisible" fullname="BrakeToy.Tests.JoyfulSceneTests.ActualToyVerticesFitCollisionBoundsAndFarHazardsRemainVisible" methodname="ActualToyVerticesFitCollisionBoundsAndFarHazardsRemainVisible" classname="BrakeToy.Tests.JoyfulSceneTests" runstate="Runnable" seed="1357549287" result="Passed" start-time="2026-10-23 23:03:48Z" end-time="2026-10-23 23:03:49Z" duration="0.936420" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1024" name="AirPoseDoesNotAccumulateRotationWhilePausedAndResetsAfterLanding" fullname="BrakeToy.Tests.JoyfulSceneTests.AirPoseDoesNotAccumulateRotationWhilePausedAndResetsAfterLanding" methodname="AirPoseDoesNotAccumulateRotationWhilePausedAndResetsAfterLanding" classname="BrakeToy.Tests.JoyfulSceneTests" runstate="Runnable" seed="1016979745" result="Passed" start-time="2026-10-23 23:03:49Z" end-time="2026-10-23 23:03:50Z" duration="0.468972" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1020" name="AudioHasRealDistinctTracksAndExplainedThreeChannelSettings" fullname="BrakeToy.Tests.JoyfulSceneTests.AudioHasRealDistinctTracksAndExplainedThreeChannelSettings" methodname="AudioHasRealDistinctTracksAndExplainedThreeChannelSettings" classname="BrakeToy.Tests.JoyfulSceneTests" runstate="Runnable" seed="630598410" result="Passed" start-time="2026-10-23 23:03:50Z" end-time="2026-10-23 23:03:50Z" duration="0.266314" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1026" name="DayNightChangesOutsideWhileKeepingTrackLit" fullname="BrakeToy.Tests.JoyfulSceneTests.DayNightChangesOutsideWhileKeepingTrackLit" methodname="DayNightChangesOutsideWhileKeepingTrackLit" classname="BrakeToy.Tests.JoyfulSceneTests" runstate="Runnable" seed="1146850410" result="Passed" start-time="2026-10-23 23:03:50Z" end-time="2026-10-23 23:03:50Z" duration="0.272350" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1021" name="NewPoolContainsToysCurvedBallsAndMovingBusWithNoNullModels" fullname="BrakeToy.Tests.JoyfulSceneTests.NewPoolContainsToysCurvedBallsAndMovingBusWithNoNullModels" methodname="NewPoolContainsToysCurvedBallsAndMovingBusWithNoNullModels" classname="BrakeToy.Tests.JoyfulSceneTests" runstate="Runnable" seed="1266629790" result="Passed" start-time="2026-10-23 23:03:50Z" end-time="2026-10-23 23:03:51Z" duration="0.257258" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1023" name="RampLaunchHeightLandingAndDoubleTpDistanceAreReal" fullname="BrakeToy.Tests.JoyfulSceneTests.RampLaunchHeightLandingAndDoubleTpDistanceAreReal" methodname="RampLaunchHeightLandingAndDoubleTpDistanceAreReal" classname="BrakeToy.Tests.JoyfulSceneTests" runstate="Runnable" seed="1769064758" result="Passed" start-time="2026-10-23 23:03:51Z" end-time="2026-10-23 23:03:51Z" duration="0.262739" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1025" name="SafeWitnessSurvivesGrowingArcadeAndRelaxWithReuse" fullname="BrakeToy.Tests.JoyfulSceneTests.SafeWitnessSurvivesGrowingArcadeAndRelaxWithReuse" methodname="SafeWitnessSurvivesGrowingArcadeAndRelaxWithReuse" classname="BrakeToy.Tests.JoyfulSceneTests" runstate="Runnable" seed="1205224171" result="Passed" start-time="2026-10-23 23:03:51Z" end-time="2026-10-23 23:03:52Z" duration="1.055314" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1027" name="LivingSceneTests" fullname="BrakeToy.Tests.LivingSceneTests" classname="BrakeToy.Tests.LivingSceneTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-23 23:03:52Z" end-time="2026-10-23 23:03:54Z" duration="2.014499" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1031" name="CameraPreservesReactionVisibilityAndCarAtSteeringExtremes" fullname="BrakeToy.Tests.LivingSceneTests.CameraPreservesReactionVisibilityAndCarAtSteeringExtremes" methodname="CameraPreservesReactionVisibilityAndCarAtSteeringExtremes" classname="BrakeToy.Tests.LivingSceneTests" runstate="Runnable" seed="2107491922" result="Passed" start-time="2026-10-23 23:03:52Z" end-time="2026-10-23 23:03:52Z" duration="0.292788" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1030" name="CenterAndRiskWitnessesSurviveTwoMinutesAcrossSeedsWithoutGrowingPools" fullname="BrakeToy.Tests.LivingSceneTests.CenterAndRiskWitnessesSurviveTwoMinutesAcrossSeedsWithoutGrowingPools" methodname="CenterAndRiskWitnessesSurviveTwoMinutesAcrossSeedsWithoutGrowingPools" classname="BrakeToy.Tests.LivingSceneTests" runstate="Runnable" seed="2064312455" result="Passed" start-time="2026-10-23 23:03:52Z" end-time="2026-10-23 23:03:53Z" duration="0.706960" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1033" name="ImportedChairKeepsItsIntendedRoomScaleAfterMeshMerge" fullname="BrakeToy.Tests.LivingSceneTests.ImportedChairKeepsItsIntendedRoomScaleAfterMeshMerge" methodname="ImportedChairKeepsItsIntendedRoomScaleAfterMeshMerge" classname="BrakeToy.Tests.LivingSceneTests" runstate="Runnable" seed="1228124493" result="Passed" start-time="2026-10-23 23:03:53Z" end-time="2026-10-23 23:03:53Z" duration="0.240216" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1032" name="RebuiltCarHasFiniteGeometryAndRoomHasNoGameplayColliders" fullname="BrakeToy.Tests.LivingSceneTests.RebuiltCarHasFiniteGeometryAndRoomHasNoGameplayColliders" methodname="RebuiltCarHasFiniteGeometryAndRoomHasNoGameplayColliders" classname="BrakeToy.Tests.LivingSceneTests" runstate="Runnable" seed="1253680398" result="Passed" start-time="2026-10-23 23:03:53Z" end-time="2026-10-23 23:03:53Z" duration="0.282705" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1028" name="RecordedAudioAndPrivateQualityProfilesAreWired" fullname="BrakeToy.Tests.LivingSceneTests.RecordedAudioAndPrivateQualityProfilesAreWired" methodname="RecordedAudioAndPrivateQualityProfilesAreWired" classname="BrakeToy.Tests.LivingSceneTests" runstate="Runnable" seed="2043528826" result="Passed" start-time="2026-10-23 23:03:53Z" end-time="2026-10-23 23:03:54Z" duration="0.243761" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1029" name="RiskRewardOccursOnceAndNeverOnImpactThenResets" fullname="BrakeToy.Tests.LivingSceneTests.RiskRewardOccursOnceAndNeverOnImpactThenResets" methodname="RiskRewardOccursOnceAndNeverOnImpactThenResets" classname="BrakeToy.Tests.LivingSceneTests" runstate="Runnable" seed="951267576" result="Passed" start-time="2026-10-23 23:03:54Z" end-time="2026-10-23 23:03:54Z" duration="0.245558" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1034" name="PlaygroundSceneTests" fullname="BrakeToy.Tests.PlaygroundSceneTests" classname="BrakeToy.Tests.PlaygroundSceneTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-23 23:03:54Z" end-time="2026-10-23 23:04:00Z" duration="5.842278" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1043" name="DiagonalSideEntryAndExitDoNotDropCarThroughBookSurface" fullname="BrakeToy.Tests.PlaygroundSceneTests.DiagonalSideEntryAndExitDoNotDropCarThroughBookSurface" methodname="DiagonalSideEntryAndExitDoNotDropCarThroughBookSurface" classname="BrakeToy.Tests.PlaygroundSceneTests" runstate="Runnable" seed="52228433" result="Passed" start-time="2026-10-23 23:03:54Z" end-time="2026-10-23 23:03:55Z" duration="0.720770" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1040" name="DominoContactTopplesSequenceAndOpensBarrierBeforeCleanup" fullname="BrakeToy.Tests.PlaygroundSceneTests.DominoContactTopplesSequenceAndOpensBarrierBeforeCleanup" methodname="DominoContactTopplesSequenceAndOpensBarrierBeforeCleanup" classname="BrakeToy.Tests.PlaygroundSceneTests" runstate="Runnable" seed="2025575556" result="Passed" start-time="2026-10-23 23:03:55Z" end-time="2026-10-23 23:03:55Z" duration="0.308193" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1045" name="EndingAnAssistedRunRemovesAttachmentsAndLiftWithoutRefundingCharge" fullname="BrakeToy.Tests.PlaygroundSceneTests.EndingAnAssistedRunRemovesAttachmentsAndLiftWithoutRefundingCharge" methodname="EndingAnAssistedRunRemovesAttachmentsAndLiftWithoutRefundingCharge" classname="BrakeToy.Tests.PlaygroundSceneTests" runstate="Runnable" seed="334336401" result="Passed" start-time="2026-10-23 23:03:55Z" end-time="2026-10-23 23:03:55Z" duration="0.311371" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1038" name="EveryAuthoredFamilyHasAReachableSafeRouteAndNoPoolExhaustion" fullname="BrakeToy.Tests.PlaygroundSceneTests.EveryAuthoredFamilyHasAReachableSafeRouteAndNoPoolExhaustion" methodname="EveryAuthoredFamilyHasAReachableSafeRouteAndNoPoolExhaustion" classname="BrakeToy.Tests.PlaygroundSceneTests" runstate="Runnable" seed="969360089" result="Passed" start-time="2026-10-23 23:03:55Z" end-time="2026-10-23 23:03:58Z" duration="2.371452" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1041" name="GateSignalFollowsOpenStateAndSafeBypassSurvivesFullCycle" fullname="BrakeToy.Tests.PlaygroundSceneTests.GateSignalFollowsOpenStateAndSafeBypassSurvivesFullCycle" methodname="GateSignalFollowsOpenStateAndSafeBypassSurvivesFullCycle" classname="BrakeToy.Tests.PlaygroundSceneTests" runstate="Runnable" seed="262381530" result="Passed" start-time="2026-10-23 23:03:58Z" end-time="2026-10-23 23:03:58Z" duration="0.299034" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1044" name="OptionalRoutesSpawnCollectibleRewardsIncludingAirborneStars" fullname="BrakeToy.Tests.PlaygroundSceneTests.OptionalRoutesSpawnCollectibleRewardsIncludingAirborneStars" methodname="OptionalRoutesSpawnCollectibleRewardsIncludingAirborneStars" classname="BrakeToy.Tests.PlaygroundSceneTests" runstate="Runnable" seed="782157253" result="Passed" start-time="2026-10-23 23:03:58Z" end-time="2026-10-23 23:03:58Z" duration="0.300357" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1036" name="PowersHaveRealDurationFreezeOnPauseAndDoNotRefillOnRetry" fullname="BrakeToy.Tests.PlaygroundSceneTests.PowersHaveRealDurationFreezeOnPauseAndDoNotRefillOnRetry" methodname="PowersHaveRealDurationFreezeOnPauseAndDoNotRefillOnRetry" classname="BrakeToy.Tests.PlaygroundSceneTests" runstate="Runnable" seed="974545484" result="Passed" start-time="2026-10-23 23:03:58Z" end-time="2026-10-23 23:03:59Z" duration="0.303578" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1035" name="RampsLiftBothEdgesInAllLanesAndLandWithoutPassingThrough" fullname="BrakeToy.Tests.PlaygroundSceneTests.RampsLiftBothEdgesInAllLanesAndLandWithoutPassingThrough" methodname="RampsLiftBothEdgesInAllLanesAndLandWithoutPassingThrough" classname="BrakeToy.Tests.PlaygroundSceneTests" runstate="Runnable" seed="1766962635" result="Passed" start-time="2026-10-23 23:03:59Z" end-time="2026-10-23 23:03:59Z" duration="0.335833" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1039" name="ReversibleFeaturesAndVisualMissionCardsArePresent" fullname="BrakeToy.Tests.PlaygroundSceneTests.ReversibleFeaturesAndVisualMissionCardsArePresent" methodname="ReversibleFeaturesAndVisualMissionCardsArePresent" classname="BrakeToy.Tests.PlaygroundSceneTests" runstate="Runnable" seed="950319571" result="Passed" start-time="2026-10-23 23:03:59Z" end-time="2026-10-23 23:03:59Z" duration="0.291643" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1042" name="RocketClearsContactAndJetpackEndsAtGroundWithLandingGrace" fullname="BrakeToy.Tests.PlaygroundSceneTests.RocketClearsContactAndJetpackEndsAtGroundWithLandingGrace" methodname="RocketClearsContactAndJetpackEndsAtGroundWithLandingGrace" classname="BrakeToy.Tests.PlaygroundSceneTests" runstate="Runnable" seed="1945636392" result="Passed" start-time="2026-10-23 23:03:59Z" end-time="2026-10-23 23:03:59Z" duration="0.309227" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1037" name="SlowPreservesSteeringAndRocketMovesFurtherWhileJetLifts" fullname="BrakeToy.Tests.PlaygroundSceneTests.SlowPreservesSteeringAndRocketMovesFurtherWhileJetLifts" methodname="SlowPreservesSteeringAndRocketMovesFurtherWhileJetLifts" classname="BrakeToy.Tests.PlaygroundSceneTests" runstate="Runnable" seed="607559989" result="Passed" start-time="2026-10-23 23:03:59Z" end-time="2026-10-23 23:04:00Z" duration="0.279570" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1046" name="RefinedSceneTests" fullname="BrakeToy.Tests.RefinedSceneTests" classname="BrakeToy.Tests.RefinedSceneTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-23 23:04:00Z" end-time="2026-10-23 23:04:03Z" duration="3.263220" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1051" name="AccelerationPauseAndDeterministicRetryReuseInstances" fullname="BrakeToy.Tests.RefinedSceneTests.AccelerationPauseAndDeterministicRetryReuseInstances" methodname="AccelerationPauseAndDeterministicRetryReuseInstances" classname="BrakeToy.Tests.RefinedSceneTests" runstate="Runnable" seed="505687880" result="Passed" start-time="2026-10-23 23:04:00Z" end-time="2026-10-23 23:04:00Z" duration="0.286263" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1055" name="FeverIsVisualOnlyAndStopsOnCrash" fullname="BrakeToy.Tests.RefinedSceneTests.FeverIsVisualOnlyAndStopsOnCrash" methodname="FeverIsVisualOnlyAndStopsOnCrash" classname="BrakeToy.Tests.RefinedSceneTests" runstate="Runnable" seed="946047847" result="Passed" start-time="2026-10-23 23:04:00Z" end-time="2026-10-23 23:04:00Z" duration="0.257729" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1052" name="FirstChallengeArrivesQuicklyAndRetryIsImmediate" fullname="BrakeToy.Tests.RefinedSceneTests.FirstChallengeArrivesQuicklyAndRetryIsImmediate" methodname="FirstChallengeArrivesQuicklyAndRetryIsImmediate" classname="BrakeToy.Tests.RefinedSceneTests" runstate="Runnable" seed="1133509383" result="Passed" start-time="2026-10-23 23:04:00Z" end-time="2026-10-23 23:04:01Z" duration="0.225455" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1049" name="ImpactKeepsCollisionRootFixedAndRestoresVisuals" fullname="BrakeToy.Tests.RefinedSceneTests.ImpactKeepsCollisionRootFixedAndRestoresVisuals" methodname="ImpactKeepsCollisionRootFixedAndRestoresVisuals" classname="BrakeToy.Tests.RefinedSceneTests" runstate="Runnable" seed="853828479" result="Passed" start-time="2026-10-23 23:04:01Z" end-time="2026-10-23 23:04:01Z" duration="0.754852" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1056" name="MaxSpeedReactionDistanceRemainsVisibleInFourPortraitRatios" fullname="BrakeToy.Tests.RefinedSceneTests.MaxSpeedReactionDistanceRemainsVisibleInFourPortraitRatios" methodname="MaxSpeedReactionDistanceRemainsVisibleInFourPortraitRatios" classname="BrakeToy.Tests.RefinedSceneTests" runstate="Runnable" seed="962477520" result="Passed" start-time="2026-10-23 23:04:01Z" end-time="2026-10-23 23:04:02Z" duration="0.233735" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1053" name="NearMissAwardsOnceAndMovingBallUsesRelativeSweep" fullname="BrakeToy.Tests.RefinedSceneTests.NearMissAwardsOnceAndMovingBallUsesRelativeSweep" methodname="NearMissAwardsOnceAndMovingBallUsesRelativeSweep" classname="BrakeToy.Tests.RefinedSceneTests" runstate="Runnable" seed="705747109" result="Passed" start-time="2026-10-23 23:04:02Z" end-time="2026-10-23 23:04:02Z" duration="0.230090" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1047" name="ProfilesArePrivateAndMenuHasOnePanel" fullname="BrakeToy.Tests.RefinedSceneTests.ProfilesArePrivateAndMenuHasOnePanel" methodname="ProfilesArePrivateAndMenuHasOnePanel" classname="BrakeToy.Tests.RefinedSceneTests" runstate="Runnable" seed="299408420" result="Passed" start-time="2026-10-23 23:04:02Z" end-time="2026-10-23 23:04:02Z" duration="0.237188" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1048" name="SameRouteReplaysAndNewRunChangesSeed" fullname="BrakeToy.Tests.RefinedSceneTests.SameRouteReplaysAndNewRunChangesSeed" methodname="SameRouteReplaysAndNewRunChangesSeed" classname="BrakeToy.Tests.RefinedSceneTests" runstate="Runnable" seed="1835023030" result="Passed" start-time="2026-10-23 23:04:02Z" end-time="2026-10-23 23:04:02Z" duration="0.257251" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1050" name="StartupPoolAndDetailedModelsAreValid" fullname="BrakeToy.Tests.RefinedSceneTests.StartupPoolAndDetailedModelsAreValid" methodname="StartupPoolAndDetailedModelsAreValid" classname="BrakeToy.Tests.RefinedSceneTests" runstate="Runnable" seed="1832706117" result="Passed" start-time="2026-10-23 23:04:02Z" end-time="2026-10-23 23:04:03Z" duration="0.509138" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1054" name="TwoMinuteWitnessDriveHandlesEveryRowWithoutAllocatingHazards" fullname="BrakeToy.Tests.RefinedSceneTests.TwoMinuteWitnessDriveHandlesEveryRowWithoutAllocatingHazards" methodname="TwoMinuteWitnessDriveHandlesEveryRowWithoutAllocatingHazards" classname="BrakeToy.Tests.RefinedSceneTests" runstate="Runnable" seed="1594232425" result="Passed" start-time="2026-10-23 23:04:03Z" end-time="2026-10-23 23:04:03Z" duration="0.268936" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1057" name="ReviewSceneTests" fullname="BrakeToy.Tests.ReviewSceneTests" classname="BrakeToy.Tests.ReviewSceneTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-23 23:04:03Z" end-time="2026-10-23 23:04:05Z" duration="2.129929" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1060" name="AllPagesAndDailyOfflinePracticeWorkWithoutOnlineEligibility" fullname="BrakeToy.Tests.ReviewSceneTests.AllPagesAndDailyOfflinePracticeWorkWithoutOnlineEligibility" methodname="AllPagesAndDailyOfflinePracticeWorkWithoutOnlineEligibility" classname="BrakeToy.Tests.ReviewSceneTests" runstate="Runnable" seed="313751762" result="Passed" start-time="2026-10-23 23:04:03Z" end-time="2026-10-23 23:04:04Z" duration="0.813993" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1061" name="ArcadeAndRelaxWitnessesKeepFairCorridorsAndPools" fullname="BrakeToy.Tests.ReviewSceneTests.ArcadeAndRelaxWitnessesKeepFairCorridorsAndPools" methodname="ArcadeAndRelaxWitnessesKeepFairCorridorsAndPools" classname="BrakeToy.Tests.ReviewSceneTests" runstate="Runnable" seed="2037149811" result="Passed" start-time="2026-10-23 23:04:04Z" end-time="2026-10-23 23:04:04Z" duration="0.450523" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1062" name="ExportActualUnityTraceForServerParity" fullname="BrakeToy.Tests.ReviewSceneTests.ExportActualUnityTraceForServerParity" methodname="ExportActualUnityTraceForServerParity" classname="BrakeToy.Tests.ReviewSceneTests" runstate="Runnable" seed="778000258" result="Passed" start-time="2026-10-23 23:04:04Z" end-time="2026-10-23 23:04:05Z" duration="0.328519" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1059" name="RelaxLosesExactlyThreeLivesAndNeverWritesArcadeRecords" fullname="BrakeToy.Tests.ReviewSceneTests.RelaxLosesExactlyThreeLivesAndNeverWritesArcadeRecords" methodname="RelaxLosesExactlyThreeLivesAndNeverWritesArcadeRecords" classname="BrakeToy.Tests.ReviewSceneTests" runstate="Runnable" seed="866543204" result="Passed" start-time="2026-10-23 23:04:05Z" end-time="2026-10-23 23:04:05Z" duration="0.265030" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1058" name="TenModelsUseSameColliderAndFourAnimatedWheels" fullname="BrakeToy.Tests.ReviewSceneTests.TenModelsUseSameColliderAndFourAnimatedWheels" methodname="TenModelsUseSameColliderAndFourAnimatedWheels" classname="BrakeToy.Tests.ReviewSceneTests" runstate="Runnable" seed="1354869242" result="Passed" start-time="2026-10-23 23:04:05Z" end-time="2026-10-23 23:04:05Z" duration="0.269991" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1063" name="RunLoopTests" fullname="BrakeToy.Tests.RunLoopTests" classname="BrakeToy.Tests.RunLoopTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-23 23:04:05Z" end-time="2026-10-23 23:04:08Z" duration="3.062015" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1065" name="CameraPreservesPortraitFraming" fullname="BrakeToy.Tests.RunLoopTests.CameraPreservesPortraitFraming" methodname="CameraPreservesPortraitFraming" classname="BrakeToy.Tests.RunLoopTests" runstate="Runnable" seed="112951017" result="Passed" start-time="2026-10-23 23:04:05Z" end-time="2026-10-23 23:04:05Z" duration="0.231973" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1064" name="ReadyCrashAndRestart" fullname="BrakeToy.Tests.RunLoopTests.ReadyCrashAndRestart" methodname="ReadyCrashAndRestart" classname="BrakeToy.Tests.RunLoopTests" runstate="Runnable" seed="109017749" result="Passed" start-time="2026-10-23 23:04:05Z" end-time="2026-10-23 23:04:08Z" duration="2.819779" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1066" name="TabletopSceneTests" fullname="BrakeToy.Tests.TabletopSceneTests" classname="BrakeToy.Tests.TabletopSceneTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-23 23:04:08Z" end-time="2026-10-23 23:04:12Z" duration="3.529733" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1069" name="NearDecorSharesWorldMovementPauseAndRestart" fullname="BrakeToy.Tests.TabletopSceneTests.NearDecorSharesWorldMovementPauseAndRestart" methodname="NearDecorSharesWorldMovementPauseAndRestart" classname="BrakeToy.Tests.TabletopSceneTests" runstate="Runnable" seed="290321444" result="Passed" start-time="2026-10-23 23:04:08Z" end-time="2026-10-23 23:04:08Z" duration="0.261431" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1070" name="NewSceneStillCrashesAndReusesWorldOnRestart" fullname="BrakeToy.Tests.TabletopSceneTests.NewSceneStillCrashesAndReusesWorldOnRestart" methodname="NewSceneStillCrashesAndReusesWorldOnRestart" classname="BrakeToy.Tests.TabletopSceneTests" runstate="Runnable" seed="428067222" result="Passed" start-time="2026-10-23 23:04:08Z" end-time="2026-10-23 23:04:11Z" duration="2.801108" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1068" name="RoomCameraKeepsTrackAndReactionDistanceVisible" fullname="BrakeToy.Tests.TabletopSceneTests.RoomCameraKeepsTrackAndReactionDistanceVisible" methodname="RoomCameraKeepsTrackAndReactionDistanceVisible" classname="BrakeToy.Tests.TabletopSceneTests" runstate="Runnable" seed="1808866507" result="Passed" start-time="2026-10-23 23:04:11Z" end-time="2026-10-23 23:04:12Z" duration="0.229729" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1067" name="RoomPreservesGameplayAndDecorHasNoColliders" fullname="BrakeToy.Tests.TabletopSceneTests.RoomPreservesGameplayAndDecorHasNoColliders" methodname="RoomPreservesGameplayAndDecorHasNoColliders" classname="BrakeToy.Tests.TabletopSceneTests" runstate="Runnable" seed="1535153782" result="Passed" start-time="2026-10-23 23:04:12Z" end-time="2026-10-23 23:04:12Z" duration="0.222179" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1071" name="TidyRoomTests" fullname="BrakeToy.Tests.TidyRoomTests" classname="BrakeToy.Tests.TidyRoomTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-23 23:04:12Z" end-time="2026-10-23 23:04:13Z" duration="1.737532" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1072" name="AllThreeZonesReserveNotebookAndPencilSpaceAcrossFourFullCycles" fullname="BrakeToy.Tests.TidyRoomTests.AllThreeZonesReserveNotebookAndPencilSpaceAcrossFourFullCycles" methodname="AllThreeZonesReserveNotebookAndPencilSpaceAcrossFourFullCycles" classname="BrakeToy.Tests.TidyRoomTests" runstate="Runnable" seed="590651731" result="Passed" start-time="2026-10-23 23:04:12Z" end-time="2026-10-23 23:04:13Z" duration="1.449785" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1073" name="RadioStaysOnShelfAndDominoHasNoGeometryOrMenuSwitch" fullname="BrakeToy.Tests.TidyRoomTests.RadioStaysOnShelfAndDominoHasNoGeometryOrMenuSwitch" methodname="RadioStaysOnShelfAndDominoHasNoGeometryOrMenuSwitch" classname="BrakeToy.Tests.TidyRoomTests" runstate="Runnable" seed="946784289" result="Passed" start-time="2026-10-23 23:04:13Z" end-time="2026-10-23 23:04:13Z" duration="0.276714" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Baris/AppData/LocalLow/Brake Toy/Brake Toy\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

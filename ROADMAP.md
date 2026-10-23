@@ -1,3 +1,7 @@
+# v0.9 — mekanik revizyon
+
+Onaylanan sekiz öğe Adventure sahnesinde. Sonraki kabul: kullanıcının tablet/oynanış değerlendirmesi ve ayrı model detay çalışması. Sanat/mağaza/online kabulü otomatik olarak tamamlanmış sayılmaz.
+
 ## 24 Ekim — v0.8.1 yerleşim düzeltmesi
 
 Yeni ToyRoomTidy sahnesi, fix/table-layout-v081 dalı. Mavi parçalar v0.8 oyuncak kasabası kenar dekorlarıydı; 42 m dekor döngüsüyle 64 m defter/kalemlik döngüsü bağımsız olduğundan tekrar tekrar çakışıyordu. Yeni sahnede iki grup aynı 64 m döngüyü ve ayrılmış boşlukları kullanır. Defter/kalemlik en fazla 1.25 birim genişliğe indirildi, ±4.45 kenar merkezlerine oturtuldu; oyun alanına ve masa dışına taşmaları sınandı. Tüm bölge parçaları hücre olarak birlikte akar, pencere/ev parçaları ayrışmaz.

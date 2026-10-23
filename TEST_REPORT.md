@@ -1,3 +1,7 @@
+# v0.9 — otomatik kanıt
+
+50 EditMode +62 PlayMode: 112/112. Altı tohum, iki mod, 120 saniye/koşu; toplam24 dakika. Fiziksel cihaz ölçümü değildir. UNITY_TEST_RESULTS-v09.json.
+
 ## 24 Ekim — v0.8.1 yerleşim düzeltmesi
 
 Yeni ToyRoomTidy sahnesi, fix/table-layout-v081 dalı. Mavi parçalar v0.8 oyuncak kasabası kenar dekorlarıydı; 42 m dekor döngüsüyle 64 m defter/kalemlik döngüsü bağımsız olduğundan tekrar tekrar çakışıyordu. Yeni sahnede iki grup aynı 64 m döngüyü ve ayrılmış boşlukları kullanır. Defter/kalemlik en fazla 1.25 birim genişliğe indirildi, ±4.45 kenar merkezlerine oturtuldu; oyun alanına ve masa dışına taşmaları sınandı. Tüm bölge parçaları hücre olarak birlikte akar, pencere/ev parçaları ayrışmaz.

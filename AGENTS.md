@@ -1,3 +1,5 @@
+- Current approved milestone v0.9: user explicitly requested all eight proposed mechanics. PLAN-v0.9.md supersedes v0.8.1 no-new-mechanics restriction. Preserve Tidy layout fixes, existing career/charges/music and speed curve. Domino remains removed.
+
 # Brake Toy project workflow
 
 - Current patch v0.8.1: PLAN-v0.8.1.md. Fix tabletop dressing/notebook overlaps, relocate radio onto shelf, remove domino from the new Tidy scene. Preserve v0.8 and user career/charges. Do not retune speed/difficulty or add suggested future mechanics in this patch. Notion block creation was entitlement-blocked; keep local pending notes and GitHub current without retrying that request automatically.

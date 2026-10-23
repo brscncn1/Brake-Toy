@@ -1,0 +1,39 @@
+{
+  "version": "0.9.0",
+  "total": 112,
+  "tests": {
+    "EditMode": {
+      "total": "50",
+      "passed": "50",
+      "failed": "0",
+      "end-time": "2026-10-23 22:52:13Z"
+    },
+    "PlayMode": {
+      "total": "62",
+      "passed": "62",
+      "failed": "0",
+      "end-time": "2026-10-23 23:04:13Z"
+    }
+  },
+  "newSceneSafeRouteWitnesses": {
+    "seeds": [
+      7331,
+      109,
+      917,
+      5,
+      42,
+      888
+    ],
+    "modes": [
+      "Arcade",
+      "Relax"
+    ],
+    "secondsPerRun": 120,
+    "totalSimulatedMinutes": 24,
+    "poolExhaustions": 0
+  },
+  "sequenceSeeds": 100,
+  "sequenceRowsPerSeed": 256,
+  "physicalDeviceTested": false,
+  "humanArtAccepted": false
+}

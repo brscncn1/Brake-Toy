@@ -1,3 +1,18 @@
+# v0.9 teslim edildi — 24 Ekim 2026
+
+GitHub PR #9 (base fix/table-layout-v081), v0.9.0 Release ve APK yüklendi. GitHub asset digest/byte sayısı yerel APK ile aynı; main README d6dae250c0752a9c41830ddf479ce42d155c55d8 doğrulandı. Kaynak dal feat/adventure-v09; oyun PR'ları merge edilmedi, main oyun kodu Faz1 olarak açıklanır. DELIVERY-v09.json teslim kanıtıdır. PC Unity penceresi büyütüldü, ToyRoomAdventure Play menüsü 1× hazır bırakıldı; kullanıcı turu başlatmadı. Kariyer korunur. Yeni fiziksel tablet testi ve insan sanat/oynanış kabulü bekler. Notion yeni kayıtları bilinen ücretsiz blok kotası nedeniyle yerel/GitHub pending; yeniden blok isteği yapılmadı.
+
+# v0.9 Android doğrulandı — 24 Ekim 2026
+
+Kaynak b656017cb48c7b10b62891647135d0bc2371cfde; 0.9.0/kod10 ARM64 IL2CPP non-Development, 40568255 bayt. V2/aynı sertifika, ZIP bütünlüğü/ZIP16KB/ELF16KB geçti. Fiziksel tablet kabulü bekler. Rapor ANDROID_BUILD_REPORT-v09.json. GitHub Release yükleme sırada; Notion kotası pending.
+
+# v0.9 checkpoint — 24 Ekim 2026
+
+112/112 test geçti. Misket erken giriş hatası hızla ölçeklenen başlangıç mesafesiyle düzeltildi; son12 uzun koşuda çarpışma/hak kaybı/havuz tükenmesi yok. Kurmalı kurbağa/ördek, gerçek enine tren, vinç geçiş boşluğu ve sabit uzunluklu halat; tünel yüksek tavan/duvar çarpışmaları. Malzeme başına statik mesh birleştirme. Fiziksel tablet ve sanat kabulü bekler. Notion kotası nedeniyle yeni notlar yerelde bekliyor.
+
+# v0.9 started — 2026-10-24
+Eight mechanics authorized; PLAN-v0.9.md. New scene preserves Tidy, no domino, same difficulty curve. Implementation/testing in progress; no acceptance claimed. Notion quota pending.
+
 ## 24 Ekim — v0.8.1 yerleşim düzeltmesi
 
 Yeni ToyRoomTidy sahnesi, fix/table-layout-v081 dalı. Mavi parçalar v0.8 oyuncak kasabası kenar dekorlarıydı; 42 m dekor döngüsüyle 64 m defter/kalemlik döngüsü bağımsız olduğundan tekrar tekrar çakışıyordu. Yeni sahnede iki grup aynı 64 m döngüyü ve ayrılmış boşlukları kullanır. Defter/kalemlik en fazla 1.25 birim genişliğe indirildi, ±4.45 kenar merkezlerine oturtuldu; oyun alanına ve masa dışına taşmaları sınandı. Tüm bölge parçaları hücre olarak birlikte akar, pencere/ev parçaları ayrışmaz.
