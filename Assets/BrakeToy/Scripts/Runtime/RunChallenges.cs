@@ -12,8 +12,8 @@ namespace BrakeToy
         public readonly RunGoals Goals=new RunGoals();
         public int PoolExhaustions{get;private set;}
         private GameManager game;
-        private ArcadeDirector arcade;
-        public void Initialize(GameManager manager,ArcadeDirector director){game=manager;arcade=director;}
+        private ArcadeDirector arcade;private float[] starHeights;
+        public void Initialize(GameManager manager,ArcadeDirector director){game=manager;arcade=director;starHeights=new float[RiskStars.Length];for(int i=0;i<starHeights.Length;i++)starHeights[i]=.25f;}
         public void ResetRun(){Goals.Reset();PoolExhaustions=0;foreach(var star in RiskStars)star.gameObject.SetActive(false);}
         public void SpawnRisk(ArcadeRow row,float z)
         {
@@ -29,8 +29,8 @@ namespace BrakeToy
             foreach(var star in RiskStars)
             {
                 if(!star.gameObject.activeSelf)continue;
-                var a=star.position;var b=a-Vector3.forward*moved;b.y=.25f+Mathf.Sin(arcade.Elapsed*4+a.x)*.035f;star.position=b;
-                if(!crashed && (!game.Arcade.Joyful||game.GetComponent<JoyfulRun>().Height<.6f) && SweptCircleBox.TryHit(oldX-a.x,-a.z,newX-b.x,-b.z,game.Config.PlayerHalfWidth,game.Config.PlayerHalfLength,.11f,out _))
+                int index=System.Array.IndexOf(RiskStars,star);float elevation=starHeights[index];var a=star.position;var b=a-Vector3.forward*moved;b.y=elevation+Mathf.Sin(arcade.Elapsed*4+a.x)*.035f;star.position=b;
+                if(!crashed && (!game.Arcade.Joyful|| (game.GetComponent<PlaygroundRun>()?Mathf.Abs(game.GetComponent<JoyfulRun>().Height+.25f-elevation)<.60f:game.GetComponent<JoyfulRun>().Height<.6f)) && SweptCircleBox.TryHit(oldX-a.x,-a.z,newX-b.x,-b.z,game.Config.PlayerHalfWidth,game.Config.PlayerHalfLength,.11f,out _))
                 {
                     star.gameObject.SetActive(false);Goals.Collect();arcade.Style.AwardRiskStar();
                     arcade.HUD.Notify("RİSK YILDIZI  +75",new Color(1,.83f,.25f));arcade.Sound.NearMiss(1);
@@ -40,6 +40,8 @@ namespace BrakeToy
             if(!crashed && Goals.Advance(arcade.Distance,arcade.Style.NearMisses))
             {arcade.HUD.Notify("HEDEF TAMAM  "+Goals.Completed+" / 3",new Color(.55f,1,.8f));arcade.Sound.Shift();}
         }
+        public void SpawnAt(float x,float z,float height=.25f)
+        {for(int i=0;i<RiskStars.Length;i++)if(!RiskStars[i].gameObject.activeSelf){starHeights[i]=height;RiskStars[i].position=new Vector3(x,height,z);RiskStars[i].gameObject.SetActive(true);return;}PoolExhaustions++;throw new System.InvalidOperationException("Playground reward pool exhausted");}
         private void LateUpdate()
         {
             if(!game)return;

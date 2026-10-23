@@ -10,7 +10,7 @@ namespace BrakeToy.Editor
         [MenuItem("Tools/Brake Toy/Build Android Prototype")]
         public static void Build()
         {
-            string scene = File.Exists(JoyfulSceneBuilder.ScenePath) ? JoyfulSceneBuilder.ScenePath : File.Exists(ReviewSceneBuilder.ScenePath) ? ReviewSceneBuilder.ScenePath : File.Exists(LivingSceneBuilder.ScenePath) ? LivingSceneBuilder.ScenePath : File.Exists(RefinedSceneBuilder.ScenePath) ? RefinedSceneBuilder.ScenePath : File.Exists(WorkshopSceneBuilder.ScenePath) ? WorkshopSceneBuilder.ScenePath : File.Exists(TabletopSceneBuilder.ScenePath) ? TabletopSceneBuilder.ScenePath : "Assets/BrakeToy/Scenes/ToyRoom.unity";
+            string scene = File.Exists(PlaygroundSceneBuilder.ScenePath) ? PlaygroundSceneBuilder.ScenePath : File.Exists(JoyfulSceneBuilder.ScenePath) ? JoyfulSceneBuilder.ScenePath : File.Exists(ReviewSceneBuilder.ScenePath) ? ReviewSceneBuilder.ScenePath : File.Exists(LivingSceneBuilder.ScenePath) ? LivingSceneBuilder.ScenePath : File.Exists(RefinedSceneBuilder.ScenePath) ? RefinedSceneBuilder.ScenePath : File.Exists(WorkshopSceneBuilder.ScenePath) ? WorkshopSceneBuilder.ScenePath : File.Exists(TabletopSceneBuilder.ScenePath) ? TabletopSceneBuilder.ScenePath : "Assets/BrakeToy/Scenes/ToyRoom.unity";
             if (!File.Exists(scene)) PrototypeBuilder.Create();
             Directory.CreateDirectory("Builds/Android");
             PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64;
@@ -19,9 +19,9 @@ namespace BrakeToy.Editor
             var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions
             {
                 scenes = new[] { scene },
-                locationPathName = scene == JoyfulSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.7-Joyful.apk" : scene == ReviewSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.6-Review.apk" : scene == LivingSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.5-Living.apk" : scene == RefinedSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.4-Refined.apk" : scene == WorkshopSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.3-Arcade.apk" : scene == TabletopSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.2-Tabletop.apk" : "Builds/Android/BrakeToy-Phase1.apk",
+                locationPathName = scene == PlaygroundSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.8-Playground.apk" : scene == JoyfulSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.7-Joyful.apk" : scene == ReviewSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.6-Review.apk" : scene == LivingSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.5-Living.apk" : scene == RefinedSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.4-Refined.apk" : scene == WorkshopSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.3-Arcade.apk" : scene == TabletopSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.2-Tabletop.apk" : "Builds/Android/BrakeToy-Phase1.apk",
                 target = BuildTarget.Android,
-                options = scene == JoyfulSceneBuilder.ScenePath || scene == ReviewSceneBuilder.ScenePath ? BuildOptions.None : BuildOptions.Development
+                options = scene == PlaygroundSceneBuilder.ScenePath || scene == JoyfulSceneBuilder.ScenePath || scene == ReviewSceneBuilder.ScenePath ? BuildOptions.None : BuildOptions.Development
             });
             if (report.summary.result != BuildResult.Succeeded)
                 throw new System.InvalidOperationException("Android prototip derlemesi başarısız: " + report.summary.result);

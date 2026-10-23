@@ -1,0 +1,13 @@
+{
+    "scene": "ToyRoomPlayground",
+    "version": "0.8.0",
+    "sceneRenderersIncludingInactiveCars": 789,
+    "sceneTrianglesIncludingInactiveCars": 999691,
+    "uniqueMeshes": 406,
+    "missingMeshes": 0,
+    "missingMaterials": 0,
+    "shaderErrors": 0,
+    "decorativeColliders": 0,
+    "physicalDeviceProfiled": false,
+    "note": "Scene counts before runtime catalog pool replacement. All seven prefab models separately checked."
+}

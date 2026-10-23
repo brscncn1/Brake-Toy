@@ -1,0 +1,30 @@
+{
+  "version": "0.8.0",
+  "sourceCommit": "0cda6024cfe585500df58cc61e3c232d7125bb35",
+  "pullRequest": "https://github.com/brscncn1/Brake-Toy/pull/7",
+  "release": "https://github.com/brscncn1/Brake-Toy/releases/tag/v0.8.0",
+  "apk": {
+    "url": "https://github.com/brscncn1/Brake-Toy/releases/download/v0.8.0/BrakeToy-v0.8-Playground.apk",
+    "bytes": 39074371,
+    "sha256": "a67b7f605583efa7b685f9118f29b7caf90703d30194f85e9f243d44aecaef60",
+    "githubDigestMatched": true
+  },
+  "mainReadmeCommit": "c356447d1fcd48026b024fc45b854c6e9f7f7ea9",
+  "unityTests": {
+    "EditMode": 48,
+    "PlayMode": 54,
+    "passed": 102
+  },
+  "realUnityRenders": 29,
+  "notion": {
+    "status": "blocked_free_block_limit",
+    "initialJournalEntryReadbackVerified": true,
+    "newPageCreated": false,
+    "pendingDocument": "NOTION_PENDING-v08.md"
+  },
+  "physicalV08Tested": false,
+  "humanArtAccepted": false,
+  "productionOnlineDeployed": false,
+  "realMoneyPaymentsImplemented": false,
+  "storeAcceptanceComplete": false
+}
