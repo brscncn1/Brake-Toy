@@ -2,6 +2,12 @@
 
 **NO BRAKES. BIG TROUBLE.** Unity 6.3 LTS / C# / gerçek 3D URP / Android portre.
 
+## Agent belgeleri — 24 Ekim 2026
+
+Codex ve Claude Code için ortak giriş [AGENTS.md](https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/AGENTS.md); [yol haritası](https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/YOL_HARITASI.md), [mimari](https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/MIMARI.md), [mekanikler](https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/MEKANIKLER.md). Yardımcılar: [Claude](https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/CLAUDE.md), [kararlar](https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/KARARLAR.md), [doğrulama](https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/DOGRULAMA.md). Her dosya en fazla 300 satırdır; konuya göre okunur. Güncel belge dalı **docs/agent-handbook**, oyun tabanı v0.9 Adventure. Eski İngilizce/faz belgeleri tarihsel kayıttır. Notion merkez ve mevcut belge özetleri/kaynak bağlantıları güncellendi; yeni tam sayfa kopyaları ücretsiz blok kotası nedeniyle bekliyor ([eşitleme kapsamı](https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/Docs/NOTION_SYNC-agent-handbook.json)). Belge turunda oyun kodu/APK değişmedi, Unity testleri yeniden koşulmadı.
+
+[Belge PR #10](https://github.com/brscncn1/Brake-Toy/pull/10).
+
 ## Kaynak dalı
 
 Bu main dalının oyun kaynak tabanı Faz 1'dir; özellik PR'ları henüz birleştirilmedi. Güncel oyun **feat/adventure-v09** dalında veya hazır v0.9.0 APK'dadır. Bu README güncel teslimi gösterir; main aynı oyun kaynaklarını içermez.
