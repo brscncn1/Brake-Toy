@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-24",
+  "type": "documentation-only",
+  "files": {
+    "AGENTS.md": {
+      "lines": 116,
+      "bytes": 8181,
+      "sha256": "14ef6c10a11569003af24b94c71707b9c08445e6bd5c7c0488f143250caea477",
+      "maxLineLength": 103
+    },
+    "YOL_HARITASI.md": {
+      "lines": 146,
+      "bytes": 9668,
+      "sha256": "698f84bb51b963a69168df94c1d51f5aa9b6ebf56e15a926e2f1724715f0f49e",
+      "maxLineLength": 109
+    },
+    "MIMARI.md": {
+      "lines": 161,
+      "bytes": 11782,
+      "sha256": "accd0d2a28b0f33cd731af59273ee52866c213d6665ffe028b667d1928147895",
+      "maxLineLength": 113
+    },
+    "MEKANIKLER.md": {
+      "lines": 165,
+      "bytes": 10835,
+      "sha256": "3f55f87d8fb172ba701fafe2703f0bbb9fae24847a877e94d7a29e7354067423",
+      "maxLineLength": 113
+    },
+    "CLAUDE.md": {
+      "lines": 12,
+      "bytes": 563,
+      "sha256": "c18941e5bab1c60db57073b0b3e3a855ee53ac3eef41b6a665b4a68905a4dd3f",
+      "maxLineLength": 83
+    },
+    "KARARLAR.md": {
+      "lines": 78,
+      "bytes": 5647,
+      "sha256": "fe1236ee01a3c772ff375e20e468b00ab9a4815ff9cab7b21ebc8419d1b8d650",
+      "maxLineLength": 107
+    },
+    "DOGRULAMA.md": {
+      "lines": 123,
+      "bytes": 8458,
+      "sha256": "1bcd715365148dafa02a8c14e26dc92e0340cd00575c23bb215b6585edf8dd04",
+      "maxLineLength": 114
+    }
+  },
+  "errors": [],
+  "runtimeChanged": false,
+  "unityTestsRerun": false,
+  "previousRecordedUnityTests": 112
+}

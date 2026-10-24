@@ -1,3 +1,7 @@
+> TARİHSEL BELGE — Güncel başvuru: [YOL_HARITASI.md](YOL_HARITASI.md).
+> Aşağıdaki sürüm/faz açıklamaları mevcut davranış talimatı değildir.
+> Değiştirilmemiş önceki kopya Docs/Archive/2026-10-24-agent-handbook/ içindedir.
+
 # v0.9 — mekanik revizyon
 
 Onaylanan sekiz öğe Adventure sahnesinde. Sonraki kabul: kullanıcının tablet/oynanış değerlendirmesi ve ayrı model detay çalışması. Sanat/mağaza/online kabulü otomatik olarak tamamlanmış sayılmaz.

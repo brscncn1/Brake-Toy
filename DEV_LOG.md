@@ -1,3 +1,15 @@
+# Agent rehberleri teslim — 24 Ekim 2026
+
+GitHub PR #10 oluşturuldu; docs/agent-handbook kaynakları yüklendi. Main README8da3c121c12bdb9010963896e342ddd052707551 ile yedi belgeye ve PR'a yönlendirildi, API geri okuması doğrulandı. Hiçbir oyun PR'ı merge edilmedi. Yedi dosya300 satır altında; eski dört kaynak arşivde. Notion mevcut altı sayfada güncel özet/bağlantı kapsamıyla doğrulandı,33 eski alt sayfa korundu; yedi tam yeni kopya blok kotasında bekliyor. Teslim kapsamı Docs/AGENT_DOCUMENTATION_DELIVERY.json içinde. Bu turda oyun kodu/APK değişmedi ve Unity testleri tekrar çalıştırılmadı.
+
+# Agent belge teslimi ve Notion sonucu — 24 Ekim 2026
+
+Yedi dosya sırasıyla116/146/161/165/12/78/123 satır; UTF-8/link/satır doğrulaması geçti, oyun kaynakları değişmedi. Kaynak4c61e0f docs/agent-handbook dalına yüklendi. Notion async kuyruğu503 döndüğü için geri okuma gerektiren senkron güncellemeye geçildi ve mevcut altı sayfa güncellendi/geri okundu. Yeni yedi sayfa isteği ücretsiz blok kotasından reddedildi; otomatik create tekrarı yapılmadı. Merkez33 tarihsel alt sayfayı koruyor; dört güncel konu özeti ve tam GitHub kaynak bağlantıları mevcut. Tam ayrı kopyalar pending; Docs/NOTION_INDEX.json ve NOTION_SYNC-agent-handbook.json kapsamı ayırır. Önceki112 Unity testi yeniden koşulmadı, yeni APK oluşturulmadı.
+
+# Agent belge paketi — 24 Ekim 2026
+
+Kullanıcı hazırlama ve Notion güncellemesine izin verdi. AGENTS yeniden yazıldı; YOL_HARITASI/MIMARI/MEKANIKLER ile CLAUDE/KARARLAR/DOGRULAMA eklendi. Eski belgeler arşivlendi, İngilizce kaynaklar tarihsel olarak işaretlendi. Oyun kodu/sahne/paket değişmedi; 112 test önceki kanıttır, bu tur yeniden koşulmadı. Relax yeni havuz temizliği, ortak kariyer rekor ayrımı ve benchmark generator uyumu doğrulama adayı olarak kaydedildi; düzeltilmiş sayılmaz. Notion erişim haritası create/update kullanılabilir döndü; gerçek eşitleme sonucu ayrıca kaydedilecek.
+
 # v0.9 teslim edildi — 24 Ekim 2026
 
 GitHub PR #9 (base fix/table-layout-v081), v0.9.0 Release ve APK yüklendi. GitHub asset digest/byte sayısı yerel APK ile aynı; main README d6dae250c0752a9c41830ddf479ce42d155c55d8 doğrulandı. Kaynak dal feat/adventure-v09; oyun PR'ları merge edilmedi, main oyun kodu Faz1 olarak açıklanır. DELIVERY-v09.json teslim kanıtıdır. PC Unity penceresi büyütüldü, ToyRoomAdventure Play menüsü 1× hazır bırakıldı; kullanıcı turu başlatmadı. Kariyer korunur. Yeni fiziksel tablet testi ve insan sanat/oynanış kabulü bekler. Notion yeni kayıtları bilinen ücretsiz blok kotası nedeniyle yerel/GitHub pending; yeniden blok isteği yapılmadı.

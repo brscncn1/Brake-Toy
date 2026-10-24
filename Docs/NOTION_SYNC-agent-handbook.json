@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-24",
+  "sourceBranch": "docs/agent-handbook",
+  "documentSourceCommit": "4c61e0fab86a3b668fe3fe67ec29985ab1264266",
+  "status": "partial_verified_summary_links",
+  "rootPageId": "3ffdce66-5831-8186-8ac1-d4e4bd6feeac",
+  "existingPagesUpdatedAndReadBack": [
+    {
+      "id": "3ffdce66-5831-8176-82a9-f71a13419f7d",
+      "file": "AGENTS.md",
+      "url": "https://app.notion.com/p/3ffdce665831817682a9f71a13419f7d?pvs=204",
+      "verified": true,
+      "fullReplica": false,
+      "scope": "current_summary_and_source_links",
+      "lastEditedAt": "2026-10-24T18:23:12.726Z"
+    },
+    {
+      "id": "3ffdce66-5831-8115-a557-d18574f69136",
+      "file": "YOL_HARITASI.md",
+      "url": "https://app.notion.com/p/3ffdce6658318115a557d18574f69136?pvs=204",
+      "verified": true,
+      "fullReplica": false,
+      "scope": "current_summary_and_source_links",
+      "lastEditedAt": "2026-10-24T18:23:13.502Z"
+    },
+    {
+      "id": "3ffdce66-5831-81d1-8624-ddfabfc1f49b",
+      "file": "MIMARI.md",
+      "url": "https://app.notion.com/p/3ffdce66583181d18624ddfabfc1f49b?pvs=204",
+      "verified": true,
+      "fullReplica": false,
+      "scope": "current_summary_and_source_links",
+      "lastEditedAt": "2026-10-24T18:23:14.414Z"
+    },
+    {
+      "id": "3ffdce66-5831-81ff-877c-c1cf4b5d9fbe",
+      "file": "MEKANIKLER.md",
+      "url": "https://app.notion.com/p/3ffdce66583181ff877cc1cf4b5d9fbe?pvs=204",
+      "verified": true,
+      "fullReplica": false,
+      "scope": "current_summary_and_source_links",
+      "lastEditedAt": "2026-10-24T18:23:15.100Z"
+    },
+    {
+      "id": "3ffdce66-5831-8131-ace0-e39614da7f6f",
+      "file": "DEV_LOG.md",
+      "url": "https://app.notion.com/p/3ffdce6658318131ace0e39614da7f6f?pvs=204",
+      "verified": true,
+      "fullReplica": false,
+      "scope": "current_summary_and_source_links",
+      "lastEditedAt": "2026-10-24T18:23:16.864Z"
+    },
+    {
+      "id": "3ffdce66-5831-8186-8ac1-d4e4bd6feeac",
+      "file": "ROOT",
+      "url": "https://app.notion.com/p/3ffdce66583181868ac1d4e4bd6feeac?pvs=204",
+      "verified": true,
+      "fullReplica": false,
+      "scope": "current_summary_and_source_links",
+      "lastEditedAt": "2026-10-24T18:23:15.774Z",
+      "preservedChildPages": 33
+    }
+  ],
+  "newPagesCreated": 0,
+  "preservedHistoricalChildPages": 33,
+  "fullDocumentReplicas": {
+    "status": "blocked",
+    "files": [
+      "AGENTS.md",
+      "YOL_HARITASI.md",
+      "MIMARI.md",
+      "MEKANIKLER.md",
+      "CLAUDE.md",
+      "KARARLAR.md",
+      "DOGRULAMA.md"
+    ],
+    "code": "entitlement_required",
+    "operation": "block_creation",
+    "sideEffects": "none",
+    "automaticCreateRetries": 0,
+    "reason": "Workspace free block limit reached; full text is available in GitHub. Existing summary/source-link edits succeeded.",
+    "learnMore": "https://www.notion.com/help/understanding-block-usage",
+    "paidPlanPurchased": false
+  },
+  "runtimeChanged": false,
+  "unityTestsRerun": false
+}

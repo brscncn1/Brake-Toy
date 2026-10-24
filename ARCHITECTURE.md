@@ -1,3 +1,7 @@
+> TARİHSEL BELGE — Güncel başvuru: [MIMARI.md](MIMARI.md).
+> Aşağıdaki sürüm/faz açıklamaları mevcut davranış talimatı değildir.
+> Değiştirilmemiş önceki kopya Docs/Archive/2026-10-24-agent-handbook/ içindedir.
+
 ## 24 Ekim — v0.8 Playground
 
 Yeni ToyRoomPlayground sahnesi ve feat/playground-v08 dalı; v0.7 korunur. Güvenli/riskli yol, bağlı altı karşılaşma ailesi, isteğe bağlı domino ile yol açma, sinyalli açılıp kapanan oyuncak garaj kapısı/hareketli oyuncak geçişleri, üç yatay konuma dağılan kitap rampaları ve farklı hareketleri bağlayan ustalık bonusu uygulandı. Rampa artık dar merkez toleransı yerine aracın teker/gövde temas alanını kullanır; yan giriş/çıkış ve kenarları sınandı.
