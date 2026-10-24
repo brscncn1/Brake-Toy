@@ -1,3 +1,7 @@
+# Agent belge paketi — 24 Ekim 2026
+
+Kullanıcı hazırlama ve Notion güncellemesine izin verdi. AGENTS yeniden yazıldı; YOL_HARITASI/MIMARI/MEKANIKLER ile CLAUDE/KARARLAR/DOGRULAMA eklendi. Eski belgeler arşivlendi, İngilizce kaynaklar tarihsel olarak işaretlendi. Oyun kodu/sahne/paket değişmedi; 112 test önceki kanıttır, bu tur yeniden koşulmadı. Relax yeni havuz temizliği, ortak kariyer rekor ayrımı ve benchmark generator uyumu doğrulama adayı olarak kaydedildi; düzeltilmiş sayılmaz. Notion erişim haritası create/update kullanılabilir döndü; gerçek eşitleme sonucu ayrıca kaydedilecek.
+
 # v0.9 teslim edildi — 24 Ekim 2026
 
 GitHub PR #9 (base fix/table-layout-v081), v0.9.0 Release ve APK yüklendi. GitHub asset digest/byte sayısı yerel APK ile aynı; main README d6dae250c0752a9c41830ddf479ce42d155c55d8 doğrulandı. Kaynak dal feat/adventure-v09; oyun PR'ları merge edilmedi, main oyun kodu Faz1 olarak açıklanır. DELIVERY-v09.json teslim kanıtıdır. PC Unity penceresi büyütüldü, ToyRoomAdventure Play menüsü 1× hazır bırakıldı; kullanıcı turu başlatmadı. Kariyer korunur. Yeni fiziksel tablet testi ve insan sanat/oynanış kabulü bekler. Notion yeni kayıtları bilinen ücretsiz blok kotası nedeniyle yerel/GitHub pending; yeniden blok isteği yapılmadı.
