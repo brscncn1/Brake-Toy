@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-24",
+  "sourceBranch": "docs/agent-handbook",
+  "documentsCommit": "4c61e0fab86a3b668fe3fe67ec29985ab1264266",
+  "syncEvidenceCommit": "49b0e40",
+  "pullRequest": "https://github.com/brscncn1/Brake-Toy/pull/10",
+  "mainReadmeCommit": "8da3c121c12bdb9010963896e342ddd052707551",
+  "mainReadmeVerified": true,
+  "files": {
+    "AGENTS.md": 116,
+    "YOL_HARITASI.md": 146,
+    "MIMARI.md": 161,
+    "MEKANIKLER.md": 165,
+    "CLAUDE.md": 12,
+    "KARARLAR.md": 78,
+    "DOGRULAMA.md": 123
+  },
+  "allUnder300Lines": true,
+  "runtimeFilesChanged": false,
+  "unityTestsRerun": false,
+  "newApkBuilt": false,
+  "notion": "six_existing_pages_summary_and_source_links_updated_and_read_back",
+  "notionHistoricalChildPagesPreserved": 33,
+  "notionFullReplicasCreated": 0,
+  "notionFullReplicasPending": 7,
+  "notionCreationBlock": "entitlement_required/block_creation/free_block_quota",
+  "syncReport": "Docs/NOTION_SYNC-agent-handbook.json",
+  "validationReport": "Docs/AGENT_DOCUMENTATION_VALIDATION.json"
+}
