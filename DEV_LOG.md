@@ -1,3 +1,7 @@
+# Agent belge teslimi ve Notion sonucu — 24 Ekim 2026
+
+Yedi dosya sırasıyla116/146/161/165/12/78/123 satır; UTF-8/link/satır doğrulaması geçti, oyun kaynakları değişmedi. Kaynak4c61e0f docs/agent-handbook dalına yüklendi. Notion async kuyruğu503 döndüğü için geri okuma gerektiren senkron güncellemeye geçildi ve mevcut altı sayfa güncellendi/geri okundu. Yeni yedi sayfa isteği ücretsiz blok kotasından reddedildi; otomatik create tekrarı yapılmadı. Merkez33 tarihsel alt sayfayı koruyor; dört güncel konu özeti ve tam GitHub kaynak bağlantıları mevcut. Tam ayrı kopyalar pending; Docs/NOTION_INDEX.json ve NOTION_SYNC-agent-handbook.json kapsamı ayırır. Önceki112 Unity testi yeniden koşulmadı, yeni APK oluşturulmadı.
+
 # Agent belge paketi — 24 Ekim 2026
 
 Kullanıcı hazırlama ve Notion güncellemesine izin verdi. AGENTS yeniden yazıldı; YOL_HARITASI/MIMARI/MEKANIKLER ile CLAUDE/KARARLAR/DOGRULAMA eklendi. Eski belgeler arşivlendi, İngilizce kaynaklar tarihsel olarak işaretlendi. Oyun kodu/sahne/paket değişmedi; 112 test önceki kanıttır, bu tur yeniden koşulmadı. Relax yeni havuz temizliği, ortak kariyer rekor ayrımı ve benchmark generator uyumu doğrulama adayı olarak kaydedildi; düzeltilmiş sayılmaz. Notion erişim haritası create/update kullanılabilir döndü; gerçek eşitleme sonucu ayrıca kaydedilecek.

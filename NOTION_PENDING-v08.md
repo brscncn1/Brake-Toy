@@ -17,3 +17,6 @@ Kaynak b656017cb48c7b10b62891647135d0bc2371cfde; ARM64 IL2CPP 0.9.0/kod10, SHA25
 
 ### v0.9 teslim kaydı — 24 Ekim 2026
 PR https://github.com/brscncn1/Brake-Toy/pull/9 ; Release https://github.com/brscncn1/Brake-Toy/releases/tag/v0.9.0 ; main README güncel. APK asset digest/byte eşleşmesi API üzerinden doğrulandı. 112/112 test, 13 gerçek render, 24 dakika güvenli yol simülasyonu. PC Adventure Play menüsü hazır; tablette yeni fiziksel kabul yapılmadı. Ayrıntılar DELIVERY-v09.json / MILESTONE-v09.md. Bu yeni kayıtlar Notion'a gönderilmedi; bilinen ücretsiz blok kotası devam ediyor.
+
+## 24 Ekim — agent rehberleri / kısmi eşitleme doğrulandı
+AGENTS/YOL_HARITASI/MIMARI/MEKANIKLER/CLAUDE/KARARLAR/DOGRULAMA GitHub'da tam metin olarak hazır. Mevcut Notion merkezi, dört belge özeti ve günlük güncellendi ve geri okundu; eski33 alt sayfa korundu. Yedi yeni tam belge sayfası oluşturma isteği entitlement_required/block_creation nedeniyle reddedildi; yan etki yok, sıfır yeni sayfa, otomatik tekrar yok. Tam kopyalar kota çözülene kadar bekler; mevcut Notion sayfaları güncel kaynak dosyalarına yönlendirir. Docs/NOTION_SYNC-agent-handbook.json gerçek kapsamı kaydeder. Önceki v0.8–v0.9 tam rapor eşitlemeleri de tümü tamamlandı sayılmaz. Kullanıcı adına ücretli plan alınmadı.

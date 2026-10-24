@@ -4,7 +4,7 @@
 
 ## Agent belgeleri — 24 Ekim 2026
 
-Codex ve Claude Code için ortak giriş [AGENTS.md](AGENTS.md); [yol haritası](YOL_HARITASI.md), [mimari](MIMARI.md), [mekanikler](MEKANIKLER.md). Yardımcılar: [Claude](CLAUDE.md), [kararlar](KARARLAR.md), [doğrulama](DOGRULAMA.md). Her dosya en fazla 300 satırdır; konuya göre okunur. Güncel belge dalı **docs/agent-handbook**, oyun tabanı v0.9 Adventure. Eski İngilizce/faz belgeleri tarihsel kayıttır. Belge turunda oyun kodu/APK değişmedi, Unity testleri yeniden koşulmadı.
+Codex ve Claude Code için ortak giriş [AGENTS.md](AGENTS.md); [yol haritası](YOL_HARITASI.md), [mimari](MIMARI.md), [mekanikler](MEKANIKLER.md). Yardımcılar: [Claude](CLAUDE.md), [kararlar](KARARLAR.md), [doğrulama](DOGRULAMA.md). Her dosya en fazla 300 satırdır; konuya göre okunur. Güncel belge dalı **docs/agent-handbook**, oyun tabanı v0.9 Adventure. Eski İngilizce/faz belgeleri tarihsel kayıttır. Notion merkez ve mevcut belge özetleri/kaynak bağlantıları güncellendi; yeni tam sayfa kopyaları ücretsiz blok kotası nedeniyle bekliyor ([eşitleme kapsamı](Docs/NOTION_SYNC-agent-handbook.json)). Belge turunda oyun kodu/APK değişmedi, Unity testleri yeniden koşulmadı.
 
 ## v0.9 — Adventure
 

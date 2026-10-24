@@ -87,7 +87,10 @@
       "url": "https://app.notion.com/p/3ffdce665831817682a9f71a13419f7d?pvs=204",
       "properties": {
         "title": "12 — Çalışma ve eşitleme kuralları"
-      }
+      },
+      "syncMode": "current_summary_and_source_link",
+      "fullReplica": false,
+      "source": "https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/AGENTS.md"
     },
     "ANDROID_BUILD_REPORT.json": {
       "id": "3ffdce66-5831-81da-8f2a-f9a9127e89aa",
@@ -235,10 +238,94 @@
       "properties": {
         "title": "33 — v0.7 sonuç, test ve eleştiri"
       }
+    },
+    "YOL_HARITASI.md": {
+      "id": "3ffdce66-5831-8115-a557-d18574f69136",
+      "url": "https://app.notion.com/p/3ffdce6658318115a557d18574f69136?pvs=204",
+      "properties": {
+        "title": "05 — Yol haritası"
+      },
+      "syncMode": "current_summary_and_source_link",
+      "fullReplica": false,
+      "source": "https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/YOL_HARITASI.md"
+    },
+    "MIMARI.md": {
+      "id": "3ffdce66-5831-81d1-8624-ddfabfc1f49b",
+      "url": "https://app.notion.com/p/3ffdce66583181d18624ddfabfc1f49b?pvs=204",
+      "properties": {
+        "title": "04 — Teknik mimari"
+      },
+      "syncMode": "current_summary_and_source_link",
+      "fullReplica": false,
+      "source": "https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/MIMARI.md"
+    },
+    "MEKANIKLER.md": {
+      "id": "3ffdce66-5831-81ff-877c-c1cf4b5d9fbe",
+      "url": "https://app.notion.com/p/3ffdce66583181ff877cc1cf4b5d9fbe?pvs=204",
+      "properties": {
+        "title": "03 — Oyun tasarımı"
+      },
+      "syncMode": "current_summary_and_source_link",
+      "fullReplica": false,
+      "source": "https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/MEKANIKLER.md"
     }
   },
   "notice": {
     "type": "free_block_limit_grace",
     "endsAtUtc": "2026-10-23T21:41:16.721Z"
+  },
+  "agent_handbook": {
+    "updated": "2026-10-24",
+    "sourceCommit": "4c61e0fab86a3b668fe3fe67ec29985ab1264266",
+    "sourceBranch": "docs/agent-handbook",
+    "syncReport": "Docs/NOTION_SYNC-agent-handbook.json",
+    "documents": {
+      "AGENTS.md": {
+        "pageId": "3ffdce66-5831-8176-82a9-f71a13419f7d",
+        "fullReplica": false,
+        "status": "summary_verified_full_copy_pending_quota",
+        "source": "https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/AGENTS.md"
+      },
+      "YOL_HARITASI.md": {
+        "pageId": "3ffdce66-5831-8115-a557-d18574f69136",
+        "fullReplica": false,
+        "status": "summary_verified_full_copy_pending_quota",
+        "source": "https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/YOL_HARITASI.md"
+      },
+      "MIMARI.md": {
+        "pageId": "3ffdce66-5831-81d1-8624-ddfabfc1f49b",
+        "fullReplica": false,
+        "status": "summary_verified_full_copy_pending_quota",
+        "source": "https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/MIMARI.md"
+      },
+      "MEKANIKLER.md": {
+        "pageId": "3ffdce66-5831-81ff-877c-c1cf4b5d9fbe",
+        "fullReplica": false,
+        "status": "summary_verified_full_copy_pending_quota",
+        "source": "https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/MEKANIKLER.md"
+      },
+      "CLAUDE.md": {
+        "pageId": null,
+        "linkedFromRoot": true,
+        "fullReplica": false,
+        "status": "source_link_verified_full_copy_pending_quota",
+        "source": "https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/CLAUDE.md"
+      },
+      "KARARLAR.md": {
+        "pageId": null,
+        "linkedFromRoot": true,
+        "fullReplica": false,
+        "status": "source_link_verified_full_copy_pending_quota",
+        "source": "https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/KARARLAR.md"
+      },
+      "DOGRULAMA.md": {
+        "pageId": null,
+        "linkedFromRoot": true,
+        "fullReplica": false,
+        "status": "source_link_verified_full_copy_pending_quota",
+        "source": "https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/DOGRULAMA.md"
+      }
+    },
+    "note": "Existing page summaries and source links are current. New full replicas were not created because of free block quota. Old English mappings remain historical; prefer these canonical mappings."
   }
 }
