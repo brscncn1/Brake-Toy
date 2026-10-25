@@ -3,7 +3,8 @@
 Taban: v0.9 Adventure; sağlamlaştırma doğrulaması 25 Ekim 2026. Bütün komutlar Unity/Git proje kökünden çalıştırılır.
 Bu belge bir koşu raporu değildir; sonuç iddiası gerçek çıktı ve zamanla desteklenir.
 
-Son temiz klon kontrolü: 74 EditMode +GPU açık 71 PlayMode =145/145;
+Son ölçüm paketi: 77 EditMode +GPU açık 72 PlayMode =149/149; `Reports/OPENING_VALIDATION.json`.
+Önceki temiz klon kontrolü: 74 EditMode +GPU açık 71 PlayMode =145/145;
 `Reports/CLEAN_CLONE_VALIDATION.json`, uygulama `Docs/CLEAN_CLONE-2026-10-25.md`.
 Bağımsız C# 19/19 ve sunucu 9/9 ayrıca geçti; bu sonuçlar Unity sayısına eklenmez.
 Önceki v0.9 APK kanıtları kendi kaynak commit'i içindir; bu düzeltmeler için APK derlenmedi.

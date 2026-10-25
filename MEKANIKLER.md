@@ -39,6 +39,8 @@ Taban: v0.9 Adventure, 24 Ekim 2026. Sayılar mevcut koddur; denge önerileri ay
 - Sekizli torbada her aile bir kez; son üç ailenin hemen tekrarı önlenir.
 - Seed aile/yan yol/varyant/faz seçimlerini tekrar oynatılabilir kılar.
 - İlk karşılaşma 24 birim; sonraki aralık en az 48 veya Arcade 2.65/Relax 3 saniyelik mesafedir.
+- K2.1 ölçümünde 10/30/60 sn Arcade 4/11/22, Relax 2/7/15 cümle referansı geçilir.
+  Bu adetler insan karar sayısı değildir; ayrıntı Docs/OPENING_PACE-2026-10-25.md.
 - Yeşil güvenli yol ile altın isteğe bağlı risk yolu ayrı işaretlenir; üçüncü şerit engellenebilir.
 - Güvenli şerit ardışık karşılaşmada komşuya geçer; bir karede tam genişlik kaçışı beklenmez.
 - Yaklaşma yıldızları → ana oyuncak kararı → rampa/atlayış/çıkış ödülü bağlanır.

@@ -1,5 +1,9 @@
 # BRAKE TOY
 
+25 Ekim K2.1: [ilk dakika tempo ölçümü](Docs/OPENING_PACE-2026-10-25.md),
+[10/30/60 saniye motor görüntüleri](Reports/Visuals/OPENING_GALLERY.html).
+149/149 Unity testi; hız/parkur kuralları değişmedi, yeni APK üretilmedi.
+
 25 Ekim K1.2: [temiz GitHub klonu doğrulandı](Docs/CLEAN_CLONE-2026-10-25.md),
 145/145 Unity testi; bağımsız C# 19/19 ve sunucu 9/9 ayrıca geçti. Yeni APK üretilmedi.
 

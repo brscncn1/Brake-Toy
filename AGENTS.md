@@ -69,6 +69,7 @@ Ortamın sistem/geliştirici talimatları ayrıca geçerlidir; belge bunları de
 7. Sonucu, testleri ve kalan sınırları anlaşılır Türkçeyle bildir.
 
 - Tüm oyunu tek turda bitirmeye çalışma; seçilen ve yetkilendirilmiş paketi tamamla.
+- Kullanıcıya planlanan son iş paketine geçildiğinde açıkça haber ver.
 - Yetkili işe gereksiz tekrar onayı isteme; eksik zorunlu bilgiyi somut gerekçeyle sor.
 - Bağımlılıkları plana işle; ilgisiz sonraki kademeye sessizce geçme.
 - Ayrı agent çalıştırmak kullanıcı/ortam yetkisine bağlıdır; bu belge görevi delege etme emri değildir.
@@ -98,7 +99,8 @@ Ortamın sistem/geliştirici talimatları ayrıca geçerlidir; belge bunları de
 - Builder'lar genel güncelleme aracı değildir; Create/upgrade davranışını önce incele.
 - Mevcut sahneyi açmak için `Open` kullan; gereksiz `Create` çağırma.
 - Sürüşte sürekli Instantiate/Destroy veya kare başına yeni koleksiyon ekleme.
-- K1.2 temiz klon: 74 EditMode +GPU açık 71 PlayMode =145/145; APK aynı kaldı.
+- K2.1 ölçüm paketi: 77 EditMode +GPU açık 72 PlayMode =149/149; APK aynı kaldı.
+- Önceki K1.2 temiz klon kontrolü: 145/145; bu yeni paket temiz klonda tekrar koşulmadı.
 - PlayMode UI/garaj testlerini GPU açık çalıştır; -nographics ile RenderTexture hatası görüldü.
 - Fiziksel v0.9 FPS/p95/ısı ve kullanıcı sanat/oynanış kabulü henüz tamamlanmadı.
 - Test, cihaz ölçümü, kullanıcı onayı ve mağaza yayını ayrı kabul durumlarıdır.

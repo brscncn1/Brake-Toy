@@ -1,0 +1,184 @@
+{
+    "samples": [
+        {
+            "seed": 7331,
+            "seconds": 10,
+            "lives": 1,
+            "referenceCrossings": 4,
+            "spawnedIncludingLookahead": 5,
+            "relax": false,
+            "distance": 185.6577606201172,
+            "speed": 22.167343139648439
+        },
+        {
+            "seed": 7331,
+            "seconds": 30,
+            "lives": 1,
+            "referenceCrossings": 11,
+            "spawnedIncludingLookahead": 13,
+            "relax": false,
+            "distance": 702.2714233398438,
+            "speed": 28.122854232788087
+        },
+        {
+            "seed": 7331,
+            "seconds": 60,
+            "lives": 1,
+            "referenceCrossings": 22,
+            "spawnedIncludingLookahead": 24,
+            "relax": false,
+            "distance": 1579.0609130859375,
+            "speed": 29.779767990112306
+        },
+        {
+            "seed": 109,
+            "seconds": 10,
+            "lives": 1,
+            "referenceCrossings": 4,
+            "spawnedIncludingLookahead": 5,
+            "relax": false,
+            "distance": 185.6577606201172,
+            "speed": 22.167343139648439
+        },
+        {
+            "seed": 109,
+            "seconds": 30,
+            "lives": 1,
+            "referenceCrossings": 11,
+            "spawnedIncludingLookahead": 13,
+            "relax": false,
+            "distance": 702.2714233398438,
+            "speed": 28.122854232788087
+        },
+        {
+            "seed": 109,
+            "seconds": 60,
+            "lives": 1,
+            "referenceCrossings": 22,
+            "spawnedIncludingLookahead": 24,
+            "relax": false,
+            "distance": 1579.0609130859375,
+            "speed": 29.779767990112306
+        },
+        {
+            "seed": 917,
+            "seconds": 10,
+            "lives": 1,
+            "referenceCrossings": 4,
+            "spawnedIncludingLookahead": 5,
+            "relax": false,
+            "distance": 185.6577606201172,
+            "speed": 22.167343139648439
+        },
+        {
+            "seed": 917,
+            "seconds": 30,
+            "lives": 1,
+            "referenceCrossings": 11,
+            "spawnedIncludingLookahead": 13,
+            "relax": false,
+            "distance": 702.2714233398438,
+            "speed": 28.122854232788087
+        },
+        {
+            "seed": 917,
+            "seconds": 60,
+            "lives": 1,
+            "referenceCrossings": 22,
+            "spawnedIncludingLookahead": 24,
+            "relax": false,
+            "distance": 1579.0609130859375,
+            "speed": 29.779767990112306
+        },
+        {
+            "seed": 7331,
+            "seconds": 10,
+            "lives": 3,
+            "referenceCrossings": 2,
+            "spawnedIncludingLookahead": 4,
+            "relax": true,
+            "distance": 97.47989654541016,
+            "speed": 10.417346000671387
+        },
+        {
+            "seed": 7331,
+            "seconds": 30,
+            "lives": 3,
+            "referenceCrossings": 7,
+            "spawnedIncludingLookahead": 9,
+            "relax": true,
+            "distance": 325.1784362792969,
+            "speed": 12.160585403442383
+        },
+        {
+            "seed": 7331,
+            "seconds": 60,
+            "lives": 3,
+            "referenceCrossings": 15,
+            "spawnedIncludingLookahead": 17,
+            "relax": true,
+            "distance": 710.2904052734375,
+            "speed": 13.323307037353516
+        },
+        {
+            "seed": 109,
+            "seconds": 10,
+            "lives": 3,
+            "referenceCrossings": 2,
+            "spawnedIncludingLookahead": 4,
+            "relax": true,
+            "distance": 97.47989654541016,
+            "speed": 10.417346000671387
+        },
+        {
+            "seed": 109,
+            "seconds": 30,
+            "lives": 3,
+            "referenceCrossings": 7,
+            "spawnedIncludingLookahead": 9,
+            "relax": true,
+            "distance": 325.1784362792969,
+            "speed": 12.160585403442383
+        },
+        {
+            "seed": 109,
+            "seconds": 60,
+            "lives": 3,
+            "referenceCrossings": 15,
+            "spawnedIncludingLookahead": 17,
+            "relax": true,
+            "distance": 710.2904052734375,
+            "speed": 13.323307037353516
+        },
+        {
+            "seed": 917,
+            "seconds": 10,
+            "lives": 3,
+            "referenceCrossings": 2,
+            "spawnedIncludingLookahead": 4,
+            "relax": true,
+            "distance": 97.47989654541016,
+            "speed": 10.417346000671387
+        },
+        {
+            "seed": 917,
+            "seconds": 30,
+            "lives": 3,
+            "referenceCrossings": 7,
+            "spawnedIncludingLookahead": 9,
+            "relax": true,
+            "distance": 325.1784362792969,
+            "speed": 12.160585403442383
+        },
+        {
+            "seed": 917,
+            "seconds": 60,
+            "lives": 3,
+            "referenceCrossings": 15,
+            "spawnedIncludingLookahead": 17,
+            "relax": true,
+            "distance": 710.2904052734375,
+            "speed": 13.323307037353516
+        }
+    ]
+}
