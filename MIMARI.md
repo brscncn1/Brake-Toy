@@ -156,7 +156,9 @@ GameManager.Update
 - Sunucu doğrulaması botlara/optimal input'a tam koruma sağlamaz; üretim ölçeği kanıtı yoktur.
 - Kalıcı kimlik, kurtarma, üretim HTTPS, veri saklama/silme ve yük/güvenlik kabulü açık işlerdir.
 - Yeni sağlayıcı veya backend seçimi K5 kararıdır; istemciye sır gömme, eski endpoint'i açma.
-- AndroidPrototypeBuild sahneyi File.Exists zinciriyle seçer; açık hedef seçimi henüz ayrı araç değildir.
+- AndroidBuildPlan açık profille sahne/çıktı/seçenek seçer; eksik sahnede fallback veya generator yoktur.
+- AndroidPrototypeBuild.Build/Validate batch girişleridir; CLI -brakeToyProfile kullanılır, varsayılan Adventure.
+- APK adayları Builds/Android/Candidates altına yazılır; profil mevcut PlayerSettings sürümünü değiştirmez.
 - AdventureValidation.Check/CheckAndBuild denetimi ve APK akışı için `DOGRULAMA.md` kullan.
 
 ## 12. Değişiklikte etki haritası

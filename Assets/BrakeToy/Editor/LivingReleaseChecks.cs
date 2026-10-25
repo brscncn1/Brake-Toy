@@ -9,7 +9,7 @@ namespace BrakeToy.Editor
 {
     public static class LivingReleaseChecks
     {
-        public static void CheckAndBuild(){Check();PruneUnusedRoomMeshes();AndroidPrototypeBuild.Build();}
+        public static void CheckAndBuild(){Check();PruneUnusedRoomMeshes();AndroidPrototypeBuild.BuildProfile(AndroidBuildProfile.Living);}
         private static void PruneUnusedRoomMeshes()
         {
             const string folder="Assets/BrakeToy/Art/Living/Meshes";

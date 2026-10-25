@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-25",
+  "baseCommit": "b4c3f34eb58f871809a4854362be4f9d2cab9414",
+  "branch": "fix/explicit-android-build-target",
+  "unity": "6000.3.26f1",
+  "editMode": {
+    "path": "Reports/Tests/BuildPlan-EditMode.xml",
+    "total": 74,
+    "passed": 74,
+    "failed": 0,
+    "newProfileTests": 21,
+    "startTimeUtc": "2026-10-25 19:40:48Z",
+    "sha256": "a0d19a6ff42b42caf391c8569a02ce42d1cafc9b21f117d9d09aafdcb58219d1"
+  },
+  "cliDryRuns": [
+    {
+      "profile": "Adventure",
+      "path": "Reports/BUILD_PLAN-Adventure.json",
+      "exitCode": 0,
+      "buildExecuted": false,
+      "sha256": "fd4b572870fd8714b9d17af8f2f90536a6f85302a0a8faa1f29ccab020837d4e"
+    },
+    {
+      "profile": "Tidy",
+      "path": "Reports/BUILD_PLAN-Tidy.json",
+      "exitCode": 0,
+      "buildExecuted": false,
+      "sha256": "7af1aea7784e124a984a9651cb018663cb9e9c750b23b700ba4bafadb53c733c"
+    }
+  ],
+  "playModeRerun": false,
+  "previousPlayModePassed": 71,
+  "previousPlayModeEvidence": "Reports/Tests/Landing-PlayMode.xml",
+  "apkRebuilt": false,
+  "runtimeChanged": false,
+  "notionAttempted": false,
+  "desktopBackup": "BrakeToy_Notion_Yedek.txt",
+  "testedSourceHashes": {
+    "Assets/BrakeToy/Editor/AndroidBuildPlan.cs": "dc8a3b144adb0710c34b56c9121f87d5fb7f32e120a316b170eafdaeb8d01218",
+    "Assets/BrakeToy/Editor/AndroidPrototypeBuild.cs": "f5b8dc5b603e411dd6c27e8828966ab82c873c6e4600cdc4b4f12b9edd74db3d"
+  }
+}

@@ -1,5 +1,8 @@
 # BRAKE TOY
 
+25 Ekim K1.6/K1.7: [açık Android profilleri](Docs/ANDROID_BUILD_PROFILES.md), 74/74 Editor testi.
+Dal `fix/explicit-android-build-target`; APK üretmeden hedef doğrulaması eklendi.
+
 25 Ekim K1.5: [iniş ve rampa sınırları](Docs/LANDING-2026-10-25.md), 124/124 Unity testi.
 Dal `fix/landing-ramp-boundaries`; indirmedeki APK bu yeni düzeltmeleri henüz içermez.
 

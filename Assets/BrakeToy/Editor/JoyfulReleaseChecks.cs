@@ -10,7 +10,7 @@ namespace BrakeToy.Editor
     {
         [Serializable]private sealed class Report
         {public string scene="ToyRoomJoyful",version="0.7.0";public int sceneRenderersIncludingInactiveCars,sceneTrianglesIncludingInactiveCars,uniqueMeshes,missingMeshes,missingMaterials,shaderErrors,decorativeColliders;public bool physicalDeviceProfiled;public string note="Scene counts before runtime catalog pool replacement. All seven prefab models separately checked.";}
-        public static void CheckAndBuild(){Check();AndroidPrototypeBuild.Build();}
+        public static void CheckAndBuild(){Check();AndroidPrototypeBuild.BuildProfile(AndroidBuildProfile.Joyful);}
         public static void Check()
         {
             EditorSceneManager.OpenScene(JoyfulSceneBuilder.ScenePath);var report=new Report();var meshes=new HashSet<Mesh>();
