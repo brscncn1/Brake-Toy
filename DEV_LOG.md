@@ -1,3 +1,7 @@
+# Sağlamlaştırma teslimi — 25 Ekim 2026
+
+25 Ekim sağlamlaştırma: Relax aynı oyuncaktan tekrar hak kaybetmeyi önlemek için yakın yeni oyuncak/prop/rampaları temizler. Adventure ayrı career-adventure-v1.json kullanır; eski dosyadan TP, araçlar, görev/başarımlar ve harcanmış güç stokları korunarak taşınır, eski kurallı rekorlar aktarılmaz. Stil gerçek ArcadeDirector anahtarından yüklenir. İlk iki test düzeltme öncesi başarısız, sonrası 2/2 geçti; nihai 53 EditMode +66 PlayMode =119/119. Gerçek kariyer/ghost dosyaları değişmedi. APK derlenmedi. Notion yeni sayfa denemesi blok kotasından reddedildi, sayfa oluşmadı. Masaüstü BrakeToy_Notion_Yedek.txt ek yedek olarak tutulur. Ayrıntı Docs/HARDENING-2026-10-25.md ve Reports/HARDENING_VALIDATION.json. Sonraki paket K1.5 güç bitişi/iniş ve rampa-cetvel kenarlarıdır.
+
 # Proje düzeni — 25 Ekim 2026
 
 181 dosya Reports/ ve Docs/Archive/pre-v09/ altına taşındı. 150 JSON/XML/PNG/TXT kanıtı bayt düzeyinde korundu; mevcut bağlantılar ve tüm galeri varlıkları kontrol edildi. Editor rapor/render araçları ReportPaths kullanıyor. Unity 6000.3.26f1 batch derlemesi çıkış 0 ile tamamlandı; oynanış testleri yeniden koşulmadı ve APK değişmedi. Notion update_page isteği ücretsiz blok kotasında reddedildi, içerik oluşturulmadı ve otomatik tekrar yapılmadı. Tam kayıt GitHub dalında; sonraki paket K1.3 Relax çarpışma araştırmasıdır. Kanıt: Reports/ORGANIZATION_VALIDATION.json.

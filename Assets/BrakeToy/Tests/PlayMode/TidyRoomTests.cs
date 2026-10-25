@@ -9,7 +9,7 @@ namespace BrakeToy.Tests
     public sealed class TidyRoomTests
     {
         private GameManager game;private TidyRoom tidy;
-        private IEnumerator Load(){yield return SceneManager.LoadSceneAsync("ToyRoomTidy");yield return null;game=Object.FindFirstObjectByType<GameManager>();game.enabled=false;game.Review.Persist=false;game.Arcade.PersistRecords=false;game.GetComponent<PlaygroundRun>().PersistPreferences=false;tidy=game.GetComponent<TidyRoom>();}
+        private IEnumerator Load(){yield return SceneTestPersistence.Load("ToyRoomTidy");yield return null;game=Object.FindFirstObjectByType<GameManager>();game.enabled=false;game.Review.Persist=false;game.Arcade.PersistRecords=false;game.GetComponent<PlaygroundRun>().PersistPreferences=false;tidy=game.GetComponent<TidyRoom>();}
         [UnityTest]public IEnumerator AllThreeZonesReserveNotebookAndPencilSpaceAcrossFourFullCycles()
         {yield return Load();for(float distance=0;distance<=256;distance+=.5f){tidy.Apply(distance);foreach(var cell in tidy.Cells){var b=TidyRoom.BoundsOf(cell);Assert.That(Mathf.Min(Mathf.Abs(b.min.x),Mathf.Abs(b.max.x)),Is.GreaterThan(3.6f));foreach(var prop in tidy.NearProps){var a=TidyRoom.BoundsOf(prop);bool x=b.max.x+.15f>a.min.x&&b.min.x-.15f<a.max.x;bool z=b.max.z+.35f>a.min.z&&b.min.z-.35f<a.max.z;Assert.That(x&&z,Is.False,"distance="+distance+" cell="+cell.name+" prop="+prop.name);Assert.That(Mathf.Max(Mathf.Abs(a.min.x),Mathf.Abs(a.max.x)),Is.LessThan(5.16f));Assert.That(Mathf.Min(Mathf.Abs(a.min.x),Mathf.Abs(a.max.x)),Is.GreaterThan(3.55f));}}}tidy.Apply(0);}
         [UnityTest]public IEnumerator RadioStaysOnShelfAndDominoHasNoGeometryOrMenuSwitch()

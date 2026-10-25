@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="2" result="Passed" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-25 19:20:11Z" end-time="2026-10-25 19:20:12Z" duration="1,2234999">
+  <test-suite type="TestSuite" id="1083" name="Brake Toy" fullname="Brake Toy" runstate="Runnable" testcasecount="64" result="Passed" start-time="2026-10-25 19:20:11Z" end-time="2026-10-25 19:20:12Z" duration="1.223500" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1077" name="BrakeToy.PlayMode.Tests.dll" fullname="C:/Users/Baris/Documents/Codex/2026-10-20/burada-yazan-promptu-sana-zel-haz/outputs/BrakeToy/Library/ScriptAssemblies/BrakeToy.PlayMode.Tests.dll" runstate="Runnable" testcasecount="64" result="Passed" start-time="2026-10-25 19:20:11Z" end-time="2026-10-25 19:20:12Z" duration="1.218425" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="7220" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1078" name="BrakeToy" fullname="BrakeToy" runstate="Runnable" testcasecount="64" result="Passed" start-time="2026-10-25 19:20:11Z" end-time="2026-10-25 19:20:12Z" duration="1.218112" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1079" name="Tests" fullname="BrakeToy.Tests" runstate="Runnable" testcasecount="64" result="Passed" start-time="2026-10-25 19:20:11Z" end-time="2026-10-25 19:20:12Z" duration="1.217910" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="AdventureRecoveryTests" fullname="BrakeToy.Tests.AdventureRecoveryTests" classname="BrakeToy.Tests.AdventureRecoveryTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-25 19:20:11Z" end-time="2026-10-25 19:20:12Z" duration="1.216091" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1003" name="AdventureMigratesProgressWithoutImportingLegacyRecordsOrWritingLegacyFile" fullname="BrakeToy.Tests.AdventureRecoveryTests.AdventureMigratesProgressWithoutImportingLegacyRecordsOrWritingLegacyFile" methodname="AdventureMigratesProgressWithoutImportingLegacyRecordsOrWritingLegacyFile" classname="BrakeToy.Tests.AdventureRecoveryTests" runstate="Runnable" seed="1073678287" result="Passed" start-time="2026-10-25 19:20:11Z" end-time="2026-10-25 19:20:12Z" duration="0.914059" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1002" name="RelaxContactClearsNearbyAdventureToysButKeepsFutureEncounters" fullname="BrakeToy.Tests.AdventureRecoveryTests.RelaxContactClearsNearbyAdventureToysButKeepsFutureEncounters" methodname="RelaxContactClearsNearbyAdventureToysButKeepsFutureEncounters" classname="BrakeToy.Tests.AdventureRecoveryTests" runstate="Runnable" seed="152457938" result="Passed" start-time="2026-10-25 19:20:12Z" end-time="2026-10-25 19:20:12Z" duration="0.293959" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Baris/AppData/LocalLow/Brake Toy/Brake Toy\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -1,5 +1,8 @@
 # BRAKE TOY
 
+25 Ekim sağlamlaştırma: [Relax toparlanması ve kayıt geçişi](Docs/HARDENING-2026-10-25.md),
+53 EditMode +66 PlayMode =119/119. Dal `fix/adventure-relax-records`; yeni APK henüz üretilmedi.
+
 25 Ekim düzenlemesi: sürüm/test/build kanıtları [Reports](Reports/README.md),
 galeriler `Reports/Visuals`, eski plan ve kilometre taşları
 [Docs/Archive/pre-v09](Docs/Archive/pre-v09/README.md) altında tutulur.

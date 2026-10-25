@@ -11,7 +11,7 @@ namespace BrakeToy.Tests
     public sealed class AdventureSceneTests
     {
         private GameManager game;private AdventureEncounters toys;
-        private IEnumerator Load(){yield return SceneManager.LoadSceneAsync("ToyRoomAdventure");yield return null;game=Object.FindFirstObjectByType<GameManager>();game.enabled=false;game.Review.Persist=false;game.Arcade.PersistRecords=false;game.GetComponent<PlaygroundRun>().PersistPreferences=false;toys=game.GetComponent<AdventureEncounters>();}
+        private IEnumerator Load(){yield return SceneTestPersistence.Load("ToyRoomAdventure");yield return null;game=Object.FindFirstObjectByType<GameManager>();game.enabled=false;game.Review.Persist=false;game.Arcade.PersistRecords=false;game.GetComponent<PlaygroundRun>().PersistPreferences=false;toys=game.GetComponent<AdventureEncounters>();}
         private void Clear(){foreach(var h in game.Arcade.Pool)h.Release();foreach(var r in game.GetComponent<JoyfulRun>().Ramps)r.Release();game.GetComponent<PlaygroundEncounters>().ResetRun();toys.ResetRun();}
         private PlaygroundBeat Beat(int family,int variant=0)=>new PlaygroundBeat(0,0,1,family,variant,0);
         [UnityTest]public IEnumerator EightFamiliesKeepReachableSafeLaneAcrossSeedsAndModes()

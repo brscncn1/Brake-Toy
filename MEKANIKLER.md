@@ -144,7 +144,7 @@ Taban: v0.9 Adventure, 24 Ekim 2026. Sayılar mevcut koddur; denge önerileri ay
 - Ayrıntılı araç modelleri sonraki sanat çalışmasıdır; farklı renkleri tek başına çeşitlilik sayma.
 - Güç kullanılan tur yardımlı işaretlenir; kişisel ghost gizlenir ve yeni ghost yazılmaz.
 - Yardımlı/yardımsız skorun tamamen ayrı sıralanması uygulanmış değildir; K5 kararı açık.
-- Kariyer dosyası korunur; v0.9 rekor/ghost ayrımıyla ortak eski kayıt etkileşimi K1'de doğrulanacak.
+- Adventure kariyeri ayrı dosyaya geçer; TP/araç/güç stokları korunurken eski parkur rekorları aktarılmaz.
 
 ## 10. Oda, ses ve oyuncu açısından kabul
 
@@ -159,7 +159,7 @@ Taban: v0.9 Adventure, 24 Ekim 2026. Sayılar mevcut koddur; denge önerileri ay
 
 ## 11. Öncelikli doğrulama adayları
 
-- Yeni oyuncakta Relax çarpışmasından sonra aynı yerde kalan tehdit birden çok hak harcatıyor mu?
+- Relax aynı çarpışmada tek hak tüketir; yakın yeni oyuncak/zemin/rampa temizlenir, uzak parkur korunur.
 - Güç bitişi, tünel tavanı, rampa/cetvel kenarı ve sonraki karşılaşma birlikte adil mi?
-- Eski kariyer rekorları yeni kurallı sonuç ekranına karışıyor mu?
+- Eski kariyer rekorlarının Adventure sonuçlarına karışması ayrı profil ve doğru anahtarla giderildi.
 - Bu liste inceleme adaylarıdır; yeni test yapılmadan kesin hata veya giderildi diye işaretleme.
