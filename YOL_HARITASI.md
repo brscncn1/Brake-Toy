@@ -7,7 +7,7 @@ Seçili paketin dışındaki öneriler topluca uygulama yetkisi sayılmaz.
 ## 1. Başlangıç ve öncelik
 
 - Hazır: sürüş, sekiz yeni oyuncak ailesi, rampalar, güçler, görev/garaj, kayıt ve yerel ghost.
-- Son kanıt: K1.2 temiz klonda 145/145 Unity testi; önceki v0.9 için 13 render.
+- Son kanıt: K2 parkur revizyonunda165/165 Unity testi ve6motor karesi; temiz klon yeniden koşulmadı.
 - Açık: güncel cihaz ölçümleri, sanat/oynanış kabulü, kayıt sınırları ve mekaniklerin uç durumları.
 - Canlı online, ödeme, üretim kimliği ve mağaza yayını tamamlanmadı.
 - Hedef: çocukların okuyabildiği, ilk dakikada ilgi çeken, adil, akıcı ve tutarlı mobil oyun.
@@ -55,7 +55,10 @@ diğer maddeler tamamlanmış sayılmaz. Ayrıntı: `Docs/HARDENING-2026-10-25.m
 Çıkış: kritik veri kaybı/crash yok, baseline tekrarlanabilir, şüpheli durumlar testle sonuçlanmış.
 Kanıt: XML, örnek kayıt/migration, hata adımları, kaynak commit ve günlük.
 K2.1 tabanı ve K2.3/K2.4 iki ailelik bitiriş deneyi tamamlandı; hız eğrisi korundu.
-Sonraki paket K2.5 uyarı okunabilirliğidir; diğer ailelerin risk yolları ayrıca açık kalır.
+26 Ekim kullanıcı revizyonu: K2.4 masa eşyaları/otobüs geri dönüşü ve değişen geçitler önceliklidir.
+Docs/TABLETOP_COURSE-2026-10-26.md: mevcut öğeleri azaltmadan yeni oyuncaklarla birleştir.
+Uygulama/motor doğrulaması165/165 geçti; kullanıcı yoğunluk/tekrar/zorluk kabulü bekleniyor.
+Bu K2 revizyonudur; son planlı K6 aşamasına henüz geçilmedi.
 K1 teknik kaynak doğrulaması yapıldı; cihaz/sanat/Android paket kabulü ayrı açık kalır.
 
 ## 4. K2 — ilk dakika ve risk/ödül
@@ -69,7 +72,7 @@ Tahmin: 3–5 işgünü. Bağımlılık: K1 kontrol/çarpışma güvenilirliği.
 - K2.3: hızla karar yoğunluğunu ayrı ayarla; tüm parametreleri tek deneyde değiştirme.
 - K2.4: sekiz ailenin giriş/çıkış ve birleşim çeşitlerini artır; son üç aile hafızasını koru.
 - K2.5: yaklaşma, uyarı, kaçış, ödül ve inişte aynı okunabilirlik dilini kullan.
-- K2.6: yeşil yol witness'ına riskli yolları deneyen hedefli testler ekle.
+- K2.6: değişen geçitlerin güçsüz tanığına rampa/risk yollarını deneyen hedefli testler ekle.
 - K2.7: güç olmadan geçilebilir parkur; stok harcamayı adaletsiz bölümün zorunlu çözümü yapma.
 - K2.8: çocuk/ebeveyn ile kısa kullanım oturumları; açıklama gerektiren noktaları kaydet.
 

@@ -8,7 +8,7 @@ Taban: v0.9 Adventure, 24 Ekim 2026. Sayılar mevcut koddur; denge önerileri ay
 - Sparky'nin motor düğmesi takılı kalmıştır; oyuncak araba fren yapamadan ileri gider.
 - Oyuncu çocuk odasındaki masada, dev görünen nesne/oyuncakların arasından sıyrılır.
 - Oda, pencere, raf, yatak ve oyuncaklar dünyayı anlatır; yalnız yakın plan yol görüntüsü hedefi karşılamaz.
-- Döngü: modu seç → sürükle/karar ver → risk veya güvenli yol → skor/TP → sonuç → garaj/görev → tekrar.
+- Döngü: modu seç → sürükle/geçişi oku → değişen boşluk/rampa → skor/TP → sonuç → garaj/görev → tekrar.
 - Mesafe ve stil farklı başarı eksenleridir; araçlar gameplay avantajı için satılmaz.
 - Hedef: çocuk için açıklamasız anlaşılır giriş, deneyimli oyuncu için ustalık ve tekrar oynama isteği.
 
@@ -37,14 +37,17 @@ Taban: v0.9 Adventure, 24 Ekim 2026. Sayılar mevcut koddur; denge önerileri ay
 ## 4. Parkur üretimi ve adalet
 
 - Sekizli torbada her aile bir kez; son üç ailenin hemen tekrarı önlenir.
-- Kurmalı oyuncak/tren iki seed bitirişi kullanır: üç yer yıldızı veya kitap rampası/hava ödülü.
-  İkisinde üç yıldız vardır; hava TP bonusu farklıdır. VariedEndings=false yeni turda klasiğe döner.
+- DenseCourse bütün uygun ailelerin kitap rampasını korur; cetvel kendi sıçrayışını kullanır.
+- Önceki yer yıldızı/rampa bitiriş karşılaştırması yalnız DenseCourse=false profilindedir.
 - Seed aile/yan yol/varyant/faz seçimlerini tekrar oynatılabilir kılar.
-- İlk karşılaşma 24 birim; sonraki aralık en az 48 veya Arcade 2.65/Relax 3 saniyelik mesafedir.
+- İlk karşılaşma 24 birim; Arcade 78/81/84, Relax 86/89/92 birim aralıkla üçlü geçit dizileri gelir.
 - K2.1 ölçümünde 10/30/60 sn Arcade 4/11/22, Relax 2/7/15 cümle referansı geçilir.
   Bu adetler insan karar sayısı değildir; ayrıntı Docs/OPENING_PACE-2026-10-25.md.
-- Yeşil güvenli yol ile altın isteğe bağlı risk yolu ayrı işaretlenir; üçüncü şerit engellenebilir.
-- Güvenli şerit ardışık karşılaşmada komşuya geçer; bir karede tam genişlik kaçışı beklenmez.
+- Sürekli açık yeşil yol kaldırıldı; ana oyuncağın çıkışı sonraki geçit boyunca açık kalmaz.
+- 22/40/58±2 birimdeki çift engeller kısa slalom, dar merkez, S ve yön değiştiren çıkış üretir.
+- Kitap/spiral defter/kalemlik her cümlede vardır; otobüs altı düzenin ikisinde yatay hareket eder.
+- Hareketli otobüs ve oyuncaklarla yeni diziler birleşir; ana sekiz oyuncak ailesi korunur.
+- Geçitler komşu boşluğa yönlendirir; bir karede tam genişlik kaçışı beklenmez.
 - Yaklaşma yıldızları → ana oyuncak kararı → rampa/atlayış/çıkış ödülü bağlanır.
 - Tünel çıkışına kurmalı oyuncak, yüzey bölümüne misket eklenebilir.
 - Torba çeşitlilik sağlar; bütün kombinasyonların eşit eğlenceli olduğu henüz kullanıcı kabulü değildir.

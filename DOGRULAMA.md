@@ -3,7 +3,12 @@
 Taban: v0.9 Adventure; sağlamlaştırma doğrulaması 25 Ekim 2026. Bütün komutlar Unity/Git proje kökünden çalıştırılır.
 Bu belge bir koşu raporu değildir; sonuç iddiası gerçek çıktı ve zamanla desteklenir.
 
-Son bitiriş paketi: 82 EditMode +GPU açık 77 PlayMode =159/159;
+Son parkur düzeltmesi: 85 EditMode +GPU açık80 PlayMode =165/165;
+`Reports/TABLETOP_COURSE_VALIDATION.json`. 18 adet60sn güçsüz geçiş:2mod/3seed/30-60-120Hz.
+Kitap/defter/kalemlik fiili üretimi, otobüs salınımının tamamında boşluk, sabit şeritte ölme kontrol edildi.
+Eski güvenli şerit ve bitiriş testleri tarihsel DenseCourse=false profilinde korunur.
+Gerçek kariyer/ghost hash'leri değişmedi; altı motor karesi kaydedildi. Tablet FPS kabulü değildir.
+Önceki bitiriş paketi: 82 EditMode +GPU açık 77 PlayMode =159/159;
 `Reports/ENDING_VARIANTS_VALIDATION.json`. Son katalog/görsel fixture kontrolü5/5 ayrıca geçti.
 Önceki temiz klon kontrolü: 74 EditMode +GPU açık 71 PlayMode =145/145;
 `Reports/CLEAN_CLONE_VALIDATION.json`, uygulama `Docs/CLEAN_CLONE-2026-10-25.md`.

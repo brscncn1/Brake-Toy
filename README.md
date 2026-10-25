@@ -1,5 +1,11 @@
 # BRAKE TOY
 
+26 Ekim parkur düzeltmesi: [kitap/defter/kalemlik ve otobüs geri döndü](Docs/TABLETOP_COURSE-2026-10-26.md).
+Sekiz oyuncak ailesine üçlü geçitler, kısa slalom, dar merkez ve S dizileri eklendi;
+sürekli açık yeşil şerit kaldırıldı, kitap rampaları korundu. 165/165 Unity testi geçti.
+[Gerçek motor görüntüleri](Reports/Visuals/TABLETOP_GALLERY.html) · [doğrulama](Reports/TABLETOP_COURSE_VALIDATION.json).
+Kaynak dalı feat/dense-tabletop-course; yeni APK üretilmedi. Önceki deneyler aşağıda tarihseldir.
+
 26 Ekim: [kurmalı oyuncak/trende iki bitiriş](Docs/ENDING_VARIANTS-2026-10-26.md),
 [klasik/yeni görüntüler](Reports/Visuals/ENDING_GALLERY.html). 159/159 regresyon ve5/5 son hedefli kontrol.
 Hız eğrisi korundu; yeni APK henüz üretilmedi.

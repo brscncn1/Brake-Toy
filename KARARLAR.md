@@ -14,8 +14,9 @@ Durumlar: Kabul / Uygulandı / Doğrulama bekliyor / Açık / Öneri.
 - Durum: maketler ve ışık iyileştirmeleri mevcut; nihai sanat kabulü açık.
 - D04 — Kabul: ayrıntılı model çalışması daha sonra farklı agent desteğiyle ele alınabilir.
 - Etki: model devir notu, ölçek/pivot ve analitik hacim sözleşmesi korunur.
-- D05 — Uygulandı: yeşil güvenli/altın riskli yollar ve birbirine bağlanan karşılaşmalar.
-- Etki: bir güç harcamadan ulaşılabilir yol; yalnız rastgele engel kalabalığı yeterli değildir.
+- D05 — 26 Ekim değiştirildi: kalıcı yeşil kaçış şeridi kaldırılır; nadir kısa çıkış işareti kalabilir.
+- Etki: geçit boşluğu değişir; güçsüz geçilebilirlik korunur. Kullanıcı mevcut öğeleri azaltmayı onaylamadı.
+- Kitap/defter/kalemlik ve hareketli otobüs yeni oyuncaklara eklenir; fiili üretimleri ayrıca test edilir.
 - D06 — Uygulandı: kitap rampaları farklı yatay konumlarda; kenar teması ve havada TP ek payı.
 - Etki: merkezden geçme şartı geri getirilmez; yan giriş/çıkış ayrıca sınanır.
 - D07 — Uygulandı: domino v0.8 sonrası kullanıcı isteğiyle aktif Tidy/Adventure'den kaldırıldı.

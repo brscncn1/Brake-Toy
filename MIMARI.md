@@ -80,10 +80,15 @@ GameManager.Update
 
 - AdventureSequence: xorshift seed, sekizli karıştırılmış torba, son üç aileyi tekrarlamama.
 - PlaygroundBeat; index, safe/risk lane, family, variant ve mutlak mesafeyi taşır.
-- İlk beat 24 birim; aralık max(48, hız eğrisinde 2.65 saniyelik mesafe), Relax'ta 3 saniyelik mesafe.
+- DenseCourse aktif akış: ilk beat 24; Arcade aralığı 78/81/84, Relax 86/89/92 birim.
+- TabletopCourseRules üç geçidin konumunu ve değişen boşluğunu belirler; kalıcı güvenli şerit yoktur.
+- Eski 2.65/3 saniye aralığı yalnız DenseCourse=false tarihsel karşılaştırmada korunur.
 - ArcadeDirector yaklaşık 115 birim önünü doldurur; aktif dal AdventureSequence kullanır.
 - PlaygroundEncounters Adventure bileşenine yönlendirir; eski sahnede eski aileleri üretir.
-- AdventureEncounters ana maketi, üçüncü şerit engelini, yaklaşma yıldızlarını ve rampa/çıkış bağını kurar.
+- AdventureEncounters ana oyuncak + kitap rampası +22/40/58±2 birimde üç çift engelli geçit kurar.
+- Katalog 0–6 oyuncaklar; 7 kitap, 8 spiral defter, 9 kalemliktir. Otobüs 6 tekrar üretilir.
+- TabletopCourseUpgrade yalnız Adventure kataloğunu genişletir; oda ve eski prefabları yeniden üretmez.
+- DenseCourse tur başında sabitlenir; ghost tabletop-r3 anahtarına ayrılır, eski dosyalar korunur.
 - Adventure havuzu başlangıçta 8 tür ×6 örnek; ayrıca mevcut hazard/rampa/yıldız havuzları vardır.
 - Havuz tükenmesi sessiz nesne kaybı olarak gizlenmez; sayaç/exception ile görünürdür ve test edilmelidir.
 - Template/pivot/mesh hazırlanması sürüş başlangıcında yapılır; sürüş döngüsünde yeni maket üretilmez.

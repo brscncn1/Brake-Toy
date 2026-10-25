@@ -25,7 +25,9 @@ Ortamın sistem/geliştirici talimatları ayrıca geçerlidir; belge bunları de
 - Çocuk odasındaki masayı ve odayı birlikte hissettiren renkli, okunabilir dünya hedeflenir.
 - Ana hedef kitle çocuklar; yetişkinlere refleks/ustalık ve yüksek skor derinliği sunulur.
 - Göreli yatay sürüklemeyle serbest X kontrolü vardır; şerit seçme düğmeleri yoktur.
-- Yeşil yol erişilebilir kaçıştır; altın yol isteğe bağlı risk/ödüldür.
+- 26 Ekim kullanıcı kararı: sürekli açık yeşil kaçış şeridi yok; kısa süreli tünel çıkışı olabilir.
+- Yeni oyuncaklar mevcut kitap/defter/kalemlik/otobüsü azaltarak eklenmez; üretim sıklığını test et.
+- Parkur yön değiştiren geçitler kullanır; güç harcamadan fiziksel olarak geçilebilir kalmalıdır.
 - Görsel model ve analitik çarpışma hacmi birlikte korunur; dekor tehlike gibi davranmamalı.
 - Domino aktif Adventure/Tidy'den kaldırılmıştır; eski sahnede bulunması geri ekleme yetkisi değildir.
 - Raf radyosu, kenar dekor boşlukları, kayıtlar ve müzik korunur; değişiklik açık göreve bağlanır.
@@ -99,8 +101,9 @@ Ortamın sistem/geliştirici talimatları ayrıca geçerlidir; belge bunları de
 - Builder'lar genel güncelleme aracı değildir; Create/upgrade davranışını önce incele.
 - Mevcut sahneyi açmak için `Open` kullan; gereksiz `Create` çağırma.
 - Sürüşte sürekli Instantiate/Destroy veya kare başına yeni koleksiyon ekleme.
-- Son bitiriş paketi: 82 EditMode +GPU açık 77 PlayMode =159/159; son hedefli kontrol5/5.
-- Yeni APK üretilmedi; geri alma ve ghost profilleri Docs/ENDING_VARIANTS-2026-10-26.md içinde.
+- Son parkur düzeltmesi: 85 EditMode +GPU açık80 PlayMode =165/165; kanıt Reports/TABLETOP_COURSE_VALIDATION.json.
+- Üretim DenseCourse=true; eski güvenli şerit/bitiriş testleri açıkça DenseCourse=false profilindedir.
+- Yeni APK yok; Docs/TABLETOP_COURSE-2026-10-26.md. Eski APK bu parkuru içermez.
 - Önceki K1.2 temiz klon kontrolü: 145/145; bu yeni paket temiz klonda tekrar koşulmadı.
 - PlayMode UI/garaj testlerini GPU açık çalıştır; -nographics ile RenderTexture hatası görüldü.
 - Fiziksel v0.9 FPS/p95/ısı ve kullanıcı sanat/oynanış kabulü henüz tamamlanmadı.

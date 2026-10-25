@@ -23,6 +23,7 @@ namespace BrakeToy.Tests
             yield return null;
             game = UnityEngine.Object.FindFirstObjectByType<GameManager>();
             toys = game.GetComponent<AdventureEncounters>();
+            toys.DenseCourse = false; // Explicit historical ending profile, not the production course.
             jump = game.GetComponent<JoyfulRun>();
             Assert.That(toys.VariedEndings, Is.True, "Existing scene must enable the new default.");
         }
