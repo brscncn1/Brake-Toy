@@ -122,7 +122,9 @@ GameManager.Update
 - Eski v0.9 ortak kariyerindeki rekorların kökeni bilinmediği için topluca taşınmaz; eski kaynak korunur.
 - Persist=false oturumu PlayerPrefs rekorlarını da içeri almaz; testler geçici veri dizini kullanır.
 - GhostReplay: 20 Hz X/Y short örnekleri, gzip, 12000 örnek sınırı, seed/mod ve sürüm başlığı kontrolü.
-- Adventure ghost öneki `ghost-adventure-latest-`; güç kullanılan tur ghost oynatmaz/yazmaz.
+- Adventure ghost ad alanı adventure-r2-varied/classic; eski ghost dosyaları silinmez.
+- ActiveVariedEndings tur başında sabitlenir; tur ortasında Inspector değişikliği profili etkilemez.
+- Güç kullanılan tur ghost oynatmaz/yazmaz; kariyer/yerel rekor dosyası bu deneyde sıfırlanmaz.
 - Yeni simülasyon/rota değişikliğinde ghost/sunucu kural uyumluluğunu ve migration'ı açık sürümle yönet.
 
 ## 9. Görsel, ses ve arayüz

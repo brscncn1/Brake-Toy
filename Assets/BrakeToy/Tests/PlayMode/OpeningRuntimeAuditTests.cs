@@ -71,7 +71,7 @@ namespace BrakeToy.Tests
             Assert.That(report.samples.Count, Is.EqualTo(18));
         }
 
-        private static void Capture(GameManager game, int seconds)
+        internal static void Capture(GameManager game, int seconds, string exportName = null)
         {
             var camera = Camera.main;
             var target = new RenderTexture(720, 1280, 24);
@@ -102,7 +102,7 @@ namespace BrakeToy.Tests
                 image.ReadPixels(new Rect(0, 0, 720, 1280), 0, 0);
                 image.Apply();
                 Directory.CreateDirectory("Reports/Local");
-                File.WriteAllBytes("Reports/Local/Opening-" + seconds + ".png", image.EncodeToPNG());
+                File.WriteAllBytes("Reports/Local/" + (exportName ?? "Opening-" + seconds) + ".png", image.EncodeToPNG());
                 Object.Destroy(image);
             }
             finally

@@ -1,0 +1,100 @@
+{
+    "runs": [
+        {
+            "seed": 7331,
+            "relax": false,
+            "varied": false,
+            "distance": 1579.0609130859375,
+            "lives": 1,
+            "spawnedRows": 24
+        },
+        {
+            "seed": 7331,
+            "relax": false,
+            "varied": true,
+            "distance": 1579.0609130859375,
+            "lives": 1,
+            "spawnedRows": 24
+        },
+        {
+            "seed": 109,
+            "relax": false,
+            "varied": false,
+            "distance": 1579.0609130859375,
+            "lives": 1,
+            "spawnedRows": 24
+        },
+        {
+            "seed": 109,
+            "relax": false,
+            "varied": true,
+            "distance": 1579.0609130859375,
+            "lives": 1,
+            "spawnedRows": 24
+        },
+        {
+            "seed": 917,
+            "relax": false,
+            "varied": false,
+            "distance": 1579.0609130859375,
+            "lives": 1,
+            "spawnedRows": 24
+        },
+        {
+            "seed": 917,
+            "relax": false,
+            "varied": true,
+            "distance": 1579.0609130859375,
+            "lives": 1,
+            "spawnedRows": 24
+        },
+        {
+            "seed": 7331,
+            "relax": true,
+            "varied": false,
+            "distance": 710.2904052734375,
+            "lives": 3,
+            "spawnedRows": 17
+        },
+        {
+            "seed": 7331,
+            "relax": true,
+            "varied": true,
+            "distance": 710.2904052734375,
+            "lives": 3,
+            "spawnedRows": 17
+        },
+        {
+            "seed": 109,
+            "relax": true,
+            "varied": false,
+            "distance": 710.2904052734375,
+            "lives": 3,
+            "spawnedRows": 17
+        },
+        {
+            "seed": 109,
+            "relax": true,
+            "varied": true,
+            "distance": 710.2904052734375,
+            "lives": 3,
+            "spawnedRows": 17
+        },
+        {
+            "seed": 917,
+            "relax": true,
+            "varied": false,
+            "distance": 710.2904052734375,
+            "lives": 3,
+            "spawnedRows": 17
+        },
+        {
+            "seed": 917,
+            "relax": true,
+            "varied": true,
+            "distance": 710.2904052734375,
+            "lives": 3,
+            "spawnedRows": 17
+        }
+    ]
+}

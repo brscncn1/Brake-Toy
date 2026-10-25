@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-26",
+  "baseCommit": "6351ef87cf418e8f8ba23938fc6f74275fe657e9",
+  "branch": "feat/varied-encounter-endings",
+  "rules": "adventure-r2",
+  "runs": [
+    {
+      "path": "Reports/Tests/Endings-EditMode.xml",
+      "passed": 82,
+      "failed": 0,
+      "startTimeUtc": "2026-10-25 21:18:20Z",
+      "sha256": "239d7ae2616fb0a3d4471bc5d9378aa00dca92476d1646a2340f1e4c7a9a9e06"
+    },
+    {
+      "path": "Reports/Tests/Endings-PlayMode.xml",
+      "passed": 77,
+      "failed": 0,
+      "startTimeUtc": "2026-10-25 21:22:30Z",
+      "sha256": "283480b308b5f144fec7e336717a35cdf4680ffc51972b4131330840a8405290"
+    },
+    {
+      "path": "Reports/Tests/Endings-targeted-final.xml",
+      "passed": 5,
+      "failed": 0,
+      "startTimeUtc": "2026-10-25 21:25:15Z",
+      "sha256": "6672c2b62f75fede3991f6171b5dde3847c48c5202dea1450acca5b15ce48022"
+    }
+  ],
+  "totalMainRegressionPassed": 159,
+  "playerDataUnchanged": true,
+  "apkRebuilt": false,
+  "physicalDeviceTested": false,
+  "humanDifficultyAccepted": false,
+  "notionAttempted": false,
+  "finalPlannedStageReached": false,
+  "changedFamilies": [
+    "Windup",
+    "Train"
+  ],
+  "rollback": "VariedEndings=false before starting next run",
+  "note": "Full regression 82 EditMode +77 PlayMode. Final focused5/5 also rechecks catalog-matched visual fixtures; not counted again in total.",
+  "sameSeedWitnessRuns": 12,
+  "simulatedMinutes": 12,
+  "riskRouteCases": 12,
+  "layoutCases": 16,
+  "artifacts": {
+    "Reports/ENDING_WITNESS.json": "45353d957c640cd0a485fa0ca16d622ec872e7035b352bf08f9644453c208d5f",
+    "Reports/Visuals/Ending-Windup-classic.png": "0f959c4b51705452f5e94d57fb482b8e016523969a0303a1691d89162acd1c5e",
+    "Reports/Visuals/Ending-Windup-varied.png": "f820dfddd130f213089ce1993a77e4317cae05a85581924b5400dcd4d3af21a1",
+    "Reports/Visuals/Ending-Train-classic.png": "1b6aa915c00a68e9e9e9f82d29939ba4a62178b3ef2568c64dda0f8a424692e5",
+    "Reports/Visuals/Ending-Train-varied.png": "02afa4d4d99d637f49aea4734c28342595a583171466df846fad77a86693fb06"
+  },
+  "testedGameplaySourceHashes": {
+    "Assets/BrakeToy/Scripts/Core/AdventureRules.cs": "5df5f7f534b63961a7b315ab0301c23aa3787e0445bbe1590181fadc3f5ed3e5",
+    "Assets/BrakeToy/Scripts/Runtime/AdventureEncounters.cs": "8225f308c657caba20fd5ca991e4232734d7caa3e6f94b86f8e7e6d1806025d5",
+    "Assets/BrakeToy/Scripts/Runtime/PlaygroundEncounters.cs": "78217240313a86ef023c6d0635bacf0a142948b3f58faac595658d445cb7699a",
+    "Assets/BrakeToy/Scripts/Runtime/GhostReplay.cs": "18fdb00ddd8f84eaf1cdc8ee71e1e7c9719a5587d059c10215a32737874e4ca7"
+  },
+  "speedCurveUnchanged": true
+}

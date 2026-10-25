@@ -1,6 +1,6 @@
 # Brake Toy — ortak agent çalışma rehberi
 
-Güncelleme: 24 Ekim 2026. Codex ve Claude Code için ortak proje talimatıdır.
+Güncelleme: 26 Ekim 2026. Codex ve Claude Code için ortak proje talimatıdır.
 Öncelik: kullanıcının güncel talebi → bu rehber → konu belgesi → tarihsel kayıt.
 Ortamın sistem/geliştirici talimatları ayrıca geçerlidir; belge bunları değiştirmez.
 
@@ -99,7 +99,8 @@ Ortamın sistem/geliştirici talimatları ayrıca geçerlidir; belge bunları de
 - Builder'lar genel güncelleme aracı değildir; Create/upgrade davranışını önce incele.
 - Mevcut sahneyi açmak için `Open` kullan; gereksiz `Create` çağırma.
 - Sürüşte sürekli Instantiate/Destroy veya kare başına yeni koleksiyon ekleme.
-- K2.1 ölçüm paketi: 77 EditMode +GPU açık 72 PlayMode =149/149; APK aynı kaldı.
+- Son bitiriş paketi: 82 EditMode +GPU açık 77 PlayMode =159/159; son hedefli kontrol5/5.
+- Yeni APK üretilmedi; geri alma ve ghost profilleri Docs/ENDING_VARIANTS-2026-10-26.md içinde.
 - Önceki K1.2 temiz klon kontrolü: 145/145; bu yeni paket temiz klonda tekrar koşulmadı.
 - PlayMode UI/garaj testlerini GPU açık çalıştır; -nographics ile RenderTexture hatası görüldü.
 - Fiziksel v0.9 FPS/p95/ısı ve kullanıcı sanat/oynanış kabulü henüz tamamlanmadı.

@@ -34,9 +34,9 @@ namespace BrakeToy
                     var ball=spawn(3,b.RiskX,z*1.12f,b.RiskX,0);ball.MotionKind=1;ball.ForwardFactor=1.12f;ball.CurveAmplitude=.42f;ball.CurveFrequency=.09f;ball.CurvePhase=b.Variant;ball.transform.position=ball.PositionAfter(0);GetComponent<JoyfulRun>().SpawnRamp(b.RiskX,z+15);spawn(2,b.RiskX,z+26,0,0);break;
             }
         }
-        public void MarkRoute(float x,float z,bool risk)=>Marker(x,z,risk);
-        private void Marker(float x,float z,bool risk)
-        {foreach(var m in RouteMarkers)if(!m.gameObject.activeSelf){m.position=new Vector3(x,.025f,z-5);m.localScale=new Vector3(risk?.7f:.5f,1,1);m.GetComponent<Renderer>().sharedMaterial=risk?RiskMaterial:SafeMaterial;m.gameObject.SetActive(true);return;}throw new InvalidOperationException("Route marker pool exhausted");}
+        public void MarkRoute(float x,float z,bool risk,float height=.025f)=>Marker(x,z,risk,height);
+        private void Marker(float x,float z,bool risk,float height=.025f)
+        {foreach(var m in RouteMarkers)if(!m.gameObject.activeSelf){m.position=new Vector3(x,height,z-5);m.localScale=new Vector3(risk?.7f:.5f,1,1);m.GetComponent<Renderer>().sharedMaterial=risk?RiskMaterial:SafeMaterial;m.gameObject.SetActive(true);return;}throw new InvalidOperationException("Route marker pool exhausted");}
         public Material RiskMaterial,SafeMaterial;
         private void Prop(float x,float z,ArcadeHazard h,int kind,int phase)
         {foreach(var p in Props)if(!p.InUse){p.InUse=true;p.Kind=kind;p.Barrier=h;p.Triggered=false;p.Age=0;p.Phase=phase*.1f;p.Root.position=new Vector3(x,0,z);p.Root.gameObject.SetActive(true);p.Gate.gameObject.SetActive(kind==0);p.Signal.gameObject.SetActive(kind==0);foreach(var d in p.Dominoes){d.gameObject.SetActive(kind==1);d.localRotation=Quaternion.identity;}if(kind==0)h.Model.gameObject.SetActive(false);return;}throw new InvalidOperationException("Interactive prop pool exhausted");}
