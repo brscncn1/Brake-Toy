@@ -1,5 +1,8 @@
 # BRAKE TOY
 
+25 Ekim K1.2: [temiz GitHub klonu doğrulandı](Docs/CLEAN_CLONE-2026-10-25.md),
+145/145 Unity testi; bağımsız C# 19/19 ve sunucu 9/9 ayrıca geçti. Yeni APK üretilmedi.
+
 25 Ekim K1.6/K1.7: [açık Android profilleri](Docs/ANDROID_BUILD_PROFILES.md), 74/74 Editor testi.
 Dal `fix/explicit-android-build-target`; APK üretmeden hedef doğrulaması eklendi.
 

@@ -3,9 +3,9 @@
 Taban: v0.9 Adventure; sağlamlaştırma doğrulaması 25 Ekim 2026. Bütün komutlar Unity/Git proje kökünden çalıştırılır.
 Bu belge bir koşu raporu değildir; sonuç iddiası gerçek çıktı ve zamanla desteklenir.
 
-Son araç kontrolü: 74/74 EditMode; `Reports/BUILD_PROFILE_VALIDATION.json`.
-Önceki K1.5: 53 EditMode +71 PlayMode =124/124; `Reports/LANDING_VALIDATION.json`.
-Bu araç paketinde PlayMode yeniden koşulmadı.
+Son temiz klon kontrolü: 74 EditMode +GPU açık 71 PlayMode =145/145;
+`Reports/CLEAN_CLONE_VALIDATION.json`, uygulama `Docs/CLEAN_CLONE-2026-10-25.md`.
+Bağımsız C# 19/19 ve sunucu 9/9 ayrıca geçti; bu sonuçlar Unity sayısına eklenmez.
 Önceki v0.9 APK kanıtları kendi kaynak commit'i içindir; bu düzeltmeler için APK derlenmedi.
 
 ## 1. Göreve göre en küçük yeterli kontrol
@@ -45,7 +45,9 @@ New-Item -ItemType Directory -Force -Path $reports | Out-Null
 foreach ($mode in @('EditMode', 'PlayMode')) {
     $xml = Join-Path $reports ($mode + '.xml')
     $log = Join-Path $reports ($mode + '.log')
-    $argsForUnity = @('-batchmode', '-nographics', '-projectPath',
+    # PlayMode garaj/UI testleri gerçek RenderTexture gerektirir; GPU açık kalır.
+    $graphicsArgs = if ($mode -eq 'EditMode') { @('-nographics') } else { @('-force-d3d11') }
+    $argsForUnity = @('-batchmode') + $graphicsArgs + @('-projectPath',
         ('"' + $project + '"'), '-runTests', '-testPlatform', $mode,
         '-testResults', ('"' + $xml + '"'), '-logFile', ('"' + $log + '"'))
     $run = Start-Process -FilePath $unityExe -ArgumentList $argsForUnity `
@@ -59,8 +61,9 @@ foreach ($mode in @('EditMode', 'PlayMode')) {
 - Test runner'a `-quit` ekleme; koşuyu erken sonlandırabilir.
 - Hedefli koşu için `-testFilter BrakeToy.Tests.AdventureSceneTests` gibi tam sınıf adı kullan.
 - Exit code tek başına yeterli değildir; XML result/failed, test sayısı ve log hatalarını incele.
-- Render/ışık görsel kontrolü `-nographics` çıktısıyla doğrulanmaz.
-- Saf çekirdek için isteğe bağlı .NET 8 SDK: `dotnet run --project Tests/Standalone/BrakeToy.CoreChecks.csproj`.
+- PlayMode UI/garaj testlerini GPU açık çalıştır; Null Graphics Device ile RenderTexture hatası çıkabilir.
+- Render/ışık görsel kabulü yalnız başarılı otomatik testten çıkmaz.
+- Saf çekirdek için .NET 8 hedefini destekleyen SDK ve .NET 8 runtime: `dotnet run --project Tests/Standalone/BrakeToy.CoreChecks.csproj`.
 - Standalone akış bütün NUnit/PlayMode testlerinin yerine geçmez; güncel ortamda gerçekten koştuğunu belirt.
 
 ## 4. Mevcut kanıtın sınırı

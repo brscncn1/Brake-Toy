@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-25",
+  "sourceCommit": "df4ba16189dc482b8800f839b51e95cac8c74f76",
+  "sourceRemote": "https://github.com/brscncn1/Brake-Toy.git",
+  "cloneDirectory": "BrakeToyClean-df4ba16",
+  "freshProjectLibrary": true,
+  "localFoldersCopied": false,
+  "globalUnityPackageCacheMayBeUsed": true,
+  "cleanOperatingSystem": false,
+  "unity": "6000.3.26f1",
+  "runs": [
+    {
+      "path": "Reports/Tests/CleanClone-EditMode.xml",
+      "result": "Passed",
+      "total": 74,
+      "passed": 74,
+      "failed": 0,
+      "startTimeUtc": "2026-10-25 19:48:49Z",
+      "sha256": "6bf02d03ee044a7f4710a1b8cf4f5a1ab4a1554faf2575da9fcbb5c1cb28b9f1",
+      "graphics": "Null"
+    },
+    {
+      "path": "Reports/Tests/CleanClone-PlayMode.xml",
+      "result": "Failed(Child)",
+      "total": 71,
+      "passed": 70,
+      "failed": 1,
+      "startTimeUtc": "2026-10-25 19:49:47Z",
+      "sha256": "878a5c593f3e39ee944698e5f9f0c2ac6d42fea77bb11bc59b7aca924a2aed68",
+      "graphics": "Null"
+    },
+    {
+      "path": "Reports/Tests/CleanClone-PlayMode-GPU.xml",
+      "result": "Passed",
+      "total": 71,
+      "passed": 71,
+      "failed": 0,
+      "startTimeUtc": "2026-10-25 19:51:38Z",
+      "sha256": "10cf234e1928999fc0d4cd5174bc5dde6cf7f2d36b4a24068267084d6b18d82b",
+      "graphics": "Direct3D11"
+    }
+  ],
+  "apkRebuilt": false,
+  "physicalDeviceTested": false,
+  "runtimeChanged": false,
+  "playerDataUnchanged": true,
+  "notionAttempted": false,
+  "desktopBackup": "BrakeToy_Notion_Yedek.txt",
+  "gitFsckExitCode": 0,
+  "finalUnityPassed": 145,
+  "headlessFailure": "URP RenderTexture.Create failed in ReviewSceneTests.AllPagesAndDailyOfflinePracticeWorkWithoutOnlineEligibility; same source passed all 71 tests with GPU enabled.",
+  "standalone": {
+    "checks": 19,
+    "failures": 0,
+    "sdk": "10.0.402",
+    "runtime": "8.0.21",
+    "path": "Reports/CLEAN_CLONE_CORE_CHECKS.json",
+    "sha256": "3df2869443f6a3af3688036cd1af86434187b27c40f1e64f34f49256450136d0"
+  },
+  "server": {
+    "tests": 9,
+    "passed": 9,
+    "exitCode": 0,
+    "python": "3.14.0",
+    "command": "python -m unittest -v test_server",
+    "source": "exec_command stdout/stderr result from clean clone Server directory"
+  },
+  "buildPlan": {
+    "profile": "Adventure",
+    "exitCode": 0,
+    "buildExecuted": false,
+    "path": "Reports/CLEAN_CLONE_BUILD_PLAN.json",
+    "sha256": "fd4b572870fd8714b9d17af8f2f90536a6f85302a0a8faa1f29ccab020837d4e"
+  },
+  "generatedFormattingChanges": [
+    {
+      "path": "ProjectSettings/ProjectSettings.asset",
+      "kind": "Unity whitespace serialization only",
+      "restoredOriginalBytes": true
+    },
+    {
+      "path": "Tests/ServerParity/7331.json",
+      "kind": "same JSON values, serialized formatting only",
+      "restoredOriginalBytes": true
+    },
+    {
+      "path": "Tests/ServerParity/7332.json",
+      "kind": "same JSON values, serialized formatting only",
+      "restoredOriginalBytes": true
+    }
+  ],
+  "sourceStatusAfterCleanup": "",
+  "packageHashes": {
+    "Packages/manifest.json": "cb85fe45f082d431c450decdd4c61ca96273b905b91b7df5ffbca17ce6e83eca",
+    "Packages/packages-lock.json": "51e60680ad2d4ccbdd4656520788428c36d06bb08e91f1d0344eea89ffe72f9b"
+  }
+}
