@@ -7,7 +7,7 @@ Seçili paketin dışındaki öneriler topluca uygulama yetkisi sayılmaz.
 ## 1. Başlangıç ve öncelik
 
 - Hazır: sürüş, sekiz yeni oyuncak ailesi, rampalar, güçler, görev/garaj, kayıt ve yerel ghost.
-- Kanıt: K1.6/K1.7 araçları 74/74 EditMode; K1.5 oyun regresyonu 124/124, v0.9 için 13 render.
+- Son kanıt: K1.2 temiz klonda 145/145 Unity testi; önceki v0.9 için 13 render.
 - Açık: güncel cihaz ölçümleri, sanat/oynanış kabulü, kayıt sınırları ve mekaniklerin uç durumları.
 - Canlı online, ödeme, üretim kimliği ve mağaza yayını tamamlanmadı.
 - Hedef: çocukların okuyabildiği, ilk dakikada ilgi çeken, adil, akıcı ve tutarlı mobil oyun.
@@ -39,7 +39,8 @@ Tahmin: 3–5 işgünü. Bağımlılık: doğru kaynak tabanı ve oyuncu verisin
 diğer maddeler tamamlanmış sayılmaz. Ayrıntı: `Docs/HARDENING-2026-10-25.md`.
 
 - K1.1: yedi agent belgesi, okuma sırası,300 satır sınırı, GitHub/Notion eşleştirmesi.
-- K1.2: temiz klonda v0.9 test/derleme akışını yeniden üret ve ortamı kaydet.
+- K1.2 tamam: GitHub df4ba16 temiz klonu, taze import/derleme ve 145/145 Unity testi.
+  C# 19/19, sunucu 9/9 ayrı geçti; Docs/CLEAN_CLONE-2026-10-25.md. Android APK bu turda derlenmedi.
 - K1.3: Relax'ta yeni oyuncakla çarpışma sonrası aynı engelden peş peşe hak kaybını araştır.
 - K1.4: paylaşılan kariyer ile v0.9 rekor anahtarlarının ayrımını test et; migration kararı çıkar.
 - K1.5: güç bitişi, iniş alanı, rampa kenarı, cetvel yan çıkışı ve retry sınırlarını doğrula.
@@ -53,7 +54,8 @@ diğer maddeler tamamlanmış sayılmaz. Ayrıntı: `Docs/HARDENING-2026-10-25.m
 
 Çıkış: kritik veri kaybı/crash yok, baseline tekrarlanabilir, şüpheli durumlar testle sonuçlanmış.
 Kanıt: XML, örnek kayıt/migration, hata adımları, kaynak commit ve günlük.
-Sonraki paket K1.2 temiz klon kontrolüdür; K1 cihaz/sanat kabulü bu Editor kontrolleriyle kapanmaz.
+Sonraki paket K2.1 ilk 10/30/60 saniyenin karar yoğunluğu ve tekrar ölçümüdür.
+K1 teknik kaynak doğrulaması yapıldı; cihaz/sanat/Android paket kabulü ayrı açık kalır.
 
 ## 4. K2 — ilk dakika ve risk/ödül
 

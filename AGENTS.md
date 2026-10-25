@@ -98,8 +98,8 @@ Ortamın sistem/geliştirici talimatları ayrıca geçerlidir; belge bunları de
 - Builder'lar genel güncelleme aracı değildir; Create/upgrade davranışını önce incele.
 - Mevcut sahneyi açmak için `Open` kullan; gereksiz `Create` çağırma.
 - Sürüşte sürekli Instantiate/Destroy veya kare başına yeni koleksiyon ekleme.
-- K1.6/K1.7 araç kontrolü 74/74 EditMode; PlayMode yeniden koşulmadı, APK aynı kaldı.
-- Önceki K1.5 oyun regresyonu: 53 EditMode +71 PlayMode =124/124.
+- K1.2 temiz klon: 74 EditMode +GPU açık 71 PlayMode =145/145; APK aynı kaldı.
+- PlayMode UI/garaj testlerini GPU açık çalıştır; -nographics ile RenderTexture hatası görüldü.
 - Fiziksel v0.9 FPS/p95/ısı ve kullanıcı sanat/oynanış kabulü henüz tamamlanmadı.
 - Test, cihaz ölçümü, kullanıcı onayı ve mağaza yayını ayrı kabul durumlarıdır.
 - Belge değişikliğinde link/satır/çelişki kontrolü yeterlidir; gereksiz Unity/APK derleme.
