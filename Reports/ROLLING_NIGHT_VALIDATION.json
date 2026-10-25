@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-26",
+  "sourceBase": "2631ec280bc17c1c580477198b4fa44d92857fb0",
+  "branch": "fix/rolling-ball-motion",
+  "rules": "tabletop-r4-rolling",
+  "unity": "6000.3.26f1",
+  "tests": {
+    "EditMode": {
+      "result": "Passed",
+      "total": "90",
+      "passed": "90",
+      "failed": "0",
+      "start-time": "2026-10-25 23:03:09Z",
+      "end-time": "2026-10-25 23:03:23Z"
+    },
+    "PlayMode": {
+      "result": "Passed",
+      "total": "84",
+      "passed": "84",
+      "failed": "0",
+      "start-time": "2026-10-25 23:09:03Z",
+      "end-time": "2026-10-25 23:09:51Z"
+    }
+  },
+  "totalPassed": 174,
+  "coverage": [
+    "Four deterministic bounded trajectories, 120 variants each",
+    "Independent tabletop movement and no spin for a stationary tabletop ball",
+    "No-slip rotation distance/radius, 30/60/120 Hz agreement",
+    "Moving-ball collision and existing 18 unassisted course witnesses",
+    "All ten hazard kinds still actually spawn",
+    "Two night lights, daytime dimming, optional track spill, fixture placement bounds"
+  ],
+  "limits": [
+    "Deterministic arcade paths, not a free rigidbody simulation",
+    "No new APK or tablet FPS/p95 claim",
+    "Human movement and nighttime acceptance remains open"
+  ],
+  "sha256": {
+    "Reports/Tests/Rolling-EditMode.xml": "74baebc198bc0e75cdc0424ecafca01517d028557ef85a314241abab9ce4050f",
+    "Reports/Tests/Rolling-PlayMode.xml": "9db9d5740641a013efc6cb2a1841b84643ca117b636dcdde28f1e167a2f6fe83",
+    "Reports/Visuals/Lamps-day.png": "9d1da7d280935fa8aa502d007cef56a33963f1b45c79605eba19df68eca35d18",
+    "Reports/Visuals/Lamps-night-room-only.png": "677c2aec40809008b0787c6bb003ad1e7771d99e57a1b8c207f7e8702c094238",
+    "Reports/Visuals/Lamps-night-track-spill.png": "908de02532e2669212e664e04edfb1058a3ebb39f545902d6886aa8d35c72bb2",
+    "Reports/Visuals/Rolling-after.png": "842574d484ff48c9c76e85e8bc23b7e0ab60437cb64ce46d4531999f1fccd32e",
+    "Reports/Visuals/Rolling-before.png": "51eb8f7856dfcda8dd275dc81413dfb7020faadd36980307374bf5ff873ba57b",
+    "Assets/BrakeToy/Scripts/Core/RollingBallRules.cs": "a0a36a522ed59d8ae81ef62a40d9cb347b9a43aebb25bb566f181b971893f58f",
+    "Assets/BrakeToy/Scripts/Core/AdventureRules.cs": "36f46e425995e870b40743521798f8a16f9729174887efdb1ca82a312c624ffc",
+    "Assets/BrakeToy/Scripts/Runtime/BallRolling.cs": "bd5e9094cf0244d67199459f78e54d6c47db5d2f451855e1bf77ba6f5aeeb2d3",
+    "Assets/BrakeToy/Scripts/Runtime/ArcadeHazard.cs": "a3805e5d8c8c53194e3ab48945b4df05c6c3320109e73fbbf8813c0547ccd068",
+    "Assets/BrakeToy/Scripts/Runtime/ArcadeHUD.cs": "23c3567f19b025b071a45ab7c14d7bbc2bad61e096285d1ea89b9929fa902006",
+    "Assets/BrakeToy/Scripts/Runtime/AdventureEncounters.cs": "d41c9e98ec1d1f840fc3076c90f92705800167b8e335c3461dbc1adc363e4d46",
+    "Assets/BrakeToy/Scripts/Runtime/AdventureToy.cs": "c40f1888f0ca6110c1ed962b5143de589bb573c57c27efa156ccc79bef0a469d",
+    "Assets/BrakeToy/Scripts/Runtime/NightRoomLamps.cs": "3b746d5bccf562f0da5447204c5240ee55a792101dc930be9133b8fb401fee2b",
+    "Assets/BrakeToy/Scripts/Runtime/RoomDayCycle.cs": "a80b82d4e41490824afedea3a319b33fb261862b1ff1963138c43eebedeba9e1",
+    "Assets/BrakeToy/Scripts/Runtime/GhostReplay.cs": "1d9241457698b497e754454756b6da3e8ac6493ca0d3952c446b6bd7521ee93c",
+    "Assets/BrakeToy/Tests/EditMode/RollingBallRulesTests.cs": "620382fc799a043c5da5b56e8cc5a2e875a36fd062d1309f33b1bf7468c1fb2b",
+    "Assets/BrakeToy/Tests/PlayMode/RollingBallSceneTests.cs": "2738ec13888464cd15ed3dce398b15294a4520b81b9220c450c47ee44b5c4730"
+  },
+  "persistentSaveHashesUnchanged": true,
+  "notion": "No quota retry; DEV_LOG/NOTION_PENDING and desktop UTF-8 BOM backup updated."
+}

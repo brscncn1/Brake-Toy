@@ -101,7 +101,9 @@ Ortamın sistem/geliştirici talimatları ayrıca geçerlidir; belge bunları de
 - Builder'lar genel güncelleme aracı değildir; Create/upgrade davranışını önce incele.
 - Mevcut sahneyi açmak için `Open` kullan; gereksiz `Create` çağırma.
 - Sürüşte sürekli Instantiate/Destroy veya kare başına yeni koleksiyon ekleme.
-- Son parkur düzeltmesi: 85 EditMode +GPU açık80 PlayMode =165/165; kanıt Reports/TABLETOP_COURSE_VALIDATION.json.
+- Son top/gece paketi:90 EditMode +GPU açık84 PlayMode =174/174; Reports/ROLLING_NIGHT_VALIDATION.json.
+- Top bağımsız ilerlemeli; masa kayması yuvarlanma sayılmaz. Dört yörünge/radyus ve öngörülen temas birlikte test edilir.
+- Gece raf/yatak başlığı lambaları kullanılır; dekoru delen ayaklı yerleşim geri getirilmez.
 - Üretim DenseCourse=true; eski güvenli şerit/bitiriş testleri açıkça DenseCourse=false profilindedir.
 - Yeni APK yok; Docs/TABLETOP_COURSE-2026-10-26.md. Eski APK bu parkuru içermez.
 - Önceki K1.2 temiz klon kontrolü: 145/145; bu yeni paket temiz klonda tekrar koşulmadı.

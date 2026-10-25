@@ -55,7 +55,8 @@ namespace BrakeToy
             NoticeLabel.enabled = noticeTime > 0;
             float ballX = 0;
             bool warning = running && arcade.BallWarning(out ballX);
-            WarningLabel.text = warning ? (ballX < 0 ? "◀  SOLDAN TOP GELİYOR" : "SAĞDAN TOP GELİYOR  ▶") : "";
+            WarningLabel.text = warning ? (Mathf.Abs(ballX) < .8f ? "ÖNDE TOP · HAREKETİNİ OKU"
+                : ballX < 0 ? "◀  SOLDA TOP" : "SAĞDA TOP  ▶") : "";
             WarningLabel.color = new Color(1, .75f, .22f, .75f + .25f * Mathf.Sin(Time.unscaledTime * 10));
             if (impact > 0) impact = Mathf.Max(0, impact - Time.unscaledDeltaTime);
             ImpactFlash.color = new Color(1, .32f, .15f, impact * .7f);

@@ -1,5 +1,10 @@
 # BRAKE TOY
 
+26 Ekim [top hareketi ve gece lambaları](Docs/ROLLING_AND_NIGHT-2026-10-26.md):
+yerinde dönüş hatası düzeltildi; dört hareket profili, masa üstü yola bağlı yuvarlanma ve iki loş lamba.
+174/174 Unity testi; [gerçek görüntüler](Reports/Visuals/ROLLING_NIGHT_GALLERY.html).
+Kaynak dalı fix/rolling-ball-motion; yeni APK henüz üretilmedi.
+
 26 Ekim parkur düzeltmesi: [kitap/defter/kalemlik ve otobüs geri döndü](Docs/TABLETOP_COURSE-2026-10-26.md).
 Sekiz oyuncak ailesine üçlü geçitler, kısa slalom, dar merkez ve S dizileri eklendi;
 sürekli açık yeşil şerit kaldırıldı, kitap rampaları korundu. 165/165 Unity testi geçti.

@@ -21,7 +21,7 @@ namespace BrakeToy.Core
     }
     public static class AdventureRules
     {
-        public const string Version="adventure-r2";
+        public const string Version="adventure-r3-rolling";
         public static AdventureEnding Ending(PlaygroundBeat beat, bool varied = true)
         {
             if (beat.Family == (int)TrackToy.Seesaw) return AdventureEnding.Ruler;

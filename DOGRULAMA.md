@@ -3,7 +3,10 @@
 Taban: v0.9 Adventure; sağlamlaştırma doğrulaması 25 Ekim 2026. Bütün komutlar Unity/Git proje kökünden çalıştırılır.
 Bu belge bir koşu raporu değildir; sonuç iddiası gerçek çıktı ve zamanla desteklenir.
 
-Son parkur düzeltmesi: 85 EditMode +GPU açık80 PlayMode =165/165;
+Son top/gece paketi:90 EditMode +GPU açık84 PlayMode =174/174;
+Reports/ROLLING_NIGHT_VALIDATION.json. Dört yörünge, gerçek yol/radyus dönüşü,30/60/120Hz,
+top çarpışması, iki gece lambası ve hafif parkur ışığı açık/kapalı görüntüleri kontrol edildi.
+Önceki parkur düzeltmesi: 85 EditMode +GPU açık80 PlayMode =165/165;
 `Reports/TABLETOP_COURSE_VALIDATION.json`. 18 adet60sn güçsüz geçiş:2mod/3seed/30-60-120Hz.
 Kitap/defter/kalemlik fiili üretimi, otobüs salınımının tamamında boşluk, sabit şeritte ölme kontrol edildi.
 Eski güvenli şerit ve bitiriş testleri tarihsel DenseCourse=false profilinde korunur.

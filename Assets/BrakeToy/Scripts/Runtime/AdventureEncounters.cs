@@ -73,6 +73,9 @@ namespace BrakeToy
                     if (!bus && gap == 1 && (pattern == 1 || pattern == 5)) x *= .78f;
                     float stagger = pattern == 0 && column == 1 ? 1.5f : 0;
                     var hazard = spawn(kind, x, z + TabletopCourseRules.GateOffset(beat, row) + stagger, x, 0);
+                    if (kind == 3)
+                        hazard.ConfigureRollingBall(z + TabletopCourseRules.GateOffset(beat, row) + stagger,
+                            x, beat.Variant, beat.Index / 6);
                     if (bus)
                     {
                         hazard.MotionKind = 2;

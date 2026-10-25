@@ -6,6 +6,10 @@ Durumlar: Kabul / Uygulandı / Doğrulama bekliyor / Açık / Öneri.
 
 ## 1. Geçerli kararlar
 
+- D19 — 26 Ekim uygulandı: toplar bağımsız düz/çapraz/tek-çift kavis hareket eder; dönüş masa üstü yol/radyustur.
+- Etki: yeni oyuncaklar/masa eşyaları azaltılmaz; eski ghost yeni hareket profiline yüklenmez.
+- D20 — 26 Ekim uygulandı: gece raf ve yatak başlığına iki loş lamba; hafif parkur spotu kapatılabilir.
+- Etki: gün ışığında sönme, dekorla yerleşim ve top/engel okunabilirliği birlikte doğrulanır.
 - D01 — Kabul: Android öncelikli portre, gerçek 3D Unity/URP, çocuk odasında masa üstü oyuncak sürüşü.
 - Gerekçe: oda ölçeği ve canlı oyuncak dünyası ürün kimliğinin parçasıdır.
 - D02 — Uygulandı: göreli serbest yatay sürükleme; ana ilerleme otomatik, fren yok.
