@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-25",
+  "baseCommit": "737f5bf04fb14d78fe87fcb8bd5126fa5353087b",
+  "branch": "fix/landing-ramp-boundaries",
+  "unity": "6000.3.26f1",
+  "runs": [
+    {
+      "path": "Reports/Tests/Landing-before.xml",
+      "result": "Failed(Child)",
+      "total": 5,
+      "passed": 3,
+      "failed": 2,
+      "startTimeUtc": "2026-10-25 19:30:20Z",
+      "sha256": "a4b6a8d309725651d748b55d023d6d8fa17bfaf1abd1fd99d23d26f3053a8354",
+      "reproductionRun": true
+    },
+    {
+      "path": "Reports/Tests/Landing-after.xml",
+      "result": "Passed",
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "startTimeUtc": "2026-10-25 19:31:50Z",
+      "sha256": "b028b0f0fca82fd037be496c6f17a482f9588d8986f4964d9d22c8ff7a06a4cb",
+      "reproductionRun": false
+    },
+    {
+      "path": "Reports/Tests/Landing-EditMode.xml",
+      "result": "Passed",
+      "total": 53,
+      "passed": 53,
+      "failed": 0,
+      "startTimeUtc": "2026-10-25 19:33:13Z",
+      "sha256": "8862defb5c9c026e798d5aada50848072dbbe128da1309059ebe5370bebbebb7",
+      "reproductionRun": false
+    },
+    {
+      "path": "Reports/Tests/Landing-PlayMode.xml",
+      "result": "Passed",
+      "total": 71,
+      "passed": 71,
+      "failed": 0,
+      "startTimeUtc": "2026-10-25 19:33:44Z",
+      "sha256": "77933cc8248f4dcc100a3114ee42c9911796702d46aed11bd202ab7babbef998",
+      "reproductionRun": false
+    }
+  ],
+  "simulationStepHz": [
+    30,
+    60,
+    120
+  ],
+  "footprintBoundaryRuns": 24,
+  "apkRebuilt": false,
+  "physicalDeviceTested": false,
+  "playerDataUnchanged": true,
+  "notionAttemptedThisPackage": false,
+  "notionStatus": "prior_free_block_limit_desktop_backup_in_use",
+  "desktopBackup": "BrakeToy_Notion_Yedek.txt",
+  "totalFinalPassed": 124,
+  "testedSourceHashes": {
+    "Assets/BrakeToy/Scripts/Runtime/JoyfulRun.cs": "782b882787445cdacbc9e38b9954be20c2b22819acf7eb3e339fd2d078361f62",
+    "Assets/BrakeToy/Scripts/Runtime/PlaygroundRun.cs": "440e34402f308bf4c293aea01ff6d53d271178c2374eb7d3dc6a565f395cda18"
+  }
+}

@@ -3,7 +3,7 @@
 Taban: v0.9 Adventure; sağlamlaştırma doğrulaması 25 Ekim 2026. Bütün komutlar Unity/Git proje kökünden çalıştırılır.
 Bu belge bir koşu raporu değildir; sonuç iddiası gerçek çıktı ve zamanla desteklenir.
 
-Son yeni koşu: 53 EditMode +66 PlayMode =119/119; `Reports/HARDENING_VALIDATION.json`.
+Son yeni koşu: 53 EditMode +71 PlayMode =124/124; `Reports/LANDING_VALIDATION.json`.
 Önceki v0.9 APK kanıtları kendi kaynak commit'i içindir; bu düzeltmeler için APK derlenmedi.
 
 ## 1. Göreve göre en küçük yeterli kontrol

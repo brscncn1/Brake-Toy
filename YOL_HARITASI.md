@@ -7,7 +7,7 @@ Seçili paketin dışındaki öneriler topluca uygulama yetkisi sayılmaz.
 ## 1. Başlangıç ve öncelik
 
 - Hazır: sürüş, sekiz yeni oyuncak ailesi, rampalar, güçler, görev/garaj, kayıt ve yerel ghost.
-- Kayıtlı otomatik kanıt: 112/112 Unity testi ve 13 render; bu belge turunda yeniden koşulmadı.
+- Son otomatik kanıt: K1.5 için 124/124 Unity testi; önceki v0.9 tesliminde 13 render vardır.
 - Açık: güncel cihaz ölçümleri, sanat/oynanış kabulü, kayıt sınırları ve mekaniklerin uç durumları.
 - Canlı online, ödeme, üretim kimliği ve mağaza yayını tamamlanmadı.
 - Hedef: çocukların okuyabildiği, ilk dakikada ilgi çeken, adil, akıcı ve tutarlı mobil oyun.
@@ -43,13 +43,15 @@ diğer maddeler tamamlanmış sayılmaz. Ayrıntı: `Docs/HARDENING-2026-10-25.m
 - K1.3: Relax'ta yeni oyuncakla çarpışma sonrası aynı engelden peş peşe hak kaybını araştır.
 - K1.4: paylaşılan kariyer ile v0.9 rekor anahtarlarının ayrımını test et; migration kararı çıkar.
 - K1.5: güç bitişi, iniş alanı, rampa kenarı, cetvel yan çıkışı ve retry sınırlarını doğrula.
+- K1.5 sonucu: jet alçalması ve cetvel yüzey gecikmesi düzeltildi; hedefli 5/5 geçti.
+  Ayrıntı `Docs/LANDING-2026-10-25.md`; nihai kanıt `Reports/LANDING_VALIDATION.json`.
 - K1.6: yoğun tek satır koddan bir alan seç; davranışı değiştirmeden okunabilir hâle getir.
 - K1.7: dosya varlığına göre sahne seçen build aracında açık hedef seçimi ihtiyacını değerlendir.
 - K1.3/K1.4 yeniden üretim: düzeltme öncesi iki test başarısız, düzeltme sonrası ikisi de geçti.
 
 Çıkış: kritik veri kaybı/crash yok, baseline tekrarlanabilir, şüpheli durumlar testle sonuçlanmış.
 Kanıt: XML, örnek kayıt/migration, hata adımları, kaynak commit ve günlük.
-Sonraki önerilen paket K1.5: güç bitişi/iniş ve rampa-cetvel kenar uç durumları.
+Sonraki küçük paket K1.6/K1.7: okunabilirlik ve açık build hedefi ihtiyacını değerlendirme.
 
 ## 4. K2 — ilk dakika ve risk/ödül
 

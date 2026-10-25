@@ -14,10 +14,10 @@ namespace BrakeToy
         public void SpawnRamp(float x,float z){foreach(var r in Ramps)if(!r.InUse){r.Place(x,z);return;}throw new System.InvalidOperationException("Book ramp pool exhausted");}
         public float PredictHeight(float dt)=>PredictHeight(dt,0,game?game.Player.X:0);
         public float PredictHeight(float dt,float distance,float x)
-        {if(!playground)return Airborne?JoyfulRules.FlightHeight(flight+dt):Height;float h=flight>=0?Flight(flight+dt):Surface(x,distance);return Mathf.Max(h,playground.JetHeight(dt));}
+        {if(!playground)return Airborne?JoyfulRules.FlightHeight(flight+dt):Height;float h=flight>=0?Flight(flight+dt):Surface(x,distance,distance);return Mathf.Max(h,playground.JetHeight(dt));}
         private float Flight(float age)=>age<0||age>=flightDuration?0:launchHeight*(1-age/flightDuration)+(flightDuration>1?1.85f:0)*Mathf.Sin(Mathf.PI*age/flightDuration);
-        private float Surface(float x,float distance)
-        {float h=GetComponent<AdventureEncounters>()?.SurfaceHeight(x,distance)??0;foreach(var r in Ramps)if(r.InUse&&!r.Launched)h=Mathf.Max(h,PlaygroundRules.RampSurface(x-r.transform.position.x,-r.transform.position.z+distance,game.Config.PlayerHalfWidth,game.Config.PlayerHalfLength));return h;}
+        private float Surface(float x,float rampDistance,float toyDistance)
+        {float h=GetComponent<AdventureEncounters>()?.SurfaceHeight(x,toyDistance)??0;foreach(var r in Ramps)if(r.InUse&&!r.Launched)h=Mathf.Max(h,PlaygroundRules.RampSurface(x-r.transform.position.x,-r.transform.position.z+rampDistance,game.Config.PlayerHalfWidth,game.Config.PlayerHalfLength));return h;}
         private void AdvancePlayground(float dt,float distance,float oldX,float x)
         {
             bool collecting=Airborne,hadFlight=flight>=0;float before=Height;
@@ -27,7 +27,9 @@ namespace BrakeToy
                 float tip=-.975f-game.Config.PlayerHalfLength;
                 if(flight<0&&!ramp.Launched&&contact&&supported&&a>tip&&b<=tip){ramp.Launched=true;flight=0;flightDuration=1.65f;launchHeight=Mathf.Max(.65f,before);Jumps++;game.Arcade.HUD.Notify("TEMİZ KALKIŞ · TP ×2",new Color(.08f,.25f,.18f));}
                 if(b< -10)ramp.Release();}
-            GetComponent<AdventureEncounters>()?.TryRulerLaunch(distance,x);float surface=Surface(x,0);if(flight<0&&supported&&surface==0&&before>.02f){flight=0;flightDuration=.3f;launchHeight=before;}
+            // Ramps have moved above; Adventure toys move later in PlaygroundRun.Tick.
+            // Query each support at this step's endpoint so height matches the visible surface.
+            GetComponent<AdventureEncounters>()?.TryRulerLaunch(distance,x);float surface=Surface(x,0,distance);if(flight<0&&supported&&surface==0&&before>.02f){flight=0;flightDuration=.3f;launchHeight=before;}
             Height=Mathf.Max(flight>=0?Flight(flight):surface,playground.JetHeight());supported=flight<0&&surface>.001f;
             if(collecting&&playground.JetHeight()>.05f&&!hadFlight)AirDistance+=distance;
             int delta=game.Arcade.Style.Total-previousStyle;if(collecting&&delta>0)AirStyle+=delta;previousStyle=game.Arcade.Style.Total;

@@ -8,7 +8,10 @@ namespace BrakeToy
         public ToyPower? ActivePower{get;private set;}public float Remaining{get;private set;}public bool Assisted{get;private set;}
         public int Mastery{get;private set;}public int BestMastery{get;private set;}
         public float WorldFactor=>ActivePower==ToyPower.Slow?Mathf.Lerp(1,.32f,Mathf.SmoothStep(0,1,Remaining/.25f)):ActivePower==ToyPower.Rocket?1+.85f*Mathf.SmoothStep(0,1,Remaining/.35f)*Mathf.SmoothStep(0,1,powerAge/.15f):1;
-        public bool Protected=>ActivePower==ToyPower.Rocket||grace>0;
+        private const float JetDescentSeconds = .45f;
+        public bool Protected => ActivePower == ToyPower.Rocket
+            || (ActivePower == ToyPower.Jetpack && Remaining <= JetDescentSeconds)
+            || grace > 0;
         private GameManager game;private float grace,powerAge,masteryLeft;private int lastMiss,lastStars,lastJumps,mask;private bool wasAir;
         public string Status{get;private set;}="";
         public Transform PowerRig,RocketRig,JetRig;
@@ -23,11 +26,25 @@ namespace BrakeToy
             game.Arcade.HUD.Notify(power==ToyPower.Slow?"ZAMAN YAVAŞLADI · 3 SN":power==ToyPower.Rocket?"KORUMALI ROKET · 3 SN":"JETPACK · 5 SN",new Color(.08f,.24f,.36f));return true;
         }
         public float JetHeight(float ahead=0)
-        {if(ActivePower!=ToyPower.Jetpack)return 0;float age=powerAge+ahead,left=Remaining-ahead;return 2.25f*Mathf.Min(Mathf.SmoothStep(0,1,age/.35f),Mathf.SmoothStep(0,1,Mathf.Max(0,left)/.45f));}
+        {if(ActivePower!=ToyPower.Jetpack)return 0;float age=powerAge+ahead,left=Remaining-ahead;return 2.25f*Mathf.Min(Mathf.SmoothStep(0,1,age/.35f),Mathf.SmoothStep(0,1,Mathf.Max(0,left)/JetDescentSeconds));}
         public void Tick(float dt,float moved,float oldX,float x)
         {
             grace=Mathf.Max(0,grace-dt);
-            if(ActivePower.HasValue){powerAge+=dt;Remaining=Mathf.Max(0,Remaining-dt);if(Remaining<=0){var ended=ActivePower.Value;ActivePower=null;if(ended!=ToyPower.Slow){grace=.85f;ClearLanding();}game.Arcade.HUD.Notify("GÜÇ BİTTİ · DEVAM!",new Color(.1f,.3f,.4f));}}
+            if (ActivePower.HasValue)
+            {
+                bool enteringJetDescent = ActivePower == ToyPower.Jetpack && Remaining > JetDescentSeconds;
+                powerAge += dt;
+                Remaining = Mathf.Max(0, Remaining - dt);
+                // Landing starts before the timer expires: clear and protect the actual descent.
+                if (enteringJetDescent && Remaining <= JetDescentSeconds && Remaining > 0) ClearLanding();
+                if (Remaining <= 0)
+                {
+                    var ended = ActivePower.Value;
+                    ActivePower = null;
+                    if (ended != ToyPower.Slow) { grace = .85f; ClearLanding(); }
+                    game.Arcade.HUD.Notify("GÜÇ BİTTİ · DEVAM!", new Color(.1f,.3f,.4f));
+                }
+            }
             var a=game.Arcade;var jump=GetComponent<JoyfulRun>();int stars=a.Challenges.Goals.Pickups;
             if(a.Style.NearMisses>lastMiss)Skill(1);if(stars>lastStars)Skill(2);if(jump.Jumps>lastJumps)Skill(4);if(wasAir&&!jump.Airborne&&jump.Height<.08f)Skill(8);
             lastMiss=a.Style.NearMisses;lastStars=stars;lastJumps=jump.Jumps;wasAir=jump.Airborne;
