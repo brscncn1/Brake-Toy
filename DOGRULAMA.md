@@ -1,7 +1,10 @@
 # Brake Toy — doğrulama, derleme ve teslim rehberi
 
-Taban: v0.9 Adventure; tarih 24 Ekim 2026. Bütün komutlar Unity/Git proje kökünden çalıştırılır.
+Taban: v0.9 Adventure; sağlamlaştırma doğrulaması 25 Ekim 2026. Bütün komutlar Unity/Git proje kökünden çalıştırılır.
 Bu belge bir koşu raporu değildir; sonuç iddiası gerçek çıktı ve zamanla desteklenir.
+
+Son yeni koşu: 53 EditMode +66 PlayMode =119/119; `Reports/HARDENING_VALIDATION.json`.
+Önceki v0.9 APK kanıtları kendi kaynak commit'i içindir; bu düzeltmeler için APK derlenmedi.
 
 ## 1. Göreve göre en küçük yeterli kontrol
 
@@ -35,7 +38,7 @@ Unity Test Runner ile ilgili testi seçebilir veya aşağıdaki Windows akışı
 ```powershell
 $unityExe = 'C:/Program Files/Unity/Hub/Editor/6000.3.26f1/Editor/Unity.exe'
 $project = (Get-Location).Path
-$reports = Join-Path $project 'Logs/AgentVerification'
+$reports = Join-Path $project 'Reports/Local/AgentVerification'
 New-Item -ItemType Directory -Force -Path $reports | Out-Null
 foreach ($mode in @('EditMode', 'PlayMode')) {
     $xml = Join-Path $reports ($mode + '.xml')

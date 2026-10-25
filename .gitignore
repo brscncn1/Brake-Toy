@@ -38,3 +38,6 @@ Tests/Standalone/obj/
 /Server/*.db*
 /Server/.env
 /Server/.venv/
+
+# Unity Test Runner temporary bootstrap scenes.
+/Assets/InitTestScene*.unity*

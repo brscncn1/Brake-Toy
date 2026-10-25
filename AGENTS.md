@@ -79,10 +79,11 @@ Ortamın sistem/geliştirici talimatları ayrıca geçerlidir; belge bunları de
 
 ## 6. Oyuncu verisi ve uyumluluk
 
-- `career-playground-v1.json` TP, araç ve güç haklarını taşır; gerçek kaydı silme.
+- `career-adventure-v1.json` güncel kariyerdir; eski `career-playground-v1.json` silinmez.
+- İlk geçiş TP/araç/görev/güç stoklarını kopyalar, eski kurallı rekorları kopyalamaz.
 - Save checksum bozulma kontrolüdür; anti-cheat çözümü değildir.
 - Migration için örnek kayıt, yedek dönüşü ve yeniden açılış senaryosu gerekir.
-- Yeni PlayerPrefs anahtarı, paylaşılan kariyerde eski rekorların ayrıldığını kanıtlamaz.
+- Rekorlar sürüme özgü kariyer ve ArcadeDirector anahtarlarından yüklenir; migration testlerini koru.
 - Güçler ilk kariyere bir kez üçer hak verir; retry stok yenilemez.
 - Testlerde kayıt/PlayerPrefs yazımını kapat; gerçek TP ve haklarla test yapma.
 - Yardımlı tur kişisel ghost yazmaz; sıralama ayrımı ayrıca karar/doğrulama bekler.
@@ -97,7 +98,7 @@ Ortamın sistem/geliştirici talimatları ayrıca geçerlidir; belge bunları de
 - Builder'lar genel güncelleme aracı değildir; Create/upgrade davranışını önce incele.
 - Mevcut sahneyi açmak için `Open` kullan; gereksiz `Create` çağırma.
 - Sürüşte sürekli Instantiate/Destroy veya kare başına yeni koleksiyon ekleme.
-- Son kayıtlı kanıt 50 EditMode +62 PlayMode =112/112; yeniden koşmadıysan belirt.
+- 25 Ekim sağlamlaştırma kanıtı 53 EditMode +66 PlayMode =119/119; APK aynı kaldı.
 - Fiziksel v0.9 FPS/p95/ısı ve kullanıcı sanat/oynanış kabulü henüz tamamlanmadı.
 - Test, cihaz ölçümü, kullanıcı onayı ve mağaza yayını ayrı kabul durumlarıdır.
 - Belge değişikliğinde link/satır/çelişki kontrolü yeterlidir; gereksiz Unity/APK derleme.
@@ -114,5 +115,6 @@ Ortamın sistem/geliştirici talimatları ayrıca geçerlidir; belge bunları de
 - Kullanıcı eklerini ve alt sayfaları koru; başarısız eşitlemeyi başarılı diye sunma.
 - Önceki kota hatası tarihsel engeldir; kullanıcı güncelleme istediğinde erişimi yeniden kontrol et.
 - Kota/erişim hatasında döngüyle tekrar etme; pending kaydı tut, yerel/GitHub işini bitir.
+- Kullanıcı isteğiyle aktarılmayan notları masaüstündeki BrakeToy_Notion_Yedek.txt'ye de ekle.
 - Bu yetki ücretli plan satın alma veya kimlik/güvenlik ayarı değiştirme yetkisi değildir.
 - Devir: kapsam, dosyalar, kararlar, çalıştırılan kontrol, sonuç ve sıradaki tek paket.

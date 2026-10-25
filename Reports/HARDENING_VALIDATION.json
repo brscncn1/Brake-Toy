@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-25",
+  "baseCommit": "cee3901b1db48471924aa68657c49feb6af6cb37",
+  "branch": "fix/adventure-relax-records",
+  "unity": "6000.3.26f1",
+  "runs": [
+    {
+      "path": "Reports/Tests/Hardening-before.xml",
+      "result": "Failed(Child)",
+      "total": 2,
+      "passed": 0,
+      "failed": 2,
+      "startTimeUtc": "2026-10-25 19:18:40Z",
+      "sha256": "087310cf7db84233c353c241f53159f45633818548f19240a0c6bf539d905f16",
+      "expectedFailure": true
+    },
+    {
+      "path": "Reports/Tests/Hardening-targeted-after.xml",
+      "result": "Passed",
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "startTimeUtc": "2026-10-25 19:20:11Z",
+      "sha256": "a7aee14cda62765723356e5162259c6626cce44b8a5bc146524af18f1c2abcc0",
+      "expectedFailure": false
+    },
+    {
+      "path": "Reports/Tests/Hardening-EditMode.xml",
+      "result": "Passed",
+      "total": 53,
+      "passed": 53,
+      "failed": 0,
+      "startTimeUtc": "2026-10-25 19:24:32Z",
+      "sha256": "790108ae582fe9ac57773c95b176d58bdc3562559ae36af6dd9d2db2b178f80c",
+      "expectedFailure": false
+    },
+    {
+      "path": "Reports/Tests/Hardening-PlayMode.xml",
+      "result": "Passed",
+      "total": 66,
+      "passed": 66,
+      "failed": 0,
+      "startTimeUtc": "2026-10-25 19:24:58Z",
+      "sha256": "9597e43f9a278b7b749f800fc523e48046daa61b3daeba49c1bba92d56a0799b",
+      "expectedFailure": false
+    }
+  ],
+  "apkRebuilt": false,
+  "physicalDeviceTested": false,
+  "notionNewPageCreated": false,
+  "notionError": "entitlement_required/block_creation",
+  "desktopBackup": "BrakeToy_Notion_Yedek.txt",
+  "playerDataUnchanged": true,
+  "testedSourceHashes": {
+    "Assets/BrakeToy/Scripts/Runtime/ReviewSession.cs": "3618e257fd32dff2a68c8dbdb31bbfd0f716859c8ca016d85af3cac6e335fb72",
+    "Assets/BrakeToy/Scripts/Runtime/CareerSave.cs": "2797f0b5dc49fdb08cb79affa5d4d40efc410031e21371519854a219e6bcf944"
+  },
+  "totalFinalPassed": 119
+}

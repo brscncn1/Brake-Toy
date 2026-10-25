@@ -29,13 +29,14 @@ Seçili paketin dışındaki öneriler topluca uygulama yetkisi sayılmaz.
 ## 3. K1 — taban, belgeler ve kritik sağlamlaştırma
 
 25 Ekim ek paketi: rapor/arşiv düzeni ve Editor çıktı yolları düzenlendi;
-kanıt `Reports/ORGANIZATION_MANIFEST.json`. Sonraki paket K1.3'tür.
+kanıt `Reports/ORGANIZATION_MANIFEST.json`. K1.3/K1.4 sağlamlaştırması bu dalda eklendi.
 Öneri sırası: sağlamlaştırma → parkur/kombo → ışık/malzeme → araç parçaları → online.
 Docker, yeni fiziğe dayalı olaylar, adaptif müzik ve parça kilitleri ayrı paketlerdir;
 bu dosya düzenlemesinde uygulanmış sayılmaz.
 
 Tahmin: 3–5 işgünü. Bağımlılık: doğru kaynak tabanı ve oyuncu verisinin korunması.
-Bu tur belge paketidir; aşağıdaki kod düzeltmeleri henüz yapılmış sayılmaz.
+25 Ekim sağlamlaştırma paketi K1.3/K1.4 hatalarını yeniden üretti ve düzeltti;
+diğer maddeler tamamlanmış sayılmaz. Ayrıntı: `Docs/HARDENING-2026-10-25.md`.
 
 - K1.1: yedi agent belgesi, okuma sırası,300 satır sınırı, GitHub/Notion eşleştirmesi.
 - K1.2: temiz klonda v0.9 test/derleme akışını yeniden üret ve ortamı kaydet.
@@ -44,11 +45,11 @@ Bu tur belge paketidir; aşağıdaki kod düzeltmeleri henüz yapılmış sayıl
 - K1.5: güç bitişi, iniş alanı, rampa kenarı, cetvel yan çıkışı ve retry sınırlarını doğrula.
 - K1.6: yoğun tek satır koddan bir alan seç; davranışı değiştirmeden okunabilir hâle getir.
 - K1.7: dosya varlığına göre sahne seçen build aracında açık hedef seçimi ihtiyacını değerlendir.
-- K1.3/K1.4 tarama bulgusudur; yeniden üretmeden kesin hata veya çözülmüş madde sayma.
+- K1.3/K1.4 yeniden üretim: düzeltme öncesi iki test başarısız, düzeltme sonrası ikisi de geçti.
 
 Çıkış: kritik veri kaybı/crash yok, baseline tekrarlanabilir, şüpheli durumlar testle sonuçlanmış.
 Kanıt: XML, örnek kayıt/migration, hata adımları, kaynak commit ve günlük.
-Belge turundan sonraki önerilen tek paket: K1.3 için izole Relax çarpışma testi.
+Sonraki önerilen paket K1.5: güç bitişi/iniş ve rampa-cetvel kenar uç durumları.
 
 ## 4. K2 — ilk dakika ve risk/ödül
 

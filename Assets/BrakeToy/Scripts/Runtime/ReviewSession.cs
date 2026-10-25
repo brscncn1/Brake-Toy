@@ -18,14 +18,47 @@ namespace BrakeToy
         public bool SaveFailed{get;private set;}
         public bool Recovered=>save!=null&&save.Recovered;
         private CareerSave save;private string runId;private GameManager game;private bool settled;
-        public void Initialize(GameManager manager)
-        {game=manager;bool joyful=GetComponent<JoyfulRun>();string path=Path.Combine(Application.persistentDataPath,GetComponent<PlaygroundRun>()?"career-playground-v1.json":joyful?"career-joyful-v1.json":"career-v1.json");save=new CareerSave(path);if(Persist){Data=save.Load();if(joyful&&!File.Exists(path)){string legacy=GetComponent<PlaygroundRun>()&&File.Exists(Path.Combine(Application.persistentDataPath,"career-joyful-v1.json"))?"career-joyful-v1.json":"career-v1.json";Data=new CareerSave(Path.Combine(Application.persistentDataPath,legacy)).Load();Data.arcadeDistance=Data.relaxDistance=Data.dailyDistance=0;Data.arcadeStyle=Data.relaxStyle=Data.dailyStyle=0;Data.dailyDate="";}}Data.arcadeDistance=Mathf.Max(Data.arcadeDistance,PlayerPrefs.GetFloat(game.Arcade.DistanceRecordKey,0));Data.arcadeStyle=Mathf.Max(Data.arcadeStyle,PlayerPrefs.GetInt(GetComponent<PlaygroundRun>()?"BrakeToy.v08.style":joyful?"BrakeToy.v07.style":"BrakeToy.v05.style",0));Missions=CareerRules.ActiveMissions(Data);SelectVisual(Data.selectedCar);}
+        public void Initialize(GameManager manager, string dataDirectory = null)
+        {
+            game = manager;
+            dataDirectory = dataDirectory ?? Application.persistentDataPath;
+            bool adventure = GetComponent<AdventureEncounters>();
+            bool playground = GetComponent<PlaygroundRun>();
+            bool joyful = GetComponent<JoyfulRun>();
+            string filename = adventure ? "career-adventure-v1.json" : playground
+                ? "career-playground-v1.json" : joyful ? "career-joyful-v1.json" : "career-v1.json";
+            save = new CareerSave(Path.Combine(dataDirectory, filename));
+            Data = new CareerData();
+            if (Persist)
+            {
+                Data = save.Load();
+                if (joyful && !save.HasStoredData)
+                {
+                    string legacy = "career-v1.json";
+                    if ((playground || adventure) && new CareerSave(Path.Combine(dataDirectory, "career-joyful-v1.json")).HasStoredData)
+                        legacy = "career-joyful-v1.json";
+                    if (adventure && new CareerSave(Path.Combine(dataDirectory, "career-playground-v1.json")).HasStoredData)
+                        legacy = "career-playground-v1.json";
+                    Data = save.LoadProgressFromLegacy(Path.Combine(dataDirectory, legacy));
+                }
+                Data.arcadeDistance = Mathf.Max(Data.arcadeDistance, PlayerPrefs.GetFloat(game.Arcade.DistanceRecordKey, 0));
+                Data.arcadeStyle = Mathf.Max(Data.arcadeStyle, PlayerPrefs.GetInt(game.Arcade.StyleRecordKey, 0));
+            }
+            Missions = CareerRules.ActiveMissions(Data);
+            SelectVisual(Data.selectedCar);
+        }
         public void NewRun(){runId=Guid.NewGuid().ToString("N");settled=false;LastReward=0;Lives=Mode==PlayMode.Relax?3:1;Missions=CareerRules.ActiveMissions(Data);GetComponent<GhostReplay>()?.Begin(game.Arcade.CurrentSeed,Mode);GetComponent<ReviewOnline>()?.BeginRecord();}
         public bool SurviveHit()
         {
             Lives=Mathf.Max(0,Lives-1);if(Mode!=PlayMode.Relax||Lives==0)return false;
             foreach(var hazard in game.Arcade.Pool)if(hazard.InUse&&hazard.transform.position.z<14)hazard.Release();
             foreach(var star in game.Arcade.Challenges.RiskStars)if(star.gameObject.activeSelf&&star.position.z<14)star.gameObject.SetActive(false);
+            // Clear the active encounter too, including linked barriers and surface modifiers.
+            GetComponent<PlaygroundEncounters>()?.ClearLanding(14);
+            GetComponent<AdventureEncounters>()?.ClearLanding(14);
+            var jump = GetComponent<JoyfulRun>();
+            if (jump) foreach (var ramp in jump.Ramps)
+                if (ramp.InUse && ramp.transform.position.z < 14) ramp.Release();
             game.Input.ResetCapture();game.Player.EndDrag();game.Arcade.HUD.Notify("DEVAM!  "+Lives+" HAK KALDI",new Color(.6f,1,.7f));return true;
         }
         public void Finish()

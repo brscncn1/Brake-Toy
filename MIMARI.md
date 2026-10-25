@@ -101,18 +101,24 @@ GameManager.Update
 - Kitap uçuşu 1.65 saniye; cetvel LaunchFromToy 1.35 saniye; jet yüksekliği ayrı katkıdır.
 - PredictHeight ileri konumdaki desteği de hesaplar; yalnız mevcut yüksekliğe bakarak temas atlama.
 - Roket koruması ve güç sonu iniş temizliği hem eski hem yeni engellerle bağlanmıştır.
-- Relax'ın çarpışma sonrası temizliğinde yeni havuzun kapsamı K1.3 doğrulama maddesidir.
+- Relax toparlanması 14 birim içindeki eski/yeni engelleri, bağlı prop ve rampaları temizler.
+- Uzak karşılaşmalar korunur; Adventure zemin yavaşlatma/kayma durumu da sıfırlanır.
 
 ## 8. Skor, kariyer ve kayıt
 
 - StyleScore: yakın geçiş zinciri, yıldız ve ustalık bonusu; CareerRules tur ödülü/araç/görev/başarım.
 - ReviewSession sonuç ödemesini runId ile bir kez yapar; tekrar ödeme engeli kayıtlı son koşuları da denetler.
-- Adventure kariyer yolu `Application.persistentDataPath/career-playground-v1.json`.
+- Adventure kariyer yolu `Application.persistentDataPath/career-adventure-v1.json`.
 - CareerSave: JSON payload, SHA 256 checksum, `.pending`, `.backup` ve yükleme doğrulaması.
 - Checksum yerel bozulma kontrolüdür; oyuncunun kaydı değiştirmesini engelleyen güvenlik mekanizması değildir.
 - Power tüketim/yenilemede kayıt başarısızsa bellek değişikliği geri alınır; gerçek veri üzerinde test yapma.
-- ArcadeDirector v0.9 PlayerPrefs rekor anahtarları kullanır; ortak CareerData alanları ayrı tutulmamıştır.
-- ReviewSession stil yüklemesinde v0.8 anahtarına referans vardır; rekor ayrımı K1.4'te doğrulanmalıdır.
+- İlk Adventure geçişi Playground → Joyful → ilk kariyer sırasıyla mevcut kaynaktan ilerlemeyi taşır.
+- TP, araçlar, görev/başarımlar ve harcanmış güç stokları korunur; altı rekor alanı ve dailyDate sıfırlanır.
+- Yeni kariyer/yedeği varsa eski kaynak tekrar aktarılmaz; eski dosya değiştirilmez.
+- Yeni dosya ilk normal başarılı kayıtta yazılır; başarısız kayıt eski dosyayı silmez.
+- Mesafe/stil yalnız ArcadeDirector.DistanceRecordKey/StyleRecordKey ile birleştirilir.
+- Eski v0.9 ortak kariyerindeki rekorların kökeni bilinmediği için topluca taşınmaz; eski kaynak korunur.
+- Persist=false oturumu PlayerPrefs rekorlarını da içeri almaz; testler geçici veri dizini kullanır.
 - GhostReplay: 20 Hz X/Y short örnekleri, gzip, 12000 örnek sınırı, seed/mod ve sürüm başlığı kontrolü.
 - Adventure ghost öneki `ghost-adventure-latest-`; güç kullanılan tur ghost oynatmaz/yazmaz.
 - Yeni simülasyon/rota değişikliğinde ghost/sunucu kural uyumluluğunu ve migration'ı açık sürümle yönet.

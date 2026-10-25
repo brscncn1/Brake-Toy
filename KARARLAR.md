@@ -56,11 +56,11 @@ Durumlar: Kabul / Uygulandı / Doğrulama bekliyor / Açık / Öneri.
 
 ## 3. Doğrulama adayları / kesinleşmemiş bulgular
 
-- Q01: ReviewSession.SurviveHit eski hazard havuzunu temizliyor; yeni Adventure havuzu kapsamı incelenecek.
-- Q02: ReviewSession ortak kariyer ve v0.8 stil anahtarı kullanımı v0.9 rekorlarını etkiliyor olabilir.
+- Q01: 25 Ekim testle doğrulandı ve düzeltildi; Relax yeni oyuncak/prop/rampa temizliği eklendi.
+- Q02: 25 Ekim testle doğrulandı ve düzeltildi; ayrı Adventure kariyeri ve gerçek stil anahtarı kullanılır.
 - Q03: PerformanceProbe benchmark'ında eski ArcadeSequence ile Adventure koşusu eşleşmesi incelenecek.
 - Her aday için yeniden üretim, beklenen/gerçek davranış ve hedefli test gerekir.
-- Belge turunda bu alanlar düzeltilmedi; “test adayı” ifadesini “çözülmüş hata”ya dönüştürme.
+- Q01/Q02 kanıtı Docs/HARDENING-2026-10-25.md; Q03 hâlâ inceleme adayıdır.
 
 ## 4. Yeni karar şablonu
 
