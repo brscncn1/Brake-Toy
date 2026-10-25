@@ -98,7 +98,7 @@ Ortamın sistem/geliştirici talimatları ayrıca geçerlidir; belge bunları de
 - Builder'lar genel güncelleme aracı değildir; Create/upgrade davranışını önce incele.
 - Mevcut sahneyi açmak için `Open` kullan; gereksiz `Create` çağırma.
 - Sürüşte sürekli Instantiate/Destroy veya kare başına yeni koleksiyon ekleme.
-- 25 Ekim sağlamlaştırma kanıtı 53 EditMode +66 PlayMode =119/119; APK aynı kaldı.
+- 25 Ekim K1.5 kanıtı 53 EditMode +71 PlayMode =124/124; APK aynı kaldı.
 - Fiziksel v0.9 FPS/p95/ısı ve kullanıcı sanat/oynanış kabulü henüz tamamlanmadı.
 - Test, cihaz ölçümü, kullanıcı onayı ve mağaza yayını ayrı kabul durumlarıdır.
 - Belge değişikliğinde link/satır/çelişki kontrolü yeterlidir; gereksiz Unity/APK derleme.

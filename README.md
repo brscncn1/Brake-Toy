@@ -1,5 +1,8 @@
 # BRAKE TOY
 
+25 Ekim K1.5: [iniş ve rampa sınırları](Docs/LANDING-2026-10-25.md), 124/124 Unity testi.
+Dal `fix/landing-ramp-boundaries`; indirmedeki APK bu yeni düzeltmeleri henüz içermez.
+
 25 Ekim sağlamlaştırma: [Relax toparlanması ve kayıt geçişi](Docs/HARDENING-2026-10-25.md),
 53 EditMode +66 PlayMode =119/119. Dal `fix/adventure-relax-records`; yeni APK henüz üretilmedi.
 

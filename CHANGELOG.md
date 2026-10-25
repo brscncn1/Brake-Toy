@@ -1,3 +1,7 @@
+# K1.5 — 25 Ekim 2026 (yeni APK yayımlanmadı)
+
+K1.5 tamamlandı: jetpack alçalmasının son 0.45 saniyesi korumalı; yakın iniş alanı alçalma başında temizleniyor, güç sonundaki 0.85 saniye koruma korunuyor ve bitiyor. Cetvel destek yüksekliğinin bir simülasyon adımı geriden gelmesi giderildi. Kitap/cetvel sağ-sol temas sınırları 24 koşuda, 30/60/120 Hz adımla denendi; cihaz FPS ölçümü değildir. Yan çıkış, güç bitişi sonrası normal çarpışma ve aynı rotada retry stokları kontrol edildi. Önce 3/5, düzeltmeden sonra hedefli 5/5; nihai 53 EditMode +71 PlayMode =124/124. Gerçek kariyer/ghost dosyaları değişmedi. APK ve tablet testi yapılmadı. Kaynak dal fix/landing-ramp-boundaries. Sonraki küçük paket K1.6/K1.7 okunabilirlik ve açık build hedefi değerlendirmesidir. Kanıt Reports/LANDING_VALIDATION.json, ayrıntı Docs/LANDING-2026-10-25.md. Notion tekrar denenmedi; notlar masaüstü yedeğine eklendi.
+
 # v0.9 — Adventure / 2026-10-24
 
 Sekiz parkur ailesi, torba/hafıza, sinyaller, bağlı diziler, yüzey etkileri ve cetvel uçuşu. Tidy/kariyer korunur, domino yok. 112 test. PLAN-v0.9.md ve MILESTONE-v09.md.

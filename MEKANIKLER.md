@@ -115,6 +115,7 @@ Taban: v0.9 Adventure, 24 Ekim 2026. Sayılar mevcut koddur; denge önerileri ay
 - Yavaşlatma:3 saniye, dünya ilerlemesi yaklaşık 0.32; oyuncunun yatay kontrolü korunur.
 - Roket:3 saniye, ilerleme yaklaşık 1.85; yumuşak giriş/çıkış ve çarpışma koruması.
 - Jetpack:5 saniye, yaklaşık 2.25 yüksekliğe yumuşak yükselme/iniş.
+- Son 0.45 saniyelik jet alçalması da korumalıdır; iniş alanı alçalmaya geçişte temizlenir.
 - Roket/jetpack sonunda 0.85 saniye iniş koruması ve yakındaki tehlikeleri temizleme.
 - Aynı anda tek güç; mola süreyi durdurur. Sonuç ekranı aktif gücü/uçuşu bitirir.
 - Başlangıçta ilk kariyere bir kez her güçten 3 hak; kullanımdan önce kalıcı tüketim yapılır.
@@ -160,6 +161,6 @@ Taban: v0.9 Adventure, 24 Ekim 2026. Sayılar mevcut koddur; denge önerileri ay
 ## 11. Öncelikli doğrulama adayları
 
 - Relax aynı çarpışmada tek hak tüketir; yakın yeni oyuncak/zemin/rampa temizlenir, uzak parkur korunur.
-- Güç bitişi, tünel tavanı, rampa/cetvel kenarı ve sonraki karşılaşma birlikte adil mi?
+- K1.5: güç bitişi, iki taraflı rampa/cetvel sınırı ve yan çıkış testleri geçti; cihaz kabulü ayrıdır.
 - Eski kariyer rekorlarının Adventure sonuçlarına karışması ayrı profil ve doğru anahtarla giderildi.
 - Bu liste inceleme adaylarıdır; yeni test yapılmadan kesin hata veya giderildi diye işaretleme.

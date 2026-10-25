@@ -100,6 +100,8 @@ GameManager.Update
 - JoyfulRun; destek yüzeyi, rampanın arka uçtan ayrılması, kısa yan düşüş ve uçuş yüksekliğini yönetir.
 - Kitap uçuşu 1.65 saniye; cetvel LaunchFromToy 1.35 saniye; jet yüksekliği ayrı katkıdır.
 - PredictHeight ileri konumdaki desteği de hesaplar; yalnız mevcut yüksekliğe bakarak temas atlama.
+- Surface kitap/oyuncak mesafelerini ayrı alır: Advance'te kitap hareket etmiş, cetvel henüz etmemiştir.
+- Jet son 0.45 saniyede korumalı alçalır; iniş temizliği bu geçişte ve güç sonunda çalışır.
 - Roket koruması ve güç sonu iniş temizliği hem eski hem yeni engellerle bağlanmıştır.
 - Relax toparlanması 14 birim içindeki eski/yeni engelleri, bağlı prop ve rampaları temizler.
 - Uzak karşılaşmalar korunur; Adventure zemin yavaşlatma/kayma durumu da sıfırlanır.
