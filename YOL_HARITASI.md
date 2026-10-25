@@ -59,6 +59,8 @@ K2.1 tabanı ve K2.3/K2.4 iki ailelik bitiriş deneyi tamamlandı; hız eğrisi 
 Docs/TABLETOP_COURSE-2026-10-26.md: mevcut öğeleri azaltmadan yeni oyuncaklarla birleştir.
 Uygulama/motor doğrulaması165/165 geçti; kullanıcı yoğunluk/tekrar/zorluk kabulü bekleniyor.
 Bu K2 revizyonudur; son planlı K6 aşamasına henüz geçilmedi.
+Sonraki kullanıcı paketi: yerinde dönen top hatası, dört hareket profili ve gece iki loş lamba.
+Kapsam Docs/ROLLING_AND_NIGHT-2026-10-26.md; masa eşyaları/otobüs azaltılmaz, K2 devam eder.
 K1 teknik kaynak doğrulaması yapıldı; cihaz/sanat/Android paket kabulü ayrı açık kalır.
 
 ## 4. K2 — ilk dakika ve risk/ödül

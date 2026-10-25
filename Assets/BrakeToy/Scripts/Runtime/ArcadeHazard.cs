@@ -21,9 +21,28 @@ namespace BrakeToy
             gameObject.SetActive(true);
         }
         public void Release() { InUse = false; gameObject.SetActive(false); }
+        public BrakeToy.Core.BallPath BallPath;
+        public void ConfigureRollingBall(float crossingDepth, float laneX, int variant, int stage)
+        {
+            MotionKind = 3;
+            BallPath = BrakeToy.Core.RollingBallRules.Profile(variant);
+            ForwardFactor = BrakeToy.Core.RollingBallRules.SpeedFactor(variant, stage);
+            CrossingX = laneX;
+            CurvePhase = variant * .13f;
+            CurveAmplitude = .55f;
+            // Match the authored crossing time, despite independent forward motion.
+            transform.position = new Vector3(laneX, 0, crossingDepth * ForwardFactor);
+            transform.position = PositionAfter(0);
+        }
         public Vector3 PositionAfter(float distance)
         {
             float z = transform.position.z - distance;
+            if (MotionKind == 3)
+            {
+                z = transform.position.z - distance * ForwardFactor;
+                return new Vector3(CrossingX + BrakeToy.Core.RollingBallRules.Offset(BallPath,
+                    z / ForwardFactor, CurvePhase, CurveAmplitude), 0, z);
+            }
             if(MotionKind!=0){z=transform.position.z-distance*ForwardFactor;return new Vector3(BrakeToy.Core.JoyfulRules.MotionX(CrossingX,z/ForwardFactor,CurveAmplitude,CurveFrequency,CurvePhase),0,z);}
             return new Vector3(RollingBall ? CrossingX + Slope * z : transform.position.x, 0, z);
         }
@@ -33,10 +52,7 @@ namespace BrakeToy
             if(MotionKind==2&&wheels!=null){float angle=(transform.position.x-old.x)/.18f*Mathf.Rad2Deg;foreach(var wheel in wheels)wheel.Rotate(Vector3.forward,-angle,Space.Self);}
             if (RollingBall && Model)
             {
-                Vector3 delta = transform.position - old;
-                if(MotionKind!=0)delta.z+=distance; // actual roll relative to the moving tabletop
-                Vector3 axis = Vector3.Cross(Vector3.up, delta).normalized;
-                Model.Rotate(axis, delta.magnitude / HalfWidth * Mathf.Rad2Deg, Space.World);
+                BallRolling.Apply(Model, BallRolling.TableDisplacement(transform.position - old, distance), HalfWidth);
             }
         }
     }

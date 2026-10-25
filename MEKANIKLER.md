@@ -84,7 +84,10 @@ Taban: v0.9 Adventure, 24 Ekim 2026. Sayılar mevcut koddur; denge önerileri ay
 ### 5.5 Misket oluğu
 
 - Görünür oluk; varyanta göre 1–3 misket ve daha hızlı, yanal eğrili ilerleme.
-- TravelFactor mevcut varyantlarda 1.12/1.18/1.24; dönüş masa göreli harekete göre hesaplanır.
+- Düz/çapraz/tek kavis/çift kavis profilleri; aynı grupta farklı hareketli1–3 misket bulunabilir.
+- Büyük toplar da bağımsız ilerler; ForwardFactor1.20–1.45, büyük top yanal sınırı±0.55'tir.
+- Küçük misket yanal sınırı±0.48; hız varyanta bağlıdır, büyük toplarda ilerleme kademesi de vardır.
+- Görsel dönüş gerçek masa üstü yol/radyus kadardır; sabit top sırf masa kaydığı için dönmez.
 - Başlangıç mesafesi bu hızla ölçeklenir; gelecek karşılaşma erkenden önceki kaçışı kapatmaz.
 - Sayı/hız şu anda varyanttan seçilir; sürekli zamana bağlı ek zorluk kademesi olarak sunma.
 
@@ -157,6 +160,7 @@ Taban: v0.9 Adventure, 24 Ekim 2026. Sayılar mevcut koddur; denge önerileri ay
 ## 10. Oda, ses ve oyuncu açısından kabul
 
 - Gün/gece döngüsü güneş/ay/yıldız/kuşlarla odayı canlandırır; oynanış kuralları gün saatine bağlanmaz.
+- Gece radyonun yanındaki raf ve yatak başlığındaki iki loş lamba yanar; gündüz ışıkları söner.
 - Masa bölgeleri geri alınabilir; kenar dekorları 64 birim ortak fazda defter/kalemlik boşluğu bırakır.
 - Radyo sol raf üzerinde statiktir; domino aktif sürümde yoktur.
 - Menü ve oyun içi müzik ayrıdır; motor/efekt/müzik slider'ları ayrı kanalları yönetir.

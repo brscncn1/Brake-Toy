@@ -88,7 +88,10 @@ GameManager.Update
 - AdventureEncounters ana oyuncak + kitap rampası +22/40/58±2 birimde üç çift engelli geçit kurar.
 - Katalog 0–6 oyuncaklar; 7 kitap, 8 spiral defter, 9 kalemliktir. Otobüs 6 tekrar üretilir.
 - TabletopCourseUpgrade yalnız Adventure kataloğunu genişletir; oda ve eski prefabları yeniden üretmez.
-- DenseCourse tur başında sabitlenir; ghost tabletop-r3 anahtarına ayrılır, eski dosyalar korunur.
+- DenseCourse tur başında sabitlenir; hareket güncellemesi ghost tabletop-r4-rolling anahtarına ayrılır.
+- RollingBallRules dört sınırlı yörünge ve ileri hız faktörünü tanımlar; ArcadeHazard MotionKind=3 uygular.
+- BallRolling masa kaymasını çıkarır; açısal hareket gerçek masa üstü yol/radyustan hesaplanır.
+- Hareket tahmini ve gerçek adım aynı yörüngeyi kullanır; hızlı top başlangıç Z'si hızla ölçeklenir.
 - Adventure havuzu başlangıçta 8 tür ×6 örnek; ayrıca mevcut hazard/rampa/yıldız havuzları vardır.
 - Havuz tükenmesi sessiz nesne kaybı olarak gizlenmez; sayaç/exception ile görünürdür ve test edilmelidir.
 - Template/pivot/mesh hazırlanması sürüş başlangıcında yapılır; sürüş döngüsünde yeni maket üretilmez.
@@ -153,6 +156,8 @@ GameManager.Update
 - PerformanceProbe yerel FPS/p95/RAM raporu üretir; editör ve otomatik witness bayraklarını kaydeder.
 - Benchmark'ın eski ArcadeSequence yolu vardır; Adventure ölçümü öncesi K4.3 kontrolünü yap.
 - Draw-call/GC/CPU/GPU etkisini gerçek cihazda ölç; üçgen sayısından tek başına FPS çıkarma.
+- NightRoomLamps Adventure'da başlangıçta iki gölgesiz yerel ışık/gövde oluşturur; gece kısılır/açılır.
+- Raf spotunun TrackSpill seçeneği parkura hafif sıcak ışığı kapatabilir; yatak başlığı ışığı odada kalır.
 
 ## 11. Online sınırı ve yayın
 
