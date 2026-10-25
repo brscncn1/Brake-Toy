@@ -2,6 +2,7 @@ using System;
 namespace BrakeToy.Core
 {
     public enum TrackToy { Tunnel, Windup, Crane, Train, Marbles, Surfaces, Seesaw, Garage }
+    public enum AdventureEnding { BookRamp, GroundGate, Ruler }
     // A shuffled bag guarantees coverage; the last three families cannot repeat across a bag boundary.
     public sealed class AdventureSequence
     {
@@ -19,7 +20,16 @@ namespace BrakeToy.Core
     }
     public static class AdventureRules
     {
-        public const string Version="adventure-r1";
+        public const string Version="adventure-r2";
+        public static AdventureEnding Ending(PlaygroundBeat beat, bool varied = true)
+        {
+            if (beat.Family == (int)TrackToy.Seesaw) return AdventureEnding.Ruler;
+            bool eligible = beat.Family == (int)TrackToy.Windup || beat.Family == (int)TrackToy.Train;
+            // Separate the ending bit from the low bit used by frog/duck and obstacle variants.
+            return varied && eligible && (beat.Variant / 2) % 2 == 0
+                ? AdventureEnding.GroundGate : AdventureEnding.BookRamp;
+        }
+        public static string GhostNamespace(bool varied) => Version + (varied ? "-varied" : "-classic");
         public static float Phase(float z,float offset)=>z*.16f+offset;
         public static float Hop(float phase)=>Math.Max(0,(float)Math.Sin(phase))* .9f;
         public static float TapeSpeed(bool airborne)=>airborne?1:.62f;

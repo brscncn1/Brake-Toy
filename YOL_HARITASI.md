@@ -54,8 +54,8 @@ diğer maddeler tamamlanmış sayılmaz. Ayrıntı: `Docs/HARDENING-2026-10-25.m
 
 Çıkış: kritik veri kaybı/crash yok, baseline tekrarlanabilir, şüpheli durumlar testle sonuçlanmış.
 Kanıt: XML, örnek kayıt/migration, hata adımları, kaynak commit ve günlük.
-K2.1 sayısal taban tamamlandı; sonraki deney K2.3/K2.4 bitiriş çeşitliliğidir.
-İlk deneyde hız eğrisi korunur ve iki ailede yerden ödül/kitap rampası bitirişleri karşılaştırılır.
+K2.1 tabanı ve K2.3/K2.4 iki ailelik bitiriş deneyi tamamlandı; hız eğrisi korundu.
+Sonraki paket K2.5 uyarı okunabilirliğidir; diğer ailelerin risk yolları ayrıca açık kalır.
 K1 teknik kaynak doğrulaması yapıldı; cihaz/sanat/Android paket kabulü ayrı açık kalır.
 
 ## 4. K2 — ilk dakika ve risk/ödül

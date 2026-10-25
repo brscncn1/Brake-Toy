@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Passed" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-25 21:25:15Z" end-time="2026-10-25 21:25:19Z" duration="3,6154529">
+  <test-suite type="TestSuite" id="1099" name="Brake Toy" fullname="Brake Toy" runstate="Runnable" testcasecount="77" result="Passed" start-time="2026-10-25 21:25:15Z" end-time="2026-10-25 21:25:19Z" duration="3.615453" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1093" name="BrakeToy.PlayMode.Tests.dll" fullname="C:/Users/Baris/Documents/Codex/2026-10-20/burada-yazan-promptu-sana-zel-haz/outputs/BrakeToy/Library/ScriptAssemblies/BrakeToy.PlayMode.Tests.dll" runstate="Runnable" testcasecount="77" result="Passed" start-time="2026-10-25 21:25:15Z" end-time="2026-10-25 21:25:19Z" duration="3.610633" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="13180" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1094" name="BrakeToy" fullname="BrakeToy" runstate="Runnable" testcasecount="77" result="Passed" start-time="2026-10-25 21:25:15Z" end-time="2026-10-25 21:25:19Z" duration="3.610262" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1095" name="Tests" fullname="BrakeToy.Tests" runstate="Runnable" testcasecount="77" result="Passed" start-time="2026-10-25 21:25:15Z" end-time="2026-10-25 21:25:19Z" duration="3.610046" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="AdventureEndingSceneTests" fullname="BrakeToy.Tests.AdventureEndingSceneTests" classname="BrakeToy.Tests.AdventureEndingSceneTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-25 21:25:15Z" end-time="2026-10-25 21:25:19Z" duration="3.608509" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1006" name="CaptureSameVariantClassicAndVariedEndings" fullname="BrakeToy.Tests.AdventureEndingSceneTests.CaptureSameVariantClassicAndVariedEndings" methodname="CaptureSameVariantClassicAndVariedEndings" classname="BrakeToy.Tests.AdventureEndingSceneTests" runstate="Runnable" seed="1027481966" result="Passed" start-time="2026-10-25 21:25:15Z" end-time="2026-10-25 21:25:16Z" duration="1.302550" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1002" name="EndingGeometryKeepsThreeRewardsAndCanRestoreClassicLayout" fullname="BrakeToy.Tests.AdventureEndingSceneTests.EndingGeometryKeepsThreeRewardsAndCanRestoreClassicLayout" methodname="EndingGeometryKeepsThreeRewardsAndCanRestoreClassicLayout" classname="BrakeToy.Tests.AdventureEndingSceneTests" runstate="Runnable" seed="597871133" result="Passed" start-time="2026-10-25 21:25:16Z" end-time="2026-10-25 21:25:16Z" duration="0.286780" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1003" name="ProfileSwitchAppliesOnlyWhenStartingTheNextRun" fullname="BrakeToy.Tests.AdventureEndingSceneTests.ProfileSwitchAppliesOnlyWhenStartingTheNextRun" methodname="ProfileSwitchAppliesOnlyWhenStartingTheNextRun" classname="BrakeToy.Tests.AdventureEndingSceneTests" runstate="Runnable" seed="1854578980" result="Passed" start-time="2026-10-25 21:25:16Z" end-time="2026-10-25 21:25:17Z" duration="0.271223" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1004" name="RiskRewardRoutesWorkWithoutPowersAtThreeStepRates" fullname="BrakeToy.Tests.AdventureEndingSceneTests.RiskRewardRoutesWorkWithoutPowersAtThreeStepRates" methodname="RiskRewardRoutesWorkWithoutPowersAtThreeStepRates" classname="BrakeToy.Tests.AdventureEndingSceneTests" runstate="Runnable" seed="806985842" result="Passed" start-time="2026-10-25 21:25:17Z" end-time="2026-10-25 21:25:17Z" duration="0.355858" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1005" name="SameSeedProfilesKeepSafeRouteSpeedAndSpawnSchedule" fullname="BrakeToy.Tests.AdventureEndingSceneTests.SameSeedProfilesKeepSafeRouteSpeedAndSpawnSchedule" methodname="SameSeedProfilesKeepSafeRouteSpeedAndSpawnSchedule" classname="BrakeToy.Tests.AdventureEndingSceneTests" runstate="Runnable" seed="1573265001" result="Passed" start-time="2026-10-25 21:25:17Z" end-time="2026-10-25 21:25:19Z" duration="1.384920" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Baris/AppData/LocalLow/Brake Toy/Brake Toy\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

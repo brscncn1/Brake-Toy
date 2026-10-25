@@ -6,13 +6,15 @@ namespace BrakeToy
     public sealed class AdventureEncounters:MonoBehaviour
     {
         public AdventureToy[] Templates;public int SlotsPerKind=6;public AdventureToy[] Pool{get;private set;}
+        public bool VariedEndings = true;
+        public bool ActiveVariedEndings { get; private set; } = true;
         public int PoolExhaustions{get;private set;}public float SurfaceFactor{get;private set;}=1;public bool OnIce{get;private set;}
         private static readonly string[] labels={"KARTON TÜNEL · YEŞİL ÇIKIŞ AÇIK","KURMALI OYUNCAK · HAREKETİNİ OKU","VİNÇ · GÖLGEYİ TAKİP ET","TREN GEÇİDİ · VAGONLARA DİKKAT","MİSKET AKIŞI · YEŞİL YOL AÇIK","BANT YAVAŞLATIR · KART KAYDIRIR","CETVEL · YEŞİL OKTAN ZIPLA","GARAJ · KAPI VE FARLARA DİKKAT"};
         private GameManager game;private JoyfulRun jump;private PlaygroundRun run;
         private void Bind(){if(game)return;game=GetComponent<GameManager>();jump=GetComponent<JoyfulRun>();run=GetComponent<PlaygroundRun>();}
         public void ResetRun()
         {
-            Bind();game.Player.SetSurfaceProvider(this);if(Pool==null){Pool=new AdventureToy[Templates.Length*SlotsPerKind];for(int k=0;k<Templates.Length;k++)for(int i=0;i<SlotsPerKind;i++){var a=Instantiate(Templates[k],transform);a.name="Pooled "+a.Kind+" "+i;Pool[k*SlotsPerKind+i]=a;}}
+            Bind();ActiveVariedEndings=VariedEndings;game.Player.SetSurfaceProvider(this);if(Pool==null){Pool=new AdventureToy[Templates.Length*SlotsPerKind];for(int k=0;k<Templates.Length;k++)for(int i=0;i<SlotsPerKind;i++){var a=Instantiate(Templates[k],transform);a.name="Pooled "+a.Kind+" "+i;Pool[k*SlotsPerKind+i]=a;}}
             foreach(var a in Pool)a.Release();PoolExhaustions=0;SurfaceFactor=1;OnIce=false;
         }
         public AdventureToy Place(TrackToy kind,PlaygroundBeat beat,float z)
@@ -30,12 +32,30 @@ namespace BrakeToy
         {
             Bind();Place((TrackToy)b.Family,b,z+3);var e=GetComponent<PlaygroundEncounters>();e.MarkRoute(b.SafeX,z,false);e.MarkRoute(b.RiskX,z,true);
             int third=3-b.SafeLane-b.RiskLane;spawn(b.Variant%2==0?4:2,ArcadeRules.LaneX(third),z+23,0,0);
-            game.Arcade.Challenges.SpawnAt(b.RiskX,z-6);game.Arcade.Challenges.SpawnAt(b.RiskX,z-2);
-            // Approach -> toy decision -> optional jump/landing. Every phrase ends before +30 m.
-            if(b.Family!=(int)TrackToy.Seesaw){float offset=b.Family==(int)TrackToy.Tunnel?11:17;jump.SpawnRamp(b.RiskX,z+offset);game.Arcade.Challenges.SpawnAt(b.RiskX,z+offset+9,1.8f);}
-            else game.Arcade.Challenges.SpawnAt(b.RiskX,z+12,1.8f);
+            SpawnEnding(b, z, e);
             if(b.Family==(int)TrackToy.Tunnel)Place(TrackToy.Windup,b,z+23);
             else if(b.Family==(int)TrackToy.Surfaces)Place(TrackToy.Marbles,b,z+10);
+        }
+        private void SpawnEnding(PlaygroundBeat beat, float z, PlaygroundEncounters markers)
+        {
+            var rewards = game.Arcade.Challenges;
+            var ending = AdventureRules.Ending(beat, ActiveVariedEndings);
+            if (ending == AdventureEnding.GroundGate)
+            {
+                // Main toy clears before the ground reward trail; the green bypass stays untouched.
+                markers.MarkRoute(beat.RiskX, z + 15, true, .079f);
+                for (int i = 0; i < 3; i++) rewards.SpawnAt(beat.RiskX, z + 13 + i * 6);
+                return;
+            }
+            rewards.SpawnAt(beat.RiskX, z - 6);
+            rewards.SpawnAt(beat.RiskX, z - 2);
+            if (ending == AdventureEnding.Ruler) rewards.SpawnAt(beat.RiskX, z + 12, 1.8f);
+            else
+            {
+                float offset = beat.Family == (int)TrackToy.Tunnel ? 11 : 17;
+                jump.SpawnRamp(beat.RiskX, z + offset);
+                rewards.SpawnAt(beat.RiskX, z + offset + 9, 1.8f);
+            }
         }
         private Vector3 Centre(AdventureToy a,AdventureSolid s,float moved)
         {var p=a.transform.position-Vector3.forward*(moved*a.TravelFactor);int i=Array.IndexOf(a.Moving,s.Part);if(i>=0)p+=a.Motion(i,p.z);return p+s.Centre;}

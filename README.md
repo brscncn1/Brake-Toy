@@ -1,5 +1,9 @@
 # BRAKE TOY
 
+26 Ekim: [kurmalı oyuncak/trende iki bitiriş](Docs/ENDING_VARIANTS-2026-10-26.md),
+[klasik/yeni görüntüler](Reports/Visuals/ENDING_GALLERY.html). 159/159 regresyon ve5/5 son hedefli kontrol.
+Hız eğrisi korundu; yeni APK henüz üretilmedi.
+
 25 Ekim K2.1: [ilk dakika tempo ölçümü](Docs/OPENING_PACE-2026-10-25.md),
 [10/30/60 saniye motor görüntüleri](Reports/Visuals/OPENING_GALLERY.html).
 149/149 Unity testi; hız/parkur kuralları değişmedi, yeni APK üretilmedi.

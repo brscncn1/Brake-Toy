@@ -37,6 +37,8 @@ Taban: v0.9 Adventure, 24 Ekim 2026. Sayılar mevcut koddur; denge önerileri ay
 ## 4. Parkur üretimi ve adalet
 
 - Sekizli torbada her aile bir kez; son üç ailenin hemen tekrarı önlenir.
+- Kurmalı oyuncak/tren iki seed bitirişi kullanır: üç yer yıldızı veya kitap rampası/hava ödülü.
+  İkisinde üç yıldız vardır; hava TP bonusu farklıdır. VariedEndings=false yeni turda klasiğe döner.
 - Seed aile/yan yol/varyant/faz seçimlerini tekrar oynatılabilir kılar.
 - İlk karşılaşma 24 birim; sonraki aralık en az 48 veya Arcade 2.65/Relax 3 saniyelik mesafedir.
 - K2.1 ölçümünde 10/30/60 sn Arcade 4/11/22, Relax 2/7/15 cümle referansı geçilir.
