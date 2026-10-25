@@ -2,7 +2,8 @@
   "name": "BrakeToy.EditMode.Tests",
   "references": [
     "BrakeToy.Core",
-    "BrakeToy.Runtime"
+    "BrakeToy.Runtime",
+    "BrakeToy.Editor"
   ],
   "includePlatforms": [
     "Editor"

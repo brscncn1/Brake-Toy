@@ -1,0 +1,11 @@
+{
+    "profile": "Tidy",
+    "scene": "Assets/BrakeToy/Scenes/ToyRoomTidy.unity",
+    "outputPath": "Builds/Android/Candidates/BrakeToy-Tidy.apk",
+    "options": "None",
+    "unityVersion": "6000.3.26f1",
+    "applicationVersion": "0.9.0",
+    "result": "ValidatedOnly",
+    "versionCode": 10,
+    "buildExecuted": false
+}

@@ -7,7 +7,7 @@ Seçili paketin dışındaki öneriler topluca uygulama yetkisi sayılmaz.
 ## 1. Başlangıç ve öncelik
 
 - Hazır: sürüş, sekiz yeni oyuncak ailesi, rampalar, güçler, görev/garaj, kayıt ve yerel ghost.
-- Son otomatik kanıt: K1.5 için 124/124 Unity testi; önceki v0.9 tesliminde 13 render vardır.
+- Kanıt: K1.6/K1.7 araçları 74/74 EditMode; K1.5 oyun regresyonu 124/124, v0.9 için 13 render.
 - Açık: güncel cihaz ölçümleri, sanat/oynanış kabulü, kayıt sınırları ve mekaniklerin uç durumları.
 - Canlı online, ödeme, üretim kimliği ve mağaza yayını tamamlanmadı.
 - Hedef: çocukların okuyabildiği, ilk dakikada ilgi çeken, adil, akıcı ve tutarlı mobil oyun.
@@ -47,11 +47,13 @@ diğer maddeler tamamlanmış sayılmaz. Ayrıntı: `Docs/HARDENING-2026-10-25.m
   Ayrıntı `Docs/LANDING-2026-10-25.md`; nihai kanıt `Reports/LANDING_VALIDATION.json`.
 - K1.6: yoğun tek satır koddan bir alan seç; davranışı değiştirmeden okunabilir hâle getir.
 - K1.7: dosya varlığına göre sahne seçen build aracında açık hedef seçimi ihtiyacını değerlendir.
+- K1.6/K1.7: derleme zinciri okunabilir plan/profil yapısına ayrıldı; eski CheckAndBuild hedefleri düzeltildi.
+  Ayrıntı `Docs/ANDROID_BUILD_PROFILES.md`; gerçek Android derlemesi bu pakette yapılmadı.
 - K1.3/K1.4 yeniden üretim: düzeltme öncesi iki test başarısız, düzeltme sonrası ikisi de geçti.
 
 Çıkış: kritik veri kaybı/crash yok, baseline tekrarlanabilir, şüpheli durumlar testle sonuçlanmış.
 Kanıt: XML, örnek kayıt/migration, hata adımları, kaynak commit ve günlük.
-Sonraki küçük paket K1.6/K1.7: okunabilirlik ve açık build hedefi ihtiyacını değerlendirme.
+Sonraki paket K1.2 temiz klon kontrolüdür; K1 cihaz/sanat kabulü bu Editor kontrolleriyle kapanmaz.
 
 ## 4. K2 — ilk dakika ve risk/ödül
 

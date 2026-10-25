@@ -14,7 +14,7 @@ namespace BrakeToy.Editor
             public int authoredRenderersIncludingInactiveCarsAndPool,uniqueReferencedMeshes,trianglesIncludingInactiveCarsAndPool,missingMeshes,missingMaterials,shaderErrors,decorativeColliders;
             public bool physicalDeviceProfiled;
         }
-        public static void CheckAndBuild(){Check();AndroidPrototypeBuild.Build();}
+        public static void CheckAndBuild(){Check();AndroidPrototypeBuild.BuildProfile(AndroidBuildProfile.Review);}
         public static void Check()
         {
             EditorSceneManager.OpenScene(ReviewSceneBuilder.ScenePath);var report=new Report();var meshes=new HashSet<Mesh>();

@@ -1,5 +1,7 @@
+using System;
 using System.IO;
 using UnityEditor;
+using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
 using UnityEngine;
 
@@ -7,25 +9,74 @@ namespace BrakeToy.Editor
 {
     public static class AndroidPrototypeBuild
     {
-        [MenuItem("Tools/Brake Toy/Build Android Prototype")]
-        public static void Build()
+        // Batch default is explicitly Adventure, never whichever scene happens to exist.
+        public static void Build() => BuildProfile(AndroidBuildPlan.ParseProfile(Environment.GetCommandLineArgs()));
+
+        [MenuItem("Tools/Brake Toy/Build Android Adventure")]
+        public static void BuildAdventure() => BuildProfile(AndroidBuildProfile.Adventure);
+
+        [MenuItem("Tools/Brake Toy/Validate Android Adventure (no APK)")]
+        public static void ValidateAdventure() => ValidateProfile(AndroidBuildProfile.Adventure);
+
+        public static void Validate() => ValidateProfile(AndroidBuildPlan.ParseProfile(Environment.GetCommandLineArgs()));
+
+        public static void ValidateProfile(AndroidBuildProfile profile)
         {
-            string scene = File.Exists(AdventureSceneBuilder.ScenePath) ? AdventureSceneBuilder.ScenePath : File.Exists(TidySceneBuilder.ScenePath) ? TidySceneBuilder.ScenePath : File.Exists(PlaygroundSceneBuilder.ScenePath) ? PlaygroundSceneBuilder.ScenePath : File.Exists(JoyfulSceneBuilder.ScenePath) ? JoyfulSceneBuilder.ScenePath : File.Exists(ReviewSceneBuilder.ScenePath) ? ReviewSceneBuilder.ScenePath : File.Exists(LivingSceneBuilder.ScenePath) ? LivingSceneBuilder.ScenePath : File.Exists(RefinedSceneBuilder.ScenePath) ? RefinedSceneBuilder.ScenePath : File.Exists(WorkshopSceneBuilder.ScenePath) ? WorkshopSceneBuilder.ScenePath : File.Exists(TabletopSceneBuilder.ScenePath) ? TabletopSceneBuilder.ScenePath : "Assets/BrakeToy/Scenes/ToyRoom.unity";
-            if (!File.Exists(scene)) PrototypeBuilder.Create();
-            Directory.CreateDirectory("Builds/Android");
-            PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64;
-            PlayerSettings.SetScriptingBackend(UnityEditor.Build.NamedBuildTarget.Android, ScriptingImplementation.IL2CPP);
-            EditorUserBuildSettings.buildAppBundle = false;
-            var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions
+            var plan = AndroidBuildPlan.Create(profile);
+            string directory = Path.GetFullPath(Path.Combine(Application.dataPath, "..", "Reports", "Local"));
+            Directory.CreateDirectory(directory);
+            WriteEvidence(plan, "ValidatedOnly", false, Path.Combine(directory, "AndroidBuildPlan.json"));
+        }
+
+        public static void BuildProfile(AndroidBuildProfile profile)
+        {
+            var plan = AndroidBuildPlan.Create(profile); // Fail before changing settings or creating output dirs.
+            var architecture = PlayerSettings.Android.targetArchitectures;
+            var backend = PlayerSettings.GetScriptingBackend(NamedBuildTarget.Android);
+            bool bundle = EditorUserBuildSettings.buildAppBundle;
+            try
             {
-                scenes = new[] { scene },
-                locationPathName = scene == AdventureSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.9-Adventure.apk" : scene == TidySceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.8.1-Tidy.apk" : scene == PlaygroundSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.8-Playground.apk" : scene == JoyfulSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.7-Joyful.apk" : scene == ReviewSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.6-Review.apk" : scene == LivingSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.5-Living.apk" : scene == RefinedSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.4-Refined.apk" : scene == WorkshopSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.3-Arcade.apk" : scene == TabletopSceneBuilder.ScenePath ? "Builds/Android/BrakeToy-v0.2-Tabletop.apk" : "Builds/Android/BrakeToy-Phase1.apk",
-                target = BuildTarget.Android,
-                options = scene == AdventureSceneBuilder.ScenePath || scene == TidySceneBuilder.ScenePath || scene == PlaygroundSceneBuilder.ScenePath || scene == JoyfulSceneBuilder.ScenePath || scene == ReviewSceneBuilder.ScenePath ? BuildOptions.None : BuildOptions.Development
-            });
-            if (report.summary.result != BuildResult.Succeeded)
-                throw new System.InvalidOperationException("Android prototip derlemesi başarısız: " + report.summary.result);
-            Debug.Log("Brake Toy Android prototype: " + Path.GetFullPath(report.summary.outputPath));
+                Directory.CreateDirectory(Path.GetDirectoryName(plan.OutputPath));
+                PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64;
+                PlayerSettings.SetScriptingBackend(NamedBuildTarget.Android, ScriptingImplementation.IL2CPP);
+                EditorUserBuildSettings.buildAppBundle = false;
+                var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions
+                {
+                    scenes = new[] { plan.ScenePath }, locationPathName = plan.OutputPath,
+                    target = BuildTarget.Android, options = plan.Options
+                });
+                WriteEvidence(plan, report.summary.result.ToString(), true,
+                    ReportPaths.Report("ANDROID_BUILD_REPORT-" + profile + "-candidate.json"));
+                if (report.summary.result != BuildResult.Succeeded)
+                    throw new InvalidOperationException("Android candidate build failed: " + report.summary.result);
+            }
+            finally
+            {
+                PlayerSettings.Android.targetArchitectures = architecture;
+                PlayerSettings.SetScriptingBackend(NamedBuildTarget.Android, backend);
+                EditorUserBuildSettings.buildAppBundle = bundle;
+            }
+        }
+
+        [Serializable]
+        private sealed class Evidence
+        {
+            public string profile, scene, outputPath, options, unityVersion, applicationVersion, result;
+            public int versionCode;
+            public bool buildExecuted;
+        }
+
+        private static void WriteEvidence(AndroidBuildPlan plan, string result, bool executed, string path)
+        {
+            var evidence = new Evidence
+            {
+                profile = plan.Profile.ToString(), scene = plan.ScenePath,
+                outputPath = plan.OutputPath, options = plan.Options.ToString(),
+                unityVersion = Application.unityVersion, applicationVersion = PlayerSettings.bundleVersion,
+                versionCode = PlayerSettings.Android.bundleVersionCode, result = result, buildExecuted = executed
+            };
+            File.WriteAllText(path, JsonUtility.ToJson(evidence, true));
+            Debug.Log("Brake Toy Android " + plan.Profile + ": " + result + " -> " + plan.OutputPath);
         }
     }
 }

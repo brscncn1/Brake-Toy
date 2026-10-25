@@ -10,7 +10,7 @@ namespace BrakeToy.Editor
     {
         [Serializable]private sealed class Report
         {public string scene="ToyRoomAdventure",version="0.9.0";public int toyFamilies,pooledSlotsPerFamily,templateRenderers,templateTriangles,uniqueMeshes,missingMeshes,missingMaterials,shaderErrors,colliders;public bool physicalDeviceProfiled;public string note="Template counts include dynamic pivots; scene/pooled inactive geometry is not runtime draw-call or FPS evidence.";}
-        public static void CheckAndBuild(){Check();AndroidPrototypeBuild.Build();}
+        public static void CheckAndBuild(){Check();AndroidPrototypeBuild.BuildProfile(AndroidBuildProfile.Adventure);}
         public static void Check()
         {
             EditorSceneManager.OpenScene(AdventureSceneBuilder.ScenePath);var g=UnityEngine.Object.FindFirstObjectByType<GameManager>();var a=g.GetComponent<AdventureEncounters>();var report=new Report{toyFamilies=a.Templates.Length,pooledSlotsPerFamily=a.SlotsPerKind};var meshes=new HashSet<Mesh>();

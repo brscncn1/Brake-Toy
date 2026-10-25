@@ -3,7 +3,9 @@
 Taban: v0.9 Adventure; sağlamlaştırma doğrulaması 25 Ekim 2026. Bütün komutlar Unity/Git proje kökünden çalıştırılır.
 Bu belge bir koşu raporu değildir; sonuç iddiası gerçek çıktı ve zamanla desteklenir.
 
-Son yeni koşu: 53 EditMode +71 PlayMode =124/124; `Reports/LANDING_VALIDATION.json`.
+Son araç kontrolü: 74/74 EditMode; `Reports/BUILD_PROFILE_VALIDATION.json`.
+Önceki K1.5: 53 EditMode +71 PlayMode =124/124; `Reports/LANDING_VALIDATION.json`.
+Bu araç paketinde PlayMode yeniden koşulmadı.
 Önceki v0.9 APK kanıtları kendi kaynak commit'i içindir; bu düzeltmeler için APK derlenmedi.
 
 ## 1. Göreve göre en küçük yeterli kontrol
@@ -86,7 +88,9 @@ foreach ($mode in @('EditMode', 'PlayMode')) {
 
 - `BrakeToy.Editor.AdventureValidation.CheckAndBuild`: model denetimi ardından AndroidPrototypeBuild.
 - Son paket `Builds/Android/BrakeToy-v0.9-Adventure.apk`; non-Development ARM 64/IL 2CPP.
-- Build aracı sahneyi dosya varlığından seçer; logdan gerçekten Adventure üretildiğini doğrula.
+- Önce AndroidPrototypeBuild.Validate ile açık profili doğrula; ayrıntı `Docs/ANDROID_BUILD_PROFILES.md`.
+- Yeni aday yolu Builds/Android/Candidates/BrakeToy-Adventure.apk; eski teslim APK'sı korunur.
+- Validate APK üretmez; gerçek Build/CheckAndBuild sonrası imza/paket kontrolleri ayrıca gerekir.
 - Yeni yayın/paket işi seçilirse versionName/versionCode hedefini belirle; belge işinde artırma.
 - appId, sürüm, min/target SDK, debuggable ve izinleri aapt 2 ile kontrol et.
 - apksigner ile imza ve önceki sertifika; zipalign `-c -P 16 -v 4` ile paket hizalaması.
