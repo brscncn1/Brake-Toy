@@ -29,6 +29,7 @@ namespace BrakeToy.Tests
             yield return SceneTestPersistence.Load("ToyRoomAdventure");
             yield return null;
             var game = Object.FindFirstObjectByType<GameManager>();
+            game.GetComponent<AdventureEncounters>().DenseCourse = false; // Historical baseline audit.
             var report = new Report();
             foreach (bool relax in new[] { false, true })
             foreach (int seed in new[] { 7331, 109, 917 })

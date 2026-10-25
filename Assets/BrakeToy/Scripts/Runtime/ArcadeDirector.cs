@@ -86,7 +86,7 @@ namespace BrakeToy
             Style.Reset(); sequence = new ArcadeSequence(CurrentSeed, UseVariedPatterns, Choreographed,game&&game.Review&&game.Review.Mode==PlayMode.Relax); pending = sequence.Next();
             if(Challenges)Challenges.ResetRun();
             if(Joyful){joyfulSequence=new JoyfulSequence(CurrentSeed,game.Review.Mode==PlayMode.Relax);joyfulPending=joyfulSequence.Next();joyful.ResetRun();}
-            if(playground){playground.ResetRun();playgroundSequence=new PlaygroundSequence(CurrentSeed,game.Review.Mode==PlayMode.Relax);adventureSequence=adventure?new AdventureSequence(CurrentSeed,game.Review.Mode==PlayMode.Relax):null;playgroundPending=adventure?adventureSequence.Next():playgroundSequence.Next();}
+            if(playground){playground.ResetRun();playgroundSequence=new PlaygroundSequence(CurrentSeed,game.Review.Mode==PlayMode.Relax);adventureSequence=adventure?new AdventureSequence(CurrentSeed,game.Review.Mode==PlayMode.Relax,adventure.ActiveDenseCourse):null;playgroundPending=adventure?adventureSequence.Next():playgroundSequence.Next();}
             HUD.Clear(); FillAhead();
         }
         public void BeginRun(bool sameRoute)

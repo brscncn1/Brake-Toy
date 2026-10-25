@@ -25023,6 +25023,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0cb5109733464894ab765c3e8460e61a, type: 2}
   - {fileID: 11400000, guid: a4c2d9a6de4472440a2441f9e14ec2be, type: 2}
   - {fileID: 11400000, guid: cd04c99d561f9bd4f9d3cbf83533e8c2, type: 2}
+  - {fileID: 11400000, guid: 5d0e94836a129dd428cc6e8d0498345a, type: 2}
+  - {fileID: 11400000, guid: 4acc0bbe3c2a2944a8a9a00ac98ffa4d, type: 2}
+  - {fileID: 11400000, guid: 6f54f54aca3f95340967d7b3085e3c41, type: 2}
 --- !u!114 &1026764021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25521,6 +25524,8 @@ MonoBehaviour:
   - {fileID: 410344715029044673, guid: d722bbc8cb43cae42a5771a53aaa7fb9, type: 3}
   - {fileID: 5847085193240984986, guid: 53d1ceead7ae5de49b60625ee8e014bc, type: 3}
   SlotsPerKind: 6
+  VariedEndings: 1
+  DenseCourse: 1
 --- !u!1 &1027613393
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-26",
+  "rules": "tabletop-r3",
+  "sourceBase": "e9c5eac61c75feb4f063cb2379d8f8a48d02ade8",
+  "branch": "feat/dense-tabletop-course",
+  "unity": "6000.3.26f1",
+  "tests": {
+    "EditMode": {
+      "result": "Passed",
+      "total": "85",
+      "passed": "85",
+      "failed": "0",
+      "start-time": "2026-10-25 22:41:54Z",
+      "end-time": "2026-10-25 22:42:06Z"
+    },
+    "PlayMode": {
+      "result": "Passed",
+      "total": "80",
+      "passed": "80",
+      "failed": "0",
+      "start-time": "2026-10-25 22:46:21Z",
+      "end-time": "2026-10-25 22:47:08Z"
+    }
+  },
+  "totalPassed": 165,
+  "coverage": {
+    "deterministicSeedsPerMode": 100,
+    "phrasesPerSeed": 120,
+    "patterns": 6,
+    "toyFamilies": 8,
+    "hazardKinds": 10,
+    "deskKindsPerPhrase": [
+      7,
+      8,
+      9
+    ],
+    "hazardsPerPhrase": 6,
+    "busPatterns": [
+      3,
+      5
+    ],
+    "busSweepAmplitude": 0.65,
+    "modeSeedStepRuns": 18,
+    "secondsPerRun": 60,
+    "seeds": [
+      7331,
+      109,
+      917
+    ],
+    "stepRates": [
+      30,
+      60,
+      120
+    ],
+    "powersRequired": false,
+    "permanentGreenLane": false,
+    "bookRampsPreserved": true,
+    "fixedLaneWitnessesMustFail": 3,
+    "poolExhaustionsInWitnessRuns": 0,
+    "allTenHazardKindsActuallySpawn": true
+  },
+  "limits": [
+    "PC engine simulation, not tablet FPS/p95",
+    "Witness follows legal lateral speed; human readability/difficulty acceptance remains open",
+    "No new APK, release, online score compatibility or production art acceptance",
+    "Old safe-lane and ending tests explicitly run the preserved legacy profile"
+  ],
+  "notion": "No quota retry; local logs and UTF-8 BOM desktop backup updated.",
+  "sha256": {
+    "Reports/Tests/Tabletop-EditMode.xml": "94a96462eeb21b9e23066f3ec71e7020789f5ada494c7204af2d2c11f39a1b9d",
+    "Reports/Tests/Tabletop-PlayMode.xml": "97def0d79960ca6c5bd1e49028bdd2130ccdefdc371a6f460c7dfb4d0f1965df",
+    "Reports/Visuals/Tabletop-pattern-1.png": "b6b6802b6da4a54b9624cbf6b99195be92a6aa303132e90b898e8c6dc28bd8ae",
+    "Reports/Visuals/Tabletop-pattern-3.png": "9b7ea8f709226adee8eac63b1512d8afb3c9f26815d3c8ff901d835a9ce3bbaa",
+    "Reports/Visuals/Tabletop-pattern-5.png": "29f4de86160639a1a8bd84a39e5034e782eed75cdaccfb902e038158c1ce5212",
+    "Reports/Visuals/Tabletop-run-10.png": "872c56d288b2fd4311d884e0a64d41acb38b2d180fad8485088fecde3e713316",
+    "Reports/Visuals/Tabletop-run-20.png": "96268853116fae4ef3883ec33586a57c1604ca582982c9a5a91e7b8ec04d049e",
+    "Reports/Visuals/Tabletop-run-30.png": "5dc84c5a9965020ac44792ee7b4fd2f2d7b6e023238bf279768285171a9c2c28",
+    "Assets/BrakeToy/Scripts/Core/TabletopCourseRules.cs": "69dc1c7a62f932753f58fc99314d6fc8f64b9bd9a3d715e57a38b8a68771ff33",
+    "Assets/BrakeToy/Scripts/Core/AdventureRules.cs": "4c42e41f8bfdbe7e0d745288c4447a9ea17c0e0ef265a35624e3a996817aa955",
+    "Assets/BrakeToy/Scripts/Runtime/AdventureEncounters.cs": "7d2d3004141bbe6bdaa45ab3265b940a4a4cda3a41bb5a6fee74e37c5e1b65e1",
+    "Assets/BrakeToy/Scripts/Runtime/ArcadeDirector.cs": "551d940260c82d2d5d95cd6d156bd96fcfbec7c42c0f462fc37e262dd2936200",
+    "Assets/BrakeToy/Scripts/Runtime/GhostReplay.cs": "1d81a6da9e1ae1c1f857e902ad839e8727ec0cedfa510fceefc27d3d98e16010",
+    "Assets/BrakeToy/Scripts/Runtime/PlaygroundUI.cs": "e7dc3744d41dc6b024b5c81ce517c0620f7dc35bcd426342078f17bcd6445f1f",
+    "Assets/BrakeToy/Scenes/ToyRoomAdventure.unity": "cc7335e6e669e8f7cb3370d527c3a71aa28c51597191a98723d68f77d6ab3754",
+    "Assets/BrakeToy/Tests/PlayMode/TabletopCourseSceneTests.cs": "f32f1fa320593199d3f92cc4d250141559315cb76b7e5ae794d3036a54ee9a8a",
+    "Assets/BrakeToy/Tests/EditMode/TabletopCourseTests.cs": "8f8c45695cbd5b93375ec73ed4e2ba20553e3fae2bfb9b4a2e1b22288d606a77"
+  },
+  "persistentSaveHashesUnchanged": true
+}

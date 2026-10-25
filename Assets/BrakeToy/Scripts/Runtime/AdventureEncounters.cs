@@ -7,14 +7,16 @@ namespace BrakeToy
     {
         public AdventureToy[] Templates;public int SlotsPerKind=6;public AdventureToy[] Pool{get;private set;}
         public bool VariedEndings = true;
+        public bool DenseCourse = true;
+        public bool ActiveDenseCourse { get; private set; } = true;
         public bool ActiveVariedEndings { get; private set; } = true;
         public int PoolExhaustions{get;private set;}public float SurfaceFactor{get;private set;}=1;public bool OnIce{get;private set;}
-        private static readonly string[] labels={"KARTON TÜNEL · YEŞİL ÇIKIŞ AÇIK","KURMALI OYUNCAK · HAREKETİNİ OKU","VİNÇ · GÖLGEYİ TAKİP ET","TREN GEÇİDİ · VAGONLARA DİKKAT","MİSKET AKIŞI · YEŞİL YOL AÇIK","BANT YAVAŞLATIR · KART KAYDIRIR","CETVEL · YEŞİL OKTAN ZIPLA","GARAJ · KAPI VE FARLARA DİKKAT"};
+        private static readonly string[] labels={"KARTON TÜNEL · YEŞİL ÇIKIŞ AÇIK","KURMALI OYUNCAK · HAREKETİNİ OKU","VİNÇ · GÖLGEYİ TAKİP ET","TREN GEÇİDİ · VAGONLARA DİKKAT","MİSKET AKIŞI · YUVARLANMAYI OKU","BANT YAVAŞLATIR · KART KAYDIRIR","CETVEL · YEŞİL OKTAN ZIPLA","GARAJ · KAPI VE FARLARA DİKKAT"};
         private GameManager game;private JoyfulRun jump;private PlaygroundRun run;
         private void Bind(){if(game)return;game=GetComponent<GameManager>();jump=GetComponent<JoyfulRun>();run=GetComponent<PlaygroundRun>();}
         public void ResetRun()
         {
-            Bind();ActiveVariedEndings=VariedEndings;game.Player.SetSurfaceProvider(this);if(Pool==null){Pool=new AdventureToy[Templates.Length*SlotsPerKind];for(int k=0;k<Templates.Length;k++)for(int i=0;i<SlotsPerKind;i++){var a=Instantiate(Templates[k],transform);a.name="Pooled "+a.Kind+" "+i;Pool[k*SlotsPerKind+i]=a;}}
+            Bind();ActiveDenseCourse=DenseCourse;ActiveVariedEndings=VariedEndings;game.Player.SetSurfaceProvider(this);if(Pool==null){Pool=new AdventureToy[Templates.Length*SlotsPerKind];for(int k=0;k<Templates.Length;k++)for(int i=0;i<SlotsPerKind;i++){var a=Instantiate(Templates[k],transform);a.name="Pooled "+a.Kind+" "+i;Pool[k*SlotsPerKind+i]=a;}}
             foreach(var a in Pool)a.Release();PoolExhaustions=0;SurfaceFactor=1;OnIce=false;
         }
         public AdventureToy Place(TrackToy kind,PlaygroundBeat beat,float z)
@@ -30,11 +32,61 @@ namespace BrakeToy
         }
         public void Spawn(PlaygroundBeat b,float z,Func<int,float,float,float,float,ArcadeHazard> spawn)
         {
+            if (ActiveDenseCourse) { SpawnTabletop(b, z, spawn); return; }
             Bind();Place((TrackToy)b.Family,b,z+3);var e=GetComponent<PlaygroundEncounters>();e.MarkRoute(b.SafeX,z,false);e.MarkRoute(b.RiskX,z,true);
             int third=3-b.SafeLane-b.RiskLane;spawn(b.Variant%2==0?4:2,ArcadeRules.LaneX(third),z+23,0,0);
             SpawnEnding(b, z, e);
             if(b.Family==(int)TrackToy.Tunnel)Place(TrackToy.Windup,b,z+23);
             else if(b.Family==(int)TrackToy.Surfaces)Place(TrackToy.Marbles,b,z+10);
+        }
+        private void SpawnTabletop(PlaygroundBeat beat, float z, Func<int,float,float,float,float,ArcadeHazard> spawn)
+        {
+            Bind();
+            Place((TrackToy)beat.Family, beat, z + 3);
+            // Keep the existing toys and book jumps; desk objects supplement them.
+            game.Arcade.Challenges.SpawnAt(beat.RiskX, z - 6);
+            game.Arcade.Challenges.SpawnAt(beat.RiskX, z - 2);
+            if (beat.Family == (int)TrackToy.Seesaw)
+                game.Arcade.Challenges.SpawnAt(beat.RiskX, z + 12, 1.8f);
+            else
+            {
+                float offset = beat.Family == (int)TrackToy.Tunnel ? 11 : 17;
+                jump.SpawnRamp(beat.RiskX, z + offset);
+                game.Arcade.Challenges.SpawnAt(beat.RiskX, z + offset + 9, 1.8f);
+            }
+            for (int row = 0; row < 3; row++)
+            {
+                int gap = TabletopCourseRules.GapLane(beat, row);
+                int pattern = TabletopCourseRules.Pattern(beat);
+                int column = 0;
+                for (int lane = 0; lane < 3; lane++)
+                {
+                    if (lane == gap) continue;
+                    // Every phrase contains book, spiral notebook and pencil cup.
+                    int kind = row == 0 ? 7 + column : row == 1 && column == 0 ? 9 : 7 + (beat.Index + lane) % 3;
+                    bool bus = (pattern == 3 || pattern == 5) && row == 1 && column == 1;
+                    if (bus) kind = 6;
+                    else if (row == 2 && column == 1) kind = beat.Index % 6;
+                    else if (pattern == 4 && row == 2) kind = 1 + lane % 2;
+                    float x = ArcadeRules.LaneX(lane);
+                    // Narrow centre gates retain a full car width plus margin.
+                    if (!bus && gap == 1 && (pattern == 1 || pattern == 5)) x *= .78f;
+                    float stagger = pattern == 0 && column == 1 ? 1.5f : 0;
+                    var hazard = spawn(kind, x, z + TabletopCourseRules.GateOffset(beat, row) + stagger, x, 0);
+                    if (bus)
+                    {
+                        hazard.MotionKind = 2;
+                        hazard.CurveAmplitude = .65f;
+                        hazard.CurveFrequency = .18f;
+                        hazard.CurvePhase = beat.Variant * .13f;
+                        hazard.transform.position = hazard.PositionAfter(0);
+                    }
+                    column++;
+                }
+            }
+            // No permanent green bypass: later gates change the traversable gap.
+            if (beat.Family == (int)TrackToy.Tunnel) Place(TrackToy.Windup, beat, z + 9);
+            else if (beat.Family == (int)TrackToy.Surfaces) Place(TrackToy.Marbles, beat, z + 8);
         }
         private void SpawnEnding(PlaygroundBeat beat, float z, PlaygroundEncounters markers)
         {
