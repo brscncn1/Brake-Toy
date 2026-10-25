@@ -60,7 +60,7 @@ foreach ($mode in @('EditMode', 'PlayMode')) {
 
 ## 4. Mevcut kanıtın sınırı
 
-- `UNITY_TEST_RESULTS-v09.json`: 50 EditMode +62 PlayMode =112; tarihi test kanıtıdır.
+- `Reports/UNITY_TEST_RESULTS-v09.json`: 50 EditMode +62 PlayMode =112; tarihi test kanıtıdır.
 - Altı seed ×iki mod ×120 saniye:24 dakika simüle güvenli yol, sıfır havuz tükenmesi.
 - 100 seed ×256 sıra seçimi: torba/hafıza/mesafe kuralları.
 - Bu witness tehlikeli/riskli bütün yolların ve gerçek çocuk kullanımının kabulü değildir.
@@ -77,7 +77,7 @@ foreach ($mode in @('EditMode', 'PlayMode')) {
 - Capture mevcut Adventure PNG'lerini yazar; görsel baseline değişikliğini diff'te incele.
 - Yakın plan yanında gerçek portre kamera, gündüz/gece, teker/taban, far/cam, halat/pivot ve rampa kenarı.
 - Kadraj, dekor çakışması ve açık yol; model pozuyla aynı andaki analitik hacim birlikte kontrol edilir.
-- Son kaynak görüntüleri `ADVENTURE_GALLERY.html`; sanat onayı kullanıcıdan ayrıca alınır.
+- Son kaynak görüntüleri `Reports/Visuals/ADVENTURE_GALLERY.html`; sanat onayı kullanıcıdan ayrıca alınır.
 
 ## 6. Android üretimi ve paket kontrolü
 
@@ -90,7 +90,7 @@ foreach ($mode in @('EditMode', 'PlayMode')) {
 - ZIP bütünlüğü, ARM 64 ELF LOAD segmentlerinin 16 KB hizalaması, byte sayısı ve SHA 256 kaydı.
 - Aygıtta güncelleme kanıtı için gerçek kurulum gerekir; aynı sertifika tek başına fiziksel test değildir.
 - Son v0.9: kod 10, minSDK 25, targetSDK 36; bunlar önceki paketin kanıtıdır, gelecek mağaza gereği değildir.
-- `ANDROID_BUILD_REPORT-v09.json` test/debug sertifikasını açıkça belirtir; mağaza anahtarı değildir.
+- `Reports/ANDROID_BUILD_REPORT-v09.json` test/debug sertifikasını açıkça belirtir; mağaza anahtarı değildir.
 - Mağaza/SDK kuralları yayın aşamasında güncel resmî kaynaklarla doğrulanır.
 
 ## 7. Fiziksel cihaz kontrol listesi

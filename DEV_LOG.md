@@ -1,3 +1,7 @@
+# Proje düzeni — 25 Ekim 2026
+
+181 dosya Reports/ ve Docs/Archive/pre-v09/ altına taşındı. 150 JSON/XML/PNG/TXT kanıtı bayt düzeyinde korundu; mevcut bağlantılar ve tüm galeri varlıkları kontrol edildi. Editor rapor/render araçları ReportPaths kullanıyor. Unity 6000.3.26f1 batch derlemesi çıkış 0 ile tamamlandı; oynanış testleri yeniden koşulmadı ve APK değişmedi. Notion update_page isteği ücretsiz blok kotasında reddedildi, içerik oluşturulmadı ve otomatik tekrar yapılmadı. Tam kayıt GitHub dalında; sonraki paket K1.3 Relax çarpışma araştırmasıdır. Kanıt: Reports/ORGANIZATION_VALIDATION.json.
+
 # Agent rehberleri teslim — 24 Ekim 2026
 
 GitHub PR #10 oluşturuldu; docs/agent-handbook kaynakları yüklendi. Main README8da3c121c12bdb9010963896e342ddd052707551 ile yedi belgeye ve PR'a yönlendirildi, API geri okuması doğrulandı. Hiçbir oyun PR'ı merge edilmedi. Yedi dosya300 satır altında; eski dört kaynak arşivde. Notion mevcut altı sayfada güncel özet/bağlantı kapsamıyla doğrulandı,33 eski alt sayfa korundu; yedi tam yeni kopya blok kotasında bekliyor. Teslim kapsamı Docs/AGENT_DOCUMENTATION_DELIVERY.json içinde. Bu turda oyun kodu/APK değişmedi ve Unity testleri tekrar çalıştırılmadı.

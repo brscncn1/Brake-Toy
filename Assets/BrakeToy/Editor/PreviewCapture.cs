@@ -112,7 +112,7 @@ namespace BrakeToy.Editor
                 if (game.Arcade) filename = simulatedSeconds>10 ? "../Preview-v0.3-late-run.png" : "../Preview-v0.3.png";
                 if (game.Arcade && game.Arcade.UseVariedPatterns) filename = simulatedSeconds>10 ? "../Preview-v0.4-late-run.png" : "../Preview-v0.4.png";
                 if(game.Arcade && game.Arcade.Choreographed)filename=filename.Replace("v0.4","v0.5");
-                string output = Path.GetFullPath(Path.Combine(Application.dataPath, filename));
+                string output = ReportPaths.Visual(Path.GetFileName(filename));
                 File.WriteAllBytes(output, texture.EncodeToPNG());
                 RenderTexture.active = null;
                 camera.targetTexture = null;

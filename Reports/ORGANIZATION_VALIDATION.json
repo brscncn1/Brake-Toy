@@ -1,0 +1,15 @@
+{
+  "moves": 181,
+  "byteIdenticalEvidence": 150,
+  "existingLinksChecked": 146,
+  "errors": [],
+  "date": "2026-10-25",
+  "unityVersion": "6000.3.26f1",
+  "unityBatchCompileExitCode": 0,
+  "unityCompileLogSha256": "615d75ebfe36ddc29c9b55e3df3fad328e5dfe51116ebb9da635200aae7791a5",
+  "unityTestsRerun": false,
+  "apkRebuilt": false,
+  "gameplayChanged": false,
+  "notionStatus": "blocked_free_block_limit_no_content_created",
+  "baseBranch": "docs/agent-handbook"
+}

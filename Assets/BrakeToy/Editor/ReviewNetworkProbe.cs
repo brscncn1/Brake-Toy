@@ -34,6 +34,6 @@ namespace BrakeToy.Editor
             Complete(game.State==RunState.Running&&!online.Recording,"Unity HTTP auth → server-owned ticket → input recording → resimulated submit → own rank → daily/style fetch → gated offline Relax");
         }
         private static void Complete(bool passed,string details)
-        {SessionState.SetBool("ReviewNetworkProbe",false);EditorApplication.update-=Update;Directory.CreateDirectory("Tests");File.WriteAllText("Tests/Network-review.txt",(passed?"PASS":"FAIL")+"\n"+details+"\nLocal loopback reference server only; no production deployment or eligibility acceptance.\n");Debug.Log((passed?"PASS ":"FAIL ")+details);EditorApplication.Exit(passed?0:1);}
+        {SessionState.SetBool("ReviewNetworkProbe",false);EditorApplication.update-=Update;File.WriteAllText(ReportPaths.Test("Network-review.txt"),(passed?"PASS":"FAIL")+"\n"+details+"\nLocal loopback reference server only; no production deployment or eligibility acceptance.\n");Debug.Log((passed?"PASS ":"FAIL ")+details);EditorApplication.Exit(passed?0:1);}
     }
 }

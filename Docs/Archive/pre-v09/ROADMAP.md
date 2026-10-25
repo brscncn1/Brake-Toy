@@ -1,4 +1,4 @@
-> TARİHSEL BELGE — Güncel başvuru: [YOL_HARITASI.md](YOL_HARITASI.md).
+> TARİHSEL BELGE — Güncel başvuru: [YOL_HARITASI.md](../../../YOL_HARITASI.md).
 > Aşağıdaki sürüm/faz açıklamaları mevcut davranış talimatı değildir.
 > Değiştirilmemiş önceki kopya Docs/Archive/2026-10-24-agent-handbook/ içindedir.
 

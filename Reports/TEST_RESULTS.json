@@ -1,0 +1,106 @@
+{
+  "executedAtUtc": "2026-10-20T21:04:33.434127Z",
+  "runtime": "8.0.32",
+  "checks": 19,
+  "failures": 0,
+  "randomizedCollisionCases": 10000,
+  "unityEditorExecuted": false,
+  "androidDeviceExecuted": false,
+  "results": [
+    {
+      "name": "Touch begin does not teleport",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "Relative input is resolution independent",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "Lift immediately holds current position",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "Retouch does not jump or carry old target",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "Movement stays inside both boundaries",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "Direction reverses immediately at boundary",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "Maximum lateral speed is enforced",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "Input without a drag and zero width are ignored",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "Restart resets all steering state",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "30 60 and 120 FPS reach the same target",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "Swept collision catches forward tunneling",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "Swept collision catches lateral tunneling",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "Diagonal swept collision catches both moving axes",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "A separated path does not collide",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "Crossing each axis at different times does not collide",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "Initial overlap and contact count as collision",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "Obstacle behind the player moving away does not collide",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "Stop at contact cancels pending steering",
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "10000 seeded sweeps match independent closest approach oracle",
+      "passed": true,
+      "error": null
+    }
+  ]
+}

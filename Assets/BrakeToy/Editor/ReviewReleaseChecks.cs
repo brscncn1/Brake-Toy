@@ -27,7 +27,7 @@ namespace BrakeToy.Editor
                 foreach(int index in filter.sharedMesh.triangles)if(index<0||index>=filter.sharedMesh.vertexCount)throw new InvalidOperationException("Invalid model index.");
             }
             report.uniqueReferencedMeshes=meshes.Count;report.decorativeColliders=GameObject.Find("Bedroom Set").GetComponentsInChildren<Collider>(true).Length;
-            File.WriteAllText("MODEL_VALIDATION-review.json",JsonUtility.ToJson(report,true));
+            File.WriteAllText(ReportPaths.Report("MODEL_VALIDATION-review.json"),JsonUtility.ToJson(report,true));
             if(report.missingMeshes+report.missingMaterials+report.shaderErrors+report.decorativeColliders>0)throw new InvalidOperationException("Review model audit failed.");
             var online=UnityEngine.Object.FindFirstObjectByType<ReviewOnline>();if(online.Configured)throw new InvalidOperationException("Review artifact must ship offline until eligibility/production acceptance.");
             Debug.Log("Review asset audit passed. Counts include all ten inactive vehicle variants, not per-frame draws or device FPS.");

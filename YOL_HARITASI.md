@@ -1,6 +1,6 @@
 # Brake Toy — güncel geliştirme yol haritası
 
-Plan tarihi: 24 Ekim 2026. Taban v0.9.0 Adventure; kanıt `DELIVERY-v09.json`.
+Plan tarihi: 24 Ekim 2026. Taban v0.9.0 Adventure; kanıt `Reports/DELIVERY-v09.json`.
 Bu plan bundan sonraki kalite/yayın çalışmasını tarif eder; eski Faz 1–6 kayıtları tarihseldir.
 Seçili paketin dışındaki öneriler topluca uygulama yetkisi sayılmaz.
 
@@ -27,6 +27,12 @@ Seçili paketin dışındaki öneriler topluca uygulama yetkisi sayılmaz.
 - Yeni revizyonu etki/süre/bağımlılıkla ekle; önceki kararı sessizce silme.
 
 ## 3. K1 — taban, belgeler ve kritik sağlamlaştırma
+
+25 Ekim ek paketi: rapor/arşiv düzeni ve Editor çıktı yolları düzenlendi;
+kanıt `Reports/ORGANIZATION_MANIFEST.json`. Sonraki paket K1.3'tür.
+Öneri sırası: sağlamlaştırma → parkur/kombo → ışık/malzeme → araç parçaları → online.
+Docker, yeni fiziğe dayalı olaylar, adaptif müzik ve parça kilitleri ayrı paketlerdir;
+bu dosya düzenlemesinde uygulanmış sayılmaz.
 
 Tahmin: 3–5 işgünü. Bağımlılık: doğru kaynak tabanı ve oyuncu verisinin korunması.
 Bu tur belge paketidir; aşağıdaki kod düzeltmeleri henüz yapılmış sayılmaz.

@@ -33,7 +33,7 @@ namespace BrakeToy.Editor
                 renderers++;triangles+=filter.sharedMesh.triangles.Length/3;meshes.Add(filter.sharedMesh);
             }
             var report=new ModelReport{scene="ToyRoomArcade",unusedIntermediateMeshesRemoved=remove.Count,authoredMeshRenderersIncludingInactivePool=renderers,uniqueReferencedMeshes=meshes.Count,trianglesIncludingInactivePool=triangles,missingMeshes=0,missingMaterials=0,physicalDeviceProfiled=false};
-            File.WriteAllText("MODEL_VALIDATION.json",JsonUtility.ToJson(report,true));
+            File.WriteAllText(ReportPaths.Report("MODEL_VALIDATION.json"),JsonUtility.ToJson(report,true));
             Debug.Log("Model references checked; removed "+remove.Count+" own unused intermediate meshes. Referenced meshes="+meshes.Count);
         }
         [System.Serializable]private sealed class ModelReport

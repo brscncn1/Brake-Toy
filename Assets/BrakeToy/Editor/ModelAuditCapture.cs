@@ -56,7 +56,7 @@ namespace BrakeToy.Editor
                 if(game.Arcade.Choreographed)name=name.Replace("v0.4","v0.5");
                 if(stage==3)name="Room-v0.5-detail.png";
                 if(stage==4)name="Room-v0.5-chair.png";
-                File.WriteAllBytes(Path.GetFullPath(Path.Combine(Application.dataPath,"../"+name)),texture.EncodeToPNG());UnityEngine.Object.DestroyImmediate(texture);RenderTexture.active=null;
+                File.WriteAllBytes(ReportPaths.Visual(name),texture.EncodeToPNG());UnityEngine.Object.DestroyImmediate(texture);RenderTexture.active=null;
                 stage++;if(stage<(game.Arcade.Choreographed?5:3)){Setup();last=EditorApplication.timeSinceStartup;return;}
                 camera.targetTexture=null;target.Release();UnityEngine.Object.DestroyImmediate(target);EditorApplication.update-=Update;EditorApplication.Exit(0);
             }

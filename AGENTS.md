@@ -9,12 +9,14 @@ Ortamın sistem/geliştirici talimatları ayrıca geçerlidir; belge bunları de
 - Unity/Git kökü bu dosyanın bulunduğu klasördür; üst çalışma alanı değildir.
 - Son oyun teslimi v0.9.0 Adventure; sahne `Assets/BrakeToy/Scenes/ToyRoomAdventure.unity`.
 - Oyun referans dalı `feat/adventure-v09`; bu belge paketinin dalı `docs/agent-handbook`.
-- APK kaynak commit'i `b656017cb48c7b10b62891647135d0bc2371cfde`; kanıt `DELIVERY-v09.json`.
+- APK kaynak commit'i `b656017cb48c7b10b62891647135d0bc2371cfde`; kanıt `Reports/DELIVERY-v09.json`.
 - Başlangıçta `git status --short`, geçerli dal ve son commit'i kontrol et.
 - 24 Ekim tabanında `main` oyun kodu eski Faz 1'dir; README güncel sürüme yönlendirir.
 - Sonraki merge'ler durumu değiştirebilir: dal adından güncellik varsayma, sahneyi doğrula.
 - Çalışan ağacı sıfırlama; kullanıcı değişikliklerini koru. Doğru tabandan görev dalı kullan.
 - Bu belge paketi oyun sürümünü, APK'yı veya test sonuçlarını yenilemez.
+- 25 Ekim düzenleme dalı `chore/project-organization`: kanıtlar Reports/ altında,
+  eski plan/kilometre taşları Docs/Archive/pre-v09/ altında; taşıma manifestini koru.
 
 ## 2. Ürün ve değişmezler
 

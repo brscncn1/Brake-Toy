@@ -1,4 +1,4 @@
-> TARİHSEL BELGE — Güncel başvuru: [MEKANIKLER.md](MEKANIKLER.md).
+> TARİHSEL BELGE — Güncel başvuru: [MEKANIKLER.md](../../../MEKANIKLER.md).
 > Aşağıdaki sürüm/faz açıklamaları mevcut davranış talimatı değildir.
 > Değiştirilmemiş önceki kopya Docs/Archive/2026-10-24-agent-handbook/ içindedir.
 

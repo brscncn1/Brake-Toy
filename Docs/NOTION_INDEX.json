@@ -19,21 +19,21 @@
         "title": "02 — Ana gereksinimler"
       }
     },
-    "GAME_DESIGN.md": {
+    "Docs/Archive/pre-v09/GAME_DESIGN.md": {
       "id": "3ffdce66-5831-81ff-877c-c1cf4b5d9fbe",
       "url": "https://app.notion.com/p/3ffdce66583181ff877cc1cf4b5d9fbe?pvs=204",
       "properties": {
         "title": "03 — Oyun tasarımı"
       }
     },
-    "ARCHITECTURE.md": {
+    "Docs/Archive/pre-v09/ARCHITECTURE.md": {
       "id": "3ffdce66-5831-81d1-8624-ddfabfc1f49b",
       "url": "https://app.notion.com/p/3ffdce66583181d18624ddfabfc1f49b?pvs=204",
       "properties": {
         "title": "04 — Teknik mimari"
       }
     },
-    "ROADMAP.md": {
+    "Docs/Archive/pre-v09/ROADMAP.md": {
       "id": "3ffdce66-5831-8115-a557-d18574f69136",
       "url": "https://app.notion.com/p/3ffdce6658318115a557d18574f69136?pvs=204",
       "properties": {
@@ -68,7 +68,7 @@
         "title": "09 — Değişiklik kaydı"
       }
     },
-    "TESLIM_RAPORU.md": {
+    "Docs/Archive/pre-v09/TESLIM_RAPORU.md": {
       "id": "3ffdce66-5831-8195-93db-ff575f27bac6",
       "url": "https://app.notion.com/p/3ffdce665831819593dbff575f27bac6?pvs=204",
       "properties": {
@@ -92,42 +92,42 @@
       "fullReplica": false,
       "source": "https://github.com/brscncn1/Brake-Toy/blob/docs/agent-handbook/AGENTS.md"
     },
-    "ANDROID_BUILD_REPORT.json": {
+    "Reports/ANDROID_BUILD_REPORT.json": {
       "id": "3ffdce66-5831-81da-8f2a-f9a9127e89aa",
       "url": "https://app.notion.com/p/3ffdce66583181da8f2af9a9127e89aa?pvs=204",
       "properties": {
         "title": "13 — Android derleme kanıtı"
       }
     },
-    "UNITY_TEST_RESULTS.json": {
+    "Reports/UNITY_TEST_RESULTS.json": {
       "id": "3ffdce66-5831-8192-b035-d0ca91ac040b",
       "url": "https://app.notion.com/p/3ffdce6658318192b035d0ca91ac040b?pvs=204",
       "properties": {
         "title": "14 — Unity test kanıtı"
       }
     },
-    "TEST_RESULTS.json": {
+    "Reports/TEST_RESULTS.json": {
       "id": "3ffdce66-5831-813a-952f-fbf390ea3aca",
       "url": "https://app.notion.com/p/3ffdce665831813a952ffbf390ea3aca?pvs=204",
       "properties": {
         "title": "15 — Bağımsız C# test kanıtı"
       }
     },
-    "ROOM_MILESTONE.md": {
+    "Docs/Archive/pre-v09/ROOM_MILESTONE.md": {
       "id": "3ffdce66-5831-816a-8219-d3bd3aefca61",
       "url": "https://app.notion.com/p/3ffdce665831816a8219d3bd3aefca61",
       "properties": {
         "title": "16 — v0.2 Masa ve oda sürümü"
       }
     },
-    "RESEARCH-v0.3.md": {
+    "Docs/Archive/pre-v09/RESEARCH-v0.3.md": {
       "id": "3ffdce66-5831-8102-9c69-e394e90c3193",
       "url": "https://app.notion.com/p/3ffdce66583181029c69e394e90c3193",
       "properties": {
         "title": "17 — v0.3 Araştırma ve uygulama planı"
       }
     },
-    "ARCADE_MILESTONE.md": {
+    "Docs/Archive/pre-v09/ARCADE_MILESTONE.md": {
       "id": "3ffdce66-5831-81df-973a-c5dd7921e7b1",
       "url": "https://app.notion.com/p/3ffdce66583181df973ac5dd7921e7b1",
       "properties": {
@@ -141,63 +141,63 @@
         "title": "19 — Varlık kaynakları ve lisanslar"
       }
     },
-    "MODEL_VALIDATION.json": {
+    "Reports/MODEL_VALIDATION.json": {
       "id": "3ffdce66-5831-8127-9406-ffea5ce1ba34",
       "url": "https://app.notion.com/p/3ffdce66583181279406ffea5ce1ba34",
       "properties": {
         "title": "20 — Model ve varlık doğrulaması"
       }
     },
-    "QUALITY_REVIEW-v0.3.md": {
+    "Docs/Archive/pre-v09/QUALITY_REVIEW-v0.3.md": {
       "id": "3ffdce66-5831-8101-8431-f2d6a49d804c",
       "url": "https://app.notion.com/p/3ffdce66583181018431f2d6a49d804c",
       "properties": {
         "title": "21 — v0.3 kalite eleştirisi ve öneriler"
       }
     },
-    "PLAN-v0.4.md": {
+    "Docs/Archive/pre-v09/PLAN-v0.4.md": {
       "id": "3ffdce66-5831-81b3-b3bb-f82e6244b77b",
       "url": "https://app.notion.com/p/3ffdce66583181b3b3bbf82e6244b77b",
       "properties": {
         "title": "22 — v0.4 Refined Room planı"
       }
     },
-    "REFINED_MILESTONE.md": {
+    "Docs/Archive/pre-v09/REFINED_MILESTONE.md": {
       "id": "3ffdce66-5831-81c5-8efb-d8e063d23cdb",
       "url": "https://app.notion.com/p/3ffdce66583181c58efbd8e063d23cdb",
       "properties": {
         "title": "23 — v0.4 kalite sonuçları ve açık kabul maddeleri"
       }
     },
-    "DEVICE_TEST-v0.4.md": {
+    "Docs/Archive/pre-v09/DEVICE_TEST-v0.4.md": {
       "id": "3ffdce66-5831-8129-9a0a-e3d1c3199f3b",
       "url": "https://app.notion.com/p/3ffdce66583181299a0ae3d1c3199f3b",
       "properties": {
         "title": "24 — v0.4 tablet testi ve performans ölçümü"
       }
     },
-    "PLAN-v0.5.md": {
+    "Docs/Archive/pre-v09/PLAN-v0.5.md": {
       "id": "400dce66-5831-819b-b5a2-ca927ac0b436",
       "url": "https://app.notion.com/p/400dce665831819bb5a2ca927ac0b436",
       "properties": {
         "title": "25 — v0.5 Living Workshop Planı"
       }
     },
-    "LIVING_MILESTONE.md": {
+    "Docs/Archive/pre-v09/LIVING_MILESTONE.md": {
       "id": "400dce66-5831-8135-aed2-ed21f332cd92",
       "url": "https://app.notion.com/p/400dce6658318135aed2ed21f332cd92",
       "properties": {
         "title": "26 — v0.5 Living Workshop sonuçları ve eleştiriler"
       }
     },
-    "DEVICE_TEST-v0.5.md": {
+    "Docs/Archive/pre-v09/DEVICE_TEST-v0.5.md": {
       "id": "400dce66-5831-81ff-ad88-c85aeb13eaaf",
       "url": "https://app.notion.com/p/400dce66583181ffad88c85aeb13eaaf",
       "properties": {
         "title": "27 — v0.5 tablet kabul ve ses testi"
       }
     },
-    "PLAN-REVIEW.md": {
+    "Docs/Archive/pre-v09/PLAN-REVIEW.md": {
       "id": "401dce66-5831-816b-b857-f73e36f2462f",
       "url": "https://app.notion.com/p/401dce665831816bb857f73e36f2462f",
       "properties": {
@@ -218,21 +218,21 @@
         "title": "30 — Çevrimiçi servis ve yayın ön koşulları"
       }
     },
-    "REVIEW_MILESTONE.md": {
+    "Docs/Archive/pre-v09/REVIEW_MILESTONE.md": {
       "id": "401dce66-5831-8102-8107-e4d8f3d84255",
       "url": "https://app.notion.com/p/401dce66583181028107e4d8f3d84255",
       "properties": {
         "title": "31 — v0.6 test sonuçları, eleştiri ve teslim"
       }
     },
-    "PLAN-v0.7.md": {
+    "Docs/Archive/pre-v09/PLAN-v0.7.md": {
       "id": "402dce66-5831-817e-9d94-f357526f1e53",
       "url": "https://app.notion.com/p/402dce665831817e9d94f357526f1e53",
       "properties": {
         "title": "32 — v0.7 Joyful Room revizyonu ve araştırma"
       }
     },
-    "MILESTONE-v07.md": {
+    "Docs/Archive/pre-v09/MILESTONE-v07.md": {
       "id": "402dce66-5831-81f5-bc67-e963edeaf9d4",
       "url": "https://app.notion.com/p/402dce66583181f5bc67e963edeaf9d4",
       "properties": {
