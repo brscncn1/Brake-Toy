@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-25",
+  "baseCommit": "e951069f93fb22394d1cc4503bcc6e581d6ab1e8",
+  "branch": "feat/opening-pace-audit",
+  "runs": [
+    {
+      "path": "Reports/Tests/Opening-EditMode.xml",
+      "passed": 77,
+      "failed": 0,
+      "startTimeUtc": "2026-10-25 20:01:33Z",
+      "sha256": "c32ed7cb38fcd525ec87a3934a18aa94b8fd07ab6a3a9d647ebed53c634894f5"
+    },
+    {
+      "path": "Reports/Tests/Opening-PlayMode.xml",
+      "passed": 72,
+      "failed": 0,
+      "startTimeUtc": "2026-10-25 20:03:24Z",
+      "sha256": "8f905fb85efd41053ea28f084b831cb2733df230b4ef0f72c146cfbab6255acc"
+    }
+  ],
+  "totalFinalPassed": 149,
+  "runtimeGameplayChanged": false,
+  "packageChange": "builtin com.unity.modules.imageconversion 1.0.0 for diagnostic PNG export",
+  "playerDataUnchanged": true,
+  "apkRebuilt": false,
+  "physicalDeviceProfiled": false,
+  "humanDecisionCountMeasured": false,
+  "warningReadabilityMeasured": false,
+  "retentionMeasured": false,
+  "videoCaptured": false,
+  "finalPlannedStageReached": false,
+  "notionAttempted": false,
+  "analyticRuns": 200,
+  "analyticWindows": 600,
+  "runtimeSamples": 18,
+  "artifacts": {
+    "Reports/OPENING_PACE.json": "3893ae54b6e6953f7c5e2115630b2e4d23f7ec9e11557ed3cf0c860be916752d",
+    "Reports/OPENING_RUNTIME.json": "5cdb51221f5b0e30d21bd3f06d0b99ef1b3651d2b8b2163794a93cfe964b235c",
+    "Reports/Visuals/Opening-10.png": "d700f75031831dc5f89b749097f1823afd3dc4cfe67705e9c7cd0e507ccba4d3",
+    "Reports/Visuals/Opening-30.png": "fa3811b2aea318f30ecb690cff1f9faa55410f8a4cecbefa232e91a694fa60d6",
+    "Reports/Visuals/Opening-60.png": "7653559c3be55b721b3b43cd2386575a4a332a0b9572672b9f584f0f3f97215d"
+  },
+  "testedDiagnosticSourceHashes": {
+    "Assets/BrakeToy/Editor/OpeningPaceAudit.cs": "f41d7269be12bb388dea2b03e1143a378f6fe515f1a073de5b121b037241ce6b",
+    "Assets/BrakeToy/Tests/PlayMode/OpeningRuntimeAuditTests.cs": "f926a982a9656bc12090a8bef41787594c3aab6a68dc16bb72145bb54a1b1bb1"
+  }
+}

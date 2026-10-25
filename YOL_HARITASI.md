@@ -54,7 +54,8 @@ diğer maddeler tamamlanmış sayılmaz. Ayrıntı: `Docs/HARDENING-2026-10-25.m
 
 Çıkış: kritik veri kaybı/crash yok, baseline tekrarlanabilir, şüpheli durumlar testle sonuçlanmış.
 Kanıt: XML, örnek kayıt/migration, hata adımları, kaynak commit ve günlük.
-Sonraki paket K2.1 ilk 10/30/60 saniyenin karar yoğunluğu ve tekrar ölçümüdür.
+K2.1 sayısal taban tamamlandı; sonraki deney K2.3/K2.4 bitiriş çeşitliliğidir.
+İlk deneyde hız eğrisi korunur ve iki ailede yerden ödül/kitap rampası bitirişleri karşılaştırılır.
 K1 teknik kaynak doğrulaması yapıldı; cihaz/sanat/Android paket kabulü ayrı açık kalır.
 
 ## 4. K2 — ilk dakika ve risk/ödül
@@ -62,6 +63,8 @@ K1 teknik kaynak doğrulaması yapıldı; cihaz/sanat/Android paket kabulü ayr�
 Tahmin: 3–5 işgünü. Bağımlılık: K1 kontrol/çarpışma güvenilirliği.
 
 - K2.1: ilk 10/30/60 saniyeyi kaydet; anlamlı karar, boş bekleme ve okunmayan tehlikeyi say.
+- K2.1 sayısal taban: 100 seed/mod; Arcade 4/11/22, Relax 2/7/15 cümle referansı.
+  Merkez↔kenar ritmi %100; Docs/OPENING_PACE-2026-10-25.md. İnsan karar/uyarı kabulü açık.
 - K2.2: Arcade 14→30, Relax 9→14 hızlarını ve en az 48 birim karşılaşma aralığını birlikte ölç.
 - K2.3: hızla karar yoğunluğunu ayrı ayarla; tüm parametreleri tek deneyde değiştirme.
 - K2.4: sekiz ailenin giriş/çıkış ve birleşim çeşitlerini artır; son üç aile hafızasını koru.
@@ -128,6 +131,8 @@ Bağımlılık: sahibin yayın kapsamı, yaş ve sağlayıcı kararı; güncel f
 Ödeme/online kendiliğinden açılmaz; `review-r1` Adventure için hazır backend değildir.
 
 ## 8. K6 — yayın adayı ve devir
+
+Bu son planlı aşamaya başlarken kullanıcıya özellikle haber ver.
 
 Tahmin: 3–5 işgünü; mağaza incelemesi hariç. Bağımlılık: K1–K5 seçili kapsamın kabulü.
 
