@@ -28,7 +28,7 @@ namespace BrakeToy.Editor
                 foreach(int i in filter.sharedMesh.triangles)if(i<0||i>=filter.sharedMesh.vertexCount)throw new InvalidOperationException("Invalid model index.");
             }
             report.uniqueReferencedMeshes=meshes.Count;report.decorativeColliders=GameObject.Find("Bedroom Set").GetComponentsInChildren<Collider>(true).Length;
-            File.WriteAllText("MODEL_VALIDATION.json",JsonUtility.ToJson(report,true));
+            File.WriteAllText(ReportPaths.Report("MODEL_VALIDATION.json"),JsonUtility.ToJson(report,true));
             if(report.missingMeshes+report.missingMaterials+report.shaderErrors+report.decorativeColliders>0)throw new InvalidOperationException("Refined model audit failed.");
             Debug.Log("Refined model audit passed; unique meshes="+meshes.Count+". This is not a physical GPU profile.");
         }

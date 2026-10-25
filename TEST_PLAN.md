@@ -20,7 +20,7 @@ Manuel: yeni sahneyi 9:16'da aç; odanın ve masa yüksekliğinin okunurluğunu,
 | Android build | Unity ARM64 IL2CPP Development | Geçti; APK imza/arşiv kontrolü geçti |
 | Android dokunma/performance | Fiziksel cihaz | Bekliyor |
 
-`TEST_RESULTS.json` yalnızca gerçekten çalıştırılan bağımsız C# kontrollerinin makine çıktısıdır. Ayrı Unity koşularının kanıtı `Tests/EditMode-results.xml` ve `Tests/PlayMode-results.xml` dosyalarıdır. Fiziksel cihaz sonuçları bu koşulara dahil değildir.
+`Reports/TEST_RESULTS.json` yalnızca gerçekten çalıştırılan bağımsız C# kontrollerinin makine çıktısıdır. Ayrı Unity koşularının kanıtı `Reports/Tests/EditMode-results.xml` ve `Reports/Tests/PlayMode-results.xml` dosyalarıdır. Fiziksel cihaz sonuçları bu koşulara dahil değildir.
 
 ## Manuel Faz 1 senaryoları
 

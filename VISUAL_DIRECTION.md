@@ -48,7 +48,7 @@ Araç: yerleşik imagegen. Kullanılan tam istem: `Concepts/ToyRoom-Tabletop-v1-
 
 ## Uygulanan ilk kesit — v0.2
 
-Gerçek motor görüntüsü `Preview-v0.2.png`. 20° ve 28° karşılaştırılarak oda görünürlüğü için 20° seçildi. Onaylanan konseptin ince doku ve ışık ayrıntısı henüz nihai kaliteye ulaşmış değildir. Yeni sahnenin otomatik testleri ve APK derlemesi tamamlandı; fiziksel cihaz ve kullanıcı hissiyatı bekleniyor.
+Gerçek motor görüntüsü `Reports/Visuals/Preview-v0.2.png`. 20° ve 28° karşılaştırılarak oda görünürlüğü için 20° seçildi. Onaylanan konseptin ince doku ve ışık ayrıntısı henüz nihai kaliteye ulaşmış değildir. Yeni sahnenin otomatik testleri ve APK derlemesi tamamlandı; fiziksel cihaz ve kullanıcı hissiyatı bekleniyor.
 
 ## v0.3 görsel ilerleme
 

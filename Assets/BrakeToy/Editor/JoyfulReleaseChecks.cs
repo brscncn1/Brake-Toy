@@ -20,7 +20,7 @@ namespace BrakeToy.Editor
             foreach(var f in UnityEngine.Object.FindObjectsByType<MeshFilter>(FindObjectsInactive.Include,FindObjectsSortMode.None))Inspect(f,true);
             var game=UnityEngine.Object.FindFirstObjectByType<GameManager>();foreach(var d in game.Arcade.Definitions)foreach(var f in d.Prefab.GetComponentsInChildren<MeshFilter>(true))Inspect(f,false);
             foreach(string name in new[]{"Bedroom Set","Joyful room additions — decoration only","Joyful final room dressing","Window outdoor diorama"})report.decorativeColliders+=GameObject.Find(name).GetComponentsInChildren<Collider>(true).Length;
-            report.uniqueMeshes=meshes.Count;File.WriteAllText("MODEL_VALIDATION-v07.json",JsonUtility.ToJson(report,true));if(report.missingMeshes+report.missingMaterials+report.shaderErrors+report.decorativeColliders>0)throw new InvalidOperationException("Joyful model audit failed");
+            report.uniqueMeshes=meshes.Count;File.WriteAllText(ReportPaths.Report("MODEL_VALIDATION-v07.json"),JsonUtility.ToJson(report,true));if(report.missingMeshes+report.missingMaterials+report.shaderErrors+report.decorativeColliders>0)throw new InvalidOperationException("Joyful model audit failed");
             if(game.GetComponent<ReviewOnline>().Configured)throw new InvalidOperationException("New joyful-r2 cannot use review-r1 backend");Debug.Log("Joyful asset audit passed; not physical device FPS evidence.");
         }
     }

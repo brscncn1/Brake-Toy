@@ -1,5 +1,10 @@
 # BRAKE TOY
 
+25 Ekim düzenlemesi: sürüm/test/build kanıtları [Reports](Reports/README.md),
+galeriler `Reports/Visuals`, eski plan ve kilometre taşları
+[Docs/Archive/pre-v09](Docs/Archive/pre-v09/README.md) altında tutulur.
+Bu düzenlemenin dalı `chore/project-organization`; oyun sürümü v0.9.0 olarak kalır.
+
 **NO BRAKES. BIG TROUBLE.** Unity 6.3 LTS / C# / gerçek 3D URP / Android portre.
 
 ## Agent belgeleri — 24 Ekim 2026
@@ -12,9 +17,9 @@ Codex ve Claude Code için ortak giriş [AGENTS.md](AGENTS.md); [yol haritası](
 
 Sekizli karıştırılmış seçim, son üç aileyi tekrarlamama, bağlı yaklaşma/karar/atlayış dizileri ve açık yeşil yol. Hız eğrisi korunur; yüzey ve zamanlama kararları yenidir. Tidy yerleşimi, raf radyosu, müzik ve TP/araç/güç envanteri korunur. Domino yoktur.
 
-![Gerçek Unity parkur görünümü](Adventure-10.png)
+![Gerçek Unity parkur görünümü](Reports/Visuals/Adventure-10.png)
 
-[APK v0.9.0](https://github.com/brscncn1/Brake-Toy/releases/tag/v0.9.0) · [Kaynak feat/adventure-v09](https://github.com/brscncn1/Brake-Toy/tree/feat/adventure-v09) · [Sonuç/kanıt](MILESTONE-v09.md) · [13 gerçek Unity görüntüsü](ADVENTURE_GALLERY.html)
+[APK v0.9.0](https://github.com/brscncn1/Brake-Toy/releases/tag/v0.9.0) · [Kaynak feat/adventure-v09](https://github.com/brscncn1/Brake-Toy/tree/feat/adventure-v09) · [Sonuç/kanıt](Reports/MILESTONE-v09.md) · [13 gerçek Unity görüntüsü](Reports/Visuals/ADVENTURE_GALLERY.html)
 
 Unity **6000.3.26f1** → Tools → Brake Toy → **Open Adventure v0.9** → Play. Game 9:16, 1×. Paket com.braketoy.prototype, **0.9.0/kod10**, ARM64 IL2CPP non-Development; öncekinin üzerine güncellenir. Kariyer aynı dosyada, yeni parkurun rekor/ghost kayıtları ayrıdır. **112/112 test: 50 EditMode +62 PlayMode.** Fiziksel tablet ve insan görsel/oynanış kabulü bekler. Notion yeni not eşitlemesi ücretsiz blok kotası nedeniyle bekler; yerel/GitHub günlükleri günceldir.
 
@@ -24,9 +29,9 @@ Aşağıdaki v0.8.1 ve önceki bölümler tarihsel teslim kayıtlarıdır; günc
 
 Mavi kenar dekorları defter/kalemlikten ayrıldı, radyo soldaki rafın üstüne taşındı, domino aktif oyundan kaldırıldı. Hız/zorluk ayarları korunur. Önceki kariyer/TP/araç/güç hakları sürer.
 
-![Gerçek Unity yerleşimi](Tidy-6.png)
+![Gerçek Unity yerleşimi](Reports/Visuals/Tidy-6.png)
 
-[APK v0.8.1](https://github.com/brscncn1/Brake-Toy/releases/tag/v0.8.1) · [v0.8.1 kaynak](https://github.com/brscncn1/Brake-Toy/tree/fix/table-layout-v081) · [104/104 test ve sonuç](MILESTONE-v081.md)
+[APK v0.8.1](https://github.com/brscncn1/Brake-Toy/releases/tag/v0.8.1) · [v0.8.1 kaynak](https://github.com/brscncn1/Brake-Toy/tree/fix/table-layout-v081) · [104/104 test ve sonuç](Docs/Archive/pre-v09/MILESTONE-v081.md)
 
 Unity 6000.3.26f1 → Tools → Brake Toy → **Open Tidy Room v0.8.1** → Play. Paket com.braketoy.prototype, 0.8.1/kod9; APK öncekinin üzerine güncellenir. Önceki v0.8 açıklamaları aşağıda tarihsel olarak korunur; bu sürümün sahnesi Tidy'dir.
 
@@ -35,9 +40,9 @@ Unity 6000.3.26f1 → Tools → Brake Toy → **Open Tidy Room v0.8.1** → Play
 
 Güvenli/riskli yollar, bağlı karşılaşmalar, kitap rampalarının teker kenarı düzeltmesi, domino ile yol açma ve sinyalli oyuncak kapısı. 3 sn yavaşlatma, korumalı roket ve 5 sn jetpack; başlangıçta üçer hak, TP yenileme. Geri alınabilir masa bölgeleri, ışık/malzeme düzenlemesi, kompakt menü, görsel görev kartları ve ayrı araç siluetleri. Ayrıntılı final model/sanat kabulü bekler.
 
-![Gerçek Unity menüsü](Playground-0.png)
+![Gerçek Unity menüsü](Reports/Visuals/Playground-0.png)
 
-[APK v0.8.0](https://github.com/brscncn1/Brake-Toy/releases/tag/v0.8.0) · [Kaynak](https://github.com/brscncn1/Brake-Toy/tree/feat/playground-v08) · [Ayrıntılı sonuç/eleştiri](MILESTONE-v08.md)
+[APK v0.8.0](https://github.com/brscncn1/Brake-Toy/releases/tag/v0.8.0) · [Kaynak](https://github.com/brscncn1/Brake-Toy/tree/feat/playground-v08) · [Ayrıntılı sonuç/eleştiri](Docs/Archive/pre-v09/MILESTONE-v08.md)
 
 ## v0.8 arşivi: Aç ve oyna
 
@@ -51,6 +56,6 @@ Güvenli/riskli yollar, bağlı karşılaşmalar, kitap rampalarının teker ken
 
 **102/102 Unity testi** (48 EditMode +54 PlayMode).
 
-[Gerçek görüntüler](PLAYGROUND_GALLERY.html), [plan](PLAN-v0.8.md), [model agent devir notu](MODEL_HANDOFF-v08.md), [tasarım](GAME_DESIGN.md), [mimari](ARCHITECTURE.md), [günlük](DEV_LOG.md). ANDROID_BUILD_REPORT-v08.json, UNITY_TEST_RESULTS-v08.json ve MODEL_VALIDATION-v08.json.
+[Gerçek görüntüler](Reports/Visuals/PLAYGROUND_GALLERY.html), [plan](Docs/Archive/pre-v09/PLAN-v0.8.md), [model agent devir notu](MODEL_HANDOFF-v08.md), [tasarım](Docs/Archive/pre-v09/GAME_DESIGN.md), [mimari](Docs/Archive/pre-v09/ARCHITECTURE.md), [günlük](DEV_LOG.md). ANDROID_BUILD_REPORT-v08.json, UNITY_TEST_RESULTS-v08.json ve MODEL_VALIDATION-v08.json.
 
 Fiziksel v0.8 FPS/p95/ısınma ve insan kalite kabulü bekler. Canlı online kapalı; yeni kurallar eski referans sunucuya gönderilmez. Notion mevcut proje merkezi korunur, ücretsiz blok sınırı yeni sayfayı reddetti: [eşitleme durumu](NOTION_PENDING-v08.md). Müzik ve önceki sürüm kanıtları korunur.

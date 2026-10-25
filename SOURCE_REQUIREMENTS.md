@@ -1149,9 +1149,9 @@ Assets/
 Repository içinde ayrıca şu dokümantasyon dosyalarını oluştur:
 
 - `README.md` — Kurulum ve proje özeti.
-- `GAME_DESIGN.md` — Oyunun temel ve nihai tasarım kararları.
-- `ARCHITECTURE.md` — Sistem mimarisi.
-- `ROADMAP.md` — Fazlar ve görevler.
+- `Docs/Archive/pre-v09/GAME_DESIGN.md` — Oyunun temel ve nihai tasarım kararları.
+- `Docs/Archive/pre-v09/ARCHITECTURE.md` — Sistem mimarisi.
+- `Docs/Archive/pre-v09/ROADMAP.md` — Fazlar ve görevler.
 - `CHANGELOG.md` — Yapılan değişiklikler.
 - `TEST_PLAN.md` — Test stratejisi.
 
@@ -1189,7 +1189,7 @@ Fakat bütün oyunu tek seferde üretmeye çalışma.
 
 **B.** Unity 6.3 LTS, C# ve gerçek 3D URP yapısıyla uyumlu bir mimari hazırla.
 
-**C.** Nihai oyun kapsamını `GAME_DESIGN.md` ve aşamalı geliştirme planını `ROADMAP.md` içinde düzenle.
+**C.** Nihai oyun kapsamını `Docs/Archive/pre-v09/GAME_DESIGN.md` ve aşamalı geliştirme planını `Docs/Archive/pre-v09/ROADMAP.md` içinde düzenle.
 
 **D.** FAZ 1 için gereken en basit çalışan 3D prototipi oluşturmaya başla.
 

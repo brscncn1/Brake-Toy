@@ -1,0 +1,1093 @@
+{
+  "date": "2026-10-25",
+  "sourceCommit": "a5ac70bc1d88e92e45ac2ed14cad70aec39782b4",
+  "moves": [
+    {
+      "from": "ADVENTURE_GALLERY.html",
+      "to": "Reports/Visuals/ADVENTURE_GALLERY.html",
+      "originalSha256": "43317771690b10a3f3b01b41848a73e31f0e5ba0a9eb2f6aa276ba3b4a819c2e",
+      "contentUnchanged": true
+    },
+    {
+      "from": "ANDROID_BUILD_REPORT-review.json",
+      "to": "Reports/ANDROID_BUILD_REPORT-review.json",
+      "originalSha256": "1dc4f3e8d20af2be41da21174523701ec26283930edc68a61dc2b6188999fd25",
+      "contentUnchanged": true
+    },
+    {
+      "from": "ANDROID_BUILD_REPORT-v07.json",
+      "to": "Reports/ANDROID_BUILD_REPORT-v07.json",
+      "originalSha256": "d455da4249cb9b277f20ee2d4c133e61bef29e2b911a600ad91282487630bd8b",
+      "contentUnchanged": true
+    },
+    {
+      "from": "ANDROID_BUILD_REPORT-v08.json",
+      "to": "Reports/ANDROID_BUILD_REPORT-v08.json",
+      "originalSha256": "9dc8fe5d7bf9f42aa9a3cb67fb916c295dd9da9bcf27d7cdac4d55d7c1fac963",
+      "contentUnchanged": true
+    },
+    {
+      "from": "ANDROID_BUILD_REPORT-v081.json",
+      "to": "Reports/ANDROID_BUILD_REPORT-v081.json",
+      "originalSha256": "5f94d87c69a7a322ecc855ae544bbe029f31112bddd1aa7218c0777b63e47bbf",
+      "contentUnchanged": true
+    },
+    {
+      "from": "ANDROID_BUILD_REPORT-v09.json",
+      "to": "Reports/ANDROID_BUILD_REPORT-v09.json",
+      "originalSha256": "8b5a764ede000c703f8843aa3f83c4db5deb0521cd45f0ed6e2810a356e437f6",
+      "contentUnchanged": true
+    },
+    {
+      "from": "ANDROID_BUILD_REPORT.json",
+      "to": "Reports/ANDROID_BUILD_REPORT.json",
+      "originalSha256": "0b822395af5b0be0a35b0c7a42da672cf18bb7f4102c969a33efee01072ee5c0",
+      "contentUnchanged": true
+    },
+    {
+      "from": "ARCADE_MILESTONE.md",
+      "to": "Docs/Archive/pre-v09/ARCADE_MILESTONE.md",
+      "originalSha256": "1087aeb87ebef42758969aa1479be374a8f7255253d22a3619fe5edf941aacac",
+      "contentUnchanged": true
+    },
+    {
+      "from": "ARCHITECTURE.md",
+      "to": "Docs/Archive/pre-v09/ARCHITECTURE.md",
+      "originalSha256": "0be3006ef96517045cc88cac61b15939c7bc1ae967bcb279b667a2055174b377",
+      "contentUnchanged": false
+    },
+    {
+      "from": "Adventure-0.png",
+      "to": "Reports/Visuals/Adventure-0.png",
+      "originalSha256": "7b7ba5eb6e3e1825cc5d036d5bcc1ccf7227a05f9b024f1d1140fa15f15d49e7",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Adventure-1.png",
+      "to": "Reports/Visuals/Adventure-1.png",
+      "originalSha256": "ca8782957c7220afb93d84e293ac1ffd6dd01d052bfcd219f156e61fc567a214",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Adventure-10.png",
+      "to": "Reports/Visuals/Adventure-10.png",
+      "originalSha256": "3102f6eebae107f767f5be5f2f1d9c581c7296db61adb76c6c11613a8ec699c2",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Adventure-11.png",
+      "to": "Reports/Visuals/Adventure-11.png",
+      "originalSha256": "85914112d381764cb0f2671dda762cb359a60d1c91e1def8e817f8958c6f5612",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Adventure-12.png",
+      "to": "Reports/Visuals/Adventure-12.png",
+      "originalSha256": "fcf9c037ad33681475cbcecfb1f3895a5d2264151b528170f0741d4a29f15b4a",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Adventure-2.png",
+      "to": "Reports/Visuals/Adventure-2.png",
+      "originalSha256": "fbeaa035d305c35c06314c5c2514f64bdb284ddb4ec275da1342e51f6452640c",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Adventure-3.png",
+      "to": "Reports/Visuals/Adventure-3.png",
+      "originalSha256": "922ce4d1e8114c2561f33b190b9df24e576cec276075f837d5498c259f69f8c7",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Adventure-4.png",
+      "to": "Reports/Visuals/Adventure-4.png",
+      "originalSha256": "adcfa4e0fbbbd58a12cf96c7a430389f7cc0819586ccdeab3f6bbce0b42bfe81",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Adventure-5.png",
+      "to": "Reports/Visuals/Adventure-5.png",
+      "originalSha256": "d046dc43ba6c3a9ac18519217d36f12c08a43aa736619042ec5b6ffb24a0b3c8",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Adventure-6.png",
+      "to": "Reports/Visuals/Adventure-6.png",
+      "originalSha256": "d535caa9d92be6e975c035c34682e616407cf6d1cbb34b8ca4d4dba65f2f30c2",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Adventure-7.png",
+      "to": "Reports/Visuals/Adventure-7.png",
+      "originalSha256": "d22c64fcb875eb5b6cf8cf3dd17cb848ce2f0720604f4d0584e5e7ae28cf2791",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Adventure-8.png",
+      "to": "Reports/Visuals/Adventure-8.png",
+      "originalSha256": "32dc0c29f5edf6fc98ce039e6fd49f67631232dec5fd5a78c085a50c9b354c9b",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Adventure-9.png",
+      "to": "Reports/Visuals/Adventure-9.png",
+      "originalSha256": "9cf9be89f4188080a53a35254f3bb5c0a4e3a158dd0bce2e267c440ad5fbe93f",
+      "contentUnchanged": true
+    },
+    {
+      "from": "COMPARISON-v0.4.html",
+      "to": "Reports/Visuals/COMPARISON-v0.4.html",
+      "originalSha256": "df420caf9ee36ae6d001833db2b6191799d1b5c0324b6108e2720b7861a60fa5",
+      "contentUnchanged": false
+    },
+    {
+      "from": "COMPARISON-v0.5.html",
+      "to": "Reports/Visuals/COMPARISON-v0.5.html",
+      "originalSha256": "d7b2a16a2625c4945c257605c4754eda44ac29f68fbda512365a9b4b9d67f8d1",
+      "contentUnchanged": true
+    },
+    {
+      "from": "DELIVERY-v0.6.json",
+      "to": "Docs/Archive/pre-v09/DELIVERY-v0.6.json",
+      "originalSha256": "9169080b5e96cd7812d5e397b9c7538e7954a7291a415eff9358df67fdcec6bb",
+      "contentUnchanged": true
+    },
+    {
+      "from": "DELIVERY-v07.json",
+      "to": "Docs/Archive/pre-v09/DELIVERY-v07.json",
+      "originalSha256": "08fc327e5e7bdf95bcf7ab75e4533c0d38c25125ecf583c3b9cab46e43153d53",
+      "contentUnchanged": true
+    },
+    {
+      "from": "DELIVERY-v08.json",
+      "to": "Docs/Archive/pre-v09/DELIVERY-v08.json",
+      "originalSha256": "3b333b1feff2931c85750f8af7f8fad8dac81f6050c56e6762906551f80f359a",
+      "contentUnchanged": true
+    },
+    {
+      "from": "DELIVERY-v081.json",
+      "to": "Docs/Archive/pre-v09/DELIVERY-v081.json",
+      "originalSha256": "d36b1b0cea4ed74a2a84c8658b259b1cba987d47e0e2e103b2c79dd853344cc5",
+      "contentUnchanged": true
+    },
+    {
+      "from": "DELIVERY-v09.json",
+      "to": "Reports/DELIVERY-v09.json",
+      "originalSha256": "c4f157ff5e3def08dfa54d48aafeb4ce161e4a3a1f6b74ed1bdf12132b3df6fe",
+      "contentUnchanged": true
+    },
+    {
+      "from": "DEVICE_TEST-v0.4.md",
+      "to": "Docs/Archive/pre-v09/DEVICE_TEST-v0.4.md",
+      "originalSha256": "6e46428acccf09827ca8aa89ee25329c8533cb4d802001d3deac7655fd4b950f",
+      "contentUnchanged": true
+    },
+    {
+      "from": "DEVICE_TEST-v0.5.md",
+      "to": "Docs/Archive/pre-v09/DEVICE_TEST-v0.5.md",
+      "originalSha256": "fed8b6cca1bab22f8790e3700eafb999226e9c975496e829ad430b00ab1b7632",
+      "contentUnchanged": true
+    },
+    {
+      "from": "GAME_DESIGN.md",
+      "to": "Docs/Archive/pre-v09/GAME_DESIGN.md",
+      "originalSha256": "42d2f7d6ab1a904986b1a7a1cfb4fdd6bbcf4f346a38f357c39347c2eb12886e",
+      "contentUnchanged": false
+    },
+    {
+      "from": "JOYFUL_GALLERY.html",
+      "to": "Reports/Visuals/JOYFUL_GALLERY.html",
+      "originalSha256": "2d9d8a0f1e388b18823c18804b90fb637762c45ecdd74d0d7d5d1242193a8b47",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Joyful-0.png",
+      "to": "Reports/Visuals/Joyful-0.png",
+      "originalSha256": "b203fbec489cdeed8c6925c675659356d25c3b5f45bd32692ae5e62f4e37d4bf",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Joyful-1.png",
+      "to": "Reports/Visuals/Joyful-1.png",
+      "originalSha256": "9008f762feb55ada4eeaab743b697463dac1cfae77be406160cccd911756282d",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Joyful-10.png",
+      "to": "Reports/Visuals/Joyful-10.png",
+      "originalSha256": "a8bfb097e005aeff2bd310e4b0b6b380f64e31d6ac3e148b686e62413fdc62f2",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Joyful-11.png",
+      "to": "Reports/Visuals/Joyful-11.png",
+      "originalSha256": "175fd38f9f13fa4207c55a759cc85ec060826ed81f7c2f58c2e08238aeac04c0",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Joyful-12.png",
+      "to": "Reports/Visuals/Joyful-12.png",
+      "originalSha256": "8b931ace493cd5cf0aaecc3a86828996ba5f2b04c9737b0c57bdadafedb18dd1",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Joyful-13.png",
+      "to": "Reports/Visuals/Joyful-13.png",
+      "originalSha256": "25dd268b68016f3b1a198e118353695096859d23a7dcc75736181be48fd5bc35",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Joyful-14.png",
+      "to": "Reports/Visuals/Joyful-14.png",
+      "originalSha256": "72cbb6e160111caec20c81b1f333b72b3139fdcbc6e4df92bff8217ccbaf2e57",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Joyful-15.png",
+      "to": "Reports/Visuals/Joyful-15.png",
+      "originalSha256": "42705b374ba27e51d270e5ec89fc0a079b46bd08e1fcd94f6d273f0557080acd",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Joyful-2.png",
+      "to": "Reports/Visuals/Joyful-2.png",
+      "originalSha256": "c13cc851ddaf881bbf6ec0398d605ac69df269a2cde37edafee3392639afef72",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Joyful-3.png",
+      "to": "Reports/Visuals/Joyful-3.png",
+      "originalSha256": "3ed2587b38d3cd477494be05ca9a3cf759342e6cc6933114e834355b9cd34f09",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Joyful-4.png",
+      "to": "Reports/Visuals/Joyful-4.png",
+      "originalSha256": "4521f31e86d83ac5da1699ff7c410d87450b9da9bc46c6946429ba7977ee4c73",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Joyful-5.png",
+      "to": "Reports/Visuals/Joyful-5.png",
+      "originalSha256": "a19e2ec82f52c4eb3bf687fc00d2bd5e81e9d87404af2568f7392e91d5933080",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Joyful-6.png",
+      "to": "Reports/Visuals/Joyful-6.png",
+      "originalSha256": "190fd154747e8ef8f56e6dbd4b2bfb3eeee1f34c7383d3d159c82238f577d9b9",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Joyful-7.png",
+      "to": "Reports/Visuals/Joyful-7.png",
+      "originalSha256": "59317c66a49ab51bcb408fc8484b850b85b781d16be823edff75eb71b85be7d3",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Joyful-8.png",
+      "to": "Reports/Visuals/Joyful-8.png",
+      "originalSha256": "56f0d0d346caeb5eef5f188fff6738a52c9ca8e19a36498c138d7b5be88b5417",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Joyful-9.png",
+      "to": "Reports/Visuals/Joyful-9.png",
+      "originalSha256": "bf4e36b94481849b98f5323eed80971b291856e6c970e6c94eef44c096190e0f",
+      "contentUnchanged": true
+    },
+    {
+      "from": "LIVING_MILESTONE.md",
+      "to": "Docs/Archive/pre-v09/LIVING_MILESTONE.md",
+      "originalSha256": "1dc1504e8867b410cadb13dc9355ebfdf3f6e7c20ceb8d42a458849a26e92a3f",
+      "contentUnchanged": true
+    },
+    {
+      "from": "MILESTONE-v07.md",
+      "to": "Docs/Archive/pre-v09/MILESTONE-v07.md",
+      "originalSha256": "65a92495644408a29761ae7715ba91eb107f24e9c2dd2d638b6336f91c0a3209",
+      "contentUnchanged": true
+    },
+    {
+      "from": "MILESTONE-v08.md",
+      "to": "Docs/Archive/pre-v09/MILESTONE-v08.md",
+      "originalSha256": "ac3a350bfd3cce42f6df7b8868ad48c57d65429fd14163fcbae840c1810ffa23",
+      "contentUnchanged": true
+    },
+    {
+      "from": "MILESTONE-v081.md",
+      "to": "Docs/Archive/pre-v09/MILESTONE-v081.md",
+      "originalSha256": "5e9aa6b22be1ee463eb28b3052275d0b37376eca31981765dc76c01ba2aae2cb",
+      "contentUnchanged": true
+    },
+    {
+      "from": "MILESTONE-v09.md",
+      "to": "Reports/MILESTONE-v09.md",
+      "originalSha256": "e8640b10b1f470040815bcda2e1ee7dc7374aeeae695121e7ce027d923f21ebb",
+      "contentUnchanged": true
+    },
+    {
+      "from": "MODEL_VALIDATION-review.json",
+      "to": "Reports/MODEL_VALIDATION-review.json",
+      "originalSha256": "efca6c0244030bead6146daf73358e62d9c77658d2c7485a1757d0ea7acec266",
+      "contentUnchanged": true
+    },
+    {
+      "from": "MODEL_VALIDATION-v07.json",
+      "to": "Reports/MODEL_VALIDATION-v07.json",
+      "originalSha256": "7b5de57db8930699cec3b89bf5cd69939e5edf3aa5d9cbdbfb3f121389851b8f",
+      "contentUnchanged": true
+    },
+    {
+      "from": "MODEL_VALIDATION-v08.json",
+      "to": "Reports/MODEL_VALIDATION-v08.json",
+      "originalSha256": "be23fe551c14f2ef53337c3fc6420a30fb46c5f50d542dafe508126d2a6898ac",
+      "contentUnchanged": true
+    },
+    {
+      "from": "MODEL_VALIDATION-v081.json",
+      "to": "Reports/MODEL_VALIDATION-v081.json",
+      "originalSha256": "b8664e2a4d9b57ae201114cbee24c4ed0afc8ca8dc9d6f1b5b0683a33ec18e09",
+      "contentUnchanged": true
+    },
+    {
+      "from": "MODEL_VALIDATION-v09.json",
+      "to": "Reports/MODEL_VALIDATION-v09.json",
+      "originalSha256": "5f599f8e7b5966777fcc5bf31987ec1dc1f092777b7abe94adbf63c6ef2c74c2",
+      "contentUnchanged": true
+    },
+    {
+      "from": "MODEL_VALIDATION.json",
+      "to": "Reports/MODEL_VALIDATION.json",
+      "originalSha256": "03fd4e897e6109320cd77e37048d7ad7514e1f9a9efb78fc5bf552cb00dbebe8",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Models-v0.3-front.png",
+      "to": "Reports/Visuals/Models-v0.3-front.png",
+      "originalSha256": "e1cafc95f267c77e2c067450070451a02c6d7a597d27b1fbc4c87a3e2057cd91",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Models-v0.3-obstacles.png",
+      "to": "Reports/Visuals/Models-v0.3-obstacles.png",
+      "originalSha256": "5a76099916e1f9106b4c0851110915b2585cf6431f3f1b0cf02b2244b3614443",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Models-v0.3-rear.png",
+      "to": "Reports/Visuals/Models-v0.3-rear.png",
+      "originalSha256": "fb0d9c649f88d3ebb26f4b025504b8b25f6c2a137cf39c0de529829a6fd1be49",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Models-v0.4-front.png",
+      "to": "Reports/Visuals/Models-v0.4-front.png",
+      "originalSha256": "6c75bcadeb511c67ea61f60a9b8b23bb1dd68cc1fa0496b152673c4e6d25946f",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Models-v0.4-obstacles.png",
+      "to": "Reports/Visuals/Models-v0.4-obstacles.png",
+      "originalSha256": "ff91e685c03ca015bf4035a4c2efd76f6e1d31abbae15590a6caac2b13a77090",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Models-v0.4-rear.png",
+      "to": "Reports/Visuals/Models-v0.4-rear.png",
+      "originalSha256": "f3c73f63c01cf06bb09677deba60ec2568e856d53b5eb50785b7df7430560030",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Models-v0.5-front.png",
+      "to": "Reports/Visuals/Models-v0.5-front.png",
+      "originalSha256": "9a159b8e2cafaa054711ddb24e09a4fdd9324a094cc443192b29bd264789a702",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Models-v0.5-obstacles.png",
+      "to": "Reports/Visuals/Models-v0.5-obstacles.png",
+      "originalSha256": "9bac11098c64f919316fd1043c602795601345cc77e7ca4e7473accf8af61a8f",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Models-v0.5-rear.png",
+      "to": "Reports/Visuals/Models-v0.5-rear.png",
+      "originalSha256": "fc53d1dbf14e4c095e71264a3625e7d5fdbfa922016b6a3805f0ad9ab00df104",
+      "contentUnchanged": true
+    },
+    {
+      "from": "PLAN-REVIEW.md",
+      "to": "Docs/Archive/pre-v09/PLAN-REVIEW.md",
+      "originalSha256": "2d7c5e45695d777d4fe1b9e0b2bb3fc9d5d65e18120e8959a8abfd44d80f956f",
+      "contentUnchanged": true
+    },
+    {
+      "from": "PLAN-v0.4.md",
+      "to": "Docs/Archive/pre-v09/PLAN-v0.4.md",
+      "originalSha256": "f866948e8ca4b350c12fc429729270eff06bd11f35cf672a321f62c7095aacb2",
+      "contentUnchanged": true
+    },
+    {
+      "from": "PLAN-v0.5.md",
+      "to": "Docs/Archive/pre-v09/PLAN-v0.5.md",
+      "originalSha256": "ef8b7a867983c68781550903cf88f69131d3fbb91aa94b2badae438d7ef75389",
+      "contentUnchanged": true
+    },
+    {
+      "from": "PLAN-v0.7.md",
+      "to": "Docs/Archive/pre-v09/PLAN-v0.7.md",
+      "originalSha256": "5c4bfb317fd6302c6b028520d732012d03b6c6fca4e76bacfd17950b2da634ab",
+      "contentUnchanged": true
+    },
+    {
+      "from": "PLAN-v0.8.1.md",
+      "to": "Docs/Archive/pre-v09/PLAN-v0.8.1.md",
+      "originalSha256": "c75c854b9662c45b9ff7cd08648559ff5fc3ef077bc6082123c37bb2f1a16b6a",
+      "contentUnchanged": true
+    },
+    {
+      "from": "PLAN-v0.8.md",
+      "to": "Docs/Archive/pre-v09/PLAN-v0.8.md",
+      "originalSha256": "753dcd6dbce7d7eeafa49169e408e3618630216b502ad7d82cb672fd156f23e5",
+      "contentUnchanged": true
+    },
+    {
+      "from": "PLAN-v0.9.md",
+      "to": "Docs/Archive/pre-v09/PLAN-v0.9.md",
+      "originalSha256": "8e3b054f39cddba78da71873c25d86b8b72f2786533ca2b492e145b4325aaffb",
+      "contentUnchanged": true
+    },
+    {
+      "from": "PLAYGROUND_GALLERY.html",
+      "to": "Reports/Visuals/PLAYGROUND_GALLERY.html",
+      "originalSha256": "8d1c73b21ba9c7e2c305ab8adfc4b265d637f34e375cca2b867ae8d1afc4fd3c",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-0.png",
+      "to": "Reports/Visuals/Playground-0.png",
+      "originalSha256": "c22778d46f7ac32b03b833df06f964f4f21a26e9f7b0a2b600c7c99ea0b42804",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-1.png",
+      "to": "Reports/Visuals/Playground-1.png",
+      "originalSha256": "9fa573f83db770f458bece6e34ed5d51b5a9a01e89ca98aa587aec5470a3dc2b",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-10.png",
+      "to": "Reports/Visuals/Playground-10.png",
+      "originalSha256": "e99ab43833af1ee030bfcfe68acc2bdbeb456417db21415e63674f2605fa5e73",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-11.png",
+      "to": "Reports/Visuals/Playground-11.png",
+      "originalSha256": "5c08770154f7828686b46c380abdd455c9c9cfeed2298c333de88be3982da5fe",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-12.png",
+      "to": "Reports/Visuals/Playground-12.png",
+      "originalSha256": "29a51a275219702539478534347d60c5d26b735385427c7fbda72181aa18b011",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-13.png",
+      "to": "Reports/Visuals/Playground-13.png",
+      "originalSha256": "aa013e47826e67c8c4f22985502987c7ee8eed2b4c7e2ea673bfe48e0b775a08",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-14.png",
+      "to": "Reports/Visuals/Playground-14.png",
+      "originalSha256": "19778c481dc38d9c871af693473a7c8c2c74b8121dad0613fa35c9d5c730279b",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-15.png",
+      "to": "Reports/Visuals/Playground-15.png",
+      "originalSha256": "d9002bb1e5d2fa6e56b05c595241abfef24fa89cb06267704b79aae9e6e941b4",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-16.png",
+      "to": "Reports/Visuals/Playground-16.png",
+      "originalSha256": "d88848eaf6abe780d9dff1fef3709de1ba57f83d727d887e5daf249441388a1a",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-17.png",
+      "to": "Reports/Visuals/Playground-17.png",
+      "originalSha256": "c55427d1902eb3ee27ae880125c139cdac746e973c6258625779992a25c2997f",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-18.png",
+      "to": "Reports/Visuals/Playground-18.png",
+      "originalSha256": "8f7b7729f86e6c67235b64f2ffc06e226233bf71a63231d67b68440023c0165c",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-19.png",
+      "to": "Reports/Visuals/Playground-19.png",
+      "originalSha256": "5277ce18fe0adde981fbba56471ff9cd05c3e31d29752e6c0d88f324f0ebc9d4",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-2.png",
+      "to": "Reports/Visuals/Playground-2.png",
+      "originalSha256": "9fc2b593cf0db4450f605cdda72915c520916670f3413f3b55d62b11b3c09385",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-20.png",
+      "to": "Reports/Visuals/Playground-20.png",
+      "originalSha256": "b561f44841052ae84e8948d163d14d72f5b33f29975d67ae0d1c01d46b813483",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-21.png",
+      "to": "Reports/Visuals/Playground-21.png",
+      "originalSha256": "39ebd3c24f267c00ba61c640f08e97023aabbcb432087782f95030f91f122eb4",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-22.png",
+      "to": "Reports/Visuals/Playground-22.png",
+      "originalSha256": "36b336c4bdd64383a2a31bf30b3da43995125ed68f67c18803169d184dd57395",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-23.png",
+      "to": "Reports/Visuals/Playground-23.png",
+      "originalSha256": "4af175c645fd6fcf0d32cbf85e2939123436c548b8d5c71ddaf9a15810fb00d6",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-24.png",
+      "to": "Reports/Visuals/Playground-24.png",
+      "originalSha256": "308258d94eb4c3bbcacc7d4c2b01ee22002a081866abe30f4105d8c826ee540e",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-25.png",
+      "to": "Reports/Visuals/Playground-25.png",
+      "originalSha256": "f860fd40478fa83757141b399cb939859bafc5fed1988cb0c54fdf45acd66689",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-26.png",
+      "to": "Reports/Visuals/Playground-26.png",
+      "originalSha256": "5eaf5266c9f7b1d51f1bf87c262b76c8d75eadb6d2a37fb7bfb35cdecdd54d71",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-27.png",
+      "to": "Reports/Visuals/Playground-27.png",
+      "originalSha256": "a696799e78693a52ce393571dac06950d859a398818cf6f2ed3f8a2f3d06954d",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-28.png",
+      "to": "Reports/Visuals/Playground-28.png",
+      "originalSha256": "3ec8f0f108ac444eb085336a249637ed7569bd728632aa9081ef78bcece09ba7",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-3.png",
+      "to": "Reports/Visuals/Playground-3.png",
+      "originalSha256": "ec3e71c716cfc30daefd5761763ead2721cad1412d0d675304b5aa6ff174db9f",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-4.png",
+      "to": "Reports/Visuals/Playground-4.png",
+      "originalSha256": "eb53eb30a2b3b0eeea6fa2fdc1d41af0706bb1fe1fd88c9174eeea1861eaadc2",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-5.png",
+      "to": "Reports/Visuals/Playground-5.png",
+      "originalSha256": "8e0775387ef2d5b690f1510e339158ffbdd565659ab2dab6a4c9fe661b13e48d",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-6.png",
+      "to": "Reports/Visuals/Playground-6.png",
+      "originalSha256": "659756eaa32388cc5da550cabd2aba5781d4e8aed8a6952dd06852934e3722c8",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-7.png",
+      "to": "Reports/Visuals/Playground-7.png",
+      "originalSha256": "ae332b87235f23f0e9f4d843199394eb5f424e7f4e34527fe7d0126fe8577247",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-8.png",
+      "to": "Reports/Visuals/Playground-8.png",
+      "originalSha256": "a817fdf6b000cb04e997b4c29e98e1788acf9b81b61229894cd2d84f713dcc93",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Playground-9.png",
+      "to": "Reports/Visuals/Playground-9.png",
+      "originalSha256": "119d5b0c5bc5dd1ad5d69b2e634c397d09077b238162b23dcbe061434042252b",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Preview-v0.2-28deg.png",
+      "to": "Reports/Visuals/Preview-v0.2-28deg.png",
+      "originalSha256": "f8ae6b0e022ff956e73eae95ea8dc7a1b6945b561bf8bd760172476a429869a1",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Preview-v0.2.png",
+      "to": "Reports/Visuals/Preview-v0.2.png",
+      "originalSha256": "3049b46ff86fb0075caef8c4abe95b9a5785df8f3a3c19c728ce459a0619020d",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Preview-v0.3-late-run.png",
+      "to": "Reports/Visuals/Preview-v0.3-late-run.png",
+      "originalSha256": "49b3a625e6c97006942a6e66cef333205b1cf0802f27caef2154253ae4cfeda9",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Preview-v0.3.png",
+      "to": "Reports/Visuals/Preview-v0.3.png",
+      "originalSha256": "0bd3e352a4a18678d984f02705a64ee9afe26a238aa4dd6e6ab8c445e38235cb",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Preview-v0.4-late-run.png",
+      "to": "Reports/Visuals/Preview-v0.4-late-run.png",
+      "originalSha256": "23bb0dc324fc44da870994ae1e8c2aa9941d5bb9c3e1a5a06a7266c8ce61e87f",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Preview-v0.4.png",
+      "to": "Reports/Visuals/Preview-v0.4.png",
+      "originalSha256": "1ced559c37e78a193aa272074932013f730639af93ef7517b6ff3b5f11ad62c7",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Preview-v0.5-late-run.png",
+      "to": "Reports/Visuals/Preview-v0.5-late-run.png",
+      "originalSha256": "f0b782470737fc8deda09a70a90020b1dd52d1e33cb9cb5949134cd0c9e301d6",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Preview-v0.5.png",
+      "to": "Reports/Visuals/Preview-v0.5.png",
+      "originalSha256": "b2cd08f912949c4fc9db07c8a37d6e2b02b5358db6831d5b31f2c07fd4082554",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Preview.png",
+      "to": "Reports/Visuals/Preview.png",
+      "originalSha256": "1c028795233ae11191503ad83cbdd6b2ffe672130764094b4a44b2e7961076a4",
+      "contentUnchanged": true
+    },
+    {
+      "from": "QUALITY_REVIEW-v0.3.md",
+      "to": "Docs/Archive/pre-v09/QUALITY_REVIEW-v0.3.md",
+      "originalSha256": "5b3bd70a6bfa05b67f04633ae4d686c95ea7b3125c203e6a6176313f2fb2128c",
+      "contentUnchanged": true
+    },
+    {
+      "from": "REFINED_MILESTONE.md",
+      "to": "Docs/Archive/pre-v09/REFINED_MILESTONE.md",
+      "originalSha256": "7951a2879012b79a078f520596a6140f9456de8ecd62412a81f9d0205ad87629",
+      "contentUnchanged": true
+    },
+    {
+      "from": "RESEARCH-v0.3.md",
+      "to": "Docs/Archive/pre-v09/RESEARCH-v0.3.md",
+      "originalSha256": "fd0593550499193d85d9fb2c98e1e726af458ed5b6ee9a4d5177ce60fa3f472b",
+      "contentUnchanged": true
+    },
+    {
+      "from": "RESEARCH-v0.7.md",
+      "to": "Docs/Archive/pre-v09/RESEARCH-v0.7.md",
+      "originalSha256": "8e7b148dd96756d76abfa7dbbf751ab275ea6e9c84e88ac6a1802c3e35e77ea4",
+      "contentUnchanged": true
+    },
+    {
+      "from": "REVIEW_GALLERY.html",
+      "to": "Reports/Visuals/REVIEW_GALLERY.html",
+      "originalSha256": "cb12da44e63952fd4d60ad80c5598225894bd474c9614500f2fec9d8a8ee454a",
+      "contentUnchanged": true
+    },
+    {
+      "from": "REVIEW_MILESTONE.md",
+      "to": "Docs/Archive/pre-v09/REVIEW_MILESTONE.md",
+      "originalSha256": "585112c03be5e9c41d44932aadf5c2bf9933a215d31eac3eb3d71ea81c0d49b1",
+      "contentUnchanged": true
+    },
+    {
+      "from": "ROADMAP.md",
+      "to": "Docs/Archive/pre-v09/ROADMAP.md",
+      "originalSha256": "dd0a69b13857ae5c878f9c9225635b504062e3835a2a711eab33b27fae0bfc33",
+      "contentUnchanged": false
+    },
+    {
+      "from": "ROOM_MILESTONE.md",
+      "to": "Docs/Archive/pre-v09/ROOM_MILESTONE.md",
+      "originalSha256": "42c943af999e7da8de27170ce3683bfb27981f8978524355c79040667763bed1",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Room-v0.5-chair.png",
+      "to": "Reports/Visuals/Room-v0.5-chair.png",
+      "originalSha256": "e23dafbe5ae580c4e22f39ec82e94004c9f7ca9257a45d0e9014f7a21b2ae3cd",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Room-v0.5-detail.png",
+      "to": "Reports/Visuals/Room-v0.5-detail.png",
+      "originalSha256": "c5867715e1887f22fe8aa9837e90f0fabae886d25bb5e761dcf4ed637688df39",
+      "contentUnchanged": true
+    },
+    {
+      "from": "TESLIM_RAPORU.md",
+      "to": "Docs/Archive/pre-v09/TESLIM_RAPORU.md",
+      "originalSha256": "fc37d29b968472a5818d9312e72dc2a062c7f9b4651752e2cee5fbb118d2e338",
+      "contentUnchanged": true
+    },
+    {
+      "from": "TEST_RESULTS.json",
+      "to": "Reports/TEST_RESULTS.json",
+      "originalSha256": "62e12dbeb4071895e4b8fe0635e3fe0d8bab978c51b680e41de68193b9c7f47e",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/EditMode-results.xml",
+      "to": "Reports/Tests/EditMode-results.xml",
+      "originalSha256": "ca8230d24ab7b809fe11bf003efa27b2f77323be1fd6a5b41f584e3f7490ed39",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/EditMode-review.xml",
+      "to": "Reports/Tests/EditMode-review.xml",
+      "originalSha256": "0f850d6c98a3dcd805f22d0af1c89dc6381dc2129e0548c1b764fde237b2f85f",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/EditMode-v0.2-results.xml",
+      "to": "Reports/Tests/EditMode-v0.2-results.xml",
+      "originalSha256": "08fb166a9454dbeaa36c6a0aaea3cd913f5ede2998ad4a2f4e38befcf1604998",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/EditMode-v0.3-results.xml",
+      "to": "Reports/Tests/EditMode-v0.3-results.xml",
+      "originalSha256": "5cee6ae928330710cb20d3a15bf6cc3dfa68f6ae1a2ff5c4c5437fe4a10f03aa",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/EditMode-v0.4-results.xml",
+      "to": "Reports/Tests/EditMode-v0.4-results.xml",
+      "originalSha256": "eae82af99a370aa83163da6b1e5bb7ac615ea317390697936eefffebe9251ff3",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/EditMode-v05.xml",
+      "to": "Reports/Tests/EditMode-v05.xml",
+      "originalSha256": "da86056f3b701d27b1fb995bef9f2c46168bcc1b35fedac2b659bcc2314d98a5",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/EditMode-v07.xml",
+      "to": "Reports/Tests/EditMode-v07.xml",
+      "originalSha256": "705342dad73557603669fb4e6d85fea06c301afb277feb287cc8282c8b0e8a4d",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/EditMode-v08.xml",
+      "to": "Reports/Tests/EditMode-v08.xml",
+      "originalSha256": "c6fc30966c4e59b7e7f65bc6543557e9cf7b616d3b577b348c5e2462b696be0b",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/EditMode-v081.xml",
+      "to": "Reports/Tests/EditMode-v081.xml",
+      "originalSha256": "7186bec32209d52332789351ba436e5256429da15365b514f938c3ce6731f460",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/EditMode-v09.xml",
+      "to": "Reports/Tests/EditMode-v09.xml",
+      "originalSha256": "8a95b7b7ef84ce9dcc3a21045aeb808934c82dc58cbfd0cd41c9fe1c098b9378",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/Network-review.txt",
+      "to": "Reports/Tests/Network-review.txt",
+      "originalSha256": "3a7015acfb46cd3de0bb17af1554bf351d677a8a5626a2b78a939c6375d43b09",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/PlayMode-results.xml",
+      "to": "Reports/Tests/PlayMode-results.xml",
+      "originalSha256": "3cdf3fd2c50f850c557505ef44fc7a59d4235d48bbb74f818fc8417c8586d8f3",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/PlayMode-review.xml",
+      "to": "Reports/Tests/PlayMode-review.xml",
+      "originalSha256": "57afa40d8240cd378cd684808674f5f7b9584194a63665a523159c5ebf35652b",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/PlayMode-v0.2-results.xml",
+      "to": "Reports/Tests/PlayMode-v0.2-results.xml",
+      "originalSha256": "4b54bf55e82792dbfe1bef7c393ee014cbf5916732cee3995f9bb12e94c515f7",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/PlayMode-v0.3-results.xml",
+      "to": "Reports/Tests/PlayMode-v0.3-results.xml",
+      "originalSha256": "e7afa6b575f6859eb6d09f2dd6dbe88318d41f115bc370942b323172bea8167f",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/PlayMode-v0.4-results.xml",
+      "to": "Reports/Tests/PlayMode-v0.4-results.xml",
+      "originalSha256": "cbd4df3dd8fd1f3527cb5278cc23b6ecdc80eada918938ba4d95afc6bf42115b",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/PlayMode-v05.xml",
+      "to": "Reports/Tests/PlayMode-v05.xml",
+      "originalSha256": "6332623dd0102dd13b584384e0c8f0278509e80b0cabb44b6d41c4da0eeb46ac",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/PlayMode-v07.xml",
+      "to": "Reports/Tests/PlayMode-v07.xml",
+      "originalSha256": "9481b06945fa706610632fdac8b54e41791203d85a62db01c4ecbfbb1a321e58",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/PlayMode-v08.xml",
+      "to": "Reports/Tests/PlayMode-v08.xml",
+      "originalSha256": "7bd380020403bb25b9278e682041ee8068a77051025d21b37d725d8cdbfa416a",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/PlayMode-v081.xml",
+      "to": "Reports/Tests/PlayMode-v081.xml",
+      "originalSha256": "e6d5b5870866319992fea1bc947c0bc2f6969a1510a2dd38d57ea34fda20e712",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tests/PlayMode-v09.xml",
+      "to": "Reports/Tests/PlayMode-v09.xml",
+      "originalSha256": "b817a22ef1ee2807177080883aeb8d0c0528a83a013c11c4882c09fecc09e83e",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tidy-0.png",
+      "to": "Reports/Visuals/Tidy-0.png",
+      "originalSha256": "f79133f5159f3ce7576ee7d53fcb59eb15585291dcc75a04475dd5fce915c729",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tidy-1.png",
+      "to": "Reports/Visuals/Tidy-1.png",
+      "originalSha256": "942d55248c60599407837ecb7b5d5f676610572da65b27e3225063f24ee64ea5",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tidy-2.png",
+      "to": "Reports/Visuals/Tidy-2.png",
+      "originalSha256": "5e2e40b4a30c3fe420766a6d6af477e8dd5bf0417b3a1839b10469fccdb02d2d",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tidy-3.png",
+      "to": "Reports/Visuals/Tidy-3.png",
+      "originalSha256": "d1692ca081d051433fa227aafc663ee63099b45401a0b4242b6147543293e9bc",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tidy-4.png",
+      "to": "Reports/Visuals/Tidy-4.png",
+      "originalSha256": "0bb4bff7cb79915d34907b6f67f7272a370c99b116cb76273b7fc5be6e08dfd1",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tidy-5.png",
+      "to": "Reports/Visuals/Tidy-5.png",
+      "originalSha256": "70d189d0a5c34d385d69339a6abea70f2e8c8a9fde8f39c616e055bf29011e4a",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tidy-6.png",
+      "to": "Reports/Visuals/Tidy-6.png",
+      "originalSha256": "11fbe4e7c3ac1a8e325630dc6dba7555d818faa517eeed42206d4e5658227d1f",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tidy-7.png",
+      "to": "Reports/Visuals/Tidy-7.png",
+      "originalSha256": "a6d837cfa86fb4cdadf6b20e5973621bc070b11a94a47cde2e0f6e5a603f67e3",
+      "contentUnchanged": true
+    },
+    {
+      "from": "Tidy-8.png",
+      "to": "Reports/Visuals/Tidy-8.png",
+      "originalSha256": "62daf8ae54aad8750d3d89a3db73faf3911e7e1dffbb9d3f001914b373babe92",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-0.png",
+      "to": "Reports/Visuals/UI-review-0.png",
+      "originalSha256": "66be36d0db71265a8dd24bfe7795c5afee94e3540a3c441eae47603a3b24090e",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-1.png",
+      "to": "Reports/Visuals/UI-review-1.png",
+      "originalSha256": "88c6e15953c6917a5ccc9fe5303f26a316c5cad5761334fb59b8fb37885ae109",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-10.png",
+      "to": "Reports/Visuals/UI-review-10.png",
+      "originalSha256": "a854e7963b1830d0920f0bca6ce0fed4aae2faa2f5f6db2d1e5f54b1394acbcc",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-11.png",
+      "to": "Reports/Visuals/UI-review-11.png",
+      "originalSha256": "6aab774fb84fb2bc1b6ad95db434e195f1d600e6a78f75233aaf9229e055c51e",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-12.png",
+      "to": "Reports/Visuals/UI-review-12.png",
+      "originalSha256": "33d51c503a81d27b69b501bb039fc60e5036a2d4aee21b96d974fb1a74337bef",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-13.png",
+      "to": "Reports/Visuals/UI-review-13.png",
+      "originalSha256": "1ce37b19b1aed8b0463af4366b5e2a6ec3f90ca7970d646154e3ce0b3ae6732e",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-14.png",
+      "to": "Reports/Visuals/UI-review-14.png",
+      "originalSha256": "378623ccf425ccf8ca4815ea4f34c2725d5f54c71ec2b9b2173f621645795b92",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-15.png",
+      "to": "Reports/Visuals/UI-review-15.png",
+      "originalSha256": "7b2869fe041e1cf6d5352447a58de5bac688db660b7db757f5a9159f73adc663",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-16.png",
+      "to": "Reports/Visuals/UI-review-16.png",
+      "originalSha256": "672db2f3294d0d350f853c129f1f624101b789666901ff550d446fd7ce4b996a",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-17.png",
+      "to": "Reports/Visuals/UI-review-17.png",
+      "originalSha256": "7b0bac1e8c4d8b4aac93f06fe8b7fb496c630bcfff9c6e8ee07fbc71e78e689f",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-2.png",
+      "to": "Reports/Visuals/UI-review-2.png",
+      "originalSha256": "f650d83532efd166321a975faeabde3fb9bec9e6bb25882c1bd031350221c7df",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-3.png",
+      "to": "Reports/Visuals/UI-review-3.png",
+      "originalSha256": "9d36065ca64e6f533c3f7a011aeeed530320f6fea03a8cde2e0f959de174e19b",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-4.png",
+      "to": "Reports/Visuals/UI-review-4.png",
+      "originalSha256": "4e9174b0f44be0778b622f59e6c428d0244b9d9ea2cd7fefe0a5bade9f277f90",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-5.png",
+      "to": "Reports/Visuals/UI-review-5.png",
+      "originalSha256": "75edac847ad9640db585a8a7ea15b286a2f9c64bf5ffb8ad6f2aad25966ea162",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-6.png",
+      "to": "Reports/Visuals/UI-review-6.png",
+      "originalSha256": "f283a8ce94315edc79d4e18aabb2757787c6e09d7ab418887aa98a8553603744",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-7.png",
+      "to": "Reports/Visuals/UI-review-7.png",
+      "originalSha256": "55b43a6908ea89dcd874f01fa6360b3798077c4d0200458766f27f283384190f",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-8.png",
+      "to": "Reports/Visuals/UI-review-8.png",
+      "originalSha256": "ab046647630bf72087f2c927a4f473dfc0bd5ac42ba9f9a13b643227d2d6858e",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UI-review-9.png",
+      "to": "Reports/Visuals/UI-review-9.png",
+      "originalSha256": "b4f6ea6e0e644a0a0e23e4499bb4b85adffb3b6cfc72afa7df6f39228df1d337",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UNITY_TEST_RESULTS-review.json",
+      "to": "Reports/UNITY_TEST_RESULTS-review.json",
+      "originalSha256": "19938857bcaf0e343430faafe228069e79ac675bd4d2630d7e560974c4ae0edb",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UNITY_TEST_RESULTS-v07.json",
+      "to": "Reports/UNITY_TEST_RESULTS-v07.json",
+      "originalSha256": "15515e37220017a1b3b96a9df0186479199bad21361d85350b2fedfb47b52ea8",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UNITY_TEST_RESULTS-v08.json",
+      "to": "Reports/UNITY_TEST_RESULTS-v08.json",
+      "originalSha256": "21f01ed8d78e06ecffd3b5b9143607944a4a6b0808f2b67fcd89a5729051502c",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UNITY_TEST_RESULTS-v081.json",
+      "to": "Reports/UNITY_TEST_RESULTS-v081.json",
+      "originalSha256": "277d27008f2bf7ad3bb4274dee8c2dcf238b44969e06d21890ff819860c4ff80",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UNITY_TEST_RESULTS-v09.json",
+      "to": "Reports/UNITY_TEST_RESULTS-v09.json",
+      "originalSha256": "f968bc29c9e881213b5e87da425d1be5cf43f40b32c87ff02c42f342008f2ee2",
+      "contentUnchanged": true
+    },
+    {
+      "from": "UNITY_TEST_RESULTS.json",
+      "to": "Reports/UNITY_TEST_RESULTS.json",
+      "originalSha256": "feb27cb80f686e9c7d6e83218d0a2a1b9da66b0072c87b8dcc6d745d472c7240",
+      "contentUnchanged": true
+    }
+  ],
+  "note": "JSON/XML/PNG evidence preserved byte-for-byte; MD/HTML relative links rebased. Historical JSON paths describe their original runs."
+}

@@ -26,3 +26,15 @@ Tests/Standalone/obj/
 /Assets/Resources/PerformanceTestRunInfo.json*
 /Assets/Resources/PerformanceTestRunSettings.json*
 /Assets/Resources.meta
+
+# Disposable local runs; selected release evidence in Reports remains versioned.
+/Reports/Local/
+**/__pycache__/
+*.pyc
+*.log
+*.tmp
+*.bak
+/Server/*.sqlite3*
+/Server/*.db*
+/Server/.env
+/Server/.venv/
