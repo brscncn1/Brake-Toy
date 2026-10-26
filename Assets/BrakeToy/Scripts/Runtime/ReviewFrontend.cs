@@ -29,7 +29,7 @@ namespace BrakeToy
         {
             var r=Rect(name,game.UI.SafeArea,.045f,.035f,.955f,.96f);var bg=r.gameObject.AddComponent<Image>();bg.color=game.Arcade.Joyful?new Color(.99f,.95f,.84f,.96f):new Color(.025f,.055f,.075f,.97f);pages[name]=r.gameObject;
             Text(r,"Title",name=="Ana menü"?"BRAKE TOY":name.ToUpperInvariant(),58,.04f,.865f,.96f,.96f);
-            if(name!="Ana menü")Button(r,"GERİ",()=>SetPage(game.State==RunState.Paused?"Mola":"Ana menü"),.08f,.035f,.92f,.095f);
+            if(name!="Ana menü"&&name!="Sonuç")Button(r,"GERİ",()=>SetPage(game.State==RunState.Paused?"Mola":"Ana menü"),.08f,.035f,.92f,.095f);
             return r;
         }
         private void Build()
@@ -89,7 +89,7 @@ namespace BrakeToy
         }
         private void Refresh()
         {
-            missions.text="BU TURUN GÖREVLERİ\n";foreach(var m in career.Missions)missions.text+="• "+m.Title+"  +"+m.Reward+" TP\n";missions.text+="\nBAŞARIMLAR\n";for(int i=0;i<CareerRules.Achievements.Length;i++)missions.text+=((career.Data.achievements&(1<<i))!=0?"✓ ":"○ ")+CareerRules.Achievements[i].Title+"\n";
+            missions.text="KARİYER GÖREVLERİ\n";foreach(var m in career.Missions)missions.text+="• "+m.Title+"  +"+m.Reward+" TP\n";missions.text+="\nBAŞARIMLAR\n";for(int i=0;i<CareerRules.Achievements.Length;i++)missions.text+=((career.Data.achievements&(1<<i))!=0?"✓ ":"○ ")+CareerRules.Achievements[i].Title+"\n";
             settingsStatus.text="Ghost: "+(GetComponent<GhostReplay>().Visible?"AÇIK":"KAPALI")+"\nYazı: "+(largeText?"BÜYÜK":"STANDART")+"\n"+(career.SaveFailed?"Kayıt yazılamadı; depolamayı kontrol et.":career.Recovered?"Yedek kayıt kurtarıldı.":"İlerleme cihazda saklanır.");
             foreach(var pair in fontSizes)if(pair.Key)pair.Key.fontSize=largeText?Mathf.RoundToInt(pair.Value*(pair.Value<=30?1.15f:1.08f)):pair.Value;
             leaderboard.text="BU CİHAZDAKİ REKORLAR\n\nARCADE\n"+Mathf.FloorToInt(career.Data.arcadeDistance)+" m  •  "+career.Data.arcadeStyle+" stil\n\nRELAX\n"+Mathf.FloorToInt(career.Data.relaxDistance)+" m  •  "+career.Data.relaxStyle+" stil\n\nGÜNLÜK ANTRENMAN\n"+career.Data.dailyDate+"\n"+Mathf.FloorToInt(career.Data.dailyDistance)+" m\n\nÇEVRİMİÇİ: BAĞLI DEĞİL\nKüresel skor gönderimi yok.";
@@ -98,7 +98,7 @@ namespace BrakeToy
         {
             if(!game)return;
             game.UI.Overlay.SetActive(false);bool running=game.State==RunState.Running;
-            if(game.State!=previous){if(game.State==RunState.Crashed){SetPage("Sonuç");results.text=(game.Arcade.Joyful?"JOYFUL ROOM · ":"")+ModeName()+"\n"+Mathf.FloorToInt(game.Arcade.Distance)+" m  •  "+game.Arcade.Style.Total+" STİL\n\n+"+career.LastReward+" TOY POINTS\nBAKİYE  "+career.Data.points+" TP";if(game.Arcade.Joyful){var jump=GetComponent<JoyfulRun>();results.text+="\n\n"+jump.Jumps+" SIÇRAMA · "+Mathf.FloorToInt(jump.AirDistance)+" m HAVADA\nHava bölümünde TP ×2 uygulandı.";}}else if(game.State==RunState.Paused)SetPage("Mola");previous=game.State;}
+            if(game.State!=previous){if(game.State==RunState.Crashed){SetPage("Sonuç");results.text=(game.Arcade.Joyful?"JOYFUL ROOM · ":"")+ModeName()+"\n"+Mathf.FloorToInt(game.Arcade.Distance)+" m  •  "+game.Arcade.Style.Total+" STİL\n\n+"+career.LastReward+" TOY POINTS\nBAKİYE  "+career.Data.points+" TP";if(game.Arcade.Joyful){var jump=GetComponent<JoyfulRun>();results.text+="\n\n"+jump.Jumps+" SIÇRAMA · "+Mathf.FloorToInt(jump.AirDistance)+" m HAVADA\n"+(RunRewardBreakdown.AirBonus(jump.AirDistance,jump.AirStyle,game.Arcade.Distance,game.Arcade.Style.Total)>0?"Hava ek ödülü: +"+RunRewardBreakdown.AirBonus(jump.AirDistance,jump.AirStyle,game.Arcade.Distance,game.Arcade.Style.Total)+" TP":"Hava ek ödülü: 0 TP")+"";}}else if(game.State==RunState.Paused)SetPage("Mola");previous=game.State;}
             foreach(var pair in pages)pair.Value.SetActive(!running&&pair.Key==Page);
             wallet.gameObject.SetActive(!running);wallet.text=career.Data.points+" TOY POINTS"+(career.SaveFailed?"  •  KAYIT HATASI":"");
             garageCamera.enabled=!running&&Page=="Garaj";if(model){model.SetActive(garageCamera.enabled);if(model.activeSelf){modelAngle+=Time.unscaledDeltaTime*15;model.transform.rotation=Quaternion.Euler(0,modelAngle,0);}}

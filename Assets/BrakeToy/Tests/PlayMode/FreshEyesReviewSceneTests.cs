@@ -35,7 +35,7 @@ namespace BrakeToy.Tests
             float x = 0;
             for (int frame = 1; frame <= 3600; frame++)
             {
-                while (row < beats.Count - 1 && beats[row].Distance + 64 < game.Arcade.Distance) row++;
+                while (row < beats.Count - 1 && TabletopCourseRules.ExitDistance(beats[row]) < game.Arcade.Distance) row++;
                 float target = TabletopCourseRules.WitnessX(beats[row], game.Arcade.Distance);
                 float next = Mathf.MoveTowards(x, target, game.Config.MaxLateralSpeed / 60);
                 game.Arcade.Step(1f / 60, x, next);

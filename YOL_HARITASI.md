@@ -1,5 +1,11 @@
 # Brake Toy — güncel geliştirme yol haritası
 
+
+27 Ekim güncel paket: feat/player-experience-packages; v0.10.0/kod11 aday kaynak.
+HUD/ayar/sonuç, tabletop-r6 hafızalı parkur, Experience art varyantları;187benzersiz Unity testi.
+Ayrıntı Docs/PLAYER_EXPERIENCE_PACKAGES-2026-10-27.md. Tablet/sanat kabulü açık; K6 başlamadı.
+Önceki APK/sonuç ifadeleri tarihsel tabandır; yeni Android teslim kanıtı ayrı rapordadır.
+
 Plan tarihi: 24 Ekim 2026. Taban v0.9.0 Adventure; kanıt `Reports/DELIVERY-v09.json`.
 Bu plan bundan sonraki kalite/yayın çalışmasını tarif eder; eski Faz 1–6 kayıtları tarihseldir.
 Seçili paketin dışındaki öneriler topluca uygulama yetkisi sayılmaz.

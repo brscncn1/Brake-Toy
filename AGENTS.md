@@ -1,5 +1,11 @@
 # Brake Toy — ortak agent çalışma rehberi
 
+
+27 Ekim güncel paket: feat/player-experience-packages; v0.10.0/kod11 aday kaynak.
+HUD/ayar/sonuç, tabletop-r6 hafızalı parkur, Experience art varyantları;187benzersiz Unity testi.
+Ayrıntı Docs/PLAYER_EXPERIENCE_PACKAGES-2026-10-27.md. Tablet/sanat kabulü açık; K6 başlamadı.
+Önceki APK/sonuç ifadeleri tarihsel tabandır; yeni Android teslim kanıtı ayrı rapordadır.
+
 Güncelleme: 26 Ekim 2026. Codex ve Claude Code için ortak proje talimatıdır.
 Öncelik: kullanıcının güncel talebi → bu rehber → konu belgesi → tarihsel kayıt.
 Ortamın sistem/geliştirici talimatları ayrıca geçerlidir; belge bunları değiştirmez.

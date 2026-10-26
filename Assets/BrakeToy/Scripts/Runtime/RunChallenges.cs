@@ -47,7 +47,7 @@ namespace BrakeToy
             if(!game)return;
             GoalLabel.gameObject.SetActive(game.State==RunState.Running);
             string name=Goals.Completed==0?"60 m sür":Goals.Completed==1?"3 risk yıldızı topla":"6 yakın geçiş yap";
-            GoalLabel.text=Goals.Completed>=3?"ÜÇ HEDEF TAMAM  ★ ★ ★":"HEDEF "+(Goals.Completed+1)+"/3  •  "+name+"  "+Goals.Progress(arcade.Distance,arcade.Style.NearMisses)+"/"+Goals.Target;
+            GoalLabel.text=Goals.Completed>=3?"TUR HEDEFLERİ TAMAM  ★ ★ ★":"TUR HEDEFİ "+(Goals.Completed+1)+"/3  •  "+name+"  "+Goals.Progress(arcade.Distance,arcade.Style.NearMisses)+"/"+Goals.Target;
             if(game.State==RunState.Ready)game.UI.Description.text="Sürükle, aradan sıyrıl.\nYıldızlı geçişi seç: +75 stil.\n\nTUR HEDEFLERİ\n60 m • 3 yıldız • 6 yakın geçiş";
             else if(game.State==RunState.Crashed)game.UI.Description.text+="\nHEDEF "+Goals.Completed+"/3  •  YILDIZ "+Goals.Pickups;
         }

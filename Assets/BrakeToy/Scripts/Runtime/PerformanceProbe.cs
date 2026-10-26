@@ -9,6 +9,7 @@ using UnityEngine.UI;
 namespace BrakeToy
 {
     /// <summary>Explicit local performance capture. No network or unique device identifiers.</summary>
+    [DefaultExecutionOrder(-500)]
     public sealed class PerformanceProbe : MonoBehaviour
     {
         public Button CaptureButton;
@@ -22,6 +23,43 @@ namespace BrakeToy
         private List<ArcadeRow> rows;
         private int rowIndex;
         private float witnessX;
+        private List<PlaygroundBeat> adventureBeats;
+        private void Awake()
+        {
+#if UNITY_ANDROID && !UNITY_EDITOR && DEVELOPMENT_BUILD
+            using (var player = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+            using (var activity = player.GetStatic<AndroidJavaObject>("currentActivity"))
+            using (var intent = activity.Call<AndroidJavaObject>("getIntent"))
+                if (intent.Call<bool>("getBooleanExtra", "brakeToyBenchmark", false))
+                    IsolateBenchmark();
+#endif
+        }
+        public void IsolateBenchmark()
+        {
+            // Must run before GameManager.Start initializes the career and starter powers.
+            game = GetComponent<GameManager>();
+            game.Review.Persist = false; game.Arcade.PersistRecords = false;
+            GetComponent<PlaygroundRun>().PersistPreferences = false;
+            GetComponent<ToyAudioSettings>().PersistPreferences = false;
+            GetComponent<GraphicsProfileController>().PersistPreferences = false;
+        }
+        public void PrepareWitness()
+        {
+            game = GetComponent<GameManager>(); rowIndex = 0; witnessX = 0;
+            if (GetComponent<AdventureEncounters>())
+            {
+                adventureBeats = new List<PlaygroundBeat>(256);
+                var stream = new AdventureSequence(game.Arcade.CurrentSeed, game.Review.Mode == PlayMode.Relax,
+                    GetComponent<AdventureEncounters>().ActiveDenseCourse);
+                for(int i=0;i<256;i++)adventureBeats.Add(stream.Next());
+            }
+            else
+            {
+                rows = new List<ArcadeRow>(256);
+                var stream = new ArcadeSequence(game.Arcade.CurrentSeed,true,game.Arcade.Choreographed);
+                for(int i=0;i<256;i++)rows.Add(stream.Next());
+            }
+        }
         [Serializable] public sealed class Report
         {
             public string version, utc, deviceModel, os, cpu, gpu, profile, inputValidation;
@@ -44,8 +82,7 @@ namespace BrakeToy
                     var quality = GetComponent<GraphicsProfileController>(); quality.PersistPreferences = false;
                     quality.SetLow(intent.Call<bool>("getBooleanExtra", "brakeToyLow", false));
                     benchmark = true; game.Arcade.PersistRecords = false; game.Arcade.VaryRuns = false;
-                    game.enabled = false; game.StartRun(); rows = new List<ArcadeRow>();
-                    var stream = new ArcadeSequence(game.Arcade.CurrentSeed, true,game.Arcade.Choreographed); for (int i=0;i<256;i++) rows.Add(stream.Next());
+                    game.enabled = false; game.StartRun(); PrepareWitness();
                     BeginCapture();
                 }
             }
@@ -59,8 +96,18 @@ namespace BrakeToy
             CaptureButton.gameObject.SetActive(game.State != RunState.Running);
             if (benchmark && Capturing)
             {
-                while (rowIndex < rows.Count-1 && rows[rowIndex].Distance + 3 < game.Arcade.Distance) rowIndex++;
-                float next = Mathf.MoveTowards(witnessX, ArcadeRules.LaneX(rows[rowIndex].SafeLane), game.Config.MaxLateralSpeed * Mathf.Min(Time.deltaTime,.1f));
+                float target;
+                if(adventureBeats!=null)
+                {
+                    while(rowIndex<adventureBeats.Count-1&&TabletopCourseRules.ExitDistance(adventureBeats[rowIndex])<game.Arcade.Distance)rowIndex++;
+                    target=TabletopCourseRules.WitnessX(adventureBeats[rowIndex],game.Arcade.Distance);
+                }
+                else
+                {
+                    while(rowIndex<rows.Count-1&&rows[rowIndex].Distance+3<game.Arcade.Distance)rowIndex++;
+                    target=ArcadeRules.LaneX(rows[rowIndex].SafeLane);
+                }
+                float next = Mathf.MoveTowards(witnessX, target, game.Config.MaxLateralSpeed * Mathf.Min(Time.deltaTime,.1f));
                 game.Arcade.Step(Mathf.Min(Time.deltaTime,.1f), witnessX,next); witnessX=next;game.Player.StopAt(next);
                 if (game.State == RunState.Crashed) { Debug.LogError("Benchmark witness collision; capture rejected."); Capturing=false; return; }
             }

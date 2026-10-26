@@ -1,5 +1,11 @@
 # v0.9 ek model devir notu
 
+
+27 Ekim güncel paket: feat/player-experience-packages; v0.10.0/kod11 aday kaynak.
+HUD/ayar/sonuç, tabletop-r6 hafızalı parkur, Experience art varyantları;187benzersiz Unity testi.
+Ayrıntı Docs/PLAYER_EXPERIENCE_PACKAGES-2026-10-27.md. Tablet/sanat kabulü açık; K6 başlamadı.
+Önceki APK/sonuç ifadeleri tarihsel tabandır; yeni Android teslim kanıtı ayrı rapordadır.
+
 Güncel sahne ToyRoomAdventure. Sekiz yeni maket Assets/BrakeToy/Art/Adventure/Prefabs altında; ayrıntılı görsel model çalışması kullanıcı tarafından sonraya bırakılmıştır. AdventureToy.Moving/Options/ExitArrows/Link/Shadow pivotlarını ve AdventureSolid hacimlerini koru. Gerçek model ölçüsü değişirse çizimle analitik çarpışma hacmini birlikte güncelle; yeni PlayMode senaryolarını çalıştır. Tünel tavanı uçuş/jetpack için yüksek; cetvel her iki kenardan desteklenir, vinç yükü sabit uzunluklu askıyla hareket eder. Modeller bütün şeritleri kapatamaz; açık yeşil yol ve raf/masa kenarı yerleşim boşlukları korunmalı. Kaynak ve test ölçütleri MILESTONE-v09.md / PLAN-v0.9.md. Önceki v0.8 devir notu aşağıda tarihsel olarak korunur.
 
 # Sonraki model çalışması için bağlantı sözleşmesi
