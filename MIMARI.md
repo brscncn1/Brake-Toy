@@ -85,10 +85,11 @@ GameManager.Update
 - Eski 2.65/3 saniye aralığı yalnız DenseCourse=false tarihsel karşılaştırmada korunur.
 - ArcadeDirector yaklaşık 115 birim önünü doldurur; aktif dal AdventureSequence kullanır.
 - PlaygroundEncounters Adventure bileşenine yönlendirir; eski sahnede eski aileleri üretir.
-- AdventureEncounters ana oyuncak + kitap rampası +22/40/58±2 birimde üç çift engelli geçit kurar.
+- AdventureEncounters ana oyuncak + kitap rampası ve22/40/58±2 civarında toplam6hazard kurar.
+- OpenRampExit açık ilk çıkış seçerse rampa hattındaki nesne üçüncü şeritte5birim öne taşınır; silinmez.
 - Katalog 0–6 oyuncaklar; 7 kitap, 8 spiral defter, 9 kalemliktir. Otobüs 6 tekrar üretilir.
 - TabletopCourseUpgrade yalnız Adventure kataloğunu genişletir; oda ve eski prefabları yeniden üretmez.
-- DenseCourse tur başında sabitlenir; hareket güncellemesi ghost tabletop-r4-rolling anahtarına ayrılır.
+- DenseCourse tur başında sabitlenir; açık/engelli çıkış kuralları ghost tabletop-r5-choices anahtarına ayrılır.
 - RollingBallRules dört sınırlı yörünge ve ileri hız faktörünü tanımlar; ArcadeHazard MotionKind=3 uygular.
 - BallRolling masa kaymasını çıkarır; açısal hareket gerçek masa üstü yol/radyustan hesaplanır.
 - Hareket tahmini ve gerçek adım aynı yörüngeyi kullanır; hızlı top başlangıç Z'si hızla ölçeklenir.
@@ -157,6 +158,8 @@ GameManager.Update
 - Benchmark'ın eski ArcadeSequence yolu vardır; Adventure ölçümü öncesi K4.3 kontrolünü yap.
 - Draw-call/GC/CPU/GPU etkisini gerçek cihazda ölç; üçgen sayısından tek başına FPS çıkarma.
 - NightRoomLamps Adventure'da başlangıçta iki gölgesiz yerel ışık/gövde oluşturur; gece kısılır/açılır.
+- RoomDayCycle dış gökyüzünü döndürür; Adventure BrightInterior ile iç ana/ortam ışığı gündüz seviyesinde sabittir.
+- PlaygroundAtmosphere de BrightInterior'u kullanır; LateUpdate iç ışığı yeniden geceye göre karartmaz.
 - Raf spotunun TrackSpill seçeneği parkura hafif sıcak ışığı kapatabilir; yatak başlığı ışığı odada kalır.
 
 ## 11. Online sınırı ve yayın

@@ -6,6 +6,7 @@ namespace BrakeToy
         public Light SunLight,RoomLamp;public Renderer Sky;public Transform Sun,Moon,Clouds;public GameObject Stars,Birds;
         public float CycleSeconds=120;[Range(0,1)]public float TimeOfDay=.18f;public bool Animate=true;
         public Transform[] BirdWings;
+        public bool BrightInterior => GetComponent<AdventureEncounters>() != null;
         private NightRoomLamps localLamps;
         private Material skyMaterial;private float clock;private readonly System.Collections.Generic.List<Material> glowMaterials=new System.Collections.Generic.List<Material>();
         private void Start(){skyMaterial=new Material(Sky.sharedMaterial);Sky.sharedMaterial=skyMaterial;Glow(Sun.GetComponent<Renderer>(),new Color(1.4f,.75f,.16f));Glow(Moon.GetComponent<Renderer>(),new Color(.65f,.8f,1.1f));foreach(var r in Stars.GetComponentsInChildren<Renderer>(true))Glow(r,new Color(.7f,.8f,1));Apply();}
@@ -20,13 +21,15 @@ namespace BrakeToy
                 localLamps.Initialize();
             }
             float angle=(TimeOfDay-.25f)*Mathf.PI*2,day=Mathf.SmoothStep(0,1,Mathf.InverseLerp(-.18f,.30f,Mathf.Cos(angle)));
+            float roomDay = BrightInterior ? 1 : day;
+            float roomAngle = BrightInterior ? 0 : angle;
             Color sky=Color.Lerp(new Color(.022f,.035f,.13f),new Color(.32f,.73f,1),day);
             if(skyMaterial){skyMaterial.SetColor("_BaseColor",sky);skyMaterial.SetColor("_EmissionColor",sky*.65f);}
             Sun.localPosition=new Vector3(Mathf.Sin(angle)*3,Mathf.Cos(angle)*2.6f-.4f,0);Moon.localPosition=new Vector3(-Mathf.Sin(angle)*3,-Mathf.Cos(angle)*2.6f-.4f,-.02f);
             Sun.gameObject.SetActive(day>.04f);Moon.gameObject.SetActive(day<.94f);Stars.SetActive(day<.38f);Birds.SetActive(day>.55f);
-            SunLight.intensity=Mathf.Lerp(.28f,1.32f,day);SunLight.color=Color.Lerp(new Color(.48f,.59f,1),new Color(1,.94f,.78f),day);SunLight.transform.rotation=Quaternion.Euler(Mathf.Lerp(12,55,day),125+Mathf.Sin(angle)*35,0);
-            RenderSettings.ambientSkyColor=Color.Lerp(new Color(.30f,.35f,.57f),new Color(.65f,.75f,.85f),day);RenderSettings.ambientEquatorColor=Color.Lerp(new Color(.28f,.29f,.40f),new Color(.48f,.54f,.59f),day);RenderSettings.ambientGroundColor=new Color(.24f,.22f,.25f);
-            if(RoomLamp)RoomLamp.intensity=Mathf.Lerp(2.2f,.35f,day);
+            SunLight.intensity=Mathf.Lerp(.28f,1.32f,roomDay);SunLight.color=Color.Lerp(new Color(.48f,.59f,1),new Color(1,.94f,.78f),roomDay);SunLight.transform.rotation=Quaternion.Euler(Mathf.Lerp(12,55,roomDay),125+Mathf.Sin(roomAngle)*35,0);
+            RenderSettings.ambientSkyColor=Color.Lerp(new Color(.30f,.35f,.57f),new Color(.65f,.75f,.85f),roomDay);RenderSettings.ambientEquatorColor=Color.Lerp(new Color(.28f,.29f,.40f),new Color(.48f,.54f,.59f),roomDay);RenderSettings.ambientGroundColor=new Color(.24f,.22f,.25f);
+            if(RoomLamp)RoomLamp.intensity=Mathf.Lerp(2.2f,.35f,roomDay);
             if (localLamps) localLamps.Apply(day);
             if(Clouds){Clouds.localPosition=new Vector3(Mathf.Sin(clock*.025f)*1.4f,0,0);Clouds.gameObject.SetActive(day>.18f);}
             Birds.transform.localPosition=new Vector3(Mathf.Repeat(clock*.38f,11)-5.5f,Mathf.Sin(clock*.4f)*.3f,0);

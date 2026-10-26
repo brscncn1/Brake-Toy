@@ -5,7 +5,8 @@ namespace BrakeToy.Core
     // SafeLane names only the entrance to the original toy. Later gates require new decisions.
     public static class TabletopCourseRules
     {
-        public const string Version = "tabletop-r3";
+        public const string Version = "tabletop-r5-choices";
+        public static bool OpenRampExit(PlaygroundBeat beat) => (beat.Variant / 11) % 2 == 0;
         public static float GateOffset(PlaygroundBeat beat, int gate)
             => 22 + gate * 18 + (beat.Variant / (gate == 0 ? 1 : gate == 1 ? 5 : 25)) % 5 - 2;
         public static int Pattern(PlaygroundBeat beat) => beat.Index % 6;

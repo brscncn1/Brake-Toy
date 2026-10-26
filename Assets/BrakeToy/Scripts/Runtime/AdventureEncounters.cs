@@ -72,10 +72,17 @@ namespace BrakeToy
                     // Narrow centre gates retain a full car width plus margin.
                     if (!bus && gap == 1 && (pattern == 1 || pattern == 5)) x *= .78f;
                     float stagger = pattern == 0 && column == 1 ? 1.5f : 0;
-                    var hazard = spawn(kind, x, z + TabletopCourseRules.GateOffset(beat, row) + stagger, x, 0);
+                    float depth = z + TabletopCourseRules.GateOffset(beat, row) + stagger;
+                    if (row == 0 && lane == beat.RiskLane && TabletopCourseRules.OpenRampExit(beat))
+                    {
+                        // Keep the desk object, but leave this ramp's first exit genuinely open.
+                        // It joins the other blocked lane before the gate, outside the launch line.
+                        x = ArcadeRules.LaneX(3 - beat.SafeLane - beat.RiskLane);
+                        depth = z + TabletopCourseRules.GateOffset(beat, row) - 5;
+                    }
+                    var hazard = spawn(kind, x, depth, x, 0);
                     if (kind == 3)
-                        hazard.ConfigureRollingBall(z + TabletopCourseRules.GateOffset(beat, row) + stagger,
-                            x, beat.Variant, beat.Index / 6);
+                        hazard.ConfigureRollingBall(depth, x, beat.Variant, beat.Index / 6);
                     if (bus)
                     {
                         hazard.MotionKind = 2;

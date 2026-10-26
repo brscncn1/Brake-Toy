@@ -6,6 +6,9 @@ Durumlar: Kabul / Uygulandı / Doğrulama bekliyor / Açık / Öneri.
 
 ## 1. Geçerli kararlar
 
+- D21 — 26 Ekim uygulandı: gece yalnız dışarıda; Adventure iç ana/ortam ışığı sabit, lambalar dış geceyi izler.
+- D22 — 26 Ekim uygulandı: her rampanın önüne engel konmaz; açık/alçak engelli çıkış ve nesne sayısı birlikte korunur.
+- D23 — İnceleme: Docs/FRESH_EYES_REVIEW-2026-10-26.md içindeki diğer çözümler henüz öneridir.
 - D19 — 26 Ekim uygulandı: toplar bağımsız düz/çapraz/tek-çift kavis hareket eder; dönüş masa üstü yol/radyustur.
 - Etki: yeni oyuncaklar/masa eşyaları azaltılmaz; eski ghost yeni hareket profiline yüklenmez.
 - D20 — 26 Ekim uygulandı: gece raf ve yatak başlığına iki loş lamba; hafif parkur spotu kapatılabilir.

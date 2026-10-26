@@ -3,7 +3,11 @@
 Taban: v0.9 Adventure; sağlamlaştırma doğrulaması 25 Ekim 2026. Bütün komutlar Unity/Git proje kökünden çalıştırılır.
 Bu belge bir koşu raporu değildir; sonuç iddiası gerçek çıktı ve zamanla desteklenir.
 
-Son top/gece paketi:90 EditMode +GPU açık84 PlayMode =174/174;
+Son oda/rampa paketi:91 EditMode +GPU açık88 PlayMode =179/179;
+Reports/ROOM_RAMP_REVIEW_VALIDATION.json. İç ışık gündüz/gece eşit; dış gece/lamba döngüsü ayrı.
+14dizilimde7rampa ailesi ×2çıkış; kurmalı oyuncakta12güçsüz rampa/bypass rotası geçti.
+12ürün akışı +4oda/rampa karesi; Docs/FRESH_EYES_REVIEW-2026-10-26.md. Bunlar insan kabulü değildir.
+Önceki top/gece paketi:90 EditMode +GPU açık84 PlayMode =174/174;
 Reports/ROLLING_NIGHT_VALIDATION.json. Dört yörünge, gerçek yol/radyus dönüşü,30/60/120Hz,
 top çarpışması, iki gece lambası ve hafif parkur ışığı açık/kapalı görüntüleri kontrol edildi.
 Önceki parkur düzeltmesi: 85 EditMode +GPU açık80 PlayMode =165/165;
