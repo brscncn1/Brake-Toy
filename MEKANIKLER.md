@@ -44,6 +44,8 @@ Taban: v0.9 Adventure, 24 Ekim 2026. Sayılar mevcut koddur; denge önerileri ay
 - K2.1 ölçümünde 10/30/60 sn Arcade 4/11/22, Relax 2/7/15 cümle referansı geçilir.
   Bu adetler insan karar sayısı değildir; ayrıntı Docs/OPENING_PACE-2026-10-25.md.
 - Sürekli açık yeşil yol kaldırıldı; ana oyuncağın çıkışı sonraki geçit boyunca açık kalmaz.
+- Rampa ilk çıkışı seed'e göre açık veya alçak engelli olur; açık varyantta nesne silinmeden başka hatta taşınır.
+- Açık ilk çıkış bütün sonraki parkurun engelsiz olacağı anlamına gelmez; sonraki geçit kararları sürer.
 - 22/40/58±2 birimdeki çift engeller kısa slalom, dar merkez, S ve yön değiştiren çıkış üretir.
 - Kitap/spiral defter/kalemlik her cümlede vardır; otobüs altı düzenin ikisinde yatay hareket eder.
 - Hareketli otobüs ve oyuncaklarla yeni diziler birleşir; ana sekiz oyuncak ailesi korunur.
@@ -160,6 +162,7 @@ Taban: v0.9 Adventure, 24 Ekim 2026. Sayılar mevcut koddur; denge önerileri ay
 ## 10. Oda, ses ve oyuncu açısından kabul
 
 - Gün/gece döngüsü güneş/ay/yıldız/kuşlarla odayı canlandırır; oynanış kuralları gün saatine bağlanmaz.
+- Adventure içi gece de gündüz kadar aydınlık kalır; kararan bölüm yalnız dış manzaradır.
 - Gece radyonun yanındaki raf ve yatak başlığındaki iki loş lamba yanar; gündüz ışıkları söner.
 - Masa bölgeleri geri alınabilir; kenar dekorları 64 birim ortak fazda defter/kalemlik boşluğu bırakır.
 - Radyo sol raf üzerinde statiktir; domino aktif sürümde yoktur.

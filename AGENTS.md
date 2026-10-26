@@ -28,6 +28,8 @@ Ortamın sistem/geliştirici talimatları ayrıca geçerlidir; belge bunları de
 - 26 Ekim kullanıcı kararı: sürekli açık yeşil kaçış şeridi yok; kısa süreli tünel çıkışı olabilir.
 - Yeni oyuncaklar mevcut kitap/defter/kalemlik/otobüsü azaltarak eklenmez; üretim sıklığını test et.
 - Parkur yön değiştiren geçitler kullanır; güç harcamadan fiziksel olarak geçilebilir kalmalıdır.
+- Adventure odası gündüz/gece aydınlık kalır; gece yalnız dışarıda, dekor lambaları dış geceye göre yanar.
+- Rampa ilk çıkışı her zaman engelli olamaz; açık ve atlanabilir engelli seçenekler birlikte korunur.
 - Görsel model ve analitik çarpışma hacmi birlikte korunur; dekor tehlike gibi davranmamalı.
 - Domino aktif Adventure/Tidy'den kaldırılmıştır; eski sahnede bulunması geri ekleme yetkisi değildir.
 - Raf radyosu, kenar dekor boşlukları, kayıtlar ve müzik korunur; değişiklik açık göreve bağlanır.
@@ -101,7 +103,8 @@ Ortamın sistem/geliştirici talimatları ayrıca geçerlidir; belge bunları de
 - Builder'lar genel güncelleme aracı değildir; Create/upgrade davranışını önce incele.
 - Mevcut sahneyi açmak için `Open` kullan; gereksiz `Create` çağırma.
 - Sürüşte sürekli Instantiate/Destroy veya kare başına yeni koleksiyon ekleme.
-- Son top/gece paketi:90 EditMode +GPU açık84 PlayMode =174/174; Reports/ROLLING_NIGHT_VALIDATION.json.
+- Son oda/rampa paketi:91 EditMode +GPU açık88 PlayMode =179/179; Reports/ROOM_RAMP_REVIEW_VALIDATION.json.
+- Oyuncu incelemesi Docs/FRESH_EYES_REVIEW-2026-10-26.md; öneriler bu teslimde uygulanmış sayılmaz.
 - Top bağımsız ilerlemeli; masa kayması yuvarlanma sayılmaz. Dört yörünge/radyus ve öngörülen temas birlikte test edilir.
 - Gece raf/yatak başlığı lambaları kullanılır; dekoru delen ayaklı yerleşim geri getirilmez.
 - Üretim DenseCourse=true; eski güvenli şerit/bitiriş testleri açıkça DenseCourse=false profilindedir.

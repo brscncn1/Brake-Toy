@@ -1,5 +1,10 @@
 # BRAKE TOY
 
+26 Ekim [oda/rampa düzeltmesi ve oyuncu incelemesi](Docs/FRESH_EYES_REVIEW-2026-10-26.md):
+oda gece de aydınlık; dış manzara/gece lambaları döngüde. Rampa çıkışları açık/alçak engelli karışık.
+Nesneler silinmedi.179/179 Unity testi ve [16gerçek kamera karesi](Reports/Visuals/CHOICES_REVIEW_GALLERY.html).
+Kaynak dalı fix/bright-room-ramp-choices; yeni APK üretilmedi. İncelemedeki diğer öneriler uygulanmış sayılmaz.
+
 26 Ekim [top hareketi ve gece lambaları](Docs/ROLLING_AND_NIGHT-2026-10-26.md):
 yerinde dönüş hatası düzeltildi; dört hareket profili, masa üstü yola bağlı yuvarlanma ve iki loş lamba.
 174/174 Unity testi; [gerçek görüntüler](Reports/Visuals/ROLLING_NIGHT_GALLERY.html).

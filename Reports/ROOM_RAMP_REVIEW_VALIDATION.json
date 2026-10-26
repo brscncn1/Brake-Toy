@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-26",
+  "sourceBase": "1c18c80d635e46c8d3a2ade0054626b8a87b3220",
+  "branch": "fix/bright-room-ramp-choices",
+  "rules": "tabletop-r5-choices",
+  "unity": "6000.3.26f1",
+  "tests": {
+    "EditMode": {
+      "result": "Passed",
+      "total": "91",
+      "passed": "91",
+      "failed": "0",
+      "start-time": "2026-10-25 23:23:12Z",
+      "end-time": "2026-10-25 23:23:27Z"
+    },
+    "PlayMode": {
+      "result": "Passed",
+      "total": "88",
+      "passed": "88",
+      "failed": "0",
+      "start-time": "2026-10-26 20:35:43Z",
+      "end-time": "2026-10-26 20:37:28Z"
+    }
+  },
+  "totalPassed": 179,
+  "coverage": {
+    "rampLayoutCases": 14,
+    "rampFamilies": 7,
+    "exitVariants": 2,
+    "optionalRampAndBypassRuns": 12,
+    "functionalRampWitnessFamily": "Windup",
+    "functionalStepRates": [
+      30,
+      60,
+      120
+    ],
+    "priorUnassistedCourseWitnessRuns": 18,
+    "distributionSeeds": 100,
+    "distributionPhrasesPerSeed": 120,
+    "hazardsPerPhrasePreserved": 6,
+    "catalogKindsStillSpawn": 10,
+    "dayNightMainLightAndAmbientEqual": true,
+    "outdoorNightAndLocalLampCyclePreserved": true,
+    "productReviewFrames": 12,
+    "roomRampFrames": 4,
+    "reviewedGarageCars": 3
+  },
+  "limits": [
+    "Automated legal-speed witness, not human drag/learning/retention measurement",
+    "Only Windup optional air/bypass routes functionally sampled; seven-family layout coverage is separate",
+    "Settings footer finding is visual; physical-device raycast diagnosis remains open",
+    "Audio musical quality was not auditioned in this review",
+    "No new APK, tablet FPS/p95 or final art acceptance"
+  ],
+  "sha256": {
+    "Reports/Tests/Choices-EditMode.xml": "e7d70130498157923197290ff304523774ad796e60a8be0743066e21fe14fe98",
+    "Reports/Tests/Choices-PlayMode.xml": "35ad21aa0f9e0e9aea15c2d1e683aa96c7411a92014e54eef10adcaa492aa113",
+    "Reports/Visuals/Choices-ramp-obstacle.png": "8bb27e0c7face21dbc880556f29ea0d49dda87d7b806c92dea6b428a394ae061",
+    "Reports/Visuals/Choices-ramp-open.png": "0201c939f1af817a4115b8da699a7462c735fce960fc07e0e2999d5affc0b45a",
+    "Reports/Visuals/Choices-room-day.png": "b5c5f11d617a1b1ad9238a1e037979b1b5d12e0ae9ae76e99f293acb44bf7b27",
+    "Reports/Visuals/Choices-room-night.png": "a8bc2450ccd718f4f52a64c1f498782a6533115221c5851b60e05b4ea5dc78be",
+    "Reports/Visuals/Review-menu.png": "318dedca703912579f5efe477fe1644c242fec8450d1bab2c92bc39c963bfd59",
+    "Reports/Visuals/Review-page-garage-0.png": "248f8743587091c1a295a656bdcef9ea4b4528fa780dd2aedd8836875893f695",
+    "Reports/Visuals/Review-page-garage-1.png": "3f6a7c44d0a029476affe5dc2efc26c3d7c13999e8575ebbda8509fd9505ec1a",
+    "Reports/Visuals/Review-page-garage-2.png": "c793ab87168d2becfbbb329cd5adfc839035ab08bf5f89fc041722d221f674fa",
+    "Reports/Visuals/Review-page-missions.png": "73261a7673d8121ca207341a4db747be626e0a80645b1d1f46e261d3cd8b5286",
+    "Reports/Visuals/Review-page-records.png": "cc876e458281b89cca38bc1eeb39b91816d74b105d9a53818122ac10eebfb672",
+    "Reports/Visuals/Review-page-settings.png": "2b02461b7b629d0ad4fb9c847ed2d56b42e7991d6a451fe1ba53ad8c0fa7a3f2",
+    "Reports/Visuals/Review-pause.png": "51d20ca4393f96b82b93efc4f45d7732fdefef49a0cc76665c8cbd2ac59ea648",
+    "Reports/Visuals/Review-result.png": "e7183b33e6a0505e6c1a1cd5fd9d051fc64cf1828c41e7d33473556d088070b6",
+    "Reports/Visuals/Review-run-10.png": "40cdb61b68cea2e0d039b0bc7a1016a972f9892ce3a231e34f702d41521c3e71",
+    "Reports/Visuals/Review-run-30.png": "ce0504157ba8d64f3c4de9dd761c02e45f6819ae284a50dfe93a1149e5f83851",
+    "Reports/Visuals/Review-run-60.png": "960b86c4b0ce9e514eae620b6c1c1f0a077fd5c4a8feb7e3435e25935c98431d",
+    "Assets/BrakeToy/Scripts/Core/TabletopCourseRules.cs": "135debbf75b6175dae9c4e67bdaf09760c230b112c014be25ab469268c99c2ef",
+    "Assets/BrakeToy/Scripts/Runtime/AdventureEncounters.cs": "aaa0a35b6f9d1bd1c556d2507eb063c2eb97923017767314889fa56b9fb2404b",
+    "Assets/BrakeToy/Scripts/Runtime/RoomDayCycle.cs": "64fb4621330ca24daef81c323062ba5a89b9e2875103ab1874f90c5147af5b62",
+    "Assets/BrakeToy/Scripts/Runtime/PlaygroundAtmosphere.cs": "06197db82f006b0fdd5cca1e39461635ba15548d1cf90594a6d9ceedbe6fc3de",
+    "Assets/BrakeToy/Scripts/Runtime/GhostReplay.cs": "1d81a6da9e1ae1c1f857e902ad839e8727ec0cedfa510fceefc27d3d98e16010",
+    "Assets/BrakeToy/Tests/EditMode/RampChoiceRulesTests.cs": "8381785de93d2f545da5bd85a698422df0b5e55efce75bc42948c268a9b79b02",
+    "Assets/BrakeToy/Tests/PlayMode/RoomAndRampChoiceSceneTests.cs": "603d3d3c20e2108fa60b5269abb06e58b99cb812dc01d3133919ed193d1d4f4f",
+    "Assets/BrakeToy/Tests/PlayMode/FreshEyesReviewSceneTests.cs": "d79dcf09713767c86fedf93652f456c856393b13c646bd6eb8996f0a4c342dc9"
+  },
+  "persistentSaveHashesUnchangedDuringResumedTests": true,
+  "notion": "No quota retry; local logs and full review appended to desktop UTF-8 BOM backup."
+}
