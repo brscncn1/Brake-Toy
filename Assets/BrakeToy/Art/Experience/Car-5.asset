@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4795848bbf28424589feb07f788fc5e, type: 3}
+  m_Name: Car-5
+  m_EditorClassIdentifier: BrakeToy.Runtime::BrakeToy.VehicleDefinition
+  Title: Rocket Pop
+  Cost: 2400
+  VisualPrefab: {fileID: 3643084679746637063, guid: 24131204cfe371a4fa6a65a55c9cebee, type: 3}
+  TrailColor: {r: 0.9, g: 0.22, b: 0.1, a: 1}
+  Silhouette: "\u0130kiz roket g\xF6vdeli"

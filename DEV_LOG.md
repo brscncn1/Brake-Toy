@@ -1,3 +1,13 @@
+# Oyuncu deneyimi paketleri — 27 Ekim 2026
+
+R1 HUD/menü/ayar/sonuç; R2 son3deseni hatırlayan seed parkuru ve3ritim/ödül rolü;
+R3 üç yeni gövde ve geri alınabilir saten masa örneği; R4 Adventure benchmark/kayıt izolasyonu
+ve tablet kabul föyü uygulandı.187benzersiz Unity testi, son3kabul testi tekrar3/3 geçti.
+Gerçek kariyer/ghost dosyaları aynı. Sanat beğenisi ve gerçek cihaz kabulü bekliyor.
+Tablet bağlanamıyor; ölçülmemiş FPS veya dokunma kabulü iddiası yok. K6 başlamadı.
+Ayrıntılar Docs/PLAYER_EXPERIENCE_PACKAGES-2026-10-27.md. Android derleme sonucu ayrıca kaydedilecek.
+Notion kotası tekrar döngüyle denenmedi; kullanıcı isteğiyle masaüstü yedeği tutuldu.
+
 # Oda aydınlığı, rampa seçimi ve oyuncu incelemesi — 26 Ekim 2026
 
 Kullanıcı durdurduktan sonra 'devam et' dedi; kayıtlı checkpoint'ten sürdürüldü. İki somut hata: RoomDayCycle ve PlaygroundAtmosphere birlikte iç mekânı gece karartıyordu; ilk geçit boşluğu daima rampa dışındaki giriş hattı olduğundan her rampanın çıkışı engel anlamına geliyordu. Adventure iç ana ışığının şiddeti/rengi/yönü ve ortam ışığı gündüz değerinde sabitlendi; dış gökyüzü/ay/yıldız ve iki lambanın dış geceye göre açılması korundu. Rampa ilk çıkışı seed'e göre açık/alçak engelli; açık çıkıştaki nesne üçüncü şeritte5birim önceye taşınıyor, silinmiyor.6hazard/cümle,10katalog türü, masa eşyaları, otobüs, top profilleri ve rampalar korunuyor. Ghost tabletop-r5-choices ad alanına ayrıldı; eski dosyalar silinmedi.

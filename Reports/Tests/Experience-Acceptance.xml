@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="3" result="Passed" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-26 21:14:07Z" end-time="2026-10-26 21:14:09Z" duration="2,6984801">
+  <test-suite type="TestSuite" id="1118" name="Brake Toy" fullname="Brake Toy" runstate="Runnable" testcasecount="91" result="Passed" start-time="2026-10-26 21:14:07Z" end-time="2026-10-26 21:14:09Z" duration="2.698480" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1112" name="BrakeToy.PlayMode.Tests.dll" fullname="C:/Users/Baris/Documents/Codex/2026-10-20/burada-yazan-promptu-sana-zel-haz/outputs/BrakeToy/Library/ScriptAssemblies/BrakeToy.PlayMode.Tests.dll" runstate="Runnable" testcasecount="91" result="Passed" start-time="2026-10-26 21:14:07Z" end-time="2026-10-26 21:14:09Z" duration="2.692324" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="2972" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1113" name="BrakeToy" fullname="BrakeToy" runstate="Runnable" testcasecount="91" result="Passed" start-time="2026-10-26 21:14:07Z" end-time="2026-10-26 21:14:09Z" duration="2.691589" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1114" name="Tests" fullname="BrakeToy.Tests" runstate="Runnable" testcasecount="91" result="Passed" start-time="2026-10-26 21:14:07Z" end-time="2026-10-26 21:14:09Z" duration="2.690758" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1055" name="PlayerExperienceSceneTests" fullname="BrakeToy.Tests.PlayerExperienceSceneTests" classname="BrakeToy.Tests.PlayerExperienceSceneTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-26 21:14:07Z" end-time="2026-10-26 21:14:09Z" duration="2.688603" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1058" name="BenchmarkIsolationDisablesAllPersistenceBeforeWitnessPreparation" fullname="BrakeToy.Tests.PlayerExperienceSceneTests.BenchmarkIsolationDisablesAllPersistenceBeforeWitnessPreparation" methodname="BenchmarkIsolationDisablesAllPersistenceBeforeWitnessPreparation" classname="BrakeToy.Tests.PlayerExperienceSceneTests" runstate="Runnable" seed="73131539" result="Passed" start-time="2026-10-26 21:14:07Z" end-time="2026-10-26 21:14:08Z" duration="1.020337" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1056" name="MenuSettingsBackAndZeroAirResultAreHonestAndClickable" fullname="BrakeToy.Tests.PlayerExperienceSceneTests.MenuSettingsBackAndZeroAirResultAreHonestAndClickable" methodname="MenuSettingsBackAndZeroAirResultAreHonestAndClickable" classname="BrakeToy.Tests.PlayerExperienceSceneTests" runstate="Runnable" seed="692190377" result="Passed" start-time="2026-10-26 21:14:08Z" end-time="2026-10-26 21:14:09Z" duration="1.021768" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1057" name="SculptedCarsAndReversibleTableHaveValidReferencesAndBounds" fullname="BrakeToy.Tests.PlayerExperienceSceneTests.SculptedCarsAndReversibleTableHaveValidReferencesAndBounds" methodname="SculptedCarsAndReversibleTableHaveValidReferencesAndBounds" classname="BrakeToy.Tests.PlayerExperienceSceneTests" runstate="Runnable" seed="1183730864" result="Passed" start-time="2026-10-26 21:14:09Z" end-time="2026-10-26 21:14:09Z" duration="0.638900" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: C:/Users/Baris/AppData/LocalLow/Brake Toy/Brake Toy\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

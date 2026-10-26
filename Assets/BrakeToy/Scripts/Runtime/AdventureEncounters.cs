@@ -53,6 +53,10 @@ namespace BrakeToy
                 float offset = beat.Family == (int)TrackToy.Tunnel ? 11 : 17;
                 jump.SpawnRamp(beat.RiskX, z + offset);
                 game.Arcade.Challenges.SpawnAt(beat.RiskX, z + offset + 9, 1.8f);
+                if (TabletopCourseRules.RampRole(beat) == 1)
+                    game.Arcade.Challenges.SpawnAt(beat.RiskX, z + offset + 14, 1.5f);
+                else if (TabletopCourseRules.RampRole(beat) == 2)
+                    game.Arcade.Challenges.SpawnAt(beat.RiskX, z + offset + 5, 1.2f);
             }
             for (int row = 0; row < 3; row++)
             {

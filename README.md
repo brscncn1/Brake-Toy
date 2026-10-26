@@ -1,3 +1,11 @@
+# Güncel çalışma — v0.10 oyuncu deneyimi adayı
+
+[Paket raporu](Docs/PLAYER_EXPERIENCE_PACKAGES-2026-10-27.md): düzenlenen HUD/menü/ayarlar,
+hafızalı değişken ritimli parkur, üç araç gövdesi ve geri alınabilir masa kaplaması.
+187benzersiz Unity testi; [gerçek görüntüler](Reports/Visuals/EXPERIENCE_GALLERY.html).
+Kaynak feat/player-experience-packages. Tablet ve sanat kullanıcı kabulü bekliyor; K6 başlamadı.
+Android paketinin gerçek durumu Reports/EXPERIENCE_DELIVERY.json dosyasında ayrıca belirtilecek.
+
 # BRAKE TOY
 
 26 Ekim [oda/rampa düzeltmesi ve oyuncu incelemesi](Docs/FRESH_EYES_REVIEW-2026-10-26.md):

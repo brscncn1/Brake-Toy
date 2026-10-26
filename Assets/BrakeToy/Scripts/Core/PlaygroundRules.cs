@@ -22,8 +22,8 @@ namespace BrakeToy.Core
     }
     public readonly struct PlaygroundBeat
     {
-        public readonly int Index,SafeLane,RiskLane,Family,Variant;public readonly float Distance;public float SafeX=>ArcadeRules.LaneX(SafeLane);public float RiskX=>ArcadeRules.LaneX(RiskLane);
-        public PlaygroundBeat(int i,int safe,int risk,int family,int variant,float distance){Index=i;SafeLane=safe;RiskLane=risk;Family=family;Variant=variant;Distance=distance;}
+        public readonly int Index,SafeLane,RiskLane,Family,Variant,Recipe;public readonly float Distance;public float SafeX=>ArcadeRules.LaneX(SafeLane);public float RiskX=>ArcadeRules.LaneX(RiskLane);
+        public PlaygroundBeat(int i,int safe,int risk,int family,int variant,float distance,int recipe=-1){Recipe=recipe;Index=i;SafeLane=safe;RiskLane=risk;Family=family;Variant=variant;Distance=distance;}
     }
     // Authored approach/decision/exit phrases, seeded choice with no adjacent repeated family.
     public sealed class PlaygroundSequence

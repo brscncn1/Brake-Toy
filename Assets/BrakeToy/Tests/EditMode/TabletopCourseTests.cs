@@ -30,10 +30,10 @@ namespace BrakeToy.Tests
                     for (int gate = 1; gate < 3; gate++)
                     {
                         Assert.That(Math.Abs(TabletopCourseRules.GapLane(beat, gate) - TabletopCourseRules.GapLane(beat, gate - 1)), Is.LessThanOrEqualTo(1));
-                        Assert.That(TabletopCourseRules.GateOffset(beat, gate) - TabletopCourseRules.GateOffset(beat, gate - 1), Is.InRange(14f, 22f));
+                        Assert.That(TabletopCourseRules.GateOffset(beat, gate) - TabletopCourseRules.GateOffset(beat, gate - 1), Is.InRange(12f, 24f));
                     }
                     if (i > 0) Assert.That(beat.Distance - previous.Distance,
-                        Is.EqualTo(TabletopCourseRules.Spacing(previous.Index, relax)).Within(.01));
+                        Is.EqualTo(TabletopCourseRules.Spacing(previous, relax)).Within(.01));
                     previous = beat;
                 }
                 Assert.That(patterns.Count, Is.EqualTo(6));

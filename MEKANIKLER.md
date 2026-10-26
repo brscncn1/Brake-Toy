@@ -1,5 +1,11 @@
 # Brake Toy — oyuncu deneyimi ve mekanik sözleşmesi
 
+
+27 Ekim güncel paket: feat/player-experience-packages; v0.10.0/kod11 aday kaynak.
+HUD/ayar/sonuç, tabletop-r6 hafızalı parkur, Experience art varyantları;187benzersiz Unity testi.
+Ayrıntı Docs/PLAYER_EXPERIENCE_PACKAGES-2026-10-27.md. Tablet/sanat kabulü açık; K6 başlamadı.
+Önceki APK/sonuç ifadeleri tarihsel tabandır; yeni Android teslim kanıtı ayrı rapordadır.
+
 Taban: v0.9 Adventure, 24 Ekim 2026. Sayılar mevcut koddur; denge önerileri ayrı görevle değiştirilir.
 “Hedef” etiketleri kabul ölçütüdür; tamamlandıkları anlamına gelmez.
 

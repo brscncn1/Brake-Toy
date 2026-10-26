@@ -72,10 +72,10 @@ namespace BrakeToy.Tests
             Assert.That(report.samples.Count, Is.EqualTo(18));
         }
 
-        internal static void Capture(GameManager game, int seconds, string exportName = null)
+        internal static void Capture(GameManager game, int seconds, string exportName = null, int width = 720, int height = 1280, System.Action verify = null)
         {
             var camera = Camera.main;
-            var target = new RenderTexture(720, 1280, 24);
+            var target = new RenderTexture(width, height, 24);
             var previous = camera.targetTexture;
             var active = RenderTexture.active;
             float aspect = camera.aspect;
@@ -86,7 +86,7 @@ namespace BrakeToy.Tests
             {
                 target.Create();
                 camera.targetTexture = target;
-                camera.aspect = 720f / 1280;
+                camera.aspect = (float)width / height;
                 var framing = camera.GetComponent<PortraitCamera>();
                 framing.Reframe();
                 var position = camera.transform.position;
@@ -99,12 +99,13 @@ namespace BrakeToy.Tests
                 for (int n = 0; n < 2; n++) RenderPipeline.SubmitRenderRequest(camera,
                     new UniversalRenderPipeline.SingleCameraRequest { destination = target });
                 RenderTexture.active = target;
-                var image = new Texture2D(720, 1280, TextureFormat.RGB24, false);
-                image.ReadPixels(new Rect(0, 0, 720, 1280), 0, 0);
+                var image = new Texture2D(width, height, TextureFormat.RGB24, false);
+                image.ReadPixels(new Rect(0, 0, width, height), 0, 0);
                 image.Apply();
                 Directory.CreateDirectory("Reports/Local");
                 File.WriteAllBytes("Reports/Local/" + (exportName ?? "Opening-" + seconds) + ".png", image.EncodeToPNG());
                 Object.Destroy(image);
+                verify?.Invoke();
             }
             finally
             {
